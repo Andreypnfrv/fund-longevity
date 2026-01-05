@@ -1,0 +1,96 @@
+import type { Translation } from './types';
+import { Locale } from './types';
+
+export const globalTranslations = {
+  nav: {
+    why: {
+      [Locale.EN]: 'Why',
+      [Locale.SV]: 'Varför',
+    },
+    demonstrations: {
+      [Locale.EN]: 'Demonstrations',
+      [Locale.SV]: 'Demonstrationer',
+    },
+    asks: {
+      [Locale.EN]: 'Asks',
+      [Locale.SV]: 'Krav',
+    },
+    join: {
+      [Locale.EN]: 'How can you help',
+      [Locale.SV]: 'Hur kan du hjälpa',
+    },
+    about: {
+      [Locale.EN]: 'About us',
+      [Locale.SV]: 'Om oss',
+    },
+    faq: {
+      [Locale.EN]: 'FAQ',
+      [Locale.SV]: 'FAQ',
+    },
+  },
+  footer: {
+    summary: {
+      [Locale.EN]: 'Fund Longevity is a multinational initiative to demonstrate for life extension.',
+      [Locale.SV]: 'Fund Longevity är en multinationell initiativ för att demonstrera för livsförlängning.',
+    },
+    copyright: {
+      [Locale.EN]: '© 2024 Fund Longevity. All rights reserved.',
+      [Locale.SV]: '© 2024 Fund Longevity. Alla rättigheter förbehållna.',
+    },
+    discord: {
+      [Locale.EN]: 'Join Discord',
+      [Locale.SV]: 'Gå med i Discord',
+    },
+  },
+  common: {
+    join: {
+      [Locale.EN]: 'Join',
+      [Locale.SV]: 'Gå med',
+    },
+    learnMore: {
+      [Locale.EN]: 'Learn more',
+      [Locale.SV]: 'Läs mer',
+    },
+    close: {
+      [Locale.EN]: 'Close',
+      [Locale.SV]: 'Stäng',
+    },
+  },
+  forms: {
+    firstName: {
+      [Locale.EN]: 'First name',
+      [Locale.SV]: 'Förnamn',
+    },
+    city: {
+      [Locale.EN]: 'City',
+      [Locale.SV]: 'Stad',
+    },
+    email: {
+      [Locale.EN]: 'Email',
+      [Locale.SV]: 'E-post',
+    },
+    phone: {
+      [Locale.EN]: 'Phone',
+      [Locale.SV]: 'Telefon',
+    },
+    submit: {
+      [Locale.EN]: 'Submit',
+      [Locale.SV]: 'Skicka',
+    },
+    joinOffline: {
+      [Locale.EN]: "I'll join offline",
+      [Locale.SV]: 'Jag kommer delta offline',
+    },
+    joinOnline: {
+      [Locale.EN]: "I'll join online",
+      [Locale.SV]: 'Jag kommer delta online',
+    },
+    canTakePart: {
+      [Locale.EN]: 'I can take part',
+      [Locale.SV]: 'Jag kan delta',
+    },
+  },
+} as const satisfies Record<string, Record<string, Translation>>;
+
+export type GlobalTranslationKeys = typeof globalTranslations;
+
