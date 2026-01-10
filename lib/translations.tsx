@@ -3,6 +3,10 @@ import { Locale } from './types';
 
 export const globalTranslations = {
   nav: {
+    home: {
+      [Locale.EN]: 'Home',
+      [Locale.SV]: 'Hem',
+    },
     why: {
       [Locale.EN]: 'Why',
       [Locale.SV]: 'Varför',
@@ -22,10 +26,6 @@ export const globalTranslations = {
     about: {
       [Locale.EN]: 'About us',
       [Locale.SV]: 'Om oss',
-    },
-    faq: {
-      [Locale.EN]: 'FAQ',
-      [Locale.SV]: 'FAQ',
     },
   },
   footer: {

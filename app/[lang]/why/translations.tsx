@@ -1,11 +1,10 @@
-import type { Translation } from '@/lib/types';
 import { Locale } from '@/lib/types';
 
 export const whyTranslations = {
   hero: {
     title: {
-      [Locale.EN]: 'Aging Is a Problem — and We Should Solve It',
-      [Locale.SV]: 'Åldrande är ett problem — och vi bör lösa det',
+      [Locale.EN]: 'Aging Is a Problem —\nand We Should Solve It',
+      [Locale.SV]: 'Åldrande är ett problem —\noch vi bör lösa det',
     },
   },
   sections: {
@@ -55,7 +54,7 @@ export const whyTranslations = {
         [Locale.SV]: 'Är detta verkligen realistiskt?',
       },
       content: {
-        [Locale.EN]: 'Yes. Thousands of scientists have publicly stated that aging is a solvable problem in the Dublin Longevity Deceleration. Research already shows that aging can be slowed, paused, or reversed in laboratory organisms. Some animals exhibit negligible aging or extreme longevity. Nature has already demonstrated that aging is not unavoidable — humans simply haven't applied those solutions to ourselves yet.',
+        [Locale.EN]: 'Yes. Thousands of scientists have publicly stated that aging is a solvable problem in the Dublin Longevity Deceleration. Research already shows that aging can be slowed, paused, or reversed in laboratory organisms. Some animals exhibit negligible aging or extreme longevity. Nature has already demonstrated that aging is not unavoidable — humans simply haven\'t applied those solutions to ourselves yet.',
         [Locale.SV]: 'Ja. Tusentals forskare har offentligt konstaterat att åldrande är ett lösbart problem i Dublin Longevity Deceleration. Forskning visar redan att åldrande kan bromsas, pausas eller vändas i laboratorieorganismer. Vissa djur uppvisar försumbart åldrande eller extrem livslängd. Naturen har redan visat att åldrande inte är oundvikligt — människor har helt enkelt inte tillämpat dessa lösningar på oss själva ännu.',
       },
     },
@@ -65,13 +64,13 @@ export const whyTranslations = {
         [Locale.SV]: 'Är det svårt?',
       },
       content: {
-        [Locale.EN]: 'Extremely. Reversing aging in humans will likely be harder than landing on the Moon. It will require entirely new biotechnologies and breakthroughs that don't yet exist. We will need to remove senescent cells, repair or replace damaged tissues, and solve many problems we don't fully understand yet. This is one of the hardest challenges humanity has ever faced. But "hard" does not mean "impossible."',
+        [Locale.EN]: 'Extremely. Reversing aging in humans will likely be harder than landing on the Moon. It will require entirely new biotechnologies and breakthroughs that don\'t yet exist. We will need to remove senescent cells, repair or replace damaged tissues, and solve many problems we don\'t fully understand yet. This is one of the hardest challenges humanity has ever faced. But "hard" does not mean "impossible."',
         [Locale.SV]: 'Extremt. Att vända åldrande hos människor kommer förmodligen att vara svårare än att landa på månen. Det kommer att kräva helt nya bioteknologier och genombrott som inte finns ännu. Vi kommer att behöva ta bort senescenta celler, reparera eller ersätta skadade vävnader och lösa många problem som vi inte helt förstår ännu. Detta är en av de svåraste utmaningarna mänskligheten någonsin har stått inför. Men "svårt" betyder inte "omöjligt".',
       },
     },
     missing: {
       title: {
-        [Locale.EN]: "What's Missing?",
+        [Locale.EN]: 'What\'s Missing?',
         [Locale.SV]: 'Vad saknas?',
       },
       content: {
@@ -85,10 +84,10 @@ export const whyTranslations = {
         [Locale.SV]: 'Varför vi agerar',
       },
       content: {
-        [Locale.EN]: 'Aging is the largest cause of death and suffering on Earth. Solving it requires a society-wide effort — scientific, political, and cultural. That's why we organize. That's why we demonstrate. That's why we demand action. Join us — and help make aging optional.',
+        [Locale.EN]: 'Aging is the largest cause of death and suffering on Earth. Solving it requires a society-wide effort — scientific, political, and cultural. That\'s why we organize. That\'s why we demonstrate. That\'s why we demand action. Join us — and help make aging optional.',
         [Locale.SV]: 'Åldrande är den största orsaken till död och lidande på jorden. Att lösa det kräver ett samhällsomfattande ansträngning — vetenskaplig, politisk och kulturell. Det är därför vi organiserar. Det är därför vi demonstrerar. Det är därför vi kräver handling. Gå med oss — och hjälp till att göra åldrande valfritt.',
       },
     },
   },
-} as const satisfies Record<string, Record<string, Translation>>;
+} as const;
 

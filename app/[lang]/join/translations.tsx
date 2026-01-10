@@ -34,7 +34,7 @@ export const joinTranslations = {
       [Locale.SV]: 'Gå med som media',
     },
     description: {
-      [Locale.EN]: 'We welcome you on the demonstrations and also get in touch if you need any comments on biotech, public health, etc., we'll provide you with experts.',
+      [Locale.EN]: 'We welcome you on the demonstrations and also get in touch if you need any comments on biotech, public health, etc., we\'ll provide you with experts.',
       [Locale.SV]: 'Vi välkomnar dig på demonstrationerna och hör också av dig om du behöver några kommentarer om bioteknik, folkhälsa etc., vi kommer att förse dig med experter.',
     },
   },

@@ -9,3 +9,4 @@ export type TranslationKey = string;
 
 export type Translations<T extends Record<string, Translation>> = T;
 
+

@@ -1,4 +1,4 @@
-import type { Locale, Translation } from './types';
+import { Locale, type Translation } from './types';
 
 export function translate<T extends Record<string, Translation>>(
   translations: T,
@@ -19,4 +19,5 @@ export function getTranslation<T extends Record<string, Translation>>(
 ): (key: keyof T) => string {
   return (key: keyof T) => translate(translations, locale, key);
 }
+
 

@@ -1,4 +1,3 @@
-import type { Translation } from '@/lib/types';
 import { Locale } from '@/lib/types';
 
 export const asksTranslations = {
@@ -56,5 +55,6 @@ export const asksTranslations = {
       ],
     },
   },
-} as const satisfies Record<string, Record<string, Translation> | Translation>;
+} as const;
+
 

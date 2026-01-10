@@ -1,15 +1,24 @@
 import type { Metadata } from 'next';
 import { Hero } from '@/components/Hero';
 import { Button } from '@/components/Button';
-import { H2, P } from '@/components/Typography';
-import { Card } from '@/components/Card';
+import { H2, H3 } from '@/components/Typography';
 import { Link } from '@/components/Link';
+import { Section } from '@/components/Section';
+import { Partners } from '@/components/Partners';
+import { HowCanYouHelp } from '@/components/HowCanYouHelp';
 import { Locale } from '@/lib/types';
 import { homeTranslations } from './translations';
+import { joinTranslations } from './join/translations';
 import { getTranslation } from '@/lib/translate';
+import { Wrapper } from '@/components/Wrapper';
+import { Size } from '@/lib/theme';
 
 interface HomePageProps {
   params: Promise<{ lang: string }>;
+}
+
+export function generateStaticParams() {
+  return [{ lang: 'en' }, { lang: 'sv' }];
 }
 
 export async function generateMetadata({ params }: HomePageProps): Promise<Metadata> {
@@ -32,52 +41,75 @@ export default async function HomePage({ params }: HomePageProps): Promise<JSX.E
   const demonstrations = getTranslation(homeTranslations.demonstrations, locale);
   const howCanYouHelp = getTranslation(homeTranslations.howCanYouHelp, locale);
   const aboutUs = getTranslation(homeTranslations.aboutUs, locale);
+  const partnersTranslate = getTranslation(joinTranslations.partners, locale);
+  const buttons = getTranslation(homeTranslations.buttons, locale);
 
   return (
     <div>
       <Hero
-        title={hero.translate('title')}
-        subtitle={hero.translate('subtitle')}
-        variant="primary"
+        title={hero('title')}
+        subtitle={hero('subtitle')}
+        backgroundImage="/hero.png"
       />
+      <Section>
+        <Wrapper className='text-center py-20'>
+          <div className="flex flex-col gap-12">
+            <H2 display className="text-4xl md:text-5xl lg:text-6xl">{whyAging('title')}</H2>
+            <H3 className="font-normal text-xl md:text-2xl lg:text-3xl">{whyAging('description')}</H3>
+            <div className="flex justify-center">
+              <Link href="/why" locale={locale}>
+                <Button size={Size.XL} rightIcon="lucide:chevron-right">{buttons('learnMore')}</Button>
+              </Link>
+            </div>
+          </div>
+        </Wrapper>
+      </Section>
+      <Section>
+        <Wrapper className='text-center'>
+          <div className="flex flex-col gap-12">
+            <H2 display className="text-4xl md:text-5xl lg:text-6xl">{demonstrations('title')}</H2>
+            <H3 className="font-normal text-xl md:text-2xl lg:text-3xl">{demonstrations('description')}</H3>
+            <div className="flex justify-center">
+              <Link href="/demonstrations" locale={locale}>
+                <Button size={Size.XL} rightIcon="lucide:chevron-right">{buttons('learnMore')}</Button>
+              </Link>
+            </div>
+          </div>
+        </Wrapper>
+      </Section>
+      <Section>
+        <HowCanYouHelp
+          locale={locale}
+          title={howCanYouHelp('title')}
+          description={howCanYouHelp('description')}
+          joinDiscordLabel={buttons('joinDiscord')}
+          getInvolvedLabel={buttons('getInvolved')}
+        />
+      </Section>
+      <Section>
+        <Wrapper className='text-center'>
+          <div className="flex flex-col gap-12">
+            <H2 display className="text-4xl md:text-5xl lg:text-6xl">{aboutUs('title')}</H2>
+            <H3 className="font-normal text-xl md:text-2xl lg:text-3xl">{aboutUs('description')}</H3>
+            <div className="flex justify-center">
+              <Link href="/about" locale={locale}>
+                <Button size={Size.XL} rightIcon="lucide:chevron-right">{buttons('learnMore')}</Button>
+              </Link>
+            </div>
+          </div>
+        </Wrapper>
+      </Section>
 
-      <section className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <Card>
-            <H2 className="mb-4">{whyAging.translate('title')}</H2>
-            <P className="mb-6">{whyAging.translate('description')}</P>
-            <Link href="/why" locale={locale}>
-              <Button>Learn more</Button>
-            </Link>
-          </Card>
+      <Section className="">
+        <Wrapper>
+          <Partners
+            locale={locale}
+            title={partnersTranslate('title')}
+            partners={['Vitalism', 'Longevity Biotech Fellowship', 'Swedish longevity cluster']}
+          />
+        </Wrapper>
+      </Section>
 
-          <Card>
-            <H2 className="mb-4">{demonstrations.translate('title')}</H2>
-            <P className="mb-6">Learn how our demonstrations work and how you can participate.</P>
-            <Link href="/demonstrations" locale={locale}>
-              <Button>Learn more</Button>
-            </Link>
-          </Card>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8">
-          <Card>
-            <H2 className="mb-4">{howCanYouHelp.translate('title')}</H2>
-            <P className="mb-6">Join us in the fight against aging. There are many ways to contribute.</P>
-            <Link href="/join" locale={locale}>
-              <Button>Get involved</Button>
-            </Link>
-          </Card>
-
-          <Card>
-            <H2 className="mb-4">{aboutUs.translate('title')}</H2>
-            <P className="mb-6">Learn more about our mission and the team behind Fund Longevity.</P>
-            <Link href="/about" locale={locale}>
-              <Button>Learn more</Button>
-            </Link>
-          </Card>
-        </div>
-      </section>
     </div>
   );
 }

@@ -1,15 +1,21 @@
-import { Hero } from '@/components/Hero';
+import { SecondaryHero } from '@/components/Hero';
 import { Sidebar } from '@/components/Sidebar';
-import { H2, P } from '@/components/Typography';
-import { Button } from '@/components/Button';
-import { Link } from '@/components/Link';
-import { Card } from '@/components/Card';
+import { H2, H3, H4, P } from '@/components/Typography';
+import { Content } from '@/components/Content';
+import { Section, TextSection } from '@/components/Section';
+import { HowCanYouHelp } from '@/components/HowCanYouHelp';
 import { Locale } from '@/lib/types';
 import { whyTranslations } from './translations';
+import { homeTranslations } from '../translations';
 import { getTranslation } from '@/lib/translate';
+import { Wrapper } from '@/components/Wrapper';
 
 interface WhyPageProps {
   params: Promise<{ lang: string }>;
+}
+
+export function generateStaticParams() {
+  return [{ lang: 'en' }, { lang: 'sv' }];
 }
 
 export default async function WhyPage({ params }: WhyPageProps): Promise<JSX.Element> {
@@ -25,6 +31,8 @@ export default async function WhyPage({ params }: WhyPageProps): Promise<JSX.Ele
   const hardTranslate = getTranslation(whyTranslations.sections.hard, locale);
   const missingTranslate = getTranslation(whyTranslations.sections.missing, locale);
   const whyWeActTranslate = getTranslation(whyTranslations.sections.whyWeAct, locale);
+  const howCanYouHelp = getTranslation(homeTranslations.howCanYouHelp, locale);
+  const buttons = getTranslation(homeTranslations.buttons, locale);
 
   const sidebarItems = [
     { id: 'problem', label: problemTranslate('title'), href: '/why#problem' },
@@ -37,76 +45,72 @@ export default async function WhyPage({ params }: WhyPageProps): Promise<JSX.Ele
     { id: 'whyWeAct', label: whyWeActTranslate('title'), href: '/why#whyWeAct' },
   ];
 
+  const heroTitle = heroTranslate('title');
+
   return (
-    <div>
-      <Hero title={heroTranslate('title')} variant="secondary" />
+    <div className='flex flex-col gap-18'>
+      <SecondaryHero title={heroTitle} />
 
-      <div className="container mx-auto px-4 py-16">
-        <div className="flex gap-8">
+      <Wrapper>
+        <div className="flex gap-16">
           <Sidebar locale={locale} items={sidebarItems} />
+          <Content>
+              
+              <TextSection id="problem" className="pt-8 pb-12">
+                <H2>{problemTranslate('title')}</H2>
+                <H3 className="text-lg md:text-xl lg:text-2xl">
+                  {problemTranslate('content')}
+                </H3>
+              </TextSection>
 
-          <div className="flex-1 space-y-12">
-            <section id="problem">
-              <Card>
-                <H2 className="mb-4">{problemTranslate('title')}</H2>
-                <P>{problemTranslate('content')}</P>
-              </Card>
-            </section>
-
-            <section id="personal">
-              <Card>
-                <H2 className="mb-4">{personalTranslate('title')}</H2>
+              <TextSection id="personal">
+                <H4>{personalTranslate('title')}</H4>
                 <P>{personalTranslate('content')}</P>
-              </Card>
-            </section>
+              </TextSection>
 
-            <section id="possible">
-              <Card>
-                <H2 className="mb-4">{possibleTranslate('title')}</H2>
+              <TextSection id="possible">
+                <H4>{possibleTranslate('title')}</H4>
                 <P>{possibleTranslate('content')}</P>
-              </Card>
-            </section>
+              </TextSection>
 
-            <section id="meaning">
-              <Card>
-                <H2 className="mb-4">{meaningTranslate('title')}</H2>
+              <TextSection id="meaning">
+                <H4>{meaningTranslate('title')}</H4>
                 <P>{meaningTranslate('content')}</P>
-              </Card>
-            </section>
+              </TextSection>
 
-            <section id="realistic">
-              <Card>
-                <H2 className="mb-4">{realisticTranslate('title')}</H2>
+              <TextSection id="realistic">
+                <H4>{realisticTranslate('title')}</H4>
                 <P>{realisticTranslate('content')}</P>
-              </Card>
-            </section>
+              </TextSection>
 
-            <section id="hard">
-              <Card>
-                <H2 className="mb-4">{hardTranslate('title')}</H2>
+              <TextSection id="hard">
+                <H4>{hardTranslate('title')}</H4>
                 <P>{hardTranslate('content')}</P>
-              </Card>
-            </section>
+              </TextSection>
 
-            <section id="missing">
-              <Card>
-                <H2 className="mb-4">{missingTranslate('title')}</H2>
+              <TextSection id="missing">
+                <H4>{missingTranslate('title')}</H4>
                 <P>{missingTranslate('content')}</P>
-              </Card>
-            </section>
+              </TextSection>
 
-            <section id="whyWeAct">
-              <Card>
-                <H2 className="mb-4">{whyWeActTranslate('title')}</H2>
-                <P className="mb-6">{whyWeActTranslate('content')}</P>
-                <Link href="/join" locale={locale}>
-                  <Button>Join us</Button>
-                </Link>
-              </Card>
-            </section>
-          </div>
+              <TextSection id="whyWeAct">
+                <H4>{whyWeActTranslate('title')}</H4>
+                <P>{whyWeActTranslate('content')}</P>
+              </TextSection>
+
+          </Content>
         </div>
-      </div>
+      </Wrapper>
+
+    <Section>
+        <HowCanYouHelp
+          locale={locale}
+          title={howCanYouHelp('title')}
+          description={howCanYouHelp('description')}
+          joinDiscordLabel={buttons('joinDiscord')}
+          getInvolvedLabel={buttons('getInvolved')}
+        />
+    </Section>
     </div>
   );
 }

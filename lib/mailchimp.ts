@@ -22,8 +22,8 @@ export async function addToMailchimpList(
     canTakePart?: boolean;
   }
 ): Promise<{ success: boolean; error?: string }> {
-  const apiKey = process.env.NEXT_PUBLIC_MAILCHIMP_API_KEY;
-  const serverPrefix = process.env.NEXT_PUBLIC_MAILCHIMP_SERVER_PREFIX;
+  const apiKey = process.env['NEXT_PUBLIC_MAILCHIMP_API_KEY'];
+  const serverPrefix = process.env['NEXT_PUBLIC_MAILCHIMP_SERVER_PREFIX'];
 
   if (!apiKey || !serverPrefix) {
     return { success: false, error: 'Mailchimp configuration missing' };
@@ -34,15 +34,16 @@ export async function addToMailchimpList(
   if (data.joinOnline) tags.push('join-online');
   if (data.canTakePart) tags.push('can-take-part');
 
+  const mergeFields: NonNullable<MailchimpMember['merge_fields']> = {};
+  if (data.firstName) mergeFields.FNAME = data.firstName;
+  if (data.city) mergeFields.CITY = data.city;
+  if (data.phone) mergeFields.PHONE = data.phone;
+
   const member: MailchimpMember = {
     email_address: email,
     status: 'subscribed',
-    merge_fields: {
-      FNAME: data.firstName,
-      CITY: data.city,
-      PHONE: data.phone,
-    },
-    tags: tags.length > 0 ? tags : undefined,
+    ...(Object.keys(mergeFields).length > 0 && { merge_fields: mergeFields }),
+    ...(tags.length > 0 && { tags }),
   };
 
   try {
@@ -68,4 +69,5 @@ export async function addToMailchimpList(
     return { success: false, error: error instanceof Error ? error.message : 'Unknown error' };
   }
 }
+
 

@@ -1,4 +1,3 @@
-import type { Translation } from '@/lib/types';
 import { Locale } from '@/lib/types';
 
 export const demonstrationsTranslations = {
@@ -32,5 +31,6 @@ export const demonstrationsTranslations = {
     [Locale.EN]: "Want to make a sign? Pick it up here",
     [Locale.SV]: 'Vill du göra en skylt? Hämta den här',
   },
-} as const satisfies Record<string, Translation>;
+} as const;
+
 

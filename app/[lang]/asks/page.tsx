@@ -1,7 +1,8 @@
-import { Hero } from '@/components/Hero';
+import { SecondaryHero } from '@/components/Hero';
 import { Sidebar } from '@/components/Sidebar';
-import { H2, H3, P } from '@/components/Typography';
+import { H2, P } from '@/components/Typography';
 import { Card } from '@/components/Card';
+import { Section } from '@/components/Section';
 import { DiscordIcon } from '@/lib/icons';
 import { Locale } from '@/lib/types';
 import { asksTranslations } from './translations';
@@ -10,18 +11,21 @@ interface AsksPageProps {
   params: Promise<{ lang: string }>;
 }
 
+export function generateStaticParams() {
+  return [{ lang: 'en' }, { lang: 'sv' }];
+}
+
 export default async function AsksPage({ params }: AsksPageProps): Promise<JSX.Element> {
   const { lang } = await params;
   const locale = (lang === 'sv' ? Locale.SV : Locale.EN) as Locale;
 
   return (
     <div>
-      <Hero
+      <SecondaryHero
         title={asksTranslations.hero.title[locale]}
-        variant="secondary"
       />
 
-      <div className="container mx-auto px-4 py-16">
+      <Section>
         <Sidebar locale={locale} items={[]} />
 
         <div className="space-y-8">
@@ -65,7 +69,7 @@ export default async function AsksPage({ params }: AsksPageProps): Promise<JSX.E
             </a>
           </Card>
         </div>
-      </div>
+      </Section>
     </div>
   );
 }

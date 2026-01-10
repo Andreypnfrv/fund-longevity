@@ -12,7 +12,7 @@ import { globalTranslations } from '@/lib/translations';
 
 interface FormSectionProps {
   locale: Locale;
-  title: string;
+  title?: string;
   description?: string;
   listId: string;
   fields?: {
@@ -26,6 +26,7 @@ interface FormSectionProps {
     joinOnline?: boolean;
     canTakePart?: boolean;
   };
+  noCard?: boolean;
 }
 
 export function FormSection({
@@ -35,6 +36,7 @@ export function FormSection({
   listId,
   fields = { firstName: true, city: true, email: true, phone: true },
   checkboxes = {},
+  noCard = false,
 }: FormSectionProps): React.ReactElement {
   const { translate } = useTranslations(globalTranslations.forms, locale);
   const [formData, setFormData] = useState({
@@ -83,14 +85,14 @@ export function FormSection({
     }
   };
 
-  return (
-    <Card>
-      <H3 className="mb-4">{title}</H3>
-      {description && <P className="mb-6 text-gray-600">{description}</P>}
+  const formContent = (
+    <>
+      {title && !noCard && <H3 className="mb-4">{title}</H3>}
+      {description && !noCard && <P className="mb-6 text-gray-600">{description}</P>}
       <form onSubmit={handleSubmit} className="space-y-4">
         {fields.firstName && (
           <div>
-            <label htmlFor="firstName" className="block font-inter text-sm font-medium mb-1">
+            <label htmlFor="firstName" className="block  text-base font-medium mb-1">
               {translate('firstName')}
             </label>
             <input
@@ -99,14 +101,14 @@ export function FormSection({
               required
               value={formData.firstName}
               onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md font-inter"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md "
             />
           </div>
         )}
 
         {fields.city && (
           <div>
-            <label htmlFor="city" className="block font-inter text-sm font-medium mb-1">
+            <label htmlFor="city" className="block  text-base font-medium mb-1">
               {translate('city')}
             </label>
             <input
@@ -115,14 +117,14 @@ export function FormSection({
               required
               value={formData.city}
               onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md font-inter"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md "
             />
           </div>
         )}
 
         {fields.email && (
           <div>
-            <label htmlFor="email" className="block font-inter text-sm font-medium mb-1">
+            <label htmlFor="email" className="block  text-base font-medium mb-1">
               {translate('email')}
             </label>
             <input
@@ -131,14 +133,14 @@ export function FormSection({
               required
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md font-inter"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md "
             />
           </div>
         )}
 
         {fields.phone && (
           <div>
-            <label htmlFor="phone" className="block font-inter text-sm font-medium mb-1">
+            <label htmlFor="phone" className="block  text-base font-medium mb-1">
               {translate('phone')}
             </label>
             <input
@@ -146,7 +148,7 @@ export function FormSection({
               id="phone"
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md font-inter"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md "
             />
           </div>
         )}
@@ -160,7 +162,7 @@ export function FormSection({
               onChange={(e) => setFormData({ ...formData, joinOffline: e.target.checked })}
               className="mr-2"
             />
-            <label htmlFor="joinOffline" className="font-inter text-sm">
+            <label htmlFor="joinOffline" className=" text-base">
               {translate('joinOffline')}
             </label>
           </div>
@@ -175,7 +177,7 @@ export function FormSection({
               onChange={(e) => setFormData({ ...formData, joinOnline: e.target.checked })}
               className="mr-2"
             />
-            <label htmlFor="joinOnline" className="font-inter text-sm">
+            <label htmlFor="joinOnline" className=" text-base">
               {translate('joinOnline')}
             </label>
           </div>
@@ -190,7 +192,7 @@ export function FormSection({
               onChange={(e) => setFormData({ ...formData, canTakePart: e.target.checked })}
               className="mr-2"
             />
-            <label htmlFor="canTakePart" className="font-inter text-sm">
+            <label htmlFor="canTakePart" className=" text-base">
               {translate('canTakePart')}
             </label>
           </div>
@@ -201,13 +203,19 @@ export function FormSection({
         </Button>
 
         {submitStatus === 'success' && (
-          <P className="text-green-600 text-sm">Thank you! Your submission was successful.</P>
+          <P className="text-green-600 text-base">Thank you! Your submission was successful.</P>
         )}
         {submitStatus === 'error' && (
-          <P className="text-red-600 text-sm">Something went wrong. Please try again.</P>
+          <P className="text-red-600 text-base">Something went wrong. Please try again.</P>
         )}
       </form>
-    </Card>
+    </>
   );
+
+  if (noCard) {
+    return formContent;
+  }
+
+  return <Card>{formContent}</Card>;
 }
 

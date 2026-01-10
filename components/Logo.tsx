@@ -1,17 +1,23 @@
 import React from 'react';
-import type { Locale } from '@/lib/types';
-import { H1 } from './Typography';
+import { H3 } from './Typography';
+import { cn } from '@/lib/utils';
 
 interface LogoProps {
-  locale: Locale;
   className?: string;
 }
 
-export function Logo({ locale, className = '' }: LogoProps): React.ReactElement {
+export function Logo({ className }: LogoProps): React.ReactElement {
   return (
-    <H1 className={`text-2xl md:text-3xl ${className}`}>
-      Fund Longevity
-    </H1>
+      <H3 
+      display={false}
+      className={cn(
+        'font-bold', 'line-height-1',
+        className
+      )}
+      style={{ marginBottom: 0 }}
+      >
+        Fund Longevity
+      </H3>
   );
 }
 
