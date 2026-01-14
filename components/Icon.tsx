@@ -9,6 +9,6 @@ type IconProps = {
 };
 
 export function Icon({ icon, className, width, height }: IconProps): React.ReactElement {
-  return <IconifyIcon icon={icon} className={className} width={width} height={height} />;
+  return <IconifyIcon icon={icon} className={className} {...(width !== undefined && { width })} {...(height !== undefined && { height })} />;
 }
 

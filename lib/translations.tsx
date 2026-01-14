@@ -85,10 +85,6 @@ export const globalTranslations = {
       [Locale.EN]: "I'll join offline",
       [Locale.SV]: 'Jag kommer delta offline',
     },
-    joinOnline: {
-      [Locale.EN]: "I'll join online",
-      [Locale.SV]: 'Jag kommer delta online',
-    },
     canTakePart: {
       [Locale.EN]: 'I can take part',
       [Locale.SV]: 'Jag kan delta',

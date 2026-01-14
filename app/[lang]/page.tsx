@@ -36,7 +36,6 @@ export default async function HomePage({ params }: HomePageProps): Promise<JSX.E
   const { lang } = await params;
   const locale = (lang === 'sv' ? Locale.SV : Locale.EN) as Locale;
   
-  const hero = getTranslation(homeTranslations.hero, locale);
   const whyAging = getTranslation(homeTranslations.whyAging, locale);
   const demonstrations = getTranslation(homeTranslations.demonstrations, locale);
   const howCanYouHelp = getTranslation(homeTranslations.howCanYouHelp, locale);

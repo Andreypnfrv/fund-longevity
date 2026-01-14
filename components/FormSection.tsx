@@ -68,7 +68,7 @@ export function FormSection({
 
     try {
       const userId = mailchimpUserId || mailchimpConfig.userId;
-      const formId = mailchimpFormId || mailchimpConfig.formId;
+      const formId = mailchimpFormId;
       const server = mailchimpServer || mailchimpConfig.server;
 
       if (!userId || !listId || !formId) {

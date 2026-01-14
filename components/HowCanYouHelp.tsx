@@ -2,7 +2,6 @@ import React from 'react';
 import { H2, H3 } from './Typography';
 import { Button } from './Button';
 import { Link } from './Link';
-import { Wrapper } from './Wrapper';
 import { DiscordCommunity } from './DiscordCommunity';
 import { Locale } from '@/lib/types';
 import { Size } from '@/lib/theme';
