@@ -5,6 +5,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  env: {
+    DISCORD_URL: process.env.DISCORD_URL,
+  },
 };
 
 export default nextConfig;

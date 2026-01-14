@@ -73,8 +73,12 @@ export const globalTranslations = {
       [Locale.EN]: 'Phone',
       [Locale.SV]: 'Telefon',
     },
+    company: {
+      [Locale.EN]: 'Company',
+      [Locale.SV]: 'Företag',
+    },
     submit: {
-      [Locale.EN]: 'Submit',
+      [Locale.EN]: 'Send',
       [Locale.SV]: 'Skicka',
     },
     joinOffline: {
@@ -88,6 +92,50 @@ export const globalTranslations = {
     canTakePart: {
       [Locale.EN]: 'I can take part',
       [Locale.SV]: 'Jag kan delta',
+    },
+    intent: {
+      [Locale.EN]: 'Intent',
+      [Locale.SV]: 'Avsikt',
+    },
+    joinInPerson: {
+      [Locale.EN]: "I want to join in-person",
+      [Locale.SV]: 'Jag vill delta personligen',
+    },
+    joinOnline: {
+      [Locale.EN]: "I want to join online",
+      [Locale.SV]: 'Jag vill delta online',
+    },
+    canTakePartInOrganisation: {
+      [Locale.EN]: 'I can take part in organisation',
+      [Locale.SV]: 'Jag kan delta i organisationen',
+    },
+    media: {
+      [Locale.EN]: 'Media',
+      [Locale.SV]: 'Media',
+    },
+    ideallyUrl: {
+      [Locale.EN]: 'Ideally url',
+      [Locale.SV]: 'Helst url',
+    },
+    sending: {
+      [Locale.EN]: 'Sending...',
+      [Locale.SV]: 'Skickar...',
+    },
+    emailInvalid: {
+      [Locale.EN]: 'Please enter a valid email address',
+      [Locale.SV]: 'Vänligen ange en giltig e-postadress',
+    },
+    successMessage: {
+      [Locale.EN]: 'Thank you! Your submission was successful.',
+      [Locale.SV]: 'Tack! Din inlämning lyckades.',
+    },
+    errorMessage: {
+      [Locale.EN]: 'Something went wrong. Please try again.',
+      [Locale.SV]: 'Något gick fel. Vänligen försök igen.',
+    },
+    fieldRequired: {
+      [Locale.EN]: 'This field is required',
+      [Locale.SV]: 'Detta fält är obligatoriskt',
     },
   },
 } as const satisfies Record<string, Record<string, Translation>>;

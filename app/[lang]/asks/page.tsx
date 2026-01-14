@@ -1,11 +1,13 @@
 import { SecondaryHero } from '@/components/Hero';
-import { Sidebar } from '@/components/Sidebar';
 import { H2, P } from '@/components/Typography';
 import { Card } from '@/components/Card';
 import { Section } from '@/components/Section';
-import { DiscordIcon } from '@/lib/icons';
+import { HowCanYouHelp } from '@/components/HowCanYouHelp';
+import { Wrapper } from '@/components/Wrapper';
 import { Locale } from '@/lib/types';
 import { asksTranslations } from './translations';
+import { homeTranslations } from '../translations';
+import { getTranslation } from '@/lib/translate';
 
 interface AsksPageProps {
   params: Promise<{ lang: string }>;
@@ -19,56 +21,52 @@ export default async function AsksPage({ params }: AsksPageProps): Promise<JSX.E
   const { lang } = await params;
   const locale = (lang === 'sv' ? Locale.SV : Locale.EN) as Locale;
 
+  const buttons = getTranslation(homeTranslations.buttons, locale);
+  const howCanYouHelp = getTranslation(homeTranslations.howCanYouHelp, locale);
+
   return (
     <div>
-      <SecondaryHero
-        title={asksTranslations.hero.title[locale]}
-      />
+      <SecondaryHero title={asksTranslations.hero.title[locale]} />
 
       <Section>
-        <Sidebar locale={locale} items={[]} />
+        <Wrapper>
+          <div className="flex justify-center">
+            <div className="max-w-3xl w-full space-y-20">
 
-        <div className="space-y-8">
-          <Card>
-            <P className="mb-6">{asksTranslations.intro[locale]}</P>
-          </Card>
+              <Card>
+                <H2 className="mb-8 text-center">{asksTranslations.pageTitle[locale]}</H2>
+                <ul className="space-y-4">
+                  {asksTranslations.items[locale].map((item, index) => (
+                    <li key={index} className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full border-2 border-blue-600 flex items-center justify-center font-semibold text-sm text-blue-600">
+                        {index + 1}
+                      </div>
+                      <P className="flex-1 pt-1">
+                        {item.parts.map((part, partIndex) => 
+                          part.bold ? <strong key={partIndex}>{part.text}</strong> : <span key={partIndex}>{part.text}</span>
+                        )}
+                      </P>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
 
-          <Card>
-            <H2 className="mb-6">{asksTranslations.regulations.title[locale]}</H2>
-            <ul className="space-y-3">
-              {asksTranslations.regulations.items[locale].map((item, index) => (
-                <li key={index} className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <P>{item}</P>
-                </li>
-              ))}
-            </ul>
-          </Card>
+              <P className="mb-6 text-center ">
+                {asksTranslations.intro[locale]}
+              </P>
+            </div>
+          </div>
+        </Wrapper>
+      </Section>
 
-          <Card>
-            <H2 className="mb-6">{asksTranslations.funding.title[locale]}</H2>
-            <ul className="space-y-3">
-              {asksTranslations.funding.items[locale].map((item, index) => (
-                <li key={index} className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <P>{item}</P>
-                </li>
-              ))}
-            </ul>
-          </Card>
-
-          <Card>
-            <a
-              href="https://discord.gg/fundlongevity"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700"
-            >
-              <DiscordIcon />
-              <span>Join Discord Community</span>
-            </a>
-          </Card>
-        </div>
+      <Section>
+        <HowCanYouHelp
+          locale={locale}
+          title={howCanYouHelp('title')}
+          description={howCanYouHelp('description')}
+          joinDiscordLabel={buttons('joinDiscord')}
+          getInvolvedLabel={buttons('getInvolved')}
+        />
       </Section>
     </div>
   );

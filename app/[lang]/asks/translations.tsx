@@ -3,57 +3,45 @@ import { Locale } from '@/lib/types';
 export const asksTranslations = {
   hero: {
     title: {
-      [Locale.EN]: 'Our Asks',
-      [Locale.SV]: 'Våra krav',
+      [Locale.EN]: 'What a government can do to fight aging?',
+      [Locale.SV]: 'Vad kan en regering göra för att bekämpa åldrande?',
     },
+  },
+  pageTitle: {
+    [Locale.EN]: 'Our asks',
+    [Locale.SV]: 'Våra krav',
   },
   intro: {
     [Locale.EN]: 'We keep them a little bit broad, so the governments can shape their policies by themselves, but here are the main directions',
     [Locale.SV]: 'Vi håller dem lite breda, så att regeringarna kan forma sina policyer själva, men här är huvudriktningarna',
   },
-  regulations: {
-    title: {
-      [Locale.EN]: 'Pure regulations',
-      [Locale.SV]: 'Rena regleringar',
-    },
-    items: {
-      [Locale.EN]: [
-        'Parliaments must have anti-aging commissions to advocate pro lifespan extension',
-        'Classify aging as a disease, so research and therapeutics could be targeted',
-        'Gene editing legalized for the research',
-        'Simplify human trials for anti-aging therapeutics',
-      ],
-      [Locale.SV]: [
-        'Parlamenten måste ha anti-åldrandekommissioner för att förespråka livslängdsförlängning',
-        'Klassificera åldrande som en sjukdom, så att forskning och terapeutika kan riktas',
-        'Genredigering legaliserad för forskningen',
-        'Förenkla mänskliga försök för anti-åldrandeterapeutika',
-      ],
-    },
+  sectionTitle: {
+    [Locale.EN]: 'What a government can do to fight aging?',
+    [Locale.SV]: 'Vad kan en regering göra för att bekämpa åldrande?',
   },
-  funding: {
-    title: {
-      [Locale.EN]: 'Funding for fundamental research',
-      [Locale.SV]: 'Finansiering för grundforskning',
-    },
-    items: {
-      [Locale.EN]: [
-        '1% of GDP to anti-aging infrastructure (biobanks, research facilities), scientific, startup and educational programs',
-        'Setup public biobanks with exhaustive human data and make it accessible for the researchers',
-        'Free medical & biotech education for those who want to study aging',
-        'Include health checkups into free insurance',
-        'Specific non-dilutive funding for biotech startup',
-        'ARPA-H-alike government funds to do risky breakthroughs',
-      ],
-      [Locale.SV]: [
-        '1% av BNP till anti-åldrandeinfrastruktur (biobanker, forskningsanläggningar), vetenskapliga, startup- och utbildningsprogram',
-        'Sätt upp offentliga biobanker med omfattande mänskliga data och gör dem tillgängliga för forskare',
-        'Gratis medicinsk och bioteknikutbildning för dem som vill studera åldrande',
-        'Inkludera hälsokontroller i gratis försäkring',
-        'Specifik icke-spädande finansiering för biotekstartup',
-        'ARPA-H-liknande statliga fonder för att göra riskfyllda genombrott',
-      ],
-    },
+  items: {
+    [Locale.EN]: [
+      { parts: [{ text: 'Parliament must ', bold: false }, { text: 'create an anti-aging commissions', bold: true }, { text: ' to advocate pro lifespan extension', bold: false }] },
+      { parts: [{ text: '', bold: false }, { text: 'Classify aging as a disease', bold: true }, { text: ', so research and therapeutics could be targeted', bold: false }] },
+      { parts: [{ text: '', bold: false }, { text: 'Gene editing legalized for the research', bold: true }, { text: ' with ethical comission approval', bold: false }] },
+      { parts: [{ text: '', bold: false }, { text: 'Simplify human trials', bold: true }, { text: ' for anti-aging therapeutics', bold: false }] },
+      { parts: [{ text: '', bold: false }, { text: '1% of country budget to anti-aging infrastructure ', bold: true }, { text: '(biobanks, research facilities), scientific, startup and educational programs', bold: false }] },
+      { parts: [{ text: '', bold: false }, { text: 'Setup public biobanks with exhaustive data', bold: true }, { text: ', crucial for aging studies and make it accessible for the researchers', bold: false }] },
+      { parts: [{ text: '', bold: false }, { text: 'Free medical & biotech education', bold: true }, { text: ' for those who want to study aging', bold: false }] },
+      { parts: [{ text: '', bold: false }, { text: 'Include health checkups', bold: true }, { text: ' into government heath insurance', bold: false }] },
+      { parts: [{ text: '', bold: false }, { text: 'Specific non-dilutive funding', bold: true }, { text: ' for biotech startup to do risky breakthroughs', bold: false }] },
+    ],
+    [Locale.SV]: [
+      { parts: [{ text: 'Parlamenten måste ', bold: false }, { text: 'skapa anti-åldrandekommissioner', bold: true }, { text: ' för att förespråka livslängdsförlängning', bold: false }] },
+      { parts: [{ text: '', bold: false }, { text: 'Klassificera åldrande som en sjukdom', bold: true }, { text: ', så att forskning och terapeutika kan riktas', bold: false }] },
+      { parts: [{ text: '', bold: false }, { text: 'Genredigering legaliserad för forskningen', bold: true }, { text: ' med etisk kommissionsgodkännande', bold: false }] },
+      { parts: [{ text: '', bold: false }, { text: 'Förenkla mänskliga försök', bold: true }, { text: ' för anti-åldrandeterapeutika', bold: false }] },
+      { parts: [{ text: '', bold: false }, { text: '1% av landets budget till anti-åldrandeinfrastruktur ', bold: true }, { text: '(biobanker, forskningsanläggningar), vetenskapliga, startup- och utbildningsprogram', bold: false }] },
+      { parts: [{ text: '', bold: false }, { text: 'Sätt upp offentliga biobanker med omfattande data', bold: true }, { text: ', avgörande för åldrandestudier och gör dem tillgängliga för forskare', bold: false }] },
+      { parts: [{ text: '', bold: false }, { text: 'Gratis medicinsk och bioteknikutbildning', bold: true }, { text: ' för dem som vill studera åldrande', bold: false }] },
+      { parts: [{ text: '', bold: false }, { text: 'Inkludera hälsokontroller', bold: true }, { text: ' i statlig hälsoförsäkring', bold: false }] },
+      { parts: [{ text: '', bold: false }, { text: 'Specifik icke-spädande finansiering', bold: true }, { text: ' för biotekstartup för att göra riskfyllda genombrott', bold: false }] },
+    ],
   },
 } as const;
 

@@ -2,12 +2,13 @@ import { SecondaryHero } from '@/components/Hero';
 import { Sidebar } from '@/components/Sidebar';
 import { H2, P } from '@/components/Typography';
 import { Card } from '@/components/Card';
-import { FormSection } from '@/components/FormSection';
+import { PartnerForm } from '@/components/PartnerForm';
 import { Section } from '@/components/Section';
 import { Wrapper } from '@/components/Wrapper';
 import { DiscordIcon } from '@/lib/icons';
 import { Locale } from '@/lib/types';
 import { aboutTranslations } from './translations';
+import { mailchimpConfig, discordUrl } from '@/lib/config';
 
 interface AboutPageProps {
   params: Promise<{ lang: string }>;
@@ -32,9 +33,7 @@ export default async function AboutPage({ params }: AboutPageProps): Promise<JSX
 
   return (
     <div>
-      <SecondaryHero
-        title={aboutTranslations.hero.title[locale]}
-      />
+      <SecondaryHero title={aboutTranslations.hero.title[locale]} />
 
       <Section className="flex flex-row justify-center">
         <Wrapper>
@@ -107,7 +106,7 @@ export default async function AboutPage({ params }: AboutPageProps): Promise<JSX
                   <div className="flex gap-8">
                     <div className="flex-1">
                       <a
-                        href="https://discord.gg/fundlongevity"
+                        href={discordUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700"
@@ -128,12 +127,10 @@ export default async function AboutPage({ params }: AboutPageProps): Promise<JSX
                       <P>Is your organization already fighting aging? Awesome! We want to help.</P>
                     </div>
                     <div className="flex-1">
-                      <FormSection
+                      <PartnerForm
                         locale={locale}
-                        listId={process.env['NEXT_PUBLIC_MAILCHIMP_LIST_ID_PARTNERS'] || ''}
-                        fields={{ firstName: true, city: true, email: true, phone: true }}
-                        checkboxes={{ joinOffline: true, joinOnline: true, canTakePart: true }}
-                        noCard={true}
+                        listId={mailchimpConfig.listIds.partners}
+                        formId={mailchimpConfig.formIds.partners}
                       />
                     </div>
                   </div>

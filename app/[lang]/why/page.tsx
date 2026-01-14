@@ -22,7 +22,6 @@ export default async function WhyPage({ params }: WhyPageProps): Promise<JSX.Ele
   const { lang } = await params;
   const locale = (lang === 'sv' ? Locale.SV : Locale.EN) as Locale;
 
-  const heroTranslate = getTranslation(whyTranslations.hero, locale);
   const problemTranslate = getTranslation(whyTranslations.sections.problem, locale);
   const personalTranslate = getTranslation(whyTranslations.sections.personal, locale);
   const possibleTranslate = getTranslation(whyTranslations.sections.possible, locale);
@@ -45,11 +44,9 @@ export default async function WhyPage({ params }: WhyPageProps): Promise<JSX.Ele
     { id: 'whyWeAct', label: whyWeActTranslate('title'), href: '/why#whyWeAct' },
   ];
 
-  const heroTitle = heroTranslate('title');
-
   return (
     <div className='flex flex-col gap-18'>
-      <SecondaryHero title={heroTitle} />
+      <SecondaryHero title={whyTranslations.hero.title[locale]} />
 
       <Wrapper>
         <div className="flex gap-16">

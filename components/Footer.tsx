@@ -27,7 +27,7 @@ export function Footer({ locale }: FooterProps): React.ReactElement {
             <Logo />
             <P className="mb-4 text-gray-700">{footer.translate('summary')}</P>
             <a
-              href="https://discord.gg/fundlongevity"
+              href={process.env['DISCORD_URL'] ?? ''}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors"

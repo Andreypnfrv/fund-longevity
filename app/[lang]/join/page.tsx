@@ -2,14 +2,18 @@ import { SecondaryHero } from '@/components/Hero';
 import { Sidebar } from '@/components/Sidebar';
 import { H3, P } from '@/components/Typography';
 import { Card } from '@/components/Card';
-import { FormSection } from '@/components/FormSection';
+import { DemonstrationForm } from '@/components/DemonstrationForm';
+import { MediaForm } from '@/components/MediaForm';
+import { PartnerForm } from '@/components/PartnerForm';
 import { Section } from '@/components/Section';
 import { Wrapper } from '@/components/Wrapper';
 import { Partners } from '@/components/Partners';
 import { DiscordIcon } from '@/lib/icons';
+import { Icon } from '@/components/Icon';
 import { Locale } from '@/lib/types';
 import { joinTranslations } from './translations';
 import { getTranslation } from '@/lib/translate';
+import { mailchimpConfig, discordUrl } from '@/lib/config';
 
 interface JoinPageProps {
   params: Promise<{ lang: string }>;
@@ -23,7 +27,6 @@ export default async function JoinPage({ params }: JoinPageProps): Promise<JSX.E
   const { lang } = await params;
   const locale = (lang === 'sv' ? Locale.SV : Locale.EN) as Locale;
 
-  const heroTranslate = getTranslation(joinTranslations.hero, locale);
   const discordTranslate = getTranslation(joinTranslations.discord, locale);
   const demonstrationTranslate = getTranslation(joinTranslations.demonstration, locale);
   const mediaTranslate = getTranslation(joinTranslations.media, locale);
@@ -41,7 +44,7 @@ export default async function JoinPage({ params }: JoinPageProps): Promise<JSX.E
   return (
     <div>
       <SecondaryHero
-        title={heroTranslate('title')}
+        title={joinTranslations.hero.title[locale]}
         backgroundImage="/images/community.jpg"
       />
 
@@ -50,23 +53,32 @@ export default async function JoinPage({ params }: JoinPageProps): Promise<JSX.E
           <div className="flex gap-8">
             <Sidebar locale={locale} items={sidebarItems} />
 
-            <div className="flex-1 space-y-12">
+            <div className="flex-1 flex flex-col gap-12">
               <section id="discord">
-                <Card>
-                  <div className="flex gap-8">
-                    <div className="flex-1">
-                      <H3>{discordTranslate('title')}</H3>
-                      <P className="mb-6">{discordTranslate('description')}</P>
-                      <a
-                        href="https://discord.gg/fundlongevity"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700"
-                      >
-                        <DiscordIcon />
-                        <span>Join Discord</span>
-                      </a>
-                    </div>
+                <Card className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between md:gap-16">
+                  <div className="flex-1">
+                    <H3>{discordTranslate('title')}</H3>
+                    <P className="mb-0">{discordTranslate('description')}</P>
+                  </div>
+
+                  <div className="flex flex-1 items-center justify-start md:justify-end">
+                    <a
+                      href={discordUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex items-center gap-4 rounded-lg bg-[#5865F2] px-6 py-4 text-white shadow-md transition hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
+                    >
+                      <span className="inline-flex items-center justify-center rounded-full bg-white/15 p-3">
+                        <DiscordIcon size={40} className="text-white" />
+                      </span>
+                      <span className="text-lg font-semibold leading-tight">
+                        Join Discord
+                        <Icon
+                          icon="lucide:arrow-right"
+                          className="ml-2 inline-block align-middle transition-transform group-hover:translate-x-0.5"
+                        />
+                      </span>
+                    </a>
                   </div>
                 </Card>
               </section>
@@ -79,12 +91,10 @@ export default async function JoinPage({ params }: JoinPageProps): Promise<JSX.E
                       <P>{demonstrationTranslate('description')}</P>
                     </div>
                     <div className="flex-1">
-                      <FormSection
+                      <DemonstrationForm
                         locale={locale}
-                        listId={process.env['NEXT_PUBLIC_MAILCHIMP_LIST_ID_DEMONSTRATIONS'] || ''}
-                        fields={{ firstName: true, city: true, email: true, phone: true }}
-                        checkboxes={{ joinOffline: true, joinOnline: true, canTakePart: true }}
-                        noCard={true}
+                        listId={mailchimpConfig.listIds.demonstrations}
+                        formId={mailchimpConfig.formIds.demonstrations}
                       />
                     </div>
                   </div>
@@ -99,11 +109,10 @@ export default async function JoinPage({ params }: JoinPageProps): Promise<JSX.E
                       <P>{mediaTranslate('description')}</P>
                     </div>
                     <div className="flex-1">
-                      <FormSection
+                      <MediaForm
                         locale={locale}
-                        listId={process.env['NEXT_PUBLIC_MAILCHIMP_LIST_ID_MEDIA'] || ''}
-                        fields={{ firstName: true, city: true, email: true, phone: true }}
-                        noCard={true}
+                        listId={mailchimpConfig.listIds.media}
+                        formId={mailchimpConfig.formIds.media}
                       />
                     </div>
                   </div>
@@ -118,12 +127,10 @@ export default async function JoinPage({ params }: JoinPageProps): Promise<JSX.E
                       <P>{partnerTranslate('description')}</P>
                     </div>
                     <div className="flex-1">
-                      <FormSection
+                      <PartnerForm
                         locale={locale}
-                        listId={process.env['NEXT_PUBLIC_MAILCHIMP_LIST_ID_PARTNERS'] || ''}
-                        fields={{ firstName: true, city: true, email: true, phone: true }}
-                        checkboxes={{ joinOffline: true, joinOnline: true, canTakePart: true }}
-                        noCard={true}
+                        listId={mailchimpConfig.listIds.partners}
+                        formId={mailchimpConfig.formIds.partners}
                       />
                     </div>
                   </div>

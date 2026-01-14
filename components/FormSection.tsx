@@ -9,6 +9,7 @@ import { Button } from './Button';
 import { H3, P } from './Typography';
 import { useTranslations } from '@/lib/useTranslations';
 import { globalTranslations } from '@/lib/translations';
+import { mailchimpConfig } from '@/lib/config';
 
 interface FormSectionProps {
   locale: Locale;
@@ -26,7 +27,11 @@ interface FormSectionProps {
     joinOnline?: boolean;
     canTakePart?: boolean;
   };
+  intentRadio?: boolean;
   noCard?: boolean;
+  mailchimpUserId?: string;
+  mailchimpFormId?: string;
+  mailchimpServer?: string;
 }
 
 export function FormSection({
@@ -36,7 +41,11 @@ export function FormSection({
   listId,
   fields = { firstName: true, city: true, email: true, phone: true },
   checkboxes = {},
+  intentRadio = false,
   noCard = false,
+  mailchimpUserId,
+  mailchimpFormId,
+  mailchimpServer,
 }: FormSectionProps): React.ReactElement {
   const { translate } = useTranslations(globalTranslations.forms, locale);
   const [formData, setFormData] = useState({
@@ -44,6 +53,7 @@ export function FormSection({
     city: '',
     email: '',
     phone: '',
+    intent: '',
     joinOffline: false,
     joinOnline: false,
     canTakePart: false,
@@ -57,26 +67,59 @@ export function FormSection({
     setSubmitStatus('idle');
 
     try {
-      const response = await fetch('/api/mailchimp', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...formData, listId }),
+      const userId = mailchimpUserId || mailchimpConfig.userId;
+      const formId = mailchimpFormId || mailchimpConfig.formId;
+      const server = mailchimpServer || mailchimpConfig.server;
+
+      if (!userId || !listId || !formId) {
+        throw new Error('Mailchimp configuration missing');
+      }
+
+      const formDataToSend = new URLSearchParams();
+      formDataToSend.append('EMAIL', formData.email);
+      if (formData.firstName) formDataToSend.append('FNAME', formData.firstName);
+      if (formData.phone) formDataToSend.append('PHONE', formData.phone);
+      if (formData.intent) formDataToSend.append('INTENT', formData.intent);
+      if (formData.city) formDataToSend.append('MMERGE9', formData.city);
+      formDataToSend.append(`b_${userId}_${listId}`, '');
+
+      const callbackName = `mailchimpCallback_${Date.now()}`;
+      const mailchimpUrl = `https://${server}.list-manage.com/subscribe/post-json?u=${encodeURIComponent(userId)}&id=${encodeURIComponent(listId)}&f_id=${encodeURIComponent(formId)}&${formDataToSend.toString()}&c=${encodeURIComponent(callbackName)}`;
+
+      await new Promise<void>((resolve, reject) => {
+        (window as any)[callbackName] = (data: { result?: string; msg?: string }) => {
+          delete (window as any)[callbackName];
+          const script = document.getElementById(`mailchimp-script-${callbackName}`);
+          if (script) script.remove();
+
+          if (data.result === 'success') {
+            resolve();
+          } else {
+            reject(new Error(data.msg || 'Subscription failed'));
+          }
+        };
+
+        const script = document.createElement('script');
+        script.id = `mailchimp-script-${callbackName}`;
+        script.src = mailchimpUrl;
+        script.onerror = () => {
+          delete (window as any)[callbackName];
+          reject(new Error('Network error'));
+        };
+        document.body.appendChild(script);
       });
 
-      if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({
-          firstName: '',
-          city: '',
-          email: '',
-          phone: '',
-          joinOffline: false,
-          joinOnline: false,
-          canTakePart: false,
-        });
-      } else {
-        setSubmitStatus('error');
-      }
+      setSubmitStatus('success');
+      setFormData({
+        firstName: '',
+        city: '',
+        email: '',
+        phone: '',
+        intent: '',
+        joinOffline: false,
+        joinOnline: false,
+        canTakePart: false,
+      });
     } catch (error) {
       console.error('Form submission error:', error);
       setSubmitStatus('error');
@@ -195,6 +238,56 @@ export function FormSection({
             <label htmlFor="canTakePart" className=" text-base">
               {translate('canTakePart')}
             </label>
+          </div>
+        )}
+
+        {intentRadio && (
+          <div>
+            <label className="block text-base font-medium mb-2">Intent</label>
+            <div className="space-y-2">
+              <div className="flex items-center">
+                <input
+                  type="radio"
+                  id="intent-in-person"
+                  name="intent"
+                  value="I want to join in-person"
+                  checked={formData.intent === 'I want to join in-person'}
+                  onChange={(e) => setFormData({ ...formData, intent: e.target.value })}
+                  className="mr-2"
+                />
+                <label htmlFor="intent-in-person" className="text-base">
+                  I want to join in-person
+                </label>
+              </div>
+              <div className="flex items-center">
+                <input
+                  type="radio"
+                  id="intent-online"
+                  name="intent"
+                  value="I want to join online"
+                  checked={formData.intent === 'I want to join online'}
+                  onChange={(e) => setFormData({ ...formData, intent: e.target.value })}
+                  className="mr-2"
+                />
+                <label htmlFor="intent-online" className="text-base">
+                  I want to join online
+                </label>
+              </div>
+              <div className="flex items-center">
+                <input
+                  type="radio"
+                  id="intent-organisation"
+                  name="intent"
+                  value="I can take part in organisation"
+                  checked={formData.intent === 'I can take part in organisation'}
+                  onChange={(e) => setFormData({ ...formData, intent: e.target.value })}
+                  className="mr-2"
+                />
+                <label htmlFor="intent-organisation" className="text-base">
+                  I can take part in organisation
+                </label>
+              </div>
+            </div>
           </div>
         )}
 

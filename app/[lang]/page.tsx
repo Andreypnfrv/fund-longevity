@@ -47,9 +47,7 @@ export default async function HomePage({ params }: HomePageProps): Promise<JSX.E
   return (
     <div>
       <Hero
-        title={hero('title')}
-        subtitle={hero('subtitle')}
-        backgroundImage="/hero.png"
+        backgroundImage="/hero1.png"
       />
       <Section>
         <Wrapper className='text-center py-20'>

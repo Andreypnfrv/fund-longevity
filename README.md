@@ -29,6 +29,26 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
+## Environment Variables
+
+Create a `.env.local` file in the root directory with the following variables:
+
+```
+NEXT_PUBLIC_MAILCHIMP_USER_ID=your_user_id
+NEXT_PUBLIC_MAILCHIMP_SERVER=us16
+NEXT_PUBLIC_MAILCHIMP_FORM_ID=your_form_id
+NEXT_PUBLIC_MAILCHIMP_LIST_ID_DEMONSTRATIONS=your_demonstrations_list_id
+NEXT_PUBLIC_MAILCHIMP_LIST_ID_MEDIA=your_media_list_id
+NEXT_PUBLIC_MAILCHIMP_LIST_ID_PARTNERS=your_partners_list_id
+DISCORD_URL=your_discord_invite_url
+```
+
+These values can be extracted from your Mailchimp form embed code URL:
+- `NEXT_PUBLIC_MAILCHIMP_USER_ID`: The `u` parameter in the form URL
+- `NEXT_PUBLIC_MAILCHIMP_SERVER`: The server prefix (e.g., `us16`)
+- `NEXT_PUBLIC_MAILCHIMP_FORM_ID`: The `f_id` parameter in the form URL
+- `NEXT_PUBLIC_MAILCHIMP_LIST_ID_*`: The `id` parameter for each list
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.

@@ -1,13 +1,17 @@
 import { SecondaryHero } from '@/components/Hero';
 import { Sidebar } from '@/components/Sidebar';
-import { H2, H3, P } from '@/components/Typography';
+import { H2, H3, H4, P } from '@/components/Typography';
 import { Card } from '@/components/Card';
-import { FormSection } from '@/components/FormSection';
-import { Section } from '@/components/Section';
+import { DemonstrationForm } from '@/components/DemonstrationForm';
+import { Section, TextSection } from '@/components/Section';
+import { Content } from '@/components/Content';
 import { Wrapper } from '@/components/Wrapper';
-import { DiscordIcon } from '@/lib/icons';
+import { HowCanYouHelp } from '@/components/HowCanYouHelp';
 import { Locale } from '@/lib/types';
 import { demonstrationsTranslations } from './translations';
+import { getTranslation } from '@/lib/translate';
+import { homeTranslations } from '../translations';
+import { mailchimpConfig } from '@/lib/config';
 
 interface DemonstrationsPageProps {
   params: Promise<{ lang: string }>;
@@ -21,100 +25,73 @@ export default async function DemonstrationsPage({ params }: DemonstrationsPageP
   const { lang } = await params;
   const locale = (lang === 'sv' ? Locale.SV : Locale.EN) as Locale;
 
+  const overviewTranslate = getTranslation(demonstrationsTranslations.sections.overview, locale);
+  const behaviorTranslate = getTranslation(demonstrationsTranslations.sections.behavior, locale);
+  const signsTranslate = getTranslation(demonstrationsTranslations.sections.signs, locale);
+  const howCanYouHelp = getTranslation(homeTranslations.howCanYouHelp, locale);
+  const buttons = getTranslation(homeTranslations.buttons, locale);
+
   const sidebarItems = [
-    { id: 'overview', label: 'Overview', href: '/demonstrations#overview' },
+    { id: 'overview', label: overviewTranslate('title'), href: '/demonstrations#overview' },
     { id: 'nextDemo', label: demonstrationsTranslations.nextDemo[locale], href: '/demonstrations#nextDemo' },
-    { id: 'behavior', label: demonstrationsTranslations.behavior[locale], href: '/demonstrations#behavior' },
-    { id: 'signs', label: demonstrationsTranslations.signs[locale], href: '/demonstrations#signs' },
-    { id: 'discord', label: 'Discord Community', href: '/demonstrations#discord' },
+    { id: 'behavior', label: behaviorTranslate('title'), href: '/demonstrations#behavior' },
+    { id: 'signs', label: signsTranslate('title'), href: '/demonstrations#signs' },
   ];
 
   return (
-    <div>
-      <SecondaryHero
-        title={demonstrationsTranslations.hero.title[locale]}
-      />
+    <div className='flex flex-col gap-18'>
+      <SecondaryHero title={demonstrationsTranslations.hero.title[locale]} />
 
-      <Section className="flex flex-row justify-center">
-        <Wrapper>
-          <div className="flex gap-8">
-            <Sidebar locale={locale} items={sidebarItems} />
+      <Wrapper>
+        <div className="flex gap-16">
+          <Sidebar locale={locale} items={sidebarItems} />
+          <Content>
+            <TextSection id="overview" className="pt-8 pb-12">
+              <H2>{overviewTranslate('title')}</H2>
+              <H3 className="text-lg md:text-xl lg:text-2xl">
+                {overviewTranslate('content')}
+              </H3>
+            </TextSection>
 
-            <div className="flex-1 space-y-12">
-              <section id="overview">
-                <Card>
-                  <div className="flex gap-8">
-                    <div className="flex-1">
-                      <P>{demonstrationsTranslations.simple[locale]}</P>
-                      <P>{demonstrationsTranslations.localLead[locale]}</P>
-                      <P>{demonstrationsTranslations.liveStream[locale]}</P>
-                    </div>
+            <section id="nextDemo">
+              <Card>
+                <div className="flex gap-8">
+                  <div className="flex-1">
+                    <H2>{demonstrationsTranslations.nextDemo[locale]}</H2>
+                    <P>{demonstrationsTranslations.hero.title[locale]}</P>
                   </div>
-                </Card>
-              </section>
-
-              <section id="nextDemo">
-                <Card>
-                  <div className="flex gap-8">
-                    <div className="flex-1">
-                      <H2>{demonstrationsTranslations.nextDemo[locale]}</H2>
-                      <P>{demonstrationsTranslations.hero.title[locale]}</P>
-                    </div>
-                    <div className="flex-1">
-                      <FormSection
-                        locale={locale}
-                        listId={process.env['NEXT_PUBLIC_MAILCHIMP_LIST_ID_DEMONSTRATIONS'] || ''}
-                        fields={{ firstName: true, city: true, email: true, phone: true }}
-                        checkboxes={{ joinOffline: true, joinOnline: true, canTakePart: true }}
-                        noCard={true}
-                      />
-                    </div>
+                  <div className="flex-1">
+                    <DemonstrationForm
+                      locale={locale}
+                      listId={mailchimpConfig.listIds.demonstrations}
+                      formId={mailchimpConfig.formIds.demonstrations}
+                    />
                   </div>
-                </Card>
-              </section>
+                </div>
+              </Card>
+            </section>
 
-              <section id="behavior">
-                <Card>
-                  <div className="flex gap-8">
-                    <div className="flex-1">
-                      <H3>{demonstrationsTranslations.behavior[locale]}</H3>
-                      <P>Guidelines for demonstration behavior...</P>
-                    </div>
-                  </div>
-                </Card>
-              </section>
+            <TextSection id="behavior">
+              <H4>{behaviorTranslate('title')}</H4>
+              <P>{behaviorTranslate('content')}</P>
+            </TextSection>
 
-              <section id="signs">
-                <Card>
-                  <div className="flex gap-8">
-                    <div className="flex-1">
-                      <H3>{demonstrationsTranslations.signs[locale]}</H3>
-                      <P>Sign gallery with screenshots and PDF downloads...</P>
-                    </div>
-                  </div>
-                </Card>
-              </section>
+            <TextSection id="signs">
+              <H4>{signsTranslate('title')}</H4>
+              <P>{signsTranslate('content')}</P>
+            </TextSection>
 
-              <section id="discord">
-                <Card>
-                  <div className="flex gap-8">
-                    <div className="flex-1">
-                      <a
-                        href="https://discord.gg/fundlongevity"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700"
-                      >
-                        <DiscordIcon />
-                        <span>Join Discord Community</span>
-                      </a>
-                    </div>
-                  </div>
-                </Card>
-              </section>
-            </div>
-          </div>
-        </Wrapper>
+          </Content>
+        </div>
+      </Wrapper>
+      <Section>
+        <HowCanYouHelp
+          locale={locale}
+          title={howCanYouHelp('title')}
+          description={howCanYouHelp('description')}
+          joinDiscordLabel={buttons('joinDiscord')}
+          getInvolvedLabel={buttons('getInvolved')}
+        />
       </Section>
     </div>
   );
