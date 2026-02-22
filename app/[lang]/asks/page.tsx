@@ -4,6 +4,8 @@ import { Card } from '@/components/Card';
 import { Section } from '@/components/Section';
 import { HowCanYouHelp } from '@/components/HowCanYouHelp';
 import { Wrapper } from '@/components/Wrapper';
+import { CopyLinkButton } from '@/components/CopyLinkButton';
+import { ImagePair } from '@/components/ImagePair';
 import { Locale } from '@/lib/types';
 import { asksTranslations } from './translations';
 import { homeTranslations } from '../translations';
@@ -26,12 +28,19 @@ export default async function AsksPage({ params }: AsksPageProps): Promise<JSX.E
 
   return (
     <div>
-      <SecondaryHero title={asksTranslations.hero.title[locale]} />
+      <SecondaryHero 
+        title={asksTranslations.hero.title[locale]} 
+        subtitle={asksTranslations.hero.subtitle[locale]}
+        backgroundImage="/NASDAQ.jpg" 
+        height="80vh"
+        backgroundPosition="top right"
+      />
 
       <Section>
-        <Wrapper>
-          <div className="flex justify-center">
-            <div className="max-w-3xl w-full space-y-20">
+        <div className="pt-16 md:pt-20">
+          <Wrapper>
+            <div className="flex justify-center">
+            <div className="max-w-3xl w-full space-y-8 md:space-y-20">
 
               <Card>
                 <H2 className="mb-8 text-center">{asksTranslations.pageTitle[locale]}</H2>
@@ -56,18 +65,33 @@ export default async function AsksPage({ params }: AsksPageProps): Promise<JSX.E
               </P>
             </div>
           </div>
+          </Wrapper>
+        </div>
+      </Section>
+
+      <Section>
+        <Wrapper>
+          <ImagePair 
+            image1="/Politics1.png" 
+            image2="/Politics2.png"
+            alt1="Politics 1"
+            alt2="Politics 2"
+          />
         </Wrapper>
       </Section>
 
       <Section>
-        <HowCanYouHelp
-          locale={locale}
-          title={howCanYouHelp('title')}
-          description={howCanYouHelp('description')}
-          joinDiscordLabel={buttons('joinDiscord')}
-          getInvolvedLabel={buttons('getInvolved')}
-        />
+        <Wrapper>
+          <HowCanYouHelp
+            locale={locale}
+            title={howCanYouHelp('title')}
+            description={howCanYouHelp('description')}
+            joinDiscordLabel={buttons('joinDiscord')}
+            getInvolvedLabel={buttons('getInvolved')}
+          />
+        </Wrapper>
       </Section>
+      <CopyLinkButton />
     </div>
   );
 }

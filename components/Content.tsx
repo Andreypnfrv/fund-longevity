@@ -8,7 +8,7 @@ interface ContentProps {
 
 export function Content({ children, className = '' }: ContentProps): React.ReactElement {
   return (
-    <div className={cn('flex-1 flex flex-col gap-16 pb-16', className)}>
+    <div className={cn('flex-1 flex flex-col gap-8 md:gap-16 pb-8 md:pb-16', className)}>
       {children}
     </div>
   );

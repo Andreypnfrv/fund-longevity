@@ -10,12 +10,8 @@ interface WrapperProps {
 export function Wrapper({ children, className = '', style }: WrapperProps): React.ReactElement {
   return (
     <div 
-      className={cn('w-full mx-auto', className)} 
-      style={{
-        paddingLeft: 'clamp(1rem, 4vw, 5rem)',
-        paddingRight: 'clamp(1rem, 4vw, 5rem)',
-        ...style,
-      }}
+      className={cn('w-full mx-auto px-4 md:px-8 lg:px-16 xl:px-24', className)} 
+      style={style}
     >
       {children}
     </div>

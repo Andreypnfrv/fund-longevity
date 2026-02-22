@@ -1,24 +1,21 @@
-import React, { type ReactNode } from 'react';
-import { Wrapper } from './Wrapper';
+import React, { type ReactNode, type CSSProperties } from 'react';
 import { cn } from '@/lib/utils';
 
 interface SectionProps {
   children: ReactNode;
   className?: string;
-  wrapperClassName?: string;
   id?: string;
+  style?: CSSProperties;
 }
 
-export function Section({ children, className = '', wrapperClassName = '', id }: SectionProps): React.ReactElement {
+export function Section({ children, className = '', id, style }: SectionProps): React.ReactElement {
   return (
     <section 
       id={id}
       className={cn('w-full flex flex-row justify-center', className)}
-      style={{ paddingTop: '4rem', paddingBottom: '4rem' }}
+      style={{ paddingTop: '100px', paddingBottom: '100px', ...style }}
     >
-      <Wrapper className={wrapperClassName}>
-        {children}
-      </Wrapper>
+      {children}
     </section>
   );
 }

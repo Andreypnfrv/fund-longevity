@@ -12,6 +12,9 @@ export enum Fill {
   Secondary = 'secondary',
   Outline = 'outline',
   Ghost = 'ghost',
+  Blue = 'blue',
+  Violet = 'violet',
+  Green = 'green',
 }
 
 export const buttonSizes = {
@@ -28,22 +31,22 @@ export const buttonSizes = {
     fontSize: '0.875rem',
   },
   [Size.MD]: {
-    paddingX: '1rem',
-    paddingY: '0.5rem',
-    height: '2.5rem',
-    fontSize: '1rem',
-  },
-  [Size.LG]: {
     paddingX: '1.5rem',
     paddingY: '0.75rem',
     height: '3rem',
     fontSize: '1.125rem',
   },
-  [Size.XL]: {
+  [Size.LG]: {
     paddingX: '2rem',
-    paddingY: '1rem',
-    height: '3.5rem',
+    paddingY: '1.25rem',
+    height: '3.75rem',
     fontSize: '1.25rem',
+  },
+  [Size.XL]: {
+    paddingX: '2.5rem',
+    paddingY: '1.5rem',
+    height: '4.5rem',
+    fontSize: '1.5rem',
   },
   [Size.XXL]: {
     paddingX: '2.5rem',
@@ -51,4 +54,9 @@ export const buttonSizes = {
     height: '4rem',
     fontSize: '1.5rem',
   },
+};
+
+export const navigationColors = {
+  active: 'bg-blue-50 text-blue-700 font-semibold',
+  inactive: 'text-gray-700 hover:bg-gray-50 hover:text-blue-600',
 };

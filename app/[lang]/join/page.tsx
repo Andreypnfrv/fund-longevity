@@ -13,7 +13,7 @@ import { Icon } from '@/components/Icon';
 import { Locale } from '@/lib/types';
 import { joinTranslations } from './translations';
 import { getTranslation } from '@/lib/translate';
-import { mailchimpConfig, discordUrl } from '@/lib/config';
+import { mailchimpConfig, discordUrl, PARTNERS } from '@/lib/config';
 
 interface JoinPageProps {
   params: Promise<{ lang: string }>;
@@ -45,12 +45,14 @@ export default async function JoinPage({ params }: JoinPageProps): Promise<JSX.E
     <div>
       <SecondaryHero
         title={joinTranslations.hero.title[locale]}
-        backgroundImage="/images/community.jpg"
+        subtitle={joinTranslations.hero.subtitle[locale]}
+        backgroundImage="/HowCanUHelp.jpg"
+        height="70vh"
       />
 
       <Section className="flex flex-row justify-center">
         <Wrapper>
-          <div className="flex gap-8">
+          <div className="flex flex-col lg:flex-row gap-8">
             <Sidebar locale={locale} items={sidebarItems} />
 
             <div className="flex-1 flex flex-col gap-12">
@@ -85,7 +87,7 @@ export default async function JoinPage({ params }: JoinPageProps): Promise<JSX.E
 
               <section id="demonstration">
                 <Card>
-                  <div className="flex gap-8">
+                  <div className="flex flex-col md:flex-row gap-8">
                     <div className="flex-1">
                       <H3>{demonstrationTranslate('title')}</H3>
                       <P>{demonstrationTranslate('description')}</P>
@@ -103,7 +105,7 @@ export default async function JoinPage({ params }: JoinPageProps): Promise<JSX.E
 
               <section id="media">
                 <Card>
-                  <div className="flex gap-8">
+                  <div className="flex flex-col md:flex-row gap-8">
                     <div className="flex-1">
                       <H3>{mediaTranslate('title')}</H3>
                       <P>{mediaTranslate('description')}</P>
@@ -121,7 +123,7 @@ export default async function JoinPage({ params }: JoinPageProps): Promise<JSX.E
 
               <section id="partner">
                 <Card>
-                  <div className="flex gap-8">
+                  <div className="flex flex-col md:flex-row gap-8">
                     <div className="flex-1">
                       <H3>{partnerTranslate('title')}</H3>
                       <P>{partnerTranslate('description')}</P>
@@ -137,11 +139,11 @@ export default async function JoinPage({ params }: JoinPageProps): Promise<JSX.E
                 </Card>
               </section>
 
-              <section id="partners">
+              <section id="partners" className="mt-24">
                 <Partners
                   locale={locale}
                   title={partnersTranslate('title')}
-                  partners={['Vitalism', 'Longevity Biotech Fellowship', 'Swedish longevity cluster']}
+                  partners={PARTNERS}
                 />
               </section>
             </div>

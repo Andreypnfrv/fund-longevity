@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import type { Locale } from '@/lib/types';
 import { Link } from './Link';
 import { cn } from '@/lib/utils';
+import { navigationColors } from '@/lib/theme';
 
 interface SidebarItem {
   id: string;
@@ -105,7 +106,7 @@ export function Sidebar({ locale, items, activeId: propActiveId }: SidebarProps)
   const currentActiveId = propActiveId || activeId;
 
   return (
-    <aside className="w-64 border-l border-gray-200 sticky top-24 self-start">
+    <aside className="hidden lg:block w-64 border-l border-gray-200 sticky top-24 self-start">
       <nav>
         <ul className="space-y-6">
           {items.map((item) => (
@@ -116,8 +117,8 @@ export function Sidebar({ locale, items, activeId: propActiveId }: SidebarProps)
                 className={cn(
                   'block w-full px-3 py-3 rounded-md text-xl transition-colors',
                   currentActiveId === item.id
-                    ? 'bg-blue-50 text-blue-700 font-semibold'
-                    : 'text-gray-700 hover:bg-gray-50 hover:text-blue-600'
+                    ? navigationColors.active
+                    : navigationColors.inactive
                 )}
               >
                 {item.label}

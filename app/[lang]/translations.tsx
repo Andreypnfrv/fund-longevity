@@ -14,18 +14,22 @@ export const homeTranslations = {
   },
   whyAging: {
     title: {
-      [Locale.EN]: 'Why Longevity',
-      [Locale.SV]: 'Varför långlivet',
+      [Locale.EN]: 'Why Aging',
+      [Locale.SV]: 'Varför åldrande',
     },
-    description: {
-      [Locale.EN]: 'Funding longevity science aims to cure aging, the largest cause of suffering, death and sickness. It\'s a humanitarian emergency - that can and should be solved.',
-      [Locale.SV]: 'Att finansiera långlivetsvetenskap är att bota åldrande, som den största orsaken till lidande, död och sjukdom. Det är en humanitär nödsituation - som kan och bör lösas.',
+    description1: {
+      [Locale.EN]: 'Aging is by far the largest cause of suffering, death and sickness.',
+      [Locale.SV]: 'Åldrande är den överlägset största orsaken till lidande, död och sjukdom.',
+    },
+    description2: {
+      [Locale.EN]: 'It\'s a humanitarian emergency - that can and should be solved.',
+      [Locale.SV]: 'Det är en humanitär nödsituation - som kan och bör lösas.',
     },
   },
   demonstrations: {
     title: {
-      [Locale.EN]: 'How will the demonstrations work',
-      [Locale.SV]: 'Hur kommer demonstrationerna att fungera',
+      [Locale.EN]: 'How will this work?',
+      [Locale.SV]: 'Hur kommer detta att fungera?',
     },
     description: {
       [Locale.EN]: 'Learn how our demonstrations work and how you can participate.',
@@ -34,8 +38,8 @@ export const homeTranslations = {
   },
   howCanYouHelp: {
     title: {
-      [Locale.EN]: 'How can you help',
-      [Locale.SV]: 'Hur kan du hjälpa',
+      [Locale.EN]: 'How you can help',
+      [Locale.SV]: 'Hur du kan hjälpa',
     },
     description: {
       [Locale.EN]: 'Join us in the fight against aging. There are many ways to contribute.',
@@ -50,6 +54,10 @@ export const homeTranslations = {
     description: {
       [Locale.EN]: 'Learn more about our mission and the team behind Fund Longevity.',
       [Locale.SV]: 'Läs mer om vårt uppdrag och teamet bakom Fund Longevity.',
+    },
+    subtitle: {
+      [Locale.EN]: 'Fund Longevity is a grass-roots, non-profit movement to fight aging via public events.',
+      [Locale.SV]: 'Fund Longevity är en gräsrotsrörelse, ideell rörelse för att bekämpa åldrande via offentliga evenemang.',
     },
   },
   buttons: {

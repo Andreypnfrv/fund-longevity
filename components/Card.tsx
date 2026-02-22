@@ -8,7 +8,7 @@ interface CardProps {
 
 export function Card({ children, className = '' }: CardProps): React.ReactElement {
   return (
-    <div className={cn('border-2 border-black rounded-lg p-8 bg-white shadow-md', className)}>
+    <div className={cn('border-2 border-black rounded-lg p-4 md:p-8 bg-white shadow-md', className)}>
       {children}
     </div>
   );

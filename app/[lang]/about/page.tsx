@@ -1,14 +1,15 @@
-import { SecondaryHero } from '@/components/Hero';
+import Image from 'next/image';
+import { H1, H2, H3, P } from '@/components/Typography';
 import { Sidebar } from '@/components/Sidebar';
-import { H2, P } from '@/components/Typography';
-import { Card } from '@/components/Card';
-import { PartnerForm } from '@/components/PartnerForm';
+import { Content } from '@/components/Content';
+import { Partners } from '@/components/Partners';
 import { Section } from '@/components/Section';
 import { Wrapper } from '@/components/Wrapper';
-import { DiscordIcon } from '@/lib/icons';
 import { Locale } from '@/lib/types';
 import { aboutTranslations } from './translations';
-import { mailchimpConfig, discordUrl } from '@/lib/config';
+import { PARTNERS } from '@/lib/config';
+import { TEAM_DATA } from '@/lib/team';
+import { Icon } from '@/components/Icon';
 
 interface AboutPageProps {
   params: Promise<{ lang: string }>;
@@ -23,123 +24,96 @@ export default async function AboutPage({ params }: AboutPageProps): Promise<JSX
   const locale = (lang === 'sv' ? Locale.SV : Locale.EN) as Locale;
 
   const sidebarItems = [
-    { id: 'about', label: aboutTranslations.hero.title[locale], href: '/about#about' },
-    { id: 'coreTeam', label: aboutTranslations.coreTeam.title[locale], href: '/about#coreTeam' },
-    { id: 'advisors', label: aboutTranslations.advisors.title[locale], href: '/about#advisors' },
     { id: 'localLeads', label: aboutTranslations.localLeads.title[locale], href: '/about#localLeads' },
-    { id: 'discord', label: 'Discord Community', href: '/about#discord' },
     { id: 'partners', label: aboutTranslations.partners.title[locale], href: '/about#partners' },
   ];
 
   return (
-    <div>
-      <SecondaryHero title={aboutTranslations.hero.title[locale]} />
-
-      <Section className="flex flex-row justify-center">
+    <div className='flex flex-col gap-8 md:gap-18 pt-16 md:pt-20'>
+      <Section>
         <Wrapper>
-          <div className="flex gap-8">
-            <Sidebar locale={locale} items={sidebarItems} />
-
-            <div className="flex-1 space-y-12">
-              <section id="about">
-                <Card>
-                  <div className="flex gap-8">
-                    <div className="flex-1">
-                      <P>{aboutTranslations.about[locale]}</P>
-                    </div>
-                  </div>
-                </Card>
-              </section>
-
-              <section id="coreTeam">
-                <Card>
-                  <div className="flex gap-8">
-                    <div className="flex-1">
-                      <H2>{aboutTranslations.coreTeam.title[locale]}</H2>
-                      <ul className="space-y-2">
-                        <li>
-                          <P>Andrei Panferov</P>
-                        </li>
-                        <li>
-                          <P>Linus Petersson</P>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </Card>
-              </section>
-
-              <section id="advisors">
-                <Card>
-                  <div className="flex gap-8">
-                    <div className="flex-1">
-                      <H2>{aboutTranslations.advisors.title[locale]}</H2>
-                      <P>Advisors section...</P>
-                    </div>
-                  </div>
-                </Card>
-              </section>
-
-              <section id="localLeads">
-                <Card>
-                  <div className="flex gap-8">
-                    <div className="flex-1">
-                      <H2>{aboutTranslations.localLeads.title[locale]}</H2>
-                      <ul className="space-y-2">
-                        <li>
-                          <P>Stockholm</P>
-                        </li>
-                        <li>
-                          <P>Berlin</P>
-                        </li>
-                        <li>
-                          <P>Paris</P>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </Card>
-              </section>
-
-              <section id="discord">
-                <Card>
-                  <div className="flex gap-8">
-                    <div className="flex-1">
-                      <a
-                        href={discordUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700"
-                      >
-                        <DiscordIcon />
-                        <span>Join Discord Community</span>
-                      </a>
-                    </div>
-                  </div>
-                </Card>
-              </section>
-
-              <section id="partners">
-                <Card>
-                  <div className="flex gap-8">
-                    <div className="flex-1">
-                      <H2>{aboutTranslations.partners.title[locale]}</H2>
-                      <P>Is your organization already fighting aging? Awesome! We want to help.</P>
-                    </div>
-                    <div className="flex-1">
-                      <PartnerForm
-                        locale={locale}
-                        listId={mailchimpConfig.listIds.partners}
-                        formId={mailchimpConfig.formIds.partners}
-                      />
-                    </div>
-                  </div>
-                </Card>
-              </section>
-            </div>
+          <div>
+            <H1 display className="mb-20 text-black whitespace-pre-line">{aboutTranslations.hero.title[locale]}</H1>
+            <P className="text-4xl text-black opacity-90 whitespace-pre-line">{aboutTranslations.hero.subtitle[locale]}</P>
           </div>
         </Wrapper>
       </Section>
+
+      <Wrapper>
+        <div className="flex flex-col lg:flex-row gap-16">
+          <Sidebar locale={locale} items={sidebarItems} />
+          <Content>
+            <section id="localLeads">
+                <div className="py-8 bg-white">
+                  <H2 className="mb-6">{aboutTranslations.localLeads.title[locale]}</H2>
+                  {TEAM_DATA.cities.map((cityGroup) => (
+                    <div key={cityGroup.city} className="mb-12">
+                      <H3 className="mb-6">{cityGroup.city}</H3>
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {cityGroup.members.map((member) => (
+                          <div key={member.name} className="bg-white rounded-lg py-6">
+                            <div className="relative w-full aspect-square mb-8 rounded-lg overflow-hidden bg-gray-200 flex items-center justify-center">
+                              {member.image ? (
+                                <Image
+                                  src={member.image}
+                                  alt={member.name}
+                                  fill
+                                  className="object-cover rounded-lg"
+                                />
+                              ) : (
+                                <span className="text-gray-400 text-sm">{member.name}</span>
+                              )}
+                            </div>
+                            <div className="mb-2">
+                              <h3 className="text-2xl font-bold">{member.name}</h3>
+                              <span className="text-base text-gray-600">{member.location}</span>
+                            </div>
+                            {member.description && <P className="mb-4">{member.description}</P>}
+                            <div className="flex gap-3">
+                              {member.socialLinks?.linkedin && (
+                                <a href={member.socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-colors">
+                                  <Icon icon="mdi:linkedin" width={20} height={20} />
+                                </a>
+                              )}
+                              {member.socialLinks?.x && (
+                                <a href={member.socialLinks.x} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-colors">
+                                  <Icon icon="simple-icons:x" width={20} height={20} />
+                                </a>
+                              )}
+                              {member.socialLinks?.website && (
+                                <a href={member.socialLinks.website} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-colors">
+                                  <Icon icon="mdi:web" width={20} height={20} />
+                                </a>
+                              )}
+                              {member.socialLinks?.telegram && (
+                                <a href={member.socialLinks.telegram} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-colors">
+                                  <Icon icon="mdi:telegram" width={20} height={20} />
+                                </a>
+                              )}
+                              {member.socialLinks?.github && (
+                                <a href={member.socialLinks.github} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-colors">
+                                  <Icon icon="mdi:github" width={20} height={20} />
+                                </a>
+                              )}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+            </section>
+
+            <section id="partners">
+              <Partners
+                locale={locale}
+                title={aboutTranslations.partners.title[locale]}
+                partners={PARTNERS}
+              />
+            </section>
+          </Content>
+        </div>
+      </Wrapper>
     </div>
   );
 }

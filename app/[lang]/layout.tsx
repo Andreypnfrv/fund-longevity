@@ -3,7 +3,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { NavigationProvider } from '@/components/NavigationProvider';
 import { Locale } from '@/lib/types';
-import './globals.css';
+import '../globals.css';
 
 interface LayoutProps {
   children: ReactNode;

@@ -2,16 +2,31 @@
 
 import React, { useEffect, useRef } from 'react';
 import { H1, P } from './Typography';
+import { Wrapper } from './Wrapper';
+import { Button } from './Button';
+import { Link } from './Link';
+import { Size, Fill } from '@/lib/theme';
+import type { Locale } from '@/lib/types';
+import { globalTranslations } from '@/lib/translations';
+import { useTranslations } from '@/lib/useTranslations';
 
 interface HeroProps {
   backgroundImage: string;
+  locale: Locale;
 }
 
 export function Hero({
   backgroundImage,
+  locale,
 }: HeroProps): React.ReactElement {
+  const { translate: translateCommon } = useTranslations(globalTranslations.common, locale);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const layerRef = useRef<HTMLDivElement | null>(null);
+  const blueRef = useRef<HTMLHeadingElement | null>(null);
+  const violetRef = useRef<HTMLHeadingElement | null>(null);
+  const greenRef = useRef<HTMLHeadingElement | null>(null);
+  const hasDivergedRef = useRef(false);
+  const lastScrollYRef = useRef(0);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -29,9 +44,56 @@ export function Hero({
       layer.style.transform = `translate3d(0, ${Math.round(y)}px, 0) scale(1.15)`;
     };
 
+    const triggerDiverge = () => {
+      if (hasDivergedRef.current) return;
+      if (blueRef.current && violetRef.current && greenRef.current) {
+        blueRef.current.classList.remove('converge-blue');
+        violetRef.current.classList.remove('converge-violet');
+        greenRef.current.classList.remove('converge-green');
+        blueRef.current.classList.add('diverge-blue');
+        violetRef.current.classList.add('diverge-violet');
+        greenRef.current.classList.add('diverge-green');
+        hasDivergedRef.current = true;
+      }
+    };
+
+    const triggerConverge = () => {
+      if (!hasDivergedRef.current) return;
+      if (blueRef.current && violetRef.current && greenRef.current) {
+        blueRef.current.classList.remove('diverge-blue');
+        violetRef.current.classList.remove('diverge-violet');
+        greenRef.current.classList.remove('diverge-green');
+        blueRef.current.classList.add('converge-blue');
+        violetRef.current.classList.add('converge-violet');
+        greenRef.current.classList.add('converge-green');
+        hasDivergedRef.current = false;
+      }
+    };
+
+    const isHeroVisible = () => {
+      if (!container) return false;
+      const rect = container.getBoundingClientRect();
+      return rect.top < window.innerHeight && rect.bottom > 0;
+    };
+
     const onScroll = () => {
       if (raf) return;
       raf = window.requestAnimationFrame(update);
+      
+      const currentScrollY = window.scrollY;
+      const scrollDelta = currentScrollY - lastScrollYRef.current;
+      const isScrollingDown = scrollDelta > 0;
+      const isScrollingUp = scrollDelta < 0;
+      
+      if (isHeroVisible()) {
+        if (isScrollingDown && Math.abs(scrollDelta) > 5 && !hasDivergedRef.current) {
+          triggerDiverge();
+        } else if (isScrollingUp && Math.abs(scrollDelta) > 5 && hasDivergedRef.current) {
+          triggerConverge();
+        }
+      }
+      
+      lastScrollYRef.current = currentScrollY;
     };
 
     update();
@@ -45,7 +107,7 @@ export function Hero({
   }, []);
 
   return (
-    <div ref={containerRef} className="relative min-h-screen overflow-hidden">
+    <div ref={containerRef} className="relative min-h-[50vh] md:min-h-screen overflow-hidden flex flex-col">
       <div
         ref={layerRef}
         className="absolute inset-0"
@@ -60,6 +122,108 @@ export function Hero({
           transform: 'translate3d(0, 0, 0) scale(1.15)',
         }}
       />
+      <div className="relative z-10 flex-1 flex items-start justify-center px-4 pt-16 md:pt-24">
+        <div className="relative inline-block">
+          <h1 className="text-white font-black text-center px-8 py-4 relative z-10 uppercase whitespace-nowrap" style={{ 
+            fontSize: 'clamp(4.48rem, 11.2vw, 13.44rem)', 
+            lineHeight: '1',
+            textShadow: '0 8px 16px rgba(0, 0, 0, 0.9), 0 4px 8px rgba(0, 0, 0, 0.9)',
+            letterSpacing: '-0.02em',
+          }}>
+            FUND LONGEVITY
+          </h1>
+          <h1 ref={blueRef} className="absolute top-0 left-0 font-black text-center px-8 py-4 uppercase whitespace-nowrap converge-blue" style={{ 
+            fontSize: 'clamp(4.48rem, 11.2vw, 13.44rem)', 
+            lineHeight: '1',
+            color: 'rgb(37, 99, 235)',
+            transform: 'translate(320px, 4px)',
+            zIndex: 1,
+            mixBlendMode: 'screen',
+            letterSpacing: '-0.02em',
+          }}>
+            FUND LONGEVITY
+          </h1>
+          <h1 ref={violetRef} className="absolute top-0 left-0 font-black text-center px-8 py-4 uppercase whitespace-nowrap converge-violet" style={{ 
+            fontSize: 'clamp(4.48rem, 11.2vw, 13.44rem)', 
+            lineHeight: '1',
+            color: 'rgb(124, 58, 237)',
+            transform: 'translate(-280px, 5px)',
+            zIndex: 2,
+            mixBlendMode: 'screen',
+            letterSpacing: '-0.02em',
+          }}>
+            FUND LONGEVITY
+          </h1>
+          <h1 ref={greenRef} className="absolute top-0 left-0 font-black text-center px-8 py-4 uppercase whitespace-nowrap converge-green" style={{ 
+            fontSize: 'clamp(4.48rem, 11.2vw, 13.44rem)', 
+            lineHeight: '1',
+            color: 'rgba(34, 197, 94, 0.8)',
+            transform: 'translate(-200px, 3px)',
+            zIndex: 3,
+            mixBlendMode: 'screen',
+            letterSpacing: '-0.02em',
+          }}>
+            FUND LONGEVITY
+          </h1>
+        </div>
+      </div>
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-end w-full px-4 pb-16 gap-9" style={{ paddingTop: '4rem' }}>
+        <p className="text-white font-bold text-2xl md:text-4xl lg:text-6xl w-full whitespace-pre-line text-center px-8 py-6" style={{ 
+          textShadow: '0 0 20px rgba(59, 130, 246, 0.2), 0 0 40px rgba(59, 130, 246, 0.15), 0 4px 8px rgba(0, 0, 0, 0.9), 2px 2px 4px rgba(59, 130, 246, 0.2)',
+          WebkitTextStroke: '1px rgba(59, 130, 246, 0.2)',
+          fontWeight: '700'
+        }}>
+          Aging is by far the largest cause of suffering, death and sickness.{'\n'}It's a humanitarian emergency - that can and should be solved.
+        </p>
+        <div className="flex flex-col sm:flex-row items-center gap-4">
+          <Link href="/about#localLeads" locale={locale}>
+            <Button 
+              size={Size.XXL}
+              fill={Fill.Ghost}
+              className="hover:scale-105 transition-all duration-300 rounded-full"
+              style={{
+                fontSize: 'clamp(1.25rem, 2.5vw, 2rem)',
+                paddingLeft: 'clamp(2.5rem, 5vw, 4rem)',
+                paddingRight: 'clamp(2.5rem, 5vw, 4rem)',
+                paddingTop: 'clamp(1.25rem, 2.5vw, 2rem)',
+                paddingBottom: 'clamp(1.25rem, 2.5vw, 2rem)',
+                height: 'auto',
+                backgroundColor: 'rgba(255, 255, 255, 0.3)',
+                backdropFilter: 'blur(20px) saturate(180%)',
+                WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                color: 'white',
+                textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)',
+              }}
+            >
+              Join us in your city
+            </Button>
+          </Link>
+          <Link href="/why" locale={locale}>
+            <Button 
+              size={Size.XXL}
+              fill={Fill.Ghost}
+              className="hover:scale-105 transition-all duration-300 rounded-full"
+              style={{
+                fontSize: 'clamp(1.25rem, 2.5vw, 2rem)',
+                paddingLeft: 'clamp(2.5rem, 5vw, 4rem)',
+                paddingRight: 'clamp(2.5rem, 5vw, 4rem)',
+                paddingTop: 'clamp(1.25rem, 2.5vw, 2rem)',
+                paddingBottom: 'clamp(1.25rem, 2.5vw, 2rem)',
+                height: 'auto',
+                backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                backdropFilter: 'blur(20px) saturate(180%)',
+                WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+                border: 'none',
+                color: 'white',
+                textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)',
+              }}
+            >
+              {translateCommon('learnMore')}
+            </Button>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
@@ -68,12 +232,16 @@ interface SecondaryHeroProps {
   title: string;
   subtitle?: string;
   backgroundImage?: string;
+  height?: string;
+  backgroundPosition?: string;
 }
 
 export function SecondaryHero({
   title,
   subtitle,
   backgroundImage,
+  height = '40vh',
+  backgroundPosition = 'top center',
 }: SecondaryHeroProps): React.ReactElement {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const layerRef = useRef<HTMLDivElement | null>(null);
@@ -111,20 +279,44 @@ export function SecondaryHero({
     };
   }, [backgroundImage]);
 
-  const backgroundStyle = backgroundImage
-    ? { backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }
-    : {};
-
   return (
     <div
       ref={containerRef}
-      className="relative min-h-[40vh] flex items-center justify-center"
-      style={backgroundStyle}
+      className="relative flex overflow-hidden min-h-[40vh] md:min-h-[50vh]"
+      style={height ? { minHeight: height } : undefined}
     >
-      <div className="absolute inset-0 bg-blue-600 bg-opacity-80" />
-      <div className="relative z-10 container mx-auto px-4 text-center text-white">
-        <H1 display className="mb-4 text-white whitespace-pre-line">{title}</H1>
-        {subtitle && <P className="text-xl text-white opacity-90">{subtitle}</P>}
+      {backgroundImage && (
+        <div
+          ref={layerRef}
+          className="absolute inset-0 z-0"
+          aria-hidden
+          style={{
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: backgroundPosition,
+            backgroundRepeat: 'no-repeat',
+            willChange: 'transform',
+            transformOrigin: backgroundPosition === 'bottom center' ? 'center bottom' : backgroundPosition === 'top center' ? 'center top' : backgroundPosition === 'top right' ? 'right top' : 'center center',
+            transform: 'translate3d(0, 0, 0) scale(1.15)',
+          }}
+        />
+      )}
+      {!backgroundImage && (
+        <div className="absolute inset-0 z-[1] bg-blue-600 bg-opacity-80" />
+      )}
+      {backgroundImage && (
+        <div 
+          className="absolute inset-0 z-[1]"
+          style={{
+            background: 'linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 15%)',
+          }}
+        />
+      )}
+      <div className={`absolute bottom-0 left-0 right-0 z-10 pb-4 md:pb-8 text-left ${backgroundImage ? 'text-white drop-shadow-lg' : 'text-white'}`}>
+        <Wrapper>
+          <H1 display className="mb-4 text-white whitespace-pre-line">{title}</H1>
+          {subtitle && <P className="text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white opacity-90">{subtitle}</P>}
+        </Wrapper>
       </div>
     </div>
   );

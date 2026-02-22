@@ -96,7 +96,6 @@ export function MediaForm({
         company: '',
       });
     } catch (error) {
-      console.error('Form submission error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -104,7 +103,7 @@ export function MediaForm({
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit}>
       <FormInput
         id="email"
         label={translate('email')}

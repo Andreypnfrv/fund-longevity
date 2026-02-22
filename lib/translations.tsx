@@ -24,8 +24,8 @@ export const globalTranslations = {
       [Locale.SV]: 'Hur kan du hjälpa',
     },
     about: {
-      [Locale.EN]: 'About us',
-      [Locale.SV]: 'Om oss',
+      [Locale.EN]: 'Team',
+      [Locale.SV]: 'Team',
     },
   },
   footer: {
@@ -34,8 +34,8 @@ export const globalTranslations = {
       [Locale.SV]: 'Fund Longevity är en multinationell initiativ för att demonstrera för livsförlängning.',
     },
     copyright: {
-      [Locale.EN]: '© 2024 Fund Longevity. All rights reserved.',
-      [Locale.SV]: '© 2024 Fund Longevity. Alla rättigheter förbehållna.',
+      [Locale.EN]: '2026 Fund Longevity. All rights reserved.',
+      [Locale.SV]: '2026 Fund Longevity. Alla rättigheter förbehållna.',
     },
     discord: {
       [Locale.EN]: 'Join Discord',

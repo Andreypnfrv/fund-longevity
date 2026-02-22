@@ -51,8 +51,8 @@ export function FormInput({
   const hasError = !!displayError;
 
   return (
-    <div>
-      <label htmlFor={id} className="block text-base font-medium mb-1.5 text-gray-700">
+    <div className="mb-8">
+      <label htmlFor={id} className="block text-base font-semibold mb-1.5 text-gray-700">
         {label}
         {required && <span className="text-red-500 ml-1">*</span>}
       </label>
@@ -103,8 +103,8 @@ export function FormRadioGroup({
   required = false,
 }: FormRadioGroupProps): React.ReactElement {
   return (
-    <div>
-      <label className="block text-base font-medium mb-2">
+    <div className="mb-8">
+      <label className="block text-base font-semibold mb-2">
         {label}
         {required && <span className="text-red-500 ml-1">*</span>}
       </label>
@@ -118,7 +118,7 @@ export function FormRadioGroup({
               value={option.value}
               checked={value === option.value}
               onChange={(e) => onChange(e.target.value)}
-              className="mr-3"
+              className="mr-5"
             />
             <label htmlFor={`${name}-${option.value}`} className="text-base">
               {option.label}

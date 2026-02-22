@@ -121,7 +121,6 @@ export function FormSection({
         canTakePart: false,
       });
     } catch (error) {
-      console.error('Form submission error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);

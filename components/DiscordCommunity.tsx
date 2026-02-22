@@ -1,15 +1,12 @@
 import React from 'react';
-import { Button } from './Button';
 import { DiscordIcon } from '@/lib/icons';
-import { Size } from '@/lib/theme';
 
 interface DiscordCommunityProps {
   label: string;
   variant?: 'button' | 'link';
-  size?: Size;
 }
 
-export function DiscordCommunity({ label, variant = 'button', size = Size.XL }: DiscordCommunityProps): React.ReactElement {
+export function DiscordCommunity({ label, variant = 'button' }: DiscordCommunityProps): React.ReactElement {
   const discordUrl = process.env['DISCORD_URL'] ?? '';
   
   if (variant === 'link') {
@@ -28,7 +25,10 @@ export function DiscordCommunity({ label, variant = 'button', size = Size.XL }: 
 
   return (
     <a href={discordUrl} target="_blank" rel="noopener noreferrer" className="no-underline">
-      <Button size={size} rightIcon="mdi:discord">{label}</Button>
+      <div className="inline-flex items-center gap-2 text-white rounded-lg font-semibold px-8 py-4 text-lg md:text-xl transition-all duration-200 hover:scale-105 hover:shadow-lg cursor-pointer" style={{ backgroundColor: 'rgb(124, 58, 237)', boxShadow: '0 4px 6px rgba(124, 58, 237, 0.3)' }}>
+        <span>{label}</span>
+        <DiscordIcon />
+      </div>
     </a>
   );
 }

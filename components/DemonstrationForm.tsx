@@ -4,7 +4,7 @@ import React, { useState, type FormEvent } from 'react';
 import type { Locale } from '@/lib/types';
 import { Button } from './Button';
 import { P } from './Typography';
-import { FormInput, FormRadioGroup } from './FormInputs';
+import { FormInput } from './FormInputs';
 import { useTranslations } from '@/lib/useTranslations';
 import { globalTranslations } from '@/lib/translations';
 import { mailchimpConfig } from '@/lib/config';
@@ -25,8 +25,6 @@ export function DemonstrationForm({
     firstName: '',
     city: '',
     email: '',
-    phone: '',
-    intent: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -56,8 +54,6 @@ export function DemonstrationForm({
       const formDataToSend = new URLSearchParams();
       formDataToSend.append('EMAIL', formData.email);
       if (formData.firstName) formDataToSend.append('FNAME', formData.firstName);
-      if (formData.phone) formDataToSend.append('PHONE', formData.phone);
-      if (formData.intent) formDataToSend.append('INTENT', formData.intent);
       if (formData.city) formDataToSend.append('MMERGE9', formData.city);
       formDataToSend.append(`b_${userId}_${listId}`, '');
 
@@ -92,11 +88,8 @@ export function DemonstrationForm({
         firstName: '',
         city: '',
         email: '',
-        phone: '',
-        intent: '',
       });
     } catch (error) {
-      console.error('Form submission error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -104,7 +97,7 @@ export function DemonstrationForm({
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit}>
       <FormInput
         id="email"
         label={translate('email')}
@@ -130,32 +123,12 @@ export function DemonstrationForm({
       />
 
       <FormInput
-        id="phone"
-        label={translate('phone')}
-        type="tel"
-        value={formData.phone}
-        onChange={(value) => setFormData({ ...formData, phone: value })}
-      />
-
-      <FormInput
         id="city"
         label={translate('city')}
         value={formData.city}
         onChange={(value) => setFormData({ ...formData, city: value })}
         required
         fieldRequiredMessage={translate('fieldRequired')}
-      />
-
-      <FormRadioGroup
-        name="intent"
-        label={translate('intent')}
-        options={[
-          { value: 'I want to join in-person', label: translate('joinInPerson') },
-          { value: 'I want to join online', label: translate('joinOnline') },
-          { value: 'I can take part in organisation', label: translate('canTakePartInOrganisation') },
-        ]}
-        value={formData.intent}
-        onChange={(value) => setFormData({ ...formData, intent: value })}
       />
 
       <Button type="submit" disabled={isSubmitting} className="w-full" rightIcon="lucide:send">

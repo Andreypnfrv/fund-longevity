@@ -20,9 +20,9 @@ export function Footer({ locale }: FooterProps): React.ReactElement {
   const footer = useTranslations(globalTranslations.footer, locale);
 
   return (
-    <footer className="w-full flex flex-col items-center justify-center bg-gray-50 border-t border-gray-200 py-40">
+    <footer className="w-full flex flex-col items-center justify-center bg-gray-50 border-t border-gray-200 pt-8 md:pt-16 gap-8 md:gap-16">
       <Wrapper>
-        <div className="flex flex-row w-full justify-between">
+        <div className="flex flex-col md:flex-row w-full justify-between gap-8 md:gap-0">
           <div>
             <Logo />
             <P className="mb-4 text-gray-700">{footer.translate('summary')}</P>
@@ -56,7 +56,7 @@ export function Footer({ locale }: FooterProps): React.ReactElement {
           </nav>
         </div>
       </Wrapper>
-      <Wrapper>
+      <Wrapper className="mt-6 md:mt-12">
         <div className='w-full text-center'>
           <P className="text-base text-gray-500">
             {footer.translate('copyright')}

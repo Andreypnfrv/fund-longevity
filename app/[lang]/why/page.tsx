@@ -1,6 +1,6 @@
-import { SecondaryHero } from '@/components/Hero';
+import { GenerationsHero } from '@/components/GenerationsHero';
 import { Sidebar } from '@/components/Sidebar';
-import { H2, H3, H4, P } from '@/components/Typography';
+import { H1, H2, H3, H4, P } from '@/components/Typography';
 import { Content } from '@/components/Content';
 import { Section, TextSection } from '@/components/Section';
 import { HowCanYouHelp } from '@/components/HowCanYouHelp';
@@ -45,11 +45,21 @@ export default async function WhyPage({ params }: WhyPageProps): Promise<JSX.Ele
   ];
 
   return (
-    <div className='flex flex-col gap-18'>
-      <SecondaryHero title={whyTranslations.hero.title[locale]} />
+    <div className='flex flex-col gap-8 md:gap-18 pt-16 md:pt-20'>
+      
+      <Section>
+        <Wrapper>
+          <div>
+            <H1 display className="mb-4 text-black whitespace-pre-line">{whyTranslations.hero.title[locale]}</H1>
+          </div>
+        </Wrapper>
+      </Section>
+      <GenerationsHero 
+        images={['/Generations1.jpg', '/Generations2.jpg', '/Generations3.jpg']}
+      />
 
       <Wrapper>
-        <div className="flex gap-16">
+        <div className="flex flex-col lg:flex-row gap-16">
           <Sidebar locale={locale} items={sidebarItems} />
           <Content>
               
@@ -100,13 +110,15 @@ export default async function WhyPage({ params }: WhyPageProps): Promise<JSX.Ele
       </Wrapper>
 
     <Section>
-        <HowCanYouHelp
-          locale={locale}
-          title={howCanYouHelp('title')}
-          description={howCanYouHelp('description')}
-          joinDiscordLabel={buttons('joinDiscord')}
-          getInvolvedLabel={buttons('getInvolved')}
-        />
+        <Wrapper>
+          <HowCanYouHelp
+            locale={locale}
+            title={howCanYouHelp('title')}
+            description={howCanYouHelp('description')}
+            joinDiscordLabel={buttons('joinDiscord')}
+            getInvolvedLabel={buttons('getInvolved')}
+          />
+        </Wrapper>
     </Section>
     </div>
   );

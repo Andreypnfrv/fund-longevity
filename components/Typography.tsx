@@ -13,7 +13,7 @@ export function H1({ children, className = '', style }: TypographyProps): React.
     return (
         <h1
             className={cn(
-                `text-5xl md:text-6xl lg:text-7xl font-bold`,
+                `text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold`,
                 className
             )}
             style={style}
@@ -26,7 +26,7 @@ export function H1({ children, className = '', style }: TypographyProps): React.
 export function H2({ children, className = '', style }: TypographyProps): React.ReactElement {
     return (
         <h2
-            className={cn(`text-5xl md:text-6xl lg:text-7xl font-bold mb-4`, className)}
+            className={cn(`text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4`, className)}
             style={{ marginBottom: '1rem', ...style }}
         >
             {children}
@@ -37,7 +37,7 @@ export function H2({ children, className = '', style }: TypographyProps): React.
 export function H3({ children, className = '', style }: TypographyProps): React.ReactElement {
     return (
         <h3
-            className={cn(`text-2xl md:text-3xl lg:text-4xl mb-4 leading-snug`, className)}
+            className={cn(`text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 leading-snug`, className)}
             style={{ ...style }}
         >
             {children}
@@ -47,7 +47,7 @@ export function H3({ children, className = '', style }: TypographyProps): React.
 
 export function H4({ children, className = '', style }: TypographyProps): React.ReactElement {
     return (
-        <h4 className={`text-2xl md:text-3xl lg:text-4xl ${className}`} style={style}>
+        <h4 className={`text-xl md:text-2xl lg:text-3xl xl:text-4xl ${className}`} style={style}>
             {children}
         </h4>
     );
@@ -55,7 +55,7 @@ export function H4({ children, className = '', style }: TypographyProps): React.
 
 export function H5({ children, className = '', style }: TypographyProps): React.ReactElement {
     return (
-        <h5 className={`text-xl md:text-2xl lg:text-3xl font-semibold ${className}`} style={style}>
+        <h5 className={`text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold ${className}`} style={style}>
             {children}
         </h5>
     );
@@ -63,7 +63,7 @@ export function H5({ children, className = '', style }: TypographyProps): React.
 
 export function H6({ children, className = '', style }: TypographyProps): React.ReactElement {
     return (
-        <h6 className={`text-lg md:text-xl lg:text-2xl font-semibold ${className}`} style={style}>
+        <h6 className={`text-base md:text-lg lg:text-xl xl:text-2xl font-semibold ${className}`} style={style}>
             {children}
         </h6>
     );
@@ -72,7 +72,7 @@ export function H6({ children, className = '', style }: TypographyProps): React.
 export function P({ children, className = '', style }: TypographyProps): React.ReactElement {
     return (
         <p 
-            className={cn('text-lg leading-relaxed mb-4', className)} 
+            className={cn('text-base md:text-lg leading-relaxed mb-4', className)} 
             style={{ marginBottom: '1rem', ...style }}
         >
             {children}

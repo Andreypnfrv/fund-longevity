@@ -4,25 +4,17 @@ import { Locale } from '@/lib/types';
 export const aboutTranslations = {
   hero: {
     title: {
-      [Locale.EN]: 'About Us',
-      [Locale.SV]: 'Om oss',
+      [Locale.EN]: 'Team',
+      [Locale.SV]: 'Team',
+    },
+    subtitle: {
+      [Locale.EN]: 'Fund Longevity is a multinational initiative to demonstrate for life extension. It is not a formal organization, but a non-profit initiative founded by Linus Petersson and Andrei Panferov. The goal is to make fighting aging main-stream.',
+      [Locale.SV]: 'Fund Longevity är ett multinationellt initiativ för att demonstrera för livsförlängning. Det är inte en formell organisation, utan ett ideellt initiativ grundat av Linus Petersson och Andrei Panferov. Målet är att göra kampen mot åldrande mainstream.',
     },
   },
   about: {
-    [Locale.EN]: 'Fund Longevity is not a formal organization, but a non profit initiative founded by Linus Petersson and Andrei Panferov. It is purely informal social movement, that could be represented by anyone, who wants to advocate pro lifespan extension. We do promote other longevity organizations, but do not get any compensation.',
-    [Locale.SV]: 'Fund Longevity är inte en formell organisation, utan ett ideellt initiativ grundat av Linus Petersson och Andrei Panferov. Det är en rent informell social rörelse, som kan representeras av alla som vill förespråka livslängdsförlängning. Vi främjar andra långlivetsorganisationer, men får ingen ersättning.',
-  },
-  coreTeam: {
-    title: {
-      [Locale.EN]: 'Core Team',
-      [Locale.SV]: 'Kärnteam',
-    },
-  },
-  advisors: {
-    title: {
-      [Locale.EN]: 'Advisors',
-      [Locale.SV]: 'Rådgivare',
-    },
+    [Locale.EN]: '',
+    [Locale.SV]: '',
   },
   localLeads: {
     title: {
@@ -30,10 +22,16 @@ export const aboutTranslations = {
       [Locale.SV]: 'Lokala ledare',
     },
   },
+  mediaLeads: {
+    title: {
+      [Locale.EN]: 'Media Leads',
+      [Locale.SV]: 'Medialedare',
+    },
+  },
   partners: {
     title: {
-      [Locale.EN]: 'Partners',
-      [Locale.SV]: 'Partners',
+      [Locale.EN]: 'Featured organisations',
+      [Locale.SV]: 'Utvalda organisationer',
     },
   },
 } as const satisfies Record<string, Record<string, Translation> | Translation>;

@@ -11,7 +11,6 @@ export function useTranslations<T extends Record<string, Translation>>(
     return (key: keyof T): string => {
       const translation = translations[key];
       if (!translation) {
-        console.warn(`Translation missing for key: ${String(key)}`);
         return String(key);
       }
       return translation[locale] ?? translation[Locale.EN] ?? String(key);

@@ -3,8 +3,12 @@ import { Locale } from '@/lib/types';
 export const asksTranslations = {
   hero: {
     title: {
-      [Locale.EN]: 'What a government can do to fight aging?',
+      [Locale.EN]: 'What a government can do to\u00A0fight\u00A0aging?',
       [Locale.SV]: 'Vad kan en regering göra för att bekämpa åldrande?',
+    },
+    subtitle: {
+      [Locale.EN]: 'The science is close.\nPolitical will is what we need.',
+      [Locale.SV]: 'Vetenskapen är nära.\nPolitiskt vilja är vad vi behöver.',
     },
   },
   pageTitle: {
@@ -16,7 +20,7 @@ export const asksTranslations = {
     [Locale.SV]: 'Vi håller dem lite breda, så att regeringarna kan forma sina policyer själva, men här är huvudriktningarna',
   },
   sectionTitle: {
-    [Locale.EN]: 'What a government can do to fight aging?',
+    [Locale.EN]: 'What a government can do to\u00A0fight\u00A0aging?',
     [Locale.SV]: 'Vad kan en regering göra för att bekämpa åldrande?',
   },
   items: {

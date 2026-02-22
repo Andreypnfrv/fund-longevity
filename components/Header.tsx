@@ -1,6 +1,7 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 import type { Locale } from '@/lib/types';
 import { Logo } from './Logo';
@@ -8,9 +9,11 @@ import { Link } from './Link';
 import { Button } from './Button';
 import { LanguageDropdown } from './LanguageDropdown';
 import { Wrapper } from './Wrapper';
+import { Overlay } from './Overlay';
+import { Icon } from './Icon';
 import { useTranslations } from '@/lib/useTranslations';
 import { globalTranslations } from '@/lib/translations';
-import { Fill, Size } from '@/lib/theme';
+import { Fill, Size, navigationColors } from '@/lib/theme';
 import { cn } from '@/lib/utils';
 
 interface HeaderProps {
@@ -19,51 +22,175 @@ interface HeaderProps {
 
 export function Header({ locale }: HeaderProps): React.ReactElement {
   const { translate } = useTranslations(globalTranslations.nav, locale);
+  const pathname = usePathname();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const pathWithoutLocale = pathname.replace(/^\/[^/]+/, '') || '/';
+  const isHomePage = pathWithoutLocale === '/' || pathWithoutLocale === '';
+
+  const isActive = (path: string): boolean => {
+    const normalizedPath = pathWithoutLocale.endsWith('/') ? pathWithoutLocale.slice(0, -1) : pathWithoutLocale;
+    const normalizedTarget = path === '/' ? '/' : path;
+    return normalizedPath === normalizedTarget;
+  };
+
+  const navLinks = [
+    { href: '/', key: 'home' },
+    { href: '/why', key: 'why' },
+    { href: '/demonstrations', key: 'demonstrations' },
+    { href: '/asks', key: 'asks' },
+    { href: '/join', key: 'join' },
+    { href: '/about', key: 'about' },
+  ];
+
+  const handleLinkClick = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
-    <header 
-      className={cn(
-        `sticky top-0 z-40 bg-white border-b border-gray-200 flex flex-row justify-center items-center`,
-      )}
-      style={{
-        height: '64px'
-      }}
-    >
-      <Wrapper className="py-4 h-full">
-        <div 
-          className={cn(
-            "flex flex-row items-center justify-between w-full h-full"
-          )}
-        >
-            <Link href="/" locale={locale}>
-              <Logo />
-            </Link>
-          
-          <nav className="hidden md:flex items-center gap-2">
-            <Link href="/" locale={locale} className="no-underline">
-              <Button fill={Fill.Ghost} size={Size.MD}>{translate('home')}</Button>
-            </Link>
-            <Link href="/why" locale={locale} className="no-underline">
-              <Button fill={Fill.Ghost} size={Size.MD}>{translate('why')}</Button>
-            </Link>
-            <Link href="/demonstrations" locale={locale} className="no-underline">
-              <Button fill={Fill.Ghost} size={Size.MD}>{translate('demonstrations')}</Button>
-            </Link>
-            <Link href="/asks" locale={locale} className="no-underline">
-              <Button fill={Fill.Ghost} size={Size.MD}>{translate('asks')}</Button>
-            </Link>
-            <Link href="/join" locale={locale} className="no-underline">
-              <Button fill={Fill.Ghost} size={Size.MD}>{translate('join')}</Button>
-            </Link>
-            <Link href="/about" locale={locale} className="no-underline">
-              <Button fill={Fill.Ghost} size={Size.MD}>{translate('about')}</Button>
-            </Link>
-          </nav>
+    <>
+      <header 
+        className={cn(
+          `flex flex-row justify-center items-center z-40`,
+          isHomePage ? 'absolute top-0 left-0 right-0 pt-4' : 'sticky top-0 bg-white'
+        )}
+        style={{
+          height: isHomePage ? 'auto' : 'auto',
+          minHeight: isHomePage ? 'auto' : '80px',
+        }}
+      >
+        <Wrapper className={isHomePage ? 'h-full' : 'h-full'}>
+          <div 
+            className={cn(
+              "relative w-full h-full flex items-center",
+              isHomePage ? "rounded-full px-6 py-3" : "",
+              !isHomePage && "border-b border-gray-300"
+            )}
+            style={isHomePage ? {
+              backgroundColor: 'rgba(255, 255, 255, 0.3)',
+              backdropFilter: 'blur(20px) saturate(180%)',
+              WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+              border: '1px solid rgba(255, 255, 255, 0.2)',
+              height: '64px',
+            } : {}}
+          >
+            <div 
+              className={cn(
+                "flex flex-row items-center w-full h-full",
+                isHomePage ? "justify-center" : "justify-between"
+              )}
+            >
+                {!isHomePage && (
+                  <Link href="/" locale={locale}>
+                    <Logo />
+                  </Link>
+                )}
+              
+              <nav className={cn(
+                "hidden md:flex items-center",
+                isHomePage ? "gap-8 text-white" : "gap-2"
+              )}>
+                {navLinks.map((link) => (
+                  <Link key={link.href} href={link.href} locale={locale} className="no-underline">
+                    <Button 
+                      fill={Fill.Ghost} 
+                      size={isHomePage ? Size.XXL : Size.XL}
+                      className={cn(
+                        isActive(link.href) ? navigationColors.active : navigationColors.inactive,
+                        isHomePage && "text-white hover:text-white hover:bg-white/20",
+                        isHomePage && isActive(link.href) && "bg-white/30 text-white",
+                        isHomePage && "overflow-hidden"
+                      )}
+                      style={isHomePage ? {
+                        textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)',
+                        color: 'white',
+                        fontSize: '1.5rem',
+                        paddingLeft: '2.5rem',
+                        paddingRight: '2.5rem',
+                        paddingTop: '0.75rem',
+                        paddingBottom: '0.75rem',
+                        height: '56px',
+                        maxHeight: '56px',
+                      } : {}}
+                    >
+                      {translate(link.key as keyof typeof globalTranslations.nav)}
+                    </Button>
+                  </Link>
+                ))}
+              </nav>
 
-          <LanguageDropdown currentLocale={locale} />
+              {!isHomePage && (
+                <div className="flex items-center gap-2">
+                  <button
+                    className="md:hidden p-2 rounded-md hover:bg-gray-100 transition-colors"
+                    onClick={() => setIsMobileMenuOpen(true)}
+                    aria-label="Open menu"
+                  >
+                    <Icon icon="lucide:menu" width={24} height={24} />
+                  </button>
+                  <LanguageDropdown currentLocale={locale} />
+                </div>
+              )}
+              {isHomePage && (
+                <div className="flex items-center gap-2 absolute right-6">
+                  <button
+                    className="md:hidden p-2 rounded-md hover:bg-white/20 transition-colors text-white"
+                    onClick={() => setIsMobileMenuOpen(true)}
+                    aria-label="Open menu"
+                    style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)' }}
+                  >
+                    <Icon icon="lucide:menu" width={24} height={24} />
+                  </button>
+                  <LanguageDropdown currentLocale={locale} />
+                </div>
+              )}
+            </div>
+          </div>
+        </Wrapper>
+      </header>
+
+      <Overlay isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)}>
+        <div
+          className="fixed top-0 right-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="flex flex-col h-full">
+            <div className="flex items-center justify-between p-4 border-b border-gray-200">
+              <Logo />
+              <button
+                className="p-2 rounded-md hover:bg-gray-100 transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+                aria-label="Close menu"
+              >
+                <Icon icon="lucide:x" width={24} height={24} />
+              </button>
+            </div>
+            <nav className="flex flex-col p-4 gap-2">
+              {navLinks.map((link) => (
+                <div key={link.href} onClick={handleLinkClick}>
+                  <Link
+                    href={link.href}
+                    locale={locale}
+                    className="no-underline"
+                  >
+                    <Button
+                      fill={Fill.Ghost}
+                      size={Size.LG}
+                      className={cn(
+                        'w-full justify-start',
+                        isActive(link.href) ? navigationColors.active : navigationColors.inactive
+                      )}
+                    >
+                      {translate(link.key as keyof typeof globalTranslations.nav)}
+                    </Button>
+                  </Link>
+                </div>
+              ))}
+            </nav>
+          </div>
         </div>
-      </Wrapper>
-    </header>
+      </Overlay>
+    </>
   );
 }
 

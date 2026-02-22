@@ -1,6 +1,6 @@
 import { SecondaryHero } from '@/components/Hero';
 import { Sidebar } from '@/components/Sidebar';
-import { H2, H3, H4, P } from '@/components/Typography';
+import { H1, H2, H3, H4, P } from '@/components/Typography';
 import { Card } from '@/components/Card';
 import { DemonstrationForm } from '@/components/DemonstrationForm';
 import { Section, TextSection } from '@/components/Section';
@@ -39,11 +39,23 @@ export default async function DemonstrationsPage({ params }: DemonstrationsPageP
   ];
 
   return (
-    <div className='flex flex-col gap-18'>
-      <SecondaryHero title={demonstrationsTranslations.hero.title[locale]} />
+    <div className='flex flex-col gap-8 md:gap-18'>
+      <Section>
+        <Wrapper>
+          <div className="pt-16 md:pt-20">
+            <H1 display className="mb-4 text-black whitespace-pre-line">{demonstrationsTranslations.hero.title[locale]}</H1>
+          </div>
+        </Wrapper>
+      </Section>
+      <SecondaryHero 
+        title=""
+        backgroundImage="/Demonstrations1.jpg"
+        height="80vh"
+        backgroundPosition="bottom center"
+      />
 
       <Wrapper>
-        <div className="flex gap-16">
+        <div className="flex flex-col lg:flex-row gap-16">
           <Sidebar locale={locale} items={sidebarItems} />
           <Content>
             <TextSection id="overview" className="pt-8 pb-12">
@@ -55,10 +67,10 @@ export default async function DemonstrationsPage({ params }: DemonstrationsPageP
 
             <section id="nextDemo">
               <Card>
-                <div className="flex gap-8">
+                <div className="flex flex-col md:flex-row gap-8">
                   <div className="flex-1">
                     <H2>{demonstrationsTranslations.nextDemo[locale]}</H2>
-                    <P>{demonstrationsTranslations.hero.title[locale]}</P>
+                    <P>{demonstrationsTranslations.nextDemoDescription[locale]}</P>
                   </div>
                   <div className="flex-1">
                     <DemonstrationForm
@@ -85,13 +97,15 @@ export default async function DemonstrationsPage({ params }: DemonstrationsPageP
         </div>
       </Wrapper>
       <Section>
-        <HowCanYouHelp
-          locale={locale}
-          title={howCanYouHelp('title')}
-          description={howCanYouHelp('description')}
-          joinDiscordLabel={buttons('joinDiscord')}
-          getInvolvedLabel={buttons('getInvolved')}
-        />
+        <Wrapper>
+          <HowCanYouHelp
+            locale={locale}
+            title={howCanYouHelp('title')}
+            description={howCanYouHelp('description')}
+            joinDiscordLabel={buttons('joinDiscord')}
+            getInvolvedLabel={buttons('getInvolved')}
+          />
+        </Wrapper>
       </Section>
     </div>
   );
