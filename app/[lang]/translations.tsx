@@ -38,8 +38,8 @@ export const homeTranslations = {
   },
   howCanYouHelp: {
     title: {
-      [Locale.EN]: 'How you can help',
-      [Locale.SV]: 'Hur du kan hjälpa',
+      [Locale.EN]: 'Join',
+      [Locale.SV]: 'Gå med',
     },
     description: {
       [Locale.EN]: 'Join us in the fight against aging. There are many ways to contribute.',

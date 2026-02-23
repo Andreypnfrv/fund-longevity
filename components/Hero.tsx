@@ -20,96 +20,10 @@ export function Hero({
   locale,
 }: HeroProps): React.ReactElement {
   const { translate: translateCommon } = useTranslations(globalTranslations.common, locale);
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const layerRef = useRef<HTMLDivElement | null>(null);
-  const blueRef = useRef<HTMLHeadingElement | null>(null);
-  const violetRef = useRef<HTMLHeadingElement | null>(null);
-  const greenRef = useRef<HTMLHeadingElement | null>(null);
-  const hasDivergedRef = useRef(false);
-  const lastScrollYRef = useRef(0);
-
-  useEffect(() => {
-    const container = containerRef.current;
-    const layer = layerRef.current;
-    if (!container || !layer) return;
-
-    let raf = 0;
-    const speed = 0.25;
-
-    const update = () => {
-      raf = 0;
-      const rect = container.getBoundingClientRect();
-      const containerTop = rect.top + window.scrollY;
-      const y = (window.scrollY - containerTop) * speed;
-      layer.style.transform = `translate3d(0, ${Math.round(y)}px, 0) scale(1.15)`;
-    };
-
-    const triggerDiverge = () => {
-      if (hasDivergedRef.current) return;
-      if (blueRef.current && violetRef.current && greenRef.current) {
-        blueRef.current.classList.remove('converge-blue');
-        violetRef.current.classList.remove('converge-violet');
-        greenRef.current.classList.remove('converge-green');
-        blueRef.current.classList.add('diverge-blue');
-        violetRef.current.classList.add('diverge-violet');
-        greenRef.current.classList.add('diverge-green');
-        hasDivergedRef.current = true;
-      }
-    };
-
-    const triggerConverge = () => {
-      if (!hasDivergedRef.current) return;
-      if (blueRef.current && violetRef.current && greenRef.current) {
-        blueRef.current.classList.remove('diverge-blue');
-        violetRef.current.classList.remove('diverge-violet');
-        greenRef.current.classList.remove('diverge-green');
-        blueRef.current.classList.add('converge-blue');
-        violetRef.current.classList.add('converge-violet');
-        greenRef.current.classList.add('converge-green');
-        hasDivergedRef.current = false;
-      }
-    };
-
-    const isHeroVisible = () => {
-      if (!container) return false;
-      const rect = container.getBoundingClientRect();
-      return rect.top < window.innerHeight && rect.bottom > 0;
-    };
-
-    const onScroll = () => {
-      if (raf) return;
-      raf = window.requestAnimationFrame(update);
-      
-      const currentScrollY = window.scrollY;
-      const scrollDelta = currentScrollY - lastScrollYRef.current;
-      const isScrollingDown = scrollDelta > 0;
-      const isScrollingUp = scrollDelta < 0;
-      
-      if (isHeroVisible()) {
-        if (isScrollingDown && Math.abs(scrollDelta) > 5 && !hasDivergedRef.current) {
-          triggerDiverge();
-        } else if (isScrollingUp && Math.abs(scrollDelta) > 5 && hasDivergedRef.current) {
-          triggerConverge();
-        }
-      }
-      
-      lastScrollYRef.current = currentScrollY;
-    };
-
-    update();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', onScroll);
-    return () => {
-      if (raf) window.cancelAnimationFrame(raf);
-      window.removeEventListener('scroll', onScroll);
-      window.removeEventListener('resize', onScroll);
-    };
-  }, []);
 
   return (
-    <div ref={containerRef} className="relative min-h-[50vh] md:min-h-screen overflow-hidden flex flex-col">
+    <div className="relative min-h-[50vh] md:min-h-screen overflow-hidden flex flex-col">
       <div
-        ref={layerRef}
         className="absolute inset-0"
         aria-hidden
         style={{
@@ -117,58 +31,58 @@ export function Hero({
           backgroundSize: 'cover',
           backgroundPosition: 'bottom center',
           backgroundRepeat: 'no-repeat',
-          willChange: 'transform',
           transformOrigin: 'center bottom',
-          transform: 'translate3d(0, 0, 0) scale(1.15)',
+          transform: 'scale(1.15)',
         }}
       />
       <div className="relative z-10 flex-1 flex items-start justify-center px-4 pt-16 md:pt-24">
-        <div className="relative inline-block">
-          <h1 className="text-white font-black text-center px-8 py-4 relative z-10 uppercase whitespace-nowrap" style={{ 
-            fontSize: 'clamp(4.48rem, 11.2vw, 13.44rem)', 
+        <div className="relative inline-block hero-title-wrap">
+          <h1 className="text-white font-black text-center px-8 py-4 relative z-10 uppercase whitespace-nowrap max-[1100px]:whitespace-normal" style={{ 
+            fontSize: 'inherit',
             lineHeight: '1',
             textShadow: '0 8px 16px rgba(0, 0, 0, 0.9), 0 4px 8px rgba(0, 0, 0, 0.9)',
             letterSpacing: '-0.02em',
           }}>
-            FUND LONGEVITY
+            FUND<br className="hidden max-[1100px]:block" /> LONGEVITY
           </h1>
-          <h1 ref={blueRef} className="absolute top-0 left-0 font-black text-center px-8 py-4 uppercase whitespace-nowrap converge-blue" style={{ 
-            fontSize: 'clamp(4.48rem, 11.2vw, 13.44rem)', 
+          <h1 className="absolute top-0 left-0 font-black text-center px-8 py-4 uppercase whitespace-nowrap max-[1100px]:whitespace-normal" style={{ 
+            fontSize: 'inherit', 
             lineHeight: '1',
             color: 'rgb(37, 99, 235)',
-            transform: 'translate(320px, 4px)',
+            transform: 'translate(8px, 4px)',
             zIndex: 1,
             mixBlendMode: 'screen',
             letterSpacing: '-0.02em',
           }}>
-            FUND LONGEVITY
+            FUND<br className="hidden max-[1100px]:block" /> LONGEVITY
           </h1>
-          <h1 ref={violetRef} className="absolute top-0 left-0 font-black text-center px-8 py-4 uppercase whitespace-nowrap converge-violet" style={{ 
-            fontSize: 'clamp(4.48rem, 11.2vw, 13.44rem)', 
+          <h1 className="absolute top-0 left-0 font-black text-center px-8 py-4 uppercase whitespace-nowrap max-[1100px]:whitespace-normal" style={{ 
+            fontSize: 'inherit', 
             lineHeight: '1',
             color: 'rgb(124, 58, 237)',
-            transform: 'translate(-280px, 5px)',
+            transform: 'translate(-6px, 5px)',
             zIndex: 2,
             mixBlendMode: 'screen',
             letterSpacing: '-0.02em',
           }}>
-            FUND LONGEVITY
+            FUND<br className="hidden max-[1100px]:block" /> LONGEVITY
           </h1>
-          <h1 ref={greenRef} className="absolute top-0 left-0 font-black text-center px-8 py-4 uppercase whitespace-nowrap converge-green" style={{ 
-            fontSize: 'clamp(4.48rem, 11.2vw, 13.44rem)', 
+          <h1 className="absolute top-0 left-0 font-black text-center px-8 py-4 uppercase whitespace-nowrap max-[1100px]:whitespace-normal" style={{ 
+            fontSize: 'inherit', 
             lineHeight: '1',
             color: 'rgba(34, 197, 94, 0.8)',
-            transform: 'translate(-200px, 3px)',
+            transform: 'translate(-4px, 3px)',
             zIndex: 3,
             mixBlendMode: 'screen',
             letterSpacing: '-0.02em',
           }}>
-            FUND LONGEVITY
+            FUND<br className="hidden max-[1100px]:block" /> LONGEVITY
           </h1>
         </div>
       </div>
       <div className="relative z-10 flex-1 flex flex-col items-center justify-end w-full px-4 pb-16 gap-9" style={{ paddingTop: '4rem' }}>
-        <p className="text-white font-bold text-2xl md:text-4xl lg:text-6xl w-full whitespace-pre-line text-center px-8 py-6" style={{ 
+        <p className="text-white font-bold w-full whitespace-pre-line text-center px-8 py-6" style={{ 
+          fontSize: 'clamp(1.2rem, 2vw + 1rem, 3rem)',
           textShadow: '0 0 20px rgba(59, 130, 246, 0.2), 0 0 40px rgba(59, 130, 246, 0.15), 0 4px 8px rgba(0, 0, 0, 0.9), 2px 2px 4px rgba(59, 130, 246, 0.2)',
           WebkitTextStroke: '1px rgba(59, 130, 246, 0.2)',
           fontWeight: '700'

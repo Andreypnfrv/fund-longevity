@@ -77,17 +77,17 @@ export function Header({ locale }: HeaderProps): React.ReactElement {
             <div 
               className={cn(
                 "flex flex-row items-center w-full h-full",
-                isHomePage ? "justify-center" : "justify-between"
+                isHomePage ? "justify-center" : "justify-between gap-4 min-w-0"
               )}
             >
                 {!isHomePage && (
-                  <Link href="/" locale={locale}>
+                  <Link href="/" locale={locale} className="flex-shrink-0">
                     <Logo />
                   </Link>
                 )}
               
               <nav className={cn(
-                "hidden md:flex items-center",
+                "hidden lg:flex items-center min-w-0 flex-1 justify-center",
                 isHomePage ? "gap-8 text-white" : "gap-2"
               )}>
                 {navLinks.map((link) => (
@@ -120,9 +120,9 @@ export function Header({ locale }: HeaderProps): React.ReactElement {
               </nav>
 
               {!isHomePage && (
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 lg:hidden">
                   <button
-                    className="md:hidden p-2 rounded-md hover:bg-gray-100 transition-colors"
+                    className="p-2 rounded-md hover:bg-gray-100 transition-colors"
                     onClick={() => setIsMobileMenuOpen(true)}
                     aria-label="Open menu"
                   >
@@ -131,16 +131,26 @@ export function Header({ locale }: HeaderProps): React.ReactElement {
                   <LanguageDropdown currentLocale={locale} />
                 </div>
               )}
+              {!isHomePage && (
+                <div className="hidden lg:flex items-center gap-2 flex-shrink-0">
+                  <LanguageDropdown currentLocale={locale} />
+                </div>
+              )}
               {isHomePage && (
-                <div className="flex items-center gap-2 absolute right-6">
+                <div className="flex items-center gap-2 absolute right-6 lg:hidden">
                   <button
-                    className="md:hidden p-2 rounded-md hover:bg-white/20 transition-colors text-white"
+                    className="p-2 rounded-md hover:bg-white/20 transition-colors text-white"
                     onClick={() => setIsMobileMenuOpen(true)}
                     aria-label="Open menu"
                     style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)' }}
                   >
                     <Icon icon="lucide:menu" width={24} height={24} />
                   </button>
+                  <LanguageDropdown currentLocale={locale} />
+                </div>
+              )}
+              {isHomePage && (
+                <div className="hidden lg:flex items-center gap-2 absolute right-6">
                   <LanguageDropdown currentLocale={locale} />
                 </div>
               )}
@@ -151,43 +161,41 @@ export function Header({ locale }: HeaderProps): React.ReactElement {
 
       <Overlay isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)}>
         <div
-          className="fixed top-0 right-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
+          className="fixed inset-0 bg-white shadow-xl z-50 overflow-y-auto flex flex-col"
           onClick={(e) => e.stopPropagation()}
         >
-          <div className="flex flex-col h-full">
-            <div className="flex items-center justify-between p-4 border-b border-gray-200">
-              <Logo />
-              <button
-                className="p-2 rounded-md hover:bg-gray-100 transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-                aria-label="Close menu"
-              >
-                <Icon icon="lucide:x" width={24} height={24} />
-              </button>
-            </div>
-            <nav className="flex flex-col p-4 gap-2">
-              {navLinks.map((link) => (
-                <div key={link.href} onClick={handleLinkClick}>
-                  <Link
-                    href={link.href}
-                    locale={locale}
-                    className="no-underline"
-                  >
-                    <Button
-                      fill={Fill.Ghost}
-                      size={Size.LG}
-                      className={cn(
-                        'w-full justify-start',
-                        isActive(link.href) ? navigationColors.active : navigationColors.inactive
-                      )}
-                    >
-                      {translate(link.key as keyof typeof globalTranslations.nav)}
-                    </Button>
-                  </Link>
-                </div>
-              ))}
-            </nav>
+          <div className="flex items-center justify-between p-4 border-b border-gray-200">
+            <Logo />
+            <button
+              className="p-2 rounded-md hover:bg-gray-100 transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+              aria-label="Close menu"
+            >
+              <Icon icon="lucide:x" width={24} height={24} />
+            </button>
           </div>
+          <nav className="flex flex-col flex-1 items-center justify-center p-4 gap-2">
+            {navLinks.map((link) => (
+              <div key={link.href} onClick={handleLinkClick}>
+                <Link
+                  href={link.href}
+                  locale={locale}
+                  className="no-underline"
+                >
+                  <Button
+                    fill={Fill.Ghost}
+                    size={Size.LG}
+                    className={cn(
+                      'justify-center',
+                      isActive(link.href) ? navigationColors.active : navigationColors.inactive
+                    )}
+                  >
+                    {translate(link.key as keyof typeof globalTranslations.nav)}
+                  </Button>
+                </Link>
+              </div>
+            ))}
+          </nav>
         </div>
       </Overlay>
     </>

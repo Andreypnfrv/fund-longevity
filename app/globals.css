@@ -274,3 +274,12 @@ body {
 .diverge-green {
   animation: diverge-green 1s ease-in forwards;
 }
+
+.hero-title-wrap {
+  font-size: clamp(3.584rem, 8.96vw, 10.752rem);
+}
+@media (max-width: 1100px) {
+  .hero-title-wrap {
+    font-size: clamp(4rem, 10vw, 7rem);
+  }
+}
