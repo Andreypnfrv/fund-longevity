@@ -1,25 +1,24 @@
+'use client';
+
 import React from 'react';
 import { H3 } from './Typography';
-import { Link } from './Link';
 import { DiscordCommunity } from './DiscordCommunity';
 import { Locale } from '@/lib/types';
 import { Card } from './Card';
+import { useTranslations } from '@/lib/useTranslations';
+import { homeTranslations } from '@/app/[lang]/translations';
 
 interface HowCanYouHelpProps {
   locale: Locale;
-  title: string;
-  description: string;
-  joinDiscordLabel: string;
-  getInvolvedLabel: string;
 }
 
-export function HowCanYouHelp({
-  locale,
-  title,
-  description,
-  joinDiscordLabel,
-  getInvolvedLabel,
-}: HowCanYouHelpProps): React.ReactElement {
+export function HowCanYouHelp({ locale }: HowCanYouHelpProps): React.ReactElement {
+  const { translate: t } = useTranslations(homeTranslations.howCanYouHelp, locale);
+  const { translate: buttons } = useTranslations(homeTranslations.buttons, locale);
+
+  const title = t('title');
+  const description = t('description');
+
   return (
     <Card className='text-center border border-black rounded-xl'>
       <div className="flex flex-col gap-8 py-8 md:py-16">
@@ -42,12 +41,7 @@ export function HowCanYouHelp({
         </div>
         <H3 className="font-normal text-xl md:text-2xl">{description}</H3>
         <div className="flex justify-center gap-4 flex-wrap pt-4">
-          <DiscordCommunity label={joinDiscordLabel} variant="button" />
-          <Link href="/join" locale={locale} className="no-underline">
-            <div className="inline-block text-white rounded-lg font-semibold px-8 py-4 text-lg md:text-xl transition-all duration-200 hover:scale-105 hover:shadow-lg cursor-pointer" style={{ backgroundColor: 'rgb(37, 99, 235)', boxShadow: '0 4px 6px rgba(37, 99, 235, 0.3)' }}>
-              {getInvolvedLabel}
-            </div>
-          </Link>
+          <DiscordCommunity label={buttons('joinDiscord')} variant="button" />
         </div>
       </div>
     </Card>

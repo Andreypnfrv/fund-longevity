@@ -4,9 +4,8 @@ import { H1, H2, H3, H4, P } from '@/components/Typography';
 import { Content } from '@/components/Content';
 import { Section, TextSection } from '@/components/Section';
 import { HowCanYouHelp } from '@/components/HowCanYouHelp';
-import { Locale } from '@/lib/types';
+import { getLocaleFromLang, LOCALES } from '@/lib/types';
 import { whyTranslations } from './translations';
-import { homeTranslations } from '../translations';
 import { getTranslation } from '@/lib/translate';
 import { Wrapper } from '@/components/Wrapper';
 
@@ -15,12 +14,12 @@ interface WhyPageProps {
 }
 
 export function generateStaticParams() {
-  return [{ lang: 'en' }, { lang: 'sv' }];
+  return LOCALES.map((locale) => ({ lang: locale }));
 }
 
 export default async function WhyPage({ params }: WhyPageProps): Promise<JSX.Element> {
   const { lang } = await params;
-  const locale = (lang === 'sv' ? Locale.SV : Locale.EN) as Locale;
+  const locale = getLocaleFromLang(lang);
 
   const problemTranslate = getTranslation(whyTranslations.sections.problem, locale);
   const personalTranslate = getTranslation(whyTranslations.sections.personal, locale);
@@ -30,9 +29,6 @@ export default async function WhyPage({ params }: WhyPageProps): Promise<JSX.Ele
   const hardTranslate = getTranslation(whyTranslations.sections.hard, locale);
   const missingTranslate = getTranslation(whyTranslations.sections.missing, locale);
   const whyWeActTranslate = getTranslation(whyTranslations.sections.whyWeAct, locale);
-  const howCanYouHelp = getTranslation(homeTranslations.howCanYouHelp, locale);
-  const buttons = getTranslation(homeTranslations.buttons, locale);
-
   const sidebarItems = [
     { id: 'problem', label: problemTranslate('title'), href: '/why#problem' },
     { id: 'personal', label: personalTranslate('title'), href: '/why#personal' },
@@ -111,13 +107,7 @@ export default async function WhyPage({ params }: WhyPageProps): Promise<JSX.Ele
 
     <Section>
         <Wrapper>
-          <HowCanYouHelp
-            locale={locale}
-            title={howCanYouHelp('title')}
-            description={howCanYouHelp('description')}
-            joinDiscordLabel={buttons('joinDiscord')}
-            getInvolvedLabel={buttons('getInvolved')}
-          />
+          <HowCanYouHelp locale={locale} />
         </Wrapper>
     </Section>
     </div>

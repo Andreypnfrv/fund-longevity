@@ -3,8 +3,6 @@ import type { Locale } from './types';
 export const PATHS = {
   HOME: '/',
   WHY: '/why',
-  JOIN: '/join',
-  DEMONSTRATIONS: '/demonstrations',
   ASKS: '/asks',
   ABOUT: '/about',
 } as const;

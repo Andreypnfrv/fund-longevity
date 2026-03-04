@@ -37,9 +37,7 @@ export function Header({ locale }: HeaderProps): React.ReactElement {
   const navLinks = [
     { href: '/', key: 'home' },
     { href: '/why', key: 'why' },
-    { href: '/demonstrations', key: 'demonstrations' },
     { href: '/asks', key: 'asks' },
-    { href: '/join', key: 'join' },
     { href: '/about', key: 'about' },
   ];
 
@@ -59,101 +57,56 @@ export function Header({ locale }: HeaderProps): React.ReactElement {
           minHeight: isHomePage ? 'auto' : '80px',
         }}
       >
-        <Wrapper className={isHomePage ? 'h-full' : 'h-full'}>
+        <Wrapper className="h-full !px-3 min-[600px]:!px-12">
           <div 
             className={cn(
               "relative w-full h-full flex items-center",
-              isHomePage ? "rounded-full px-6 py-3" : "",
               !isHomePage && "border-b border-gray-300"
             )}
-            style={isHomePage ? {
-              backgroundColor: 'rgba(255, 255, 255, 0.3)',
-              backdropFilter: 'blur(20px) saturate(180%)',
-              WebkitBackdropFilter: 'blur(20px) saturate(180%)',
-              border: '1px solid rgba(255, 255, 255, 0.2)',
-              height: '64px',
-            } : {}}
+            style={{ height: '64px' }}
           >
-            <div 
-              className={cn(
-                "flex flex-row items-center w-full h-full",
-                isHomePage ? "justify-center" : "justify-between gap-4 min-w-0"
-              )}
-            >
-                {!isHomePage && (
-                  <Link href="/" locale={locale} className="flex-shrink-0">
-                    <Logo />
-                  </Link>
-                )}
-              
-              <nav className={cn(
-                "hidden lg:flex items-center min-w-0 flex-1 justify-center",
-                isHomePage ? "gap-8 text-white" : "gap-2"
-              )}>
+            <div className="flex flex-row items-center w-full h-full min-w-0 flex overflow-x-auto lg:justify-evenly lg:overflow-visible">
+              <nav className="flex items-center h-full gap-0 flex-1 min-w-0 overflow-x-auto lg:overflow-visible lg:justify-evenly">
                 {navLinks.map((link) => (
-                  <Link key={link.href} href={link.href} locale={locale} className="no-underline">
-                    <Button 
-                      fill={Fill.Ghost} 
-                      size={isHomePage ? Size.XXL : Size.XL}
-                      className={cn(
-                        isActive(link.href) ? navigationColors.active : navigationColors.inactive,
-                        isHomePage && "text-white hover:text-white hover:bg-white/20",
-                        isHomePage && isActive(link.href) && "bg-white/30 text-white",
-                        isHomePage && "overflow-hidden"
-                      )}
-                      style={isHomePage ? {
-                        textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)',
-                        color: 'white',
-                        fontSize: '1.5rem',
-                        paddingLeft: '2.5rem',
-                        paddingRight: '2.5rem',
-                        paddingTop: '0.75rem',
-                        paddingBottom: '0.75rem',
-                        height: '56px',
-                        maxHeight: '56px',
-                      } : {}}
-                    >
-                      {translate(link.key as keyof typeof globalTranslations.nav)}
-                    </Button>
-                  </Link>
+                  <div key={link.href} className="flex-shrink-0 lg:flex-1 lg:flex-shrink flex items-center h-full">
+                    <Link href={link.href} locale={locale} className="no-underline w-full h-full flex items-center">
+                      <Button 
+                        fill={Fill.Ghost} 
+                        size={Size.XXL}
+                        className={cn(
+                          "w-full h-full text-left justify-start rounded-none whitespace-nowrap",
+                          "hover:bg-[#1e3a5f]/10",
+                          isActive(link.href) && "bg-[#1e3a5f]/15"
+                        )}
+                        style={{
+                          color: '#1e3a5f',
+                          fontSize: 'clamp(0.875rem, 2vw, 1.5rem)',
+                          height: '56px',
+                          maxHeight: '56px',
+                          paddingLeft: 10,
+                          paddingRight: 10,
+                        }}
+                      >
+                        {translate(link.key as keyof typeof globalTranslations.nav)}
+                      </Button>
+                    </Link>
+                  </div>
                 ))}
               </nav>
-
-              {!isHomePage && (
-                <div className="flex items-center gap-2 lg:hidden">
-                  <button
-                    className="p-2 rounded-md hover:bg-gray-100 transition-colors"
-                    onClick={() => setIsMobileMenuOpen(true)}
-                    aria-label="Open menu"
-                  >
-                    <Icon icon="lucide:menu" width={24} height={24} />
-                  </button>
-                  <LanguageDropdown currentLocale={locale} />
-                </div>
-              )}
-              {!isHomePage && (
-                <div className="hidden lg:flex items-center gap-2 flex-shrink-0">
-                  <LanguageDropdown currentLocale={locale} />
-                </div>
-              )}
-              {isHomePage && (
-                <div className="flex items-center gap-2 absolute right-6 lg:hidden">
-                  <button
-                    className="p-2 rounded-md hover:bg-white/20 transition-colors text-white"
-                    onClick={() => setIsMobileMenuOpen(true)}
-                    aria-label="Open menu"
-                    style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)' }}
-                  >
-                    <Icon icon="lucide:menu" width={24} height={24} />
-                  </button>
-                  <LanguageDropdown currentLocale={locale} />
-                </div>
-              )}
-              {isHomePage && (
-                <div className="hidden lg:flex items-center gap-2 absolute right-6">
-                  <LanguageDropdown currentLocale={locale} />
-                </div>
-              )}
+              <div className="flex-shrink-0 flex items-center h-full min-w-[4rem]">
+                <LanguageDropdown
+                  currentLocale={locale}
+                  triggerWrapperClassName="h-full w-full min-w-[4rem]"
+                  triggerClassName="w-full h-full flex items-center gap-2 text-left justify-start rounded-none hover:bg-[#1e3a5f]/10 transition-colors font-semibold bg-transparent border-0 cursor-pointer"
+                  triggerStyle={{
+                    color: '#1e3a5f',
+                    fontSize: 'clamp(0.875rem, 2vw, 1.5rem)',
+                    height: '56px',
+                    paddingLeft: 10,
+                    paddingRight: 10,
+                  }}
+                />
+              </div>
             </div>
           </div>
         </Wrapper>

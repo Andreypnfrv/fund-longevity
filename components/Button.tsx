@@ -8,9 +8,9 @@ const fillClasses: Record<Fill, string> = {
   [Fill.Secondary]: 'bg-gray-200 text-gray-900 hover:bg-gray-300',
   [Fill.Outline]: 'border-2 border-black text-black hover:bg-gray-50',
   [Fill.Ghost]: 'bg-transparent text-gray-700 hover:text-black transition-colors duration-200 ease-in-out',
-  [Fill.Blue]: 'bg-blue-600 text-white hover:bg-blue-700 hover:shadow-lg transition-all duration-200',
-  [Fill.Violet]: 'bg-violet-600 text-white hover:bg-violet-700 hover:shadow-lg transition-all duration-200',
-  [Fill.Green]: 'bg-green-600 text-white hover:bg-green-700 hover:shadow-lg transition-all duration-200',
+  [Fill.Blue]: 'bg-[#1e3a5f] text-white hover:bg-[#1e3a5f]/90 hover:shadow-lg transition-all duration-200',
+  [Fill.Violet]: 'bg-[#1e3a5f] text-white hover:bg-[#1e3a5f]/90 hover:shadow-lg transition-all duration-200',
+  [Fill.Green]: 'bg-[#1e3a5f] text-white hover:bg-[#1e3a5f]/90 hover:shadow-lg transition-all duration-200',
 };
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -42,9 +42,7 @@ export function Button({
     height: sizeConfig.height,
     fontSize: sizeConfig.fontSize,
     ...(isColorFill && {
-      boxShadow: fill === Fill.Blue ? '0 4px 6px rgba(37, 99, 235, 0.3)' :
-                 fill === Fill.Violet ? '0 4px 6px rgba(124, 58, 237, 0.3)' :
-                 '0 4px 6px rgba(34, 197, 94, 0.3)',
+      boxShadow: '0 4px 6px rgba(30, 58, 95, 0.3)',
     }),
   };
   
@@ -57,8 +55,8 @@ export function Button({
         className
       )}
       style={{
-        ...(style || {}),
         ...baseStyle,
+        ...(style || {}),
       }}
       {...props}
     >

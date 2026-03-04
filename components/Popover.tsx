@@ -30,8 +30,6 @@ export function Popover({
       if (!triggerRef.current) return;
 
       const triggerRect = triggerRef.current.getBoundingClientRect();
-      const scrollY = window.scrollY;
-      const scrollX = window.scrollX;
 
       let top = 0;
       let left = 0;
@@ -40,27 +38,27 @@ export function Popover({
         const contentRect = contentRef.current.getBoundingClientRect();
 
         if (placement === 'bottom-start') {
-          top = triggerRect.bottom + scrollY + 8;
-          left = triggerRect.left + scrollX;
+          top = triggerRect.bottom + 8;
+          left = triggerRect.left;
         } else if (placement === 'bottom-end') {
-          top = triggerRect.bottom + scrollY + 8;
-          left = triggerRect.right + scrollX - contentRect.width;
+          top = triggerRect.bottom + 8;
+          left = triggerRect.right - contentRect.width;
         } else if (placement === 'top-start') {
-          top = triggerRect.top + scrollY - contentRect.height - 8;
-          left = triggerRect.left + scrollX;
+          top = triggerRect.top - contentRect.height - 8;
+          left = triggerRect.left;
         } else if (placement === 'top-end') {
-          top = triggerRect.top + scrollY - contentRect.height - 8;
-          left = triggerRect.right + scrollX - contentRect.width;
+          top = triggerRect.top - contentRect.height - 8;
+          left = triggerRect.right - contentRect.width;
         }
       } else {
         if (placement === 'bottom-start' || placement === 'bottom-end') {
-          top = triggerRect.bottom + scrollY + 8;
+          top = triggerRect.bottom + 8;
         } else {
-          top = triggerRect.top + scrollY - 100;
+          top = triggerRect.top - 100;
         }
-        left = placement === 'bottom-end' || placement === 'top-end' 
-          ? triggerRect.right + scrollX - 120 
-          : triggerRect.left + scrollX;
+        left = placement === 'bottom-end' || placement === 'top-end'
+          ? triggerRect.right - 120
+          : triggerRect.left;
       }
 
       setPosition({ top, left });
@@ -73,16 +71,20 @@ export function Popover({
 
     const timeoutId = setTimeout(updatePosition, 10);
 
+    const handleScroll = (): void => {
+      onClose();
+    };
+
     window.addEventListener('resize', updatePosition);
-    window.addEventListener('scroll', updatePosition, true);
+    window.addEventListener('scroll', handleScroll, true);
 
     return () => {
       cancelAnimationFrame(rafId);
       clearTimeout(timeoutId);
       window.removeEventListener('resize', updatePosition);
-      window.removeEventListener('scroll', updatePosition, true);
+      window.removeEventListener('scroll', handleScroll, true);
     };
-  }, [isOpen, placement]);
+  }, [isOpen, placement, onClose]);
 
   useEffect(() => {
     if (!isOpen) return;

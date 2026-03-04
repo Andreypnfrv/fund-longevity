@@ -283,3 +283,27 @@ body {
     font-size: clamp(4rem, 10vw, 7rem);
   }
 }
+@media (max-width: 600px) {
+  .hero-title-wrap {
+    font-size: clamp(2.25rem, 12vw, 4rem);
+  }
+}
+@media (max-width: 300px) {
+  .hero-title-wrap {
+    font-size: clamp(1.5rem, 15vw, 2.5rem);
+  }
+}
+
+.hero-subtitle-wrap {
+  font-size: clamp(1.6rem, 3vw + 1.25rem, 4rem);
+}
+@media (max-width: 600px) {
+  .hero-subtitle-wrap {
+    font-size: clamp(1rem, 4vw + 0.75rem, 1.6rem);
+  }
+}
+@media (max-width: 300px) {
+  .hero-subtitle-wrap {
+    font-size: clamp(0.75rem, 5vw + 0.5rem, 1rem);
+  }
+}

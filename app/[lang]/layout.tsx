@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { NavigationProvider } from '@/components/NavigationProvider';
-import { Locale } from '@/lib/types';
+import { getLocaleFromLang } from '@/lib/types';
 import '../globals.css';
 
 interface LayoutProps {
@@ -12,7 +12,7 @@ interface LayoutProps {
 
 export default async function LangLayout({ children, params }: LayoutProps): Promise<JSX.Element> {
   const { lang } = await params;
-  const locale = (lang === 'sv' ? Locale.SV : Locale.EN) as Locale;
+  const locale = getLocaleFromLang(lang);
 
   return (
     <NavigationProvider locale={locale}>

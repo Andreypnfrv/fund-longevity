@@ -15,7 +15,7 @@ export function DiscordCommunity({ label, variant = 'button' }: DiscordCommunity
         href={discordUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700"
+        className="inline-flex items-center gap-2 text-[#1e3a5f] hover:text-[#1e3a5f]/80"
       >
         <DiscordIcon />
         <span>{label}</span>
@@ -25,7 +25,7 @@ export function DiscordCommunity({ label, variant = 'button' }: DiscordCommunity
 
   return (
     <a href={discordUrl} target="_blank" rel="noopener noreferrer" className="no-underline">
-      <div className="inline-flex items-center gap-2 text-white rounded-lg font-semibold px-8 py-4 text-lg md:text-xl transition-all duration-200 hover:scale-105 hover:shadow-lg cursor-pointer" style={{ backgroundColor: 'rgb(124, 58, 237)', boxShadow: '0 4px 6px rgba(124, 58, 237, 0.3)' }}>
+      <div className="inline-flex items-center gap-2 text-white rounded-lg font-semibold px-8 py-4 text-lg md:text-xl transition-all duration-200 hover:scale-105 hover:shadow-lg cursor-pointer" style={{ backgroundColor: 'rgb(30, 58, 95)', boxShadow: '0 4px 6px rgba(30, 58, 95, 0.3)' }}>
         <span>{label}</span>
         <DiscordIcon />
       </div>

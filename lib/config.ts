@@ -20,7 +20,7 @@ export interface Partner {
   logo?: string;
   description?: string;
   url?: string;
-  logoSize?: 'small' | 'normal';
+  logoSize?: 'small' | 'medium' | 'normal' | 'large';
 }
 
 export const PARTNERS: Partner[] = [
@@ -45,21 +45,56 @@ export const PARTNERS: Partner[] = [
   {
     name: 'Levity',
     logo: '/levity.png',
-    logoSize: 'small' as const,
+    logoSize: 'medium' as const,
     url: 'https://reachlevity.com',
     description: 'Levity is an independent longevity media platform, shaping the conversation that will take us to longevity escape velocity. Sign up for the newsletter at reachlevity.com',
   },
   {
     name: 'Heales',
     logo: '/heales.jpg',
-    logoSize: 'small' as const,
+    logoSize: 'medium' as const,
     url: 'https://heales.org',
     description: 'Heales is an organization that informs and raises awareness about technological and medical developments in the field of biogerontology.',
   },
   {
     name: 'Open Longevity',
     logo: '/open-longevity-logo.png',
+    logoSize: 'large' as const,
     url: 'https://openlongevity.org',
     description: 'A life extension community focused on fighting aging and death through scientific methods. Runs multiple active projects including Open Genes database, AgingNets, and research initiatives.',
+  },
+  {
+    name: 'VivaCity',
+    logo: '/viva-city.avif',
+    logoSize: 'small' as const,
+    url: 'https://viva.city',
+    description: 'A permanent physical city being built for people who prioritize longevity and life extension research, with a mission to make death optional by bringing together experts and innovators to accelerate aging science.',
+  },
+  {
+    name: 'HydraDAO',
+    logo: '/hydradao.png',
+    logoSize: 'small' as const,
+    url: 'https://hydradao.org',
+    description: 'A DeSci DAO dedicated to advancing human longevity through biological replacement research, funding tissue, organ, and whole-body replacement projects to radically extend human lifespan.',
+  },
+  {
+    name: 'CryoDAO',
+    logo: '/cryodao.svg',
+    logoSize: 'small' as const,
+    url: 'https://www.cryodao.org',
+    description: 'A community-driven DAO advancing cryopreservation research, funding high-potential projects to improve cryopreservation quality and capabilities for life extension.',
+  },
+  {
+    name: 'Age.House',
+    logo: '/age-house-logo.png',
+    url: 'https://age.house',
+    description: 'Longevity community and advocacy.',
+  },
+  {
+    name: 'International Longevity Alliance',
+    logo: '/international-longevity-alliance.jpeg',
+    logoSize: 'medium' as const,
+    url: 'https://longevityalliance.org',
+    description: 'Coalition of organizations and individuals advocating for longevity research and aging as a treatable condition.',
   },
 ];

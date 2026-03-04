@@ -57,6 +57,6 @@ export const buttonSizes = {
 };
 
 export const navigationColors = {
-  active: 'bg-blue-50 text-blue-700 font-semibold',
-  inactive: 'text-gray-700 hover:bg-gray-50 hover:text-blue-600',
+  active: 'bg-[#1e3a5f]/10 text-[#1e3a5f] font-semibold',
+  inactive: 'text-gray-700 hover:bg-gray-50 hover:text-[#1e3a5f]',
 };

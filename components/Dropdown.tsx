@@ -15,6 +15,7 @@ interface DropdownProps {
   items: DropdownItem[];
   placement?: 'bottom-start' | 'bottom-end' | 'top-start' | 'top-end';
   contentClassName?: string;
+  triggerWrapperClassName?: string;
 }
 
 export function Dropdown({
@@ -22,6 +23,7 @@ export function Dropdown({
   items,
   placement = 'bottom-start',
   contentClassName = '',
+  triggerWrapperClassName = '',
 }: DropdownProps): React.ReactElement {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -35,7 +37,7 @@ export function Dropdown({
       isOpen={isOpen}
       onClose={() => setIsOpen(false)}
       trigger={
-        <div onClick={() => setIsOpen(!isOpen)}>
+        <div className={triggerWrapperClassName} onClick={() => setIsOpen(!isOpen)}>
           {trigger}
         </div>
       }
@@ -48,7 +50,7 @@ export function Dropdown({
             key={index}
             onClick={() => handleItemClick(item)}
             className={`w-full flex items-center gap-2 px-4 py-2 text-left hover:bg-gray-100 transition-colors ${
-              item.isActive ? 'bg-blue-50' : ''
+              item.isActive ? 'bg-[#1e3a5f]/10' : ''
             } ${item.className || ''}`}
           >
             {item.label}

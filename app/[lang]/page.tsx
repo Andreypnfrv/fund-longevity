@@ -5,9 +5,8 @@ import { H4 } from '@/components/Typography';
 import { Section } from '@/components/Section';
 import { Partners } from '@/components/Partners';
 import { HowCanYouHelp } from '@/components/HowCanYouHelp';
-import { Locale } from '@/lib/types';
+import { getLocaleFromLang, LOCALES } from '@/lib/types';
 import { homeTranslations } from './translations';
-import { joinTranslations } from './join/translations';
 import { getTranslation } from '@/lib/translate';
 import { Wrapper } from '@/components/Wrapper';
 import { PARTNERS } from '@/lib/config';
@@ -38,9 +37,9 @@ const EVENTS_DATA: EventData[] = [
     dateTime: 'Wednesday 8 April, 17:00-18:00 CEST',
     location: 'Youtube',
     link: 'https://luma.com/b7b2d2n2',
-    buttonText: 'Watch Live',
-    buttonColor: 'rgb(37, 99, 235)',
-    buttonShadow: '0 4px 6px rgba(37, 99, 235, 0.3)',
+    buttonText: 'Register',
+    buttonColor: 'rgb(30, 58, 95)',
+    buttonShadow: '0 4px 6px rgba(30, 58, 95, 0.3)',
   },
   {
     id: 'brussels',
@@ -51,10 +50,10 @@ const EVENTS_DATA: EventData[] = [
     imageAlt: 'Brussels',
     dateTime: 'Wednesday 8 April, 17:00-18:00 CEST',
     location: 'Brussels',
-    link: '#',
-    buttonText: 'Register for Event',
-    buttonColor: 'rgb(124, 58, 237)',
-    buttonShadow: '0 4px 6px rgba(124, 58, 237, 0.3)',
+    link: 'https://luma.com/9hjypbt7',
+    buttonText: 'Register',
+    buttonColor: 'rgb(30, 58, 95)',
+    buttonShadow: '0 4px 6px rgba(30, 58, 95, 0.3)',
   },
   {
     id: 'stockholm',
@@ -66,9 +65,9 @@ const EVENTS_DATA: EventData[] = [
     dateTime: 'Wednesday 8 April, 17:00-18:00 CEST',
     location: 'Riksgatan 3',
     link: 'https://luma.com/jjvn91yn',
-    buttonText: 'Register for Event',
-    buttonColor: 'rgb(124, 58, 237)',
-    buttonShadow: '0 4px 6px rgba(124, 58, 237, 0.3)',
+    buttonText: 'Register',
+    buttonColor: 'rgb(30, 58, 95)',
+    buttonShadow: '0 4px 6px rgba(30, 58, 95, 0.3)',
   },
   {
     id: 'berlin',
@@ -80,9 +79,9 @@ const EVENTS_DATA: EventData[] = [
     dateTime: 'Wednesday 8 April, 17:00-18:00 CEST',
     location: 'Platz der Republik vor dem Reichstagsgebäude',
     link: 'https://luma.com/85zauy4k',
-    buttonText: 'Register for Event',
-    buttonColor: 'rgba(34, 197, 94, 0.9)',
-    buttonShadow: '0 4px 6px rgba(34, 197, 94, 0.3)',
+    buttonText: 'Register',
+    buttonColor: 'rgb(30, 58, 95)',
+    buttonShadow: '0 4px 6px rgba(30, 58, 95, 0.3)',
   },
   {
     id: 'amsterdam',
@@ -93,10 +92,10 @@ const EVENTS_DATA: EventData[] = [
     imageAlt: 'Amsterdam',
     dateTime: 'Wednesday 8 April, 17:00-18:00 CEST',
     location: 'Dam Square',
-    link: 'https://luma.com/ewtm0j9h',
-    buttonText: 'Register for Event',
-    buttonColor: 'rgb(37, 99, 235)',
-    buttonShadow: '0 4px 6px rgba(37, 99, 235, 0.3)',
+    link: 'https://luma.com/tkxk5owu',
+    buttonText: 'Register',
+    buttonColor: 'rgb(30, 58, 95)',
+    buttonShadow: '0 4px 6px rgba(30, 58, 95, 0.3)',
   },
   {
     id: 'rome',
@@ -108,9 +107,9 @@ const EVENTS_DATA: EventData[] = [
     dateTime: 'Wednesday 8 April, 17:00-18:00 CEST',
     location: 'Piazza del Popolo',
     link: 'https://luma.com/xjvb2fcb',
-    buttonText: 'Register for Event',
-    buttonColor: 'rgb(124, 58, 237)',
-    buttonShadow: '0 4px 6px rgba(124, 58, 237, 0.3)',
+    buttonText: 'Register',
+    buttonColor: 'rgb(30, 58, 95)',
+    buttonShadow: '0 4px 6px rgba(30, 58, 95, 0.3)',
   },
   {
     id: 'london',
@@ -122,9 +121,9 @@ const EVENTS_DATA: EventData[] = [
     dateTime: 'Wednesday 8 April, 16:00-17:00 BST',
     location: 'Trafalgar Square',
     link: 'https://luma.com/zrhjldno',
-    buttonText: 'Register for Event',
-    buttonColor: 'rgba(34, 197, 94, 0.9)',
-    buttonShadow: '0 4px 6px rgba(34, 197, 94, 0.3)',
+    buttonText: 'Register',
+    buttonColor: 'rgb(30, 58, 95)',
+    buttonShadow: '0 4px 6px rgba(30, 58, 95, 0.3)',
   },
   {
     id: 'paris',
@@ -134,11 +133,25 @@ const EVENTS_DATA: EventData[] = [
     image: '/paris.png',
     imageAlt: 'Paris',
     dateTime: 'Wednesday 8 April, 17:00-18:00 CEST',
-    location: '2 Pl. du Palais Bourbon, 75007 Paris',
+    location: '2 Pl. du Palais Bourbon',
     link: 'https://luma.com/unt7c4gf',
-    buttonText: 'Register for Event',
-    buttonColor: 'rgb(37, 99, 235)',
-    buttonShadow: '0 4px 6px rgba(37, 99, 235, 0.3)',
+    buttonText: 'Register',
+    buttonColor: 'rgb(30, 58, 95)',
+    buttonShadow: '0 4px 6px rgba(30, 58, 95, 0.3)',
+  },
+  {
+    id: 'madrid',
+    type: 'city',
+    name: 'MADRID',
+    flag: '🇪🇸',
+    image: '/madrid.jpg',
+    imageAlt: 'Madrid',
+    dateTime: 'Wednesday 8 April, 17:00-18:00 CEST',
+    location: 'Madrid',
+    link: 'https://luma.com/lppehueq',
+    buttonText: 'Register',
+    buttonColor: 'rgb(30, 58, 95)',
+    buttonShadow: '0 4px 6px rgba(30, 58, 95, 0.3)',
   },
 ];
 
@@ -147,12 +160,12 @@ interface HomePageProps {
 }
 
 export function generateStaticParams() {
-  return [{ lang: 'en' }, { lang: 'sv' }];
+  return LOCALES.map((locale) => ({ lang: locale }));
 }
 
 export async function generateMetadata({ params }: HomePageProps): Promise<Metadata> {
   const { lang } = await params;
-  const locale = (lang === 'sv' ? Locale.SV : Locale.EN) as Locale;
+  const locale = getLocaleFromLang(lang);
   const translate = getTranslation(homeTranslations.hero, locale);
 
   return {
@@ -163,19 +176,22 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
 
 export default async function HomePage({ params }: HomePageProps): Promise<JSX.Element> {
   const { lang } = await params;
-  const locale = (lang === 'sv' ? Locale.SV : Locale.EN) as Locale;
-  
-  const howCanYouHelp = getTranslation(homeTranslations.howCanYouHelp, locale);
-  const partnersTranslate = getTranslation(joinTranslations.partners, locale);
-  const buttons = getTranslation(homeTranslations.buttons, locale);
+  const locale = getLocaleFromLang(lang);
+
+  const partnersTranslate = getTranslation(homeTranslations.partners, locale);
+  const heroTranslate = getTranslation(homeTranslations.hero, locale);
+  const citiesTranslate = getTranslation(homeTranslations.cities, locale);
 
   return (
     <div>
       <Hero
-        backgroundImage="/hero3.jpg"
+        backgroundImage="/hero4.jpg"
         locale={locale}
+        titleLine1={heroTranslate('titleLine1')}
+        titleLine2={heroTranslate('titleLine2')}
+        subtitle={heroTranslate('subtitle')}
       />
-      <Section>
+      <Section id="cities">
         <Wrapper>
           <div className="text-center py-8 md:py-12">
             <div className="inline-block">
@@ -188,7 +204,7 @@ export default async function HomePage({ params }: HomePageProps): Promise<JSX.E
                     backgroundClip: 'text',
                     letterSpacing: '-0.02em',
                   }}>
-                    JOIN US
+                    {citiesTranslate('joinUs')}
                   </div>
                   <div className="text-5xl md:text-7xl lg:text-8xl font-black leading-none" style={{
                     background: 'linear-gradient(135deg, #000 0%, #333 50%, #000 100%)',
@@ -197,61 +213,80 @@ export default async function HomePage({ params }: HomePageProps): Promise<JSX.E
                     backgroundClip: 'text',
                     letterSpacing: '-0.02em',
                   }}>
-                    IN YOUR CITY
+                    {citiesTranslate('inYourCity')}
                   </div>
                 </div>
-                <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-black leading-tight border-t-4 border-black pt-1 md:pt-2 mt-1 md:mt-2" style={{
+                <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-black leading-tight border-t-4 border-black pt-1 md:pt-2 mt-1 md:mt-2 inline-flex flex-wrap items-baseline gap-x-1 max-[1180px]:flex-col max-[1180px]:items-start max-[1180px]:gap-y-0" style={{
                   letterSpacing: '0.1em',
                   fontWeight: '900',
                 }}>
-                  8TH APRIL 2026
+                  <span className="whitespace-nowrap">{citiesTranslate('date')}</span>
+                  <span className="whitespace-nowrap">{citiesTranslate('year')}</span>
                 </div>
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-0 mb-8 pt-16 md:pt-24">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 mb-8 pt-16 md:pt-24">
             {EVENTS_DATA.map((event) => (
               <a
                 key={event.id}
                 href={event.link}
                 target="_blank"
-                className="text-start flex flex-col gap-md p-6 rounded-lg hover:bg-gray-100 transition-all duration-200 ease-in-out cursor-pointer"
+                className="text-start flex flex-col justify-between gap-md p-6 rounded-lg hover:bg-gray-100 transition-all duration-200 ease-in-out cursor-pointer"
               >
-                <div className={`relative aspect-square ${event.type === 'online' ? 'bg-black' : 'bg-gray-200'} rounded-lg overflow-hidden`}>
-                  {event.image ? (
-                    event.type === 'online' ? (
-                      <div className="absolute inset-0 flex items-center justify-center">
+                <div className="flex flex-col flex-1 min-h-0 gap-5">
+                  <div className={`relative aspect-square ${event.type === 'online' ? 'bg-black' : 'bg-gray-200'} rounded-lg overflow-hidden`}>
+                    {event.image ? (
+                      event.type === 'online' ? (
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <Image
+                            src={event.image}
+                            alt={event.imageAlt || event.name}
+                            width={200}
+                            height={200}
+                            className="object-contain"
+                            unoptimized
+                          />
+                        </div>
+                      ) : (
                         <Image
                           src={event.image}
                           alt={event.imageAlt || event.name}
-                          width={200}
-                          height={200}
-                          className="object-contain"
+                          fill
+                          className="object-cover"
                         />
-                      </div>
+                      )
                     ) : (
-                      <Image
-                        src={event.image}
-                        alt={event.imageAlt || event.name}
-                        fill
-                        className="object-cover"
-                      />
-                    )
-                  ) : (
-                    <div className="absolute inset-0 flex items-center justify-center bg-gray-300">
-                      <span className="text-gray-500 text-4xl">{event.flag}</span>
-                    </div>
-                  )}
+                      <div className="absolute inset-0 flex items-center justify-center bg-gray-300">
+                        <span className="text-gray-500 text-4xl">{event.flag}</span>
+                      </div>
+                    )}
+                  </div>
+                  <div className="flex items-center justify-between gap-2">
+                    <H4 className="text-sm md:text-base font-black whitespace-nowrap">{event.name}</H4>
+                    <div className="text-2xl md:text-3xl">{event.flag}</div>
+                  </div>
+                  <div className="text-base md:text-lg mb-0 inline-flex flex-wrap items-baseline gap-x-1 max-[1180px]:flex-col max-[1180px]:items-start max-[1180px]:gap-y-0">
+                    {(() => {
+                      const i = event.dateTime.indexOf(', ');
+                      const datePart = i >= 0 ? event.dateTime.slice(0, i) : event.dateTime;
+                      const timePart = i >= 0 ? event.dateTime.slice(i + 2) : '';
+                      const nbsp = '\u00A0';
+                      const dateStr = datePart.replace(/ /g, nbsp);
+                      const timeStr = timePart.replace(/ /g, nbsp);
+                      return (
+                        <>
+                          {dateStr && <span className="whitespace-nowrap">{dateStr}{timePart ? ',\u00A0' : ''}</span>}
+                          {timeStr && <span className="whitespace-nowrap">{timeStr}</span>}
+                        </>
+                      );
+                    })()}
+                  </div>
+                  <div className="text-base md:text-lg text-gray-600 -mt-1">{event.location}</div>
                 </div>
-                <div className="flex items-center justify-between gap-2 mb-3">
-                  <H4 className="text-sm md:text-base font-black whitespace-nowrap">{event.name}</H4>
-                  <div className="text-2xl md:text-3xl">{event.flag}</div>
-                </div>
-                <div className="text-base md:text-lg mb-0 whitespace-nowrap">{event.dateTime}</div>
-                <div className="text-base md:text-lg text-gray-600 mb-6 -mt-1">{event.location}</div>
-                <div className="mb-10">
+                <div className="flex-shrink-0">
                   <div className="inline-block text-white rounded-lg font-semibold px-8 py-4 text-lg md:text-xl transition-all duration-200 hover:scale-105 hover:shadow-lg cursor-pointer" style={{ backgroundColor: event.buttonColor, boxShadow: event.buttonShadow }}>
-                    {event.buttonText}
+                    {citiesTranslate('register')}
                   </div>
                 </div>
               </a>
@@ -261,13 +296,7 @@ export default async function HomePage({ params }: HomePageProps): Promise<JSX.E
       </Section>
       <Section>
         <Wrapper>
-          <HowCanYouHelp
-            locale={locale}
-            title={howCanYouHelp('title')}
-            description={howCanYouHelp('description')}
-            joinDiscordLabel={buttons('joinDiscord')}
-            getInvolvedLabel={buttons('getInvolved')}
-          />
+          <HowCanYouHelp locale={locale} />
         </Wrapper>
       </Section>
 
@@ -276,6 +305,7 @@ export default async function HomePage({ params }: HomePageProps): Promise<JSX.E
           <Partners
             locale={locale}
             title={partnersTranslate('title')}
+            subtitle={partnersTranslate('subtitle')}
             partners={PARTNERS}
           />
         </Wrapper>

@@ -6,36 +6,41 @@ import type { Partner } from '@/lib/config';
 interface PartnersProps {
   locale: Locale;
   title: string;
+  subtitle?: string;
   partners: Partner[];
 }
 
-function PartnerCard({ children, className = '', logo }: { children: ReactNode; className?: string; logo?: string | undefined }): React.ReactElement {
+function PartnerCard({ children, className = '', logo, logoSize }: { children: ReactNode; className?: string; logo?: string | undefined; logoSize?: 'small' | 'medium' | 'normal' | 'large' }): React.ReactElement {
+  const logoHeight = logoSize === 'small' ? 'h-[63px]' : logoSize === 'medium' ? 'h-[105px]' : logoSize === 'large' ? 'h-[200px]' : 'h-[150px]';
   return (
-    <div className={cn('rounded p-8 bg-white hover:bg-gray-100 transition-all duration-200 ease-in-out h-full min-h-[320px] flex flex-col', className)}>
-      {logo && (
-        <div 
-          className="w-full h-[150px] mb-8"
-          style={{
-            backgroundImage: `url(${logo})`,
-            backgroundSize: 'contain',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
-          }}
-        />
-      )}
-      {children}
+    <div className={cn('rounded p-8 bg-white hover:bg-gray-100 transition-all duration-200 ease-in-out h-full min-h-[320px] flex flex-col justify-between', className)}>
+      <div className="flex-shrink-0 w-full">
+        {logo && (
+          <div
+            className={cn('w-full', logoHeight)}
+            style={{
+              backgroundImage: `url(${logo})`,
+              backgroundSize: 'contain',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            }}
+          />
+        )}
+      </div>
+      <div className="flex-shrink-0 w-full">{children}</div>
     </div>
   );
 }
 
-export function Partners({ locale: _locale, title, partners }: PartnersProps) {
+export function Partners({ locale: _locale, title, subtitle, partners }: PartnersProps) {
   return (
     <section>
       <div className="text-center py-8 md:py-12 mb-8">
         <div className="inline-block">
           <div className="flex flex-col items-start gap-1 md:gap-2">
             <div className="flex flex-row items-baseline gap-2 md:gap-4 flex-wrap">
-              <div className="text-5xl md:text-7xl lg:text-8xl font-black leading-none" style={{
+              <div className="font-black leading-none" style={{
+                fontSize: 'clamp(1.25rem, 4vw + 0.75rem, 3.5rem)',
                 background: 'linear-gradient(135deg, #000 0%, #333 50%, #000 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -45,6 +50,7 @@ export function Partners({ locale: _locale, title, partners }: PartnersProps) {
                 {title.toUpperCase()}
               </div>
             </div>
+            {subtitle && <p className="text-xl md:text-2xl text-gray-600 mt-12 max-w-2xl leading-snug">{subtitle}</p>}
           </div>
         </div>
       </div>
@@ -59,8 +65,11 @@ export function Partners({ locale: _locale, title, partners }: PartnersProps) {
             </>
           );
           
-          const cardProps = partner.logo ? { logo: partner.logo } : {};
-          
+          const cardProps =
+            partner.logo
+              ? { logo: partner.logo, ...(partner.logoSize != null && { logoSize: partner.logoSize }) }
+              : {};
+
           return partner.url ? (
             <a
               key={index}

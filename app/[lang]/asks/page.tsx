@@ -6,25 +6,20 @@ import { HowCanYouHelp } from '@/components/HowCanYouHelp';
 import { Wrapper } from '@/components/Wrapper';
 import { CopyLinkButton } from '@/components/CopyLinkButton';
 import { ImagePair } from '@/components/ImagePair';
-import { Locale } from '@/lib/types';
+import { getLocaleFromLang, LOCALES } from '@/lib/types';
 import { asksTranslations } from './translations';
-import { homeTranslations } from '../translations';
-import { getTranslation } from '@/lib/translate';
 
 interface AsksPageProps {
   params: Promise<{ lang: string }>;
 }
 
 export function generateStaticParams() {
-  return [{ lang: 'en' }, { lang: 'sv' }];
+  return LOCALES.map((locale) => ({ lang: locale }));
 }
 
 export default async function AsksPage({ params }: AsksPageProps): Promise<JSX.Element> {
   const { lang } = await params;
-  const locale = (lang === 'sv' ? Locale.SV : Locale.EN) as Locale;
-
-  const buttons = getTranslation(homeTranslations.buttons, locale);
-  const howCanYouHelp = getTranslation(homeTranslations.howCanYouHelp, locale);
+  const locale = getLocaleFromLang(lang);
 
   return (
     <div>
@@ -40,14 +35,14 @@ export default async function AsksPage({ params }: AsksPageProps): Promise<JSX.E
         <div className="pt-16 md:pt-20">
           <Wrapper>
             <div className="flex justify-center">
-            <div className="max-w-3xl w-full space-y-8 md:space-y-20">
+            <div className="max-w-3xl w-full space-y-12 md:space-y-24 mb-16">
 
               <Card>
-                <H2 className="mb-8 text-center">{asksTranslations.pageTitle[locale]}</H2>
-                <ul className="space-y-4">
+                <H2 className="mb-12 text-center">{asksTranslations.pageTitle[locale]}</H2>
+                <ul className="space-y-8">
                   {asksTranslations.items[locale].map((item, index) => (
-                    <li key={index} className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-8 h-8 rounded-full border-2 border-blue-600 flex items-center justify-center font-semibold text-sm text-blue-600">
+                    <li key={index} className="flex items-start gap-6">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full border-2 border-[#1e3a5f] flex items-center justify-center font-semibold text-sm text-[#1e3a5f]">
                         {index + 1}
                       </div>
                       <P className="flex-1 pt-1">
@@ -59,8 +54,7 @@ export default async function AsksPage({ params }: AsksPageProps): Promise<JSX.E
                   ))}
                 </ul>
               </Card>
-
-              <P className="mb-6 text-center ">
+              <P className="mt-12 mb-6 text-center italic">
                 {asksTranslations.intro[locale]}
               </P>
             </div>
@@ -82,13 +76,7 @@ export default async function AsksPage({ params }: AsksPageProps): Promise<JSX.E
 
       <Section>
         <Wrapper>
-          <HowCanYouHelp
-            locale={locale}
-            title={howCanYouHelp('title')}
-            description={howCanYouHelp('description')}
-            joinDiscordLabel={buttons('joinDiscord')}
-            getInvolvedLabel={buttons('getInvolved')}
-          />
+          <HowCanYouHelp locale={locale} />
         </Wrapper>
       </Section>
       <CopyLinkButton />
