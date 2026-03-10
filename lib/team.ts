@@ -176,6 +176,12 @@ export const TEAM_DATA: TeamData = {
       ],
     },
     {
+      city: 'Caracas',
+      members: [
+        { name: 'José Gregorio Bermúdez Cancine', description: '', location: 'Caracas, Venezuela' },
+      ],
+    },
+    {
       city: 'liveStreamOrgs',
       members: [
         { name: 'Nastya Egorova', description: '', location: '', image: '/nastya.jpg' },

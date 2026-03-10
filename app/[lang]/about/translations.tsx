@@ -131,6 +131,15 @@ export const aboutTranslations = {
       [Locale.IT]: 'Tel Aviv',
       [Locale.NL]: 'Tel Aviv',
     },
+    Caracas: {
+      [Locale.EN]: 'Caracas',
+      [Locale.SV]: 'Caracas',
+      [Locale.DE]: 'Caracas',
+      [Locale.FR]: 'Caracas',
+      [Locale.ES]: 'Caracas',
+      [Locale.IT]: 'Caracas',
+      [Locale.NL]: 'Caracas',
+    },
   },
   localLeads: {
     title: {
