@@ -33,6 +33,7 @@ export const TEAM_DATA: TeamData = {
         { name: 'Peter Lidskiy', description: 'Assistant Professor at City University of Hong Kong, studies evolutionary biology of aging and the pathogen control hypothesis.', location: '', image: '/pl.jpg', socialLinks: { website: 'https://scholars.cityu.edu.hk/en/persons/plidskiy/' } },
         { name: 'Alexander Panchin', description: 'Biologist and science communicator, author of "Immortality or Death", researcher at Russian Academy of Sciences.', location: '', image: '/panchin.jpg', socialLinks: { telegram: 'https://t.me/ScienceInquisition', website: 'https://www.researchgate.net/profile/Alexander-Panchin' } },
         { name: 'Laurence Ion', description: 'Founding Steward of VitaDAO, Co-initiator of Vitalia. Focuses on DeSci and longevity research funding, and on new cities to accelerate drug development and make death optional.', location: '', image: '/laurence-ion.jpg', socialLinks: { linkedin: 'https://www.linkedin.com/in/laurenceion' } },
+        { name: 'Ingemar Patrick Linden', description: 'Author of "The Case against Death" (MIT Press 2022) and "Mot döden en radikalt livsbejakande filosofi" (Volante 2024).', location: '', socialLinks: { linkedin: 'https://www.linkedin.com/in/ingemar-patrick-linden-122bb3b/' } },
       ],
     },
     {
