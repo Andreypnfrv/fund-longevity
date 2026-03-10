@@ -58,7 +58,7 @@ export default async function AboutPage({ params }: AboutPageProps): Promise<JSX
             <section id="team">
                 <div className="py-8 bg-white">
                   {citiesSorted.map((cityGroup) => (
-                    <div key={cityGroup.city} id={cityGroup.city} className="mb-24 scroll-mt-24">
+                    <div key={cityGroup.city} id={cityGroup.city} className="mb-48 scroll-mt-48">
                       <H3 className="mb-6">{aboutTranslations.teamSections[cityGroup.city as keyof typeof aboutTranslations.teamSections][locale]}</H3>
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {cityGroup.members.map((member) => (
