@@ -6,7 +6,7 @@ const plusJakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-pl
 
 export const metadata: Metadata = {
   title: "Fund Longevity",
-  description: "A Multinational Rally for Life Extension",
+  description: "A Global Rally for Life Extension",
 };
 
 export default function RootLayout({

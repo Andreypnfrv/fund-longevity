@@ -42,13 +42,13 @@ export const globalTranslations = {
   },
   footer: {
     summary: {
-      [Locale.EN]: 'Fund Longevity is a multinational rally for life extension.',
+      [Locale.EN]: 'Fund Longevity is a global rally for life extension.',
       [Locale.SV]: 'Fund Longevity är ett multinationellt rally för livsförlängning.',
-      [Locale.DE]: 'Fund Longevity ist eine multinationale Kundgebung für Lebensverlängerung.',
-      [Locale.FR]: 'Fund Longevity est un rassemblement multinational pour l\'extension de la vie.',
+      [Locale.DE]: 'Fund Longevity ist eine globale Kundgebung für Lebensverlängerung.',
+      [Locale.FR]: 'Fund Longevity est un rassemblement global pour l\'extension de la vie.',
       [Locale.ES]: 'Fund Longevity es una manifestación multinacional por la extensión de la vida.',
       [Locale.IT]: 'Fund Longevity è un raduno multinazionale per l\'estensione della vita.',
-      [Locale.NL]: 'Fund Longevity is een multinationale bijeenkomst voor levensverlenging.',
+      [Locale.NL]: 'Fund Longevity is een globale bijeenkomst voor levensverlenging.',
     },
     copyright: {
       [Locale.EN]: '2026 Fund Longevity. All rights reserved.',

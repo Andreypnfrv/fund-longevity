@@ -31,13 +31,13 @@ export const homeTranslations = {
       [Locale.NL]: 'LONGEVITY',
     },
     subtitle: {
-      [Locale.EN]: 'A Multinational Rally for\u00A0Life\u00A0Extension',
+      [Locale.EN]: 'A Global Rally for\u00A0Life\u00A0Extension',
       [Locale.SV]: 'Ett Multinationellt Rally för Livsförlängning',
-      [Locale.DE]: 'Eine multinationale Kundgebung für Lebensverlängerung',
-      [Locale.FR]: 'Un rassemblement multinational pour l\'extension de la vie',
+      [Locale.DE]: 'Eine globale Kundgebung für Lebensverlängerung',
+      [Locale.FR]: 'Un rassemblement global pour l\'extension de la vie',
       [Locale.ES]: 'Una manifestación multinacional por la extensión de la vida',
       [Locale.IT]: 'Un raduno multinazionale per l\'estensione della vita',
-      [Locale.NL]: 'Een multinationale bijeenkomst voor levensverlenging',
+      [Locale.NL]: 'Een globale bijeenkomst voor levensverlenging',
     },
   },
   partners: {

@@ -97,4 +97,11 @@ export const PARTNERS: Partner[] = [
     url: 'https://longevityalliance.org',
     description: 'Coalition of organizations and individuals advocating for longevity research and aging as a treatable condition.',
   },
+  {
+    name: 'Humanity+',
+    logo: '/humanity.png',
+    logoSize: 'medium' as const,
+    url: 'https://www.humanityplus.org',
+    description: 'Advocates for the ethical use of technology and evidence-based science to expand human capabilities. Educational organization at the forefront of healthy longevity, AI, and the future of humanity; runs H+ Summits and TransVision conferences.',
+  },
 ];
