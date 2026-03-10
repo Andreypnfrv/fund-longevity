@@ -113,6 +113,24 @@ export const aboutTranslations = {
       [Locale.IT]: 'Bruxelles',
       [Locale.NL]: 'Brussel',
     },
+    Ljubljana: {
+      [Locale.EN]: 'Ljubljana',
+      [Locale.SV]: 'Ljubljana',
+      [Locale.DE]: 'Ljubljana',
+      [Locale.FR]: 'Ljubljana',
+      [Locale.ES]: 'Liubliana',
+      [Locale.IT]: 'Lubiana',
+      [Locale.NL]: 'Ljubljana',
+    },
+    telAviv: {
+      [Locale.EN]: 'Tel Aviv',
+      [Locale.SV]: 'Tel Aviv',
+      [Locale.DE]: 'Tel Aviv',
+      [Locale.FR]: 'Tel Aviv',
+      [Locale.ES]: 'Tel Aviv',
+      [Locale.IT]: 'Tel Aviv',
+      [Locale.NL]: 'Tel Aviv',
+    },
   },
   localLeads: {
     title: {

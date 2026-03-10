@@ -8,9 +8,9 @@ const fillClasses: Record<Fill, string> = {
   [Fill.Secondary]: 'bg-gray-200 text-gray-900 hover:bg-gray-300',
   [Fill.Outline]: 'border-2 border-black text-black hover:bg-gray-50',
   [Fill.Ghost]: 'bg-transparent text-gray-700 hover:text-black transition-colors duration-200 ease-in-out',
-  [Fill.Blue]: 'bg-[#1e3a5f] text-white hover:bg-[#1e3a5f]/90 hover:shadow-lg transition-all duration-200',
-  [Fill.Violet]: 'bg-[#1e3a5f] text-white hover:bg-[#1e3a5f]/90 hover:shadow-lg transition-all duration-200',
-  [Fill.Green]: 'bg-[#1e3a5f] text-white hover:bg-[#1e3a5f]/90 hover:shadow-lg transition-all duration-200',
+  [Fill.Blue]: 'bg-[#0900FF] text-white hover:bg-[#0900FF]/90 hover:shadow-lg transition-all duration-200',
+  [Fill.Violet]: 'bg-[#0900FF] text-white hover:bg-[#0900FF]/90 hover:shadow-lg transition-all duration-200',
+  [Fill.Green]: 'bg-[#0900FF] text-white hover:bg-[#0900FF]/90 hover:shadow-lg transition-all duration-200',
 };
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -42,7 +42,7 @@ export function Button({
     height: sizeConfig.height,
     fontSize: sizeConfig.fontSize,
     ...(isColorFill && {
-      boxShadow: '0 4px 6px rgba(30, 58, 95, 0.3)',
+      boxShadow: '0 4px 6px rgba(9, 0, 255, 0.3)',
     }),
   };
   

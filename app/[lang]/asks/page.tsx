@@ -42,7 +42,7 @@ export default async function AsksPage({ params }: AsksPageProps): Promise<JSX.E
                 <ul className="space-y-8">
                   {asksTranslations.items[locale].map((item, index) => (
                     <li key={index} className="flex items-start gap-6">
-                      <div className="flex-shrink-0 w-8 h-8 rounded-full border-2 border-[#1e3a5f] flex items-center justify-center font-semibold text-sm text-[#1e3a5f]">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full border-2 border-[#0900FF] flex items-center justify-center font-semibold text-sm text-[#0900FF]">
                         {index + 1}
                       </div>
                       <P className="flex-1 pt-1">

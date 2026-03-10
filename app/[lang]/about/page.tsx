@@ -24,8 +24,15 @@ export default async function AboutPage({ params }: AboutPageProps): Promise<JSX
   const { lang } = await params;
   const locale = getLocaleFromLang(lang);
 
+  const citiesSorted = [...TEAM_DATA.cities].sort((a, b) => {
+    if (a.city === 'experts') return 1;
+    if (b.city === 'experts') return -1;
+    if (a.city === 'liveStreamOrgs') return 1;
+    if (b.city === 'liveStreamOrgs') return -1;
+    return a.city.localeCompare(b.city, undefined, { sensitivity: 'base' });
+  });
   const sidebarItems = [
-    ...TEAM_DATA.cities.map((g) => ({
+    ...citiesSorted.map((g) => ({
       id: g.city,
       label: aboutTranslations.teamSections[g.city as keyof typeof aboutTranslations.teamSections][locale],
       href: `/about#${g.city}`,
@@ -50,7 +57,7 @@ export default async function AboutPage({ params }: AboutPageProps): Promise<JSX
           <Content>
             <section id="team">
                 <div className="py-8 bg-white">
-                  {TEAM_DATA.cities.map((cityGroup) => (
+                  {citiesSorted.map((cityGroup) => (
                     <div key={cityGroup.city} id={cityGroup.city} className="mb-24 scroll-mt-24">
                       <H3 className="mb-6">{aboutTranslations.teamSections[cityGroup.city as keyof typeof aboutTranslations.teamSections][locale]}</H3>
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

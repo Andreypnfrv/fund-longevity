@@ -24,6 +24,7 @@ interface EventData {
   buttonText: string;
   buttonColor: string;
   buttonShadow: string;
+  note?: string;
 }
 
 const EVENTS_DATA: EventData[] = [
@@ -38,8 +39,8 @@ const EVENTS_DATA: EventData[] = [
     location: 'Youtube',
     link: 'https://luma.com/b7b2d2n2',
     buttonText: 'Register',
-    buttonColor: 'rgb(30, 58, 95)',
-    buttonShadow: '0 4px 6px rgba(30, 58, 95, 0.3)',
+    buttonColor: '#0900FF',
+    buttonShadow: '0 4px 6px rgba(9, 0, 255, 0.3)',
   },
   {
     id: 'brussels',
@@ -52,8 +53,8 @@ const EVENTS_DATA: EventData[] = [
     location: 'Brussels',
     link: 'https://luma.com/9hjypbt7',
     buttonText: 'Register',
-    buttonColor: 'rgb(30, 58, 95)',
-    buttonShadow: '0 4px 6px rgba(30, 58, 95, 0.3)',
+    buttonColor: '#0900FF',
+    buttonShadow: '0 4px 6px rgba(9, 0, 255, 0.3)',
   },
   {
     id: 'stockholm',
@@ -66,8 +67,8 @@ const EVENTS_DATA: EventData[] = [
     location: 'Riksgatan 3',
     link: 'https://luma.com/jjvn91yn',
     buttonText: 'Register',
-    buttonColor: 'rgb(30, 58, 95)',
-    buttonShadow: '0 4px 6px rgba(30, 58, 95, 0.3)',
+    buttonColor: '#0900FF',
+    buttonShadow: '0 4px 6px rgba(9, 0, 255, 0.3)',
   },
   {
     id: 'berlin',
@@ -80,8 +81,8 @@ const EVENTS_DATA: EventData[] = [
     location: 'Platz der Republik vor dem Reichstagsgebäude',
     link: 'https://luma.com/85zauy4k',
     buttonText: 'Register',
-    buttonColor: 'rgb(30, 58, 95)',
-    buttonShadow: '0 4px 6px rgba(30, 58, 95, 0.3)',
+    buttonColor: '#0900FF',
+    buttonShadow: '0 4px 6px rgba(9, 0, 255, 0.3)',
   },
   {
     id: 'amsterdam',
@@ -94,8 +95,8 @@ const EVENTS_DATA: EventData[] = [
     location: 'Dam Square',
     link: 'https://luma.com/tkxk5owu',
     buttonText: 'Register',
-    buttonColor: 'rgb(30, 58, 95)',
-    buttonShadow: '0 4px 6px rgba(30, 58, 95, 0.3)',
+    buttonColor: '#0900FF',
+    buttonShadow: '0 4px 6px rgba(9, 0, 255, 0.3)',
   },
   {
     id: 'rome',
@@ -108,8 +109,22 @@ const EVENTS_DATA: EventData[] = [
     location: 'Piazza del Popolo',
     link: 'https://luma.com/xjvb2fcb',
     buttonText: 'Register',
-    buttonColor: 'rgb(30, 58, 95)',
-    buttonShadow: '0 4px 6px rgba(30, 58, 95, 0.3)',
+    buttonColor: '#0900FF',
+    buttonShadow: '0 4px 6px rgba(9, 0, 255, 0.3)',
+  },
+  {
+    id: 'ljubljana',
+    type: 'city',
+    name: 'LJUBLJANA',
+    flag: '🇸🇮',
+    image: '/ljubljana.jpg',
+    imageAlt: 'Ljubljana',
+    dateTime: 'Wednesday 8 April, 17:00-18:00 CEST',
+    location: 'Ljubljana',
+    link: 'https://luma.com/ttgmkonk',
+    buttonText: 'Register',
+    buttonColor: '#0900FF',
+    buttonShadow: '0 4px 6px rgba(9, 0, 255, 0.3)',
   },
   {
     id: 'london',
@@ -122,8 +137,8 @@ const EVENTS_DATA: EventData[] = [
     location: 'Trafalgar Square',
     link: 'https://luma.com/zrhjldno',
     buttonText: 'Register',
-    buttonColor: 'rgb(30, 58, 95)',
-    buttonShadow: '0 4px 6px rgba(30, 58, 95, 0.3)',
+    buttonColor: '#0900FF',
+    buttonShadow: '0 4px 6px rgba(9, 0, 255, 0.3)',
   },
   {
     id: 'paris',
@@ -136,8 +151,22 @@ const EVENTS_DATA: EventData[] = [
     location: '2 Pl. du Palais Bourbon',
     link: 'https://luma.com/unt7c4gf',
     buttonText: 'Register',
-    buttonColor: 'rgb(30, 58, 95)',
-    buttonShadow: '0 4px 6px rgba(30, 58, 95, 0.3)',
+    buttonColor: '#0900FF',
+    buttonShadow: '0 4px 6px rgba(9, 0, 255, 0.3)',
+  },
+  {
+    id: 'telaviv',
+    type: 'city',
+    name: 'TEL AVIV',
+    flag: '🇮🇱',
+    image: '/telaviv.jpg',
+    imageAlt: 'Tel Aviv',
+    dateTime: 'Wednesday 8 April, 17:00-18:00 CEST',
+    location: 'Tel Aviv',
+    link: 'https://luma.com/rk8hxy1h',
+    buttonText: 'Register',
+    buttonColor: '#0900FF',
+    buttonShadow: '0 4px 6px rgba(9, 0, 255, 0.3)',
   },
   {
     id: 'madrid',
@@ -146,12 +175,13 @@ const EVENTS_DATA: EventData[] = [
     flag: '🇪🇸',
     image: '/madrid.jpg',
     imageAlt: 'Madrid',
-    dateTime: 'Wednesday 8 April, 17:00-18:00 CEST',
+    dateTime: 'Wednesday 8 April, 14:00–16:00 CEST',
     location: 'Madrid',
-    link: 'https://luma.com/lppehueq',
+    link: 'https://www.meetup.com/madridsingularity/events/313571696/',
     buttonText: 'Register',
-    buttonColor: 'rgb(30, 58, 95)',
-    buttonShadow: '0 4px 6px rgba(30, 58, 95, 0.3)',
+    buttonColor: '#0900FF',
+    buttonShadow: '0 4px 6px rgba(9, 0, 255, 0.3)',
+    note: 'Because of regulations in Madrid, our March will be between 14:00 and 16:00.',
   },
 ];
 
@@ -227,7 +257,10 @@ export default async function HomePage({ params }: HomePageProps): Promise<JSX.E
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 mb-8 pt-16 md:pt-24">
-            {EVENTS_DATA.map((event) => (
+            {[
+              ...EVENTS_DATA.filter((e) => e.type === 'online'),
+              ...EVENTS_DATA.filter((e) => e.type === 'city').sort((a, b) => a.name.localeCompare(b.name)),
+            ].map((event) => (
               <a
                 key={event.id}
                 href={event.link}
@@ -283,6 +316,7 @@ export default async function HomePage({ params }: HomePageProps): Promise<JSX.E
                     })()}
                   </div>
                   <div className="text-base md:text-lg text-gray-600 -mt-1">{event.location}</div>
+                  {event.note && <div className="text-sm text-gray-500 mt-1">{event.note}</div>}
                 </div>
                 <div className="flex-shrink-0">
                   <div className="inline-block text-white rounded-lg font-semibold px-8 py-4 text-lg md:text-xl transition-all duration-200 hover:scale-105 hover:shadow-lg cursor-pointer" style={{ backgroundColor: event.buttonColor, boxShadow: event.buttonShadow }}>

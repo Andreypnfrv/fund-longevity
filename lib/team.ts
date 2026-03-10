@@ -104,6 +104,7 @@ export const TEAM_DATA: TeamData = {
           name: 'Didier Coeurnelle',
           description: 'Co-chair of Heales (Healthy Life Extension Society), Brussels. Board member of International Longevity Alliance and Humanity+. Vice-president of Association Française Transhumaniste Technoprog. Author of "Et si on arrêterait de vieillir!" and co-author of "Technoprog".',
           location: 'Brussels, Belgium',
+          image: '/didier.jpeg',
           socialLinks: {
             linkedin: 'https://www.linkedin.com/in/didiercoeurnelle/',
             x: 'https://x.com/DidierCo',
@@ -158,14 +159,26 @@ export const TEAM_DATA: TeamData = {
       city: 'madrid',
       members: [
         { name: 'José Luis Cordeiro', description: 'Engineer, economist and futurist. Vice-chair of Humanity+, founding faculty at Singularity University, co-author of "The Death of Death". Advocates longevity escape velocity and aging as a curable disease.', location: '', image: '/jose-luis-cordeiro.png' },
-        { name: 'Maristela Bermúdez', description: '', location: '', image: '/maristela-bermudez.png' },
+        { name: 'Maristela Bermúdez', description: 'Engineer working on sustainability and health. Director, International Longevity Summit, Madrid.', location: '', image: '/maristela-bermudez.png' },
         { name: 'Miguel Ferrero', description: 'Neuropsychologist, Advisor, International Longevity Summit, Madrid.', location: '', image: '/miguel-ferrero.png' },
+      ],
+    },
+    {
+      city: 'Ljubljana',
+      members: [
+        { name: 'Martin Lipovšek', description: 'PhD student at University of Ljubljana. Member of the Board of Directors, International Longevity Alliance (ILA).', location: 'Ljubljana, Slovenia', image: '/martinlipovsek.jpeg' },
+      ],
+    },
+    {
+      city: 'telAviv',
+      members: [
+        { name: 'Ilia Stambler', description: 'Chief Science Officer, Vetek (Seniority) Association, Israel. Fellow at Bar Ilan University. Chairman, International Longevity Alliance (ILA). Author of "A History of Life-extensionism in the Twentieth Century" and over 70 papers. Initiator of the Longevity Day and Month campaign.', location: 'Tel Aviv, Israel', image: '/iliastambler.jpeg' },
       ],
     },
     {
       city: 'liveStreamOrgs',
       members: [
-        { name: 'Nastya Egorova', description: '', location: '' },
+        { name: 'Nastya Egorova', description: '', location: '', image: '/nastya.jpg' },
         { name: 'Danila Immortalist', description: '', location: '', image: '/danila-immortalist.jpeg' },
       ],
     },

@@ -66,12 +66,12 @@ export function Hero(props: HeroProps): React.ReactElement {
       />
       <div className="relative z-10 flex-1 flex items-start justify-start px-3 pt-16 md:pt-24 min-[600px]:px-4">
         <div className="relative inline-block hero-title-wrap">
-          <h1 className="text-white font-black text-left px-3 py-4 min-[600px]:px-8 uppercase whitespace-normal min-[600px]:whitespace-nowrap lg:whitespace-pre-line" style={{
+          <h1 className="font-black text-left px-3 py-4 min-[600px]:px-8 uppercase whitespace-normal min-[600px]:whitespace-nowrap lg:whitespace-pre-line" style={{
+            color: '#0900FF',
             fontFamily: 'var(--font-plus-jakarta), sans-serif',
             fontSize: '0.96em',
             lineHeight: '1',
             letterSpacing: '-0.02em',
-            textShadow: '0 2px 4px rgba(0, 106, 167, 0.35), 0 4px 16px rgba(15, 23, 42, 0.5), 0 0 40px rgba(30, 58, 90, 0.25)',
           }}>
             {props.titleLine1 ?? 'FUND'}
             <span className="lg:hidden"> </span>

@@ -30,7 +30,7 @@ export function Footer({ locale }: FooterProps): React.ReactElement {
               href={process.env['DISCORD_URL'] ?? ''}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-[#1e3a5f] hover:text-[#1e3a5f]/80 transition-colors"
+              className="inline-flex items-center gap-2 text-[#0900FF] hover:text-[#0900FF]/80 transition-colors"
             >
               <DiscordIcon />
               <span className=" text-base">{footer.translate('discord')}</span>
@@ -38,13 +38,13 @@ export function Footer({ locale }: FooterProps): React.ReactElement {
           </div>
 
           <nav className="flex flex-col gap-2">
-            <Link href="/why" locale={locale} className=" text-base text-gray-700 hover:text-[#1e3a5f] transition-colors">
+            <Link href="/why" locale={locale} className=" text-base text-gray-700 hover:text-[#0900FF] transition-colors">
               {nav.translate('why')}
             </Link>
-            <Link href="/asks" locale={locale} className=" text-base text-gray-700 hover:text-[#1e3a5f] transition-colors">
+            <Link href="/asks" locale={locale} className=" text-base text-gray-700 hover:text-[#0900FF] transition-colors">
               {nav.translate('asks')}
             </Link>
-            <Link href="/about" locale={locale} className=" text-base text-gray-700 hover:text-[#1e3a5f] transition-colors">
+            <Link href="/about" locale={locale} className=" text-base text-gray-700 hover:text-[#0900FF] transition-colors">
               {nav.translate('about')}
             </Link>
           </nav>

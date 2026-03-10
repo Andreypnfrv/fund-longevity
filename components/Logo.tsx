@@ -14,7 +14,7 @@ export function Logo({ className }: LogoProps): React.ReactElement {
         'font-bold', 'line-height-1',
         className
       )}
-      style={{ marginBottom: 0 }}
+      style={{ marginBottom: 0, color: '#0900FF' }}
       >
         Fund Longevity
       </H3>
