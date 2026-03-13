@@ -70,6 +70,16 @@ export const TEAM_DATA: TeamData = {
             website: 'https://reachlevity.com/',
           },
         },
+        {
+          name: 'Thomas Ahlström',
+          description: 'Swedish transhumanist and longevity networker exploring ethics and technology to help reshape humanity\'s future. Driven to transcend human limits, expand human potential, and advance the pursuit of longer, healthier lives.',
+          location: 'Stockholm, Sweden',
+          image: '/thomas-ahlstrom.png',
+          socialLinks: {
+            linkedin: 'https://www.linkedin.com/in/thomasahlstrom',
+            telegram: 'https://t.me/thomas_ahl',
+          },
+        },
       ],
     },
     {

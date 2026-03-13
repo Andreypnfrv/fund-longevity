@@ -50,15 +50,6 @@ export const globalTranslations = {
       [Locale.IT]: 'Fund Longevity è un raduno multinazionale per l\'estensione della vita.',
       [Locale.NL]: 'Fund Longevity is een globale bijeenkomst voor levensverlenging.',
     },
-    copyright: {
-      [Locale.EN]: '2026 Fund Longevity. All rights reserved.',
-      [Locale.SV]: '2026 Fund Longevity. Alla rättigheter förbehållna.',
-      [Locale.DE]: '2026 Fund Longevity. Alle Rechte vorbehalten.',
-      [Locale.FR]: '2026 Fund Longevity. Tous droits réservés.',
-      [Locale.ES]: '2026 Fund Longevity. Todos los derechos reservados.',
-      [Locale.IT]: '2026 Fund Longevity. Tutti i diritti riservati.',
-      [Locale.NL]: '2026 Fund Longevity. Alle rechten voorbehouden.',
-    },
     discord: {
       [Locale.EN]: 'Join Discord',
       [Locale.SV]: 'Gå med i Discord',
