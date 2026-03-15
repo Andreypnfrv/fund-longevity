@@ -181,7 +181,6 @@ const EVENTS_DATA: EventData[] = [
     buttonText: 'Register',
     buttonColor: '#0900FF',
     buttonShadow: '0 4px 6px rgba(9, 0, 255, 0.3)',
-    note: 'Because of regulations in Madrid, our March will be between 14:00 and 16:00.',
   },
 ];
 
