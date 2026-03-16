@@ -50,13 +50,6 @@ export function Footer({ locale }: FooterProps): React.ReactElement {
           </nav>
         </div>
       </Wrapper>
-      <Wrapper className="mt-6 md:mt-12">
-        <div className='w-full text-center'>
-          <P className="text-base text-gray-500">
-            {footer.translate('copyright')}
-          </P>
-        </div>
-      </Wrapper>
     </footer>
   );
 }

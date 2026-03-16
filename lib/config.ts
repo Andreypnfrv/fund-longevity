@@ -13,7 +13,7 @@ export const mailchimpConfig = {
   },
 };
 
-export const discordUrl = process.env['DISCORD_URL'] || '';
+export const discordUrl = 'https://discord.gg/cgGMhDgHvE';
 
 export interface Partner {
   name: string;

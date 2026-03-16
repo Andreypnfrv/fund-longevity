@@ -40,7 +40,7 @@ export const TEAM_DATA: TeamData = {
       members: [
         {
           name: 'Linus Petersson',
-          description: 'Local lead. Co-founder of the Swedish Longevity Cluster. Expert on Longevity and Pharma. Public speaking, keynotes and talks on longevity. Startup guidance within longevity. Career guidance on longevity.',
+          description: 'Co-founder of Swedish Longevity Cluster and author of \'Läkemedel mot Åldrande\' (Drugs Against Aging). 20+ years in the longevity space. Consultant within pharmaceutical and longevity industry. Keynote speaker on aging and longevity.',
           location: 'Stockholm, Sweden',
           image: '/linus-peteresson.png',
           socialLinks: {
@@ -76,6 +76,16 @@ export const TEAM_DATA: TeamData = {
           location: 'Stockholm, Sweden',
           image: '/moaqusit.jpeg',
           socialLinks: { linkedin: 'https://www.linkedin.com/in/moaquist/' },
+        },
+        {
+          name: 'Thomas Ahlström',
+          description: 'Swedish transhumanist and longevity networker exploring ethics and technology to help reshape humanity\'s future. Driven to transcend human limits, expand human potential, and advance the pursuit of longer, healthier lives.',
+          location: 'Stockholm, Sweden',
+          image: '/thomas-ahlstrom.png',
+          socialLinks: {
+            linkedin: 'https://www.linkedin.com/in/thomasahlstrom',
+            telegram: 'https://t.me/thomas_ahl',
+          },
         },
       ],
     },
