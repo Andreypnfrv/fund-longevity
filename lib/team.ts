@@ -40,7 +40,7 @@ export const TEAM_DATA: TeamData = {
       members: [
         {
           name: 'Linus Petersson',
-          description: 'Local lead. Co-founder of the Swedish Longevity Cluster. Expert on Longevity and Pharma. Public speaking, keynotes and talks on longevity. Startup guidance within longevity. Career guidance on longevity.',
+          description: 'Co-founder of Swedish Longevity Cluster and author of \'Läkemedel mot Åldrande\' (Drugs Against Aging). 20+ years in the longevity space. Consultant within pharmaceutical and longevity industry. Keynote speaker on aging and longevity.',
           location: 'Stockholm, Sweden',
           image: '/linus-peteresson.png',
           socialLinks: {
