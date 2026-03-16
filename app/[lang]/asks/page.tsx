@@ -54,9 +54,11 @@ export default async function AsksPage({ params }: AsksPageProps): Promise<JSX.E
                   ))}
                 </ul>
               </Card>
-              <P className="mt-12 mb-6 text-center italic">
-                {asksTranslations.intro[locale]}
-              </P>
+              {asksTranslations.intro[locale] && (
+                <P className="mt-12 mb-6 text-center italic">
+                  {asksTranslations.intro[locale]}
+                </P>
+              )}
             </div>
           </div>
           </Wrapper>

@@ -123,6 +123,7 @@ export default async function AboutPage({ params }: AboutPageProps): Promise<JSX
                 title={aboutTranslations.partners.title[locale]}
                 subtitle={homeTranslations.partners.subtitle[locale]}
                 partners={PARTNERS}
+                titleAlign="left"
               />
             </section>
           </Content>

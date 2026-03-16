@@ -70,6 +70,13 @@ export const TEAM_DATA: TeamData = {
             website: 'https://reachlevity.com/',
           },
         },
+        {
+          name: 'Moa Quist',
+          description: 'Curious visionary, doer and longevity organizer.',
+          location: 'Stockholm, Sweden',
+          image: '/moaqusit.jpeg',
+          socialLinks: { linkedin: 'https://www.linkedin.com/in/moaquist/' },
+        },
       ],
     },
     {
@@ -173,7 +180,7 @@ export const TEAM_DATA: TeamData = {
     {
       city: 'Ljubljana',
       members: [
-        { name: 'Martin Lipovšek', description: 'PhD student at University of Ljubljana. Member of the Board of Directors, International Longevity Alliance (ILA).', location: 'Ljubljana, Slovenia', image: '/martinlipovsek.jpeg' },
+        { name: 'Martin Lipovšek', description: 'PhD student at University of Ljubljana. Member of the Board of Directors, International Longevity Alliance (ILA).', location: 'Ljubljana, Slovenia', image: '/martinlipovsek.jpeg', socialLinks: { linkedin: 'https://www.linkedin.com/in/martin-lipov%C5%A1ek-8905b3175/' } },
       ],
     },
     {
@@ -183,15 +190,27 @@ export const TEAM_DATA: TeamData = {
       ],
     },
     {
+      city: 'Mexico',
+      members: [
+        { name: 'Paulina Alva Flores', description: '', location: 'Mexico', image: '/paulina-mexico.png' },
+      ],
+    },
+    {
+      city: 'abuDhabi',
+      members: [
+        { name: 'Javier Torres', description: '', location: 'Abu Dhabi, UAE', image: '/javier-torres.jpeg' },
+      ],
+    },
+    {
       city: 'Caracas',
       members: [
-        { name: 'José Gregorio Bermúdez Cancine', description: '', location: 'Caracas, Venezuela' },
+        { name: 'José Gregorio Bermúdez Cancine', description: 'Mechanical engineer, expert in the control of contracts for major projects in the oil and manufacturing industries.', location: 'Caracas, Venezuela', image: '/jose-caracas.jpeg' },
       ],
     },
     {
       city: 'liveStreamOrgs',
       members: [
-        { name: 'Nastya Egorova', description: '', location: '', image: '/nastya.jpg' },
+        { name: 'Nastya Egorova', description: 'CEO & Co-Founder @Open Longevity and SayForever campaign, counselor @LBF, advisor @Vitalism Foundation. Biologist and artist by training, Nastya has been wearing multiple hats in science communication, social movements building, and open science projects.', location: '', image: '/nastya.jpg', socialLinks: { linkedin: 'https://www.linkedin.com/in/nastya-egorova/' } },
         { name: 'Danila Immortalist', description: '', location: '', image: '/danila-immortalist.jpeg' },
       ],
     },

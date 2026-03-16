@@ -8,6 +8,7 @@ interface PartnersProps {
   title: string;
   subtitle?: string;
   partners: Partner[];
+  titleAlign?: 'left' | 'center';
 }
 
 function PartnerCard({ children, className = '', logo, logoSize }: { children: ReactNode; className?: string; logo?: string | undefined; logoSize?: 'small' | 'medium' | 'normal' | 'large' }): React.ReactElement {
@@ -32,11 +33,11 @@ function PartnerCard({ children, className = '', logo, logoSize }: { children: R
   );
 }
 
-export function Partners({ locale: _locale, title, subtitle, partners }: PartnersProps) {
+export function Partners({ locale: _locale, title, subtitle, partners, titleAlign = 'center' }: PartnersProps) {
   return (
     <section>
-      <div className="text-center py-8 md:py-12 mb-8">
-        <div className="inline-block">
+      <div className={cn('py-8 md:py-12 mb-8', titleAlign === 'left' ? 'text-left' : 'text-center')}>
+        <div className={titleAlign === 'left' ? 'block' : 'inline-block'}>
           <div className="flex flex-col items-start gap-1 md:gap-2">
             <div className="flex flex-row items-baseline gap-2 md:gap-4 flex-wrap">
               <div className="font-black leading-none" style={{
