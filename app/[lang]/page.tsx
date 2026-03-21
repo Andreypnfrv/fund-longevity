@@ -210,6 +210,20 @@ const EVENTS_DATA: EventData[] = [
     buttonColor: '#0900FF',
     buttonShadow: '0 4px 6px rgba(9, 0, 255, 0.3)',
   },
+  {
+    id: 'prague',
+    type: 'city',
+    name: 'PRAGUE',
+    flag: '🇨🇿',
+    image: '/prague.jpeg',
+    imageAlt: 'Prague',
+    dateTime: 'Wednesday 8 April, 17:00-18:30 CEST',
+    location: 'Park Klárov, 118 00 Malá Strana (Památník padlým vojákům II. světové války)',
+    link: 'https://luma.com/ykwx2ykm',
+    buttonText: 'Register',
+    buttonColor: '#0900FF',
+    buttonShadow: '0 4px 6px rgba(9, 0, 255, 0.3)',
+  },
 ];
 
 interface HomePageProps {
