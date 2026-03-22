@@ -33,6 +33,8 @@ export const TEAM_DATA: TeamData = {
         { name: 'Peter Lidskiy', description: 'Assistant Professor at City University of Hong Kong, studies evolutionary biology of aging and the pathogen control hypothesis.', location: '', image: '/pl.jpg', socialLinks: { website: 'https://scholars.cityu.edu.hk/en/persons/plidskiy/' } },
         { name: 'Alexander Panchin', description: 'Biologist and science communicator, author of "Immortality or Death", researcher at Russian Academy of Sciences.', location: '', image: '/panchin.jpg', socialLinks: { telegram: 'https://t.me/ScienceInquisition', website: 'https://www.researchgate.net/profile/Alexander-Panchin' } },
         { name: 'Laurence Ion', description: 'Founding Steward of VitaDAO, Co-initiator of Vitalia. Focuses on DeSci and longevity research funding, and on new cities to accelerate drug development and make death optional.', location: '', image: '/laurence-ion.jpg', socialLinks: { linkedin: 'https://www.linkedin.com/in/laurenceion' } },
+        { name: 'Natasha Vita-More', description: 'Longevity scientist, AI Futures Theorist (PhD).', location: '', image: '/natasha-vita-more.jpg', socialLinks: {} },
+        { name: 'José Luis Cordeiro', description: 'Engineer, economist and futurist. Vice-chair of Humanity+, founding faculty at Singularity University, co-author of "The Death of Death". Advocates longevity escape velocity and aging as a curable disease.', location: '', image: '/jose-luis-cordeiro.png', socialLinks: {} },
       ],
     },
     {
@@ -203,6 +205,12 @@ export const TEAM_DATA: TeamData = {
       city: 'Mexico',
       members: [
         { name: 'Paulina Alva Flores', description: '', location: 'Mexico', image: '/paulina-mexico.png' },
+      ],
+    },
+    {
+      city: 'San Francisco',
+      members: [
+        { name: 'Melissa King', description: 'Co-Founder and COO, Healthspan Action Coalition. Founding senior staff member, California Institute for Regenerative Medicine. Policy wonk, patient advocate and science communicator.', location: 'San Francisco, USA', image: '/melissa-king.jpg', socialLinks: {} },
       ],
     },
     {

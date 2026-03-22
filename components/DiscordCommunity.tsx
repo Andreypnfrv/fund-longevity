@@ -1,5 +1,6 @@
 import React from 'react';
 import { DiscordIcon } from '@/lib/icons';
+import { discordUrl } from '@/lib/config';
 
 interface DiscordCommunityProps {
   label: string;
@@ -7,7 +8,6 @@ interface DiscordCommunityProps {
 }
 
 export function DiscordCommunity({ label, variant = 'button' }: DiscordCommunityProps): React.ReactElement {
-  const discordUrl = process.env['DISCORD_URL'] ?? '';
   
   if (variant === 'link') {
     return (

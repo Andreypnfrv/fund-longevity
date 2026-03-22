@@ -10,6 +10,7 @@ import { globalTranslations } from '@/lib/translations';
 import { DiscordIcon } from '@/lib/icons';
 import { P } from './Typography';
 import { Logo } from './Logo';
+import { discordUrl } from '@/lib/config';
 
 interface FooterProps {
   locale: Locale;
@@ -27,7 +28,7 @@ export function Footer({ locale }: FooterProps): React.ReactElement {
             <Logo />
             <P className="mb-4 text-gray-700">{footer.translate('summary')}</P>
             <a
-              href={process.env['DISCORD_URL'] ?? ''}
+              href={discordUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-[#0900FF] hover:text-[#0900FF]/80 transition-colors"
