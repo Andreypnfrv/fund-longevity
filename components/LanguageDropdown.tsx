@@ -24,7 +24,7 @@ export function LanguageDropdown({ currentLocale, triggerClassName, triggerStyle
       return;
     }
 
-    const pathWithoutLocale = pathname.replace(/^\/[^/]+/, '') || '/';
+    const pathWithoutLocale = (pathname ?? '/').replace(/^\/[^/]+/, '') || '/';
     const newPath = getLocalizedPath(pathWithoutLocale, newLocale);
     router.push(newPath);
   };

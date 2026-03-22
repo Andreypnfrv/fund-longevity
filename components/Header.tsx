@@ -25,7 +25,7 @@ export function Header({ locale }: HeaderProps): React.ReactElement {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const pathWithoutLocale = pathname.replace(/^\/[^/]+/, '') || '/';
+  const pathWithoutLocale = (pathname ?? '/').replace(/^\/[^/]+/, '') || '/';
   const isHomePage = pathWithoutLocale === '/' || pathWithoutLocale === '';
 
   const isActive = (path: string): boolean => {
