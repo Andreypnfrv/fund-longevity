@@ -25,12 +25,6 @@ export interface Partner {
 
 export const PARTNERS: Partner[] = [
   {
-    name: 'HSAC',
-    logo: '/hsac-logo.jpg',
-    url: 'https://healthspanaction.org',
-    description: 'We are a worldwide, cross-sector societal movement helping to establish a new paradigm in medicine.',
-  },
-  {
     name: 'Vitalism',
     logo: '/vitalism-logo.jpg',
     url: 'https://www.vitalism.io',
@@ -109,5 +103,11 @@ export const PARTNERS: Partner[] = [
     logoSize: 'medium' as const,
     url: 'https://www.humanityplus.org',
     description: 'Advocates for the ethical use of technology and evidence-based science to expand human capabilities. Educational organization at the forefront of healthy longevity, AI, and the future of humanity; runs H+ Summits and TransVision conferences.',
+  },
+  {
+    name: 'HSAC',
+    logo: '/hsac-logo.jpg',
+    url: 'https://healthspanaction.org',
+    description: 'We are a worldwide, cross-sector societal movement helping to establish a new paradigm in medicine.',
   },
 ];
