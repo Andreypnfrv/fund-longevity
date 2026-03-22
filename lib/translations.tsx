@@ -30,6 +30,15 @@ export const globalTranslations = {
       [Locale.IT]: 'Richieste',
       [Locale.NL]: 'Eisen',
     },
+    messages: {
+      [Locale.EN]: 'Messages',
+      [Locale.SV]: 'Budskap',
+      [Locale.DE]: 'Botschaften',
+      [Locale.FR]: 'Messages',
+      [Locale.ES]: 'Mensajes',
+      [Locale.IT]: 'Messaggi',
+      [Locale.NL]: 'Boodschappen',
+    },
     about: {
       [Locale.EN]: 'Team',
       [Locale.SV]: 'Team',

@@ -4,6 +4,7 @@ export const PATHS = {
   HOME: '/',
   WHY: '/why',
   ASKS: '/asks',
+  MESSAGES: '/messages',
   ABOUT: '/about',
 } as const;
 

@@ -38,6 +38,7 @@ export function Header({ locale }: HeaderProps): React.ReactElement {
     { href: '/', key: 'home' },
     { href: '/why', key: 'why' },
     { href: '/asks', key: 'asks' },
+    { href: '/messages', key: 'messages' },
     { href: '/about', key: 'about' },
   ];
 
