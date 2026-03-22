@@ -158,6 +158,15 @@ export const aboutTranslations = {
       [Locale.IT]: 'Caracas',
       [Locale.NL]: 'Caracas',
     },
+    'San Francisco': {
+      [Locale.EN]: 'San Francisco',
+      [Locale.SV]: 'San Francisco',
+      [Locale.DE]: 'San Francisco',
+      [Locale.FR]: 'San Francisco',
+      [Locale.ES]: 'San Francisco',
+      [Locale.IT]: 'San Francisco',
+      [Locale.NL]: 'San Francisco',
+    },
   },
   localLeads: {
     title: {
