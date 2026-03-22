@@ -25,6 +25,12 @@ export interface Partner {
 
 export const PARTNERS: Partner[] = [
   {
+    name: 'HSAC',
+    logo: '/hsac-logo.jpg',
+    url: 'https://healthspanaction.org',
+    description: 'We are a worldwide, cross-sector societal movement helping to establish a new paradigm in medicine.',
+  },
+  {
     name: 'Vitalism',
     logo: '/vitalism-logo.jpg',
     url: 'https://www.vitalism.io',
