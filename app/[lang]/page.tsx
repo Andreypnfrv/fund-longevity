@@ -225,7 +225,7 @@ const EVENTS_DATA: EventData[] = [
     buttonShadow: '0 4px 6px rgba(9, 0, 255, 0.3)',
   },
   {
-    id: 'prague',
+    id: 'prague2',
     type: 'city',
     name: 'PRAGUE',
     flag: '🇨🇿',
