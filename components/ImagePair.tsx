@@ -11,7 +11,7 @@ export function ImagePair({ image1, image2, alt1 = 'Image 1', alt2 = 'Image 2' }
   return (
     <div className="flex flex-col md:flex-row gap-4 w-full">
       <div 
-        className="flex-1"
+        className="flex-1 overflow-hidden rounded-xl"
         style={{
           backgroundImage: `url(${image1})`,
           backgroundSize: 'cover',
@@ -23,7 +23,7 @@ export function ImagePair({ image1, image2, alt1 = 'Image 1', alt2 = 'Image 2' }
         aria-label={alt1}
       />
       <div 
-        className="flex-1"
+        className="flex-1 overflow-hidden rounded-xl"
         style={{
           backgroundImage: `url(${image2})`,
           backgroundSize: 'cover',

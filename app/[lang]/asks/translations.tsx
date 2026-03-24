@@ -1,83 +1,74 @@
-import { Locale } from '@/lib/types';
+export type AskBlueprintSection = {
+  title: string;
+  bullets: string[];
+};
 
-export const asksTranslations = {
-  hero: {
-    title: {
-      [Locale.EN]: 'We want aging research funded',
-      [Locale.SV]: 'Vi vill att åldrandeforskning finansieras',
-      [Locale.DE]: 'Wir wollen, dass Altersforschung finanziert wird',
-      [Locale.FR]: 'Nous voulons que la recherche sur le vieillissement soit financée',
-      [Locale.ES]: 'Queremos que se financie la investigación sobre el envejecimiento',
-      [Locale.IT]: 'Vogliamo che la ricerca sull\'invecchiamento sia finanziata',
-      [Locale.NL]: 'We willen dat verouderingsonderzoek wordt gefinancierd',
+export const asksContentEn = {
+  heroTitle: 'Longevity State',
+  heroSubtitle: 'A policy blueprint for the aging world',
+  lead: 'Aging is the leading cause of death, disability, and healthcare cost — yet it receives a fraction of the funding spent on its symptoms like cancer and heart disease. With aging populations and shrinking workforces, extending healthy productive years is the most urgent demographic challenge and the most neglected.',
+  objectivesLabel: 'Objectives',
+  objectives:
+    'Extended healthy and productive years, lower disability burden — leading to longer workforce participation, broader tax base, reduced care costs. Returns compound over time.',
+  ownershipLabel: 'Ownership',
+  ownership:
+    'Driven by a cross-ministerial commission (Health, Education, Science, Economy, Labor) with a unified National Longevity Strategy, funded by 1% of the yearly government budget.',
+  sections: [
+    {
+      title:
+        'Talents — Attract, develop, and retain top longevity science talents by removing barriers for job entry and strengthening training',
+      bullets: [
+        'Fast-tracks visas and credential recognition for researchers and clinicians',
+        'PhD/MD-PhD programs bridging aging biology, medicine and data science',
+      ],
     },
-    subtitle: {
-      [Locale.EN]: 'The science is close.\nPolitical will is what we need.',
-      [Locale.SV]: 'Vetenskapen är nära.\nPolitiskt vilja är vad vi behöver.',
-      [Locale.DE]: 'Die Wissenschaft ist nah.\nPolitischer Wille ist, was wir brauchen.',
-      [Locale.FR]: 'La science est proche.\nLa volonté politique est ce dont nous avons besoin.',
-      [Locale.ES]: 'La ciencia está cerca.\nLa voluntad política es lo que necesitamos.',
-      [Locale.IT]: 'La scienza è vicina.\nLa volontà politica è ciò di cui abbiamo bisogno.',
-      [Locale.NL]: 'De wetenschap is dichtbij.\nPolitieke wil is wat we nodig hebben.',
+    {
+      title:
+        'Science — Sustainable long-term funding for aging research and frontier interventions',
+      bullets: [
+        'Dedicated financing specifically for fundamental research in aging',
+        'Risk-proportionate regulation of human gene editing, replacing blanket prohibitions',
+      ],
     },
-  },
-  pageTitle: {
-    [Locale.EN]: 'We want aging research funded',
-    [Locale.SV]: 'Vi vill att åldrandeforskning finansieras',
-    [Locale.DE]: 'Wir wollen, dass Altersforschung finanziert wird',
-    [Locale.FR]: 'Nous voulons que la recherche sur le vieillissement soit financée',
-    [Locale.ES]: 'Queremos que se financie la investigación sobre el envejecimiento',
-    [Locale.IT]: 'Vogliamo che la ricerca sull\'invecchiamento sia finanziata',
-    [Locale.NL]: 'We willen dat verouderingsonderzoek wordt gefinancierd',
-  },
-  intro: {
-    [Locale.EN]: '',
-    [Locale.SV]: '',
-    [Locale.DE]: '',
-    [Locale.FR]: '',
-    [Locale.ES]: '',
-    [Locale.IT]: '',
-    [Locale.NL]: '',
-  },
-  sectionTitle: {
-    [Locale.EN]: 'We want aging research funded',
-    [Locale.SV]: 'Vi vill att åldrandeforskning finansieras',
-    [Locale.DE]: 'Wir wollen, dass Altersforschung finanziert wird',
-    [Locale.FR]: 'Nous voulons que la recherche sur le vieillissement soit financée',
-    [Locale.ES]: 'Queremos que se financie la investigación sobre el envejecimiento',
-    [Locale.IT]: 'Vogliamo che la ricerca sull\'invecchiamento sia finanziata',
-    [Locale.NL]: 'We willen dat verouderingsonderzoek wordt gefinancierd',
-  },
-  items: {
-    [Locale.EN]: [
-      { parts: [{ text: 'Massively increase funding for aging research in order to make it a treatable condition', bold: false }] },
-      { parts: [{ text: 'Classify aging as a disease to provide a regulatory pathway for aging interventions', bold: false }] },
-    ],
-    [Locale.SV]: [
-      { parts: [{ text: 'Massivt öka finansieringen av åldrandeforskning för att göra det en behandlingsbar tillstånd', bold: false }] },
-      { parts: [{ text: 'Klassificera åldrande som en sjukdom för att ge en regulatorisk väg för åldrandeingrepp', bold: false }] },
-    ],
-    [Locale.DE]: [
-      { parts: [{ text: 'Die Finanzierung der Altersforschung massiv erhöhen, um sie zu einem behandelbaren Zustand zu machen', bold: false }] },
-      { parts: [{ text: 'Altern als Krankheit einstufen, um einen regulatorischen Weg für Altersinterventionen zu schaffen', bold: false }] },
-    ],
-    [Locale.FR]: [
-      { parts: [{ text: 'Augmenter massivement le financement de la recherche sur le vieillissement pour en faire une condition traitable', bold: false }] },
-      { parts: [{ text: 'Classer le vieillissement comme maladie pour ouvrir une voie réglementaire aux interventions anti-âge', bold: false }] },
-    ],
-    [Locale.ES]: [
-      { parts: [{ text: 'Aumentar masivamente la financiación de la investigación sobre el envejecimiento para convertirlo en una condición tratable', bold: false }] },
-      { parts: [{ text: 'Clasificar el envejecimiento como enfermedad para proporcionar una vía regulatoria a las intervenciones antienvejecimiento', bold: false }] },
-    ],
-    [Locale.IT]: [
-      { parts: [{ text: 'Aumentare massicciamente i finanziamenti per la ricerca sull\'invecchiamento per renderla una condizione trattabile', bold: false }] },
-      { parts: [{ text: 'Classificare l\'invecchiamento come malattia per fornire un percorso normativo per gli interventi anti-invecchiamento', bold: false }] },
-    ],
-    [Locale.NL]: [
-      { parts: [{ text: 'De financiering van verouderingsonderzoek massaal verhogen om er een behandelbare aandoening van te maken', bold: false }] },
-      { parts: [{ text: 'Veroudering classificeren als ziekte om een regelgevend pad te bieden voor verouderingsinterventies', bold: false }] },
-    ],
-  },
-} as const;
-
-
+    {
+      title:
+        'Translation — Adaptive regulation and public funding for equitable accessible therapies',
+      bullets: [
+        'Dedicated longevity agency modeled on proven ARPA/DARPA frameworks: directed challenges, competitive execution, non-dilutive funding, IP retained by developers',
+        'Adaptive licensing with synthetic control arms from national health data',
+        'Regulatory sandboxes for combination and repurposed therapies',
+        'Right to try for therapies',
+        'Publicly funded therapies priced for universal access through national healthcare systems',
+      ],
+    },
+    {
+      title:
+        'Healthcare — Clinical infrastructure optimized for population-scale prevention',
+      bullets: [
+        'Population-scale screening and prevention targeting major age-related disease risks',
+        'Longitudinal biomarker collection — functional and molecular — opt-out by default',
+        'Integration of preventive trials into routine clinical practices',
+        'Gero-therapeutic endpoints in health tech assessment and reimbursement frameworks',
+      ],
+    },
+    {
+      title:
+        'Data — Open, interoperable, and scalable data ecosystem to power aging research',
+      bullets: [
+        'Secure free access to anonymized data for any researcher and AI application',
+        'Unified interoperability standards across health, research, and registry data',
+        'Standardized endpoints for gero-therapeutic trials',
+      ],
+    },
+    {
+      title:
+        'International — Coordination for what no single country can do alone',
+      bullets: [
+        'AI-ready perturbation screening programs and shared molecular data infrastructure',
+        'Mutual recognition of clinical trial results and regulatory sandbox outcomes',
+        'Shared research infrastructure: wet labs, model organisms, compute, perturbation screening',
+        'Public engagement to counter misinformation on longevity science',
+      ],
+    },
+  ] satisfies AskBlueprintSection[],
+};

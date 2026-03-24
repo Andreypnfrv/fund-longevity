@@ -45,7 +45,7 @@ export default async function AboutPage({ params }: AboutPageProps): Promise<JSX
       <Section>
         <Wrapper>
           <div>
-            <H1 display className="mb-20 text-black whitespace-pre-line">{aboutTranslations.hero.title[locale]}</H1>
+            <H1 display className="mb-20 text-[#0900FF] whitespace-pre-line">{aboutTranslations.hero.title[locale]}</H1>
             <P className="text-4xl text-black opacity-90 whitespace-pre-line">{aboutTranslations.hero.subtitle[locale]}</P>
           </div>
         </Wrapper>

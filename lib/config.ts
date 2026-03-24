@@ -1,3 +1,24 @@
+export const siteUrl =
+  (typeof process !== 'undefined' && process.env['NEXT_PUBLIC_SITE_URL']) ||
+  'https://fund-longevity.web.app';
+
+export const ogLocaleByLang: Record<string, string> = {
+  en: 'en_US',
+  sv: 'sv_SE',
+  de: 'de_DE',
+  fr: 'fr_FR',
+  es: 'es_ES',
+  it: 'it_IT',
+  nl: 'nl_NL',
+};
+
+export function getOgLocale(lang: string): string {
+  const v = ogLocaleByLang[lang];
+  return v !== undefined ? v : 'en_US';
+}
+
+export const defaultOgImage = '/hero4.jpg';
+
 export const mailchimpConfig = {
   userId: 'f5fb33aedc3387e255921da9c',
   server: 'us16',

@@ -5,6 +5,7 @@ import { H4 } from '@/components/Typography';
 import { Section } from '@/components/Section';
 import { Partners } from '@/components/Partners';
 import { HowCanYouHelp } from '@/components/HowCanYouHelp';
+import { defaultOgImage, getOgLocale } from '@/lib/config';
 import { getLocaleFromLang, LOCALES } from '@/lib/types';
 import { homeTranslations } from './translations';
 import { getTranslation } from '@/lib/translate';
@@ -163,7 +164,7 @@ const EVENTS_DATA: EventData[] = [
     imageAlt: 'Prague',
     dateTime: 'Wednesday 8 April, 17:00-18:30 CEST',
     location: 'Park Klárov, 118 00 Malá Strana (Památník padlým vojákům II. světové války)',
-    link: 'https://lu.ma/evt-12Q4mJK5n6EKCZd',
+    link: 'https://luma.com/ykwx2ykm',
     buttonText: 'Register',
     buttonColor: '#0900FF',
     buttonShadow: '0 4px 6px rgba(9, 0, 255, 0.3)',
@@ -225,20 +226,6 @@ const EVENTS_DATA: EventData[] = [
     buttonShadow: '0 4px 6px rgba(9, 0, 255, 0.3)',
   },
   {
-    id: 'prague2',
-    type: 'city',
-    name: 'PRAGUE',
-    flag: '🇨🇿',
-    image: '/prague.jpeg',
-    imageAlt: 'Prague',
-    dateTime: 'Wednesday 8 April, 17:00-18:30 CEST',
-    location: 'Park Klárov, 118 00 Malá Strana (Památník padlým vojákům II. světové války)',
-    link: 'https://luma.com/ykwx2ykm',
-    buttonText: 'Register',
-    buttonColor: '#0900FF',
-    buttonShadow: '0 4px 6px rgba(9, 0, 255, 0.3)',
-  },
-  {
     id: 'sanfrancisco',
     type: 'city',
     name: 'SAN FRANCISCO',
@@ -266,6 +253,20 @@ const EVENTS_DATA: EventData[] = [
     buttonColor: '#0900FF',
     buttonShadow: '0 4px 6px rgba(9, 0, 255, 0.3)',
   },
+  {
+    id: 'tbilisi',
+    type: 'city',
+    name: 'TBILISI',
+    flag: '🇬🇪',
+    image: '/tbilisi.jpg',
+    imageAlt: 'Tbilisi',
+    dateTime: 'Sunday 5 April 2026, 16:00-19:00 GMT+4',
+    location: 'Tbilisi Balneological Resort, Tbilisi',
+    link: 'https://luma.com/epvbjkci',
+    buttonText: 'Register',
+    buttonColor: '#0900FF',
+    buttonShadow: '0 4px 6px rgba(9, 0, 255, 0.3)',
+  },
 ];
 
 interface HomePageProps {
@@ -280,10 +281,26 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
   const { lang } = await params;
   const locale = getLocaleFromLang(lang);
   const translate = getTranslation(homeTranslations.hero, locale);
+  const title = translate('title');
+  const description = translate('subtitle');
+  const path = `/${lang}/`;
 
   return {
-    title: translate('title'),
-    description: translate('subtitle'),
+    title,
+    description,
+    alternates: {
+      canonical: path,
+      languages: Object.fromEntries(LOCALES.map((l) => [l, `/${l}/`])),
+    },
+    openGraph: {
+      title,
+      description,
+      url: path,
+      locale: getOgLocale(lang),
+      siteName: 'Fund Longevity',
+      images: [{ url: defaultOgImage, alt: title }],
+    },
+    twitter: { title, description, images: [defaultOgImage] },
   };
 }
 

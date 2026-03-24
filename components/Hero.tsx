@@ -179,7 +179,7 @@ export function SecondaryHero({
       )}
       <div className={`absolute bottom-0 left-0 right-0 z-10 pb-4 md:pb-8 text-left ${backgroundImage ? 'text-white drop-shadow-lg' : 'text-white'}`}>
         <Wrapper>
-          <H1 display className="mb-8 text-white whitespace-pre-line">{title}</H1>
+          <H1 className="mb-8 text-white whitespace-pre-line">{title}</H1>
           {subtitle && <P className="text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white opacity-90">{subtitle}</P>}
         </Wrapper>
       </div>

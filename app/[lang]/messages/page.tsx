@@ -4,6 +4,7 @@ import { H1, H2, P } from '@/components/Typography';
 import { Section } from '@/components/Section';
 import { Wrapper } from '@/components/Wrapper';
 import { CopyLinkButton } from '@/components/CopyLinkButton';
+import { defaultOgImage, getOgLocale } from '@/lib/config';
 import { getLocaleFromLang, LOCALES, Locale } from '@/lib/types';
 import { globalTranslations } from '@/lib/translations';
 import { cn } from '@/lib/utils';
@@ -33,7 +34,28 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: MessagesPageProps): Promise<Metadata> {
   const { lang } = await params;
   const locale = getLocaleFromLang(lang);
-  return { title: globalTranslations.nav.messages[locale] };
+  const title = globalTranslations.nav.messages[locale];
+  const description =
+    messagesTranslations.heroTitle[locale] ?? messagesTranslations.heroTitle[Locale.EN];
+  const path = `/${lang}/messages/`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: path,
+      languages: Object.fromEntries(LOCALES.map((l) => [l, `/${l}/messages/`])),
+    },
+    openGraph: {
+      title,
+      description,
+      url: path,
+      locale: getOgLocale(lang),
+      siteName: 'Fund Longevity',
+      images: [{ url: defaultOgImage, alt: title }],
+    },
+    twitter: { title, description, images: [defaultOgImage] },
+  };
 }
 
 function SignBlock({ sign, downloadLabel }: { sign: ImportantSign; downloadLabel: string }) {
@@ -82,7 +104,7 @@ export default async function MessagesPage({ params }: MessagesPageProps): Promi
       <Section>
         <Wrapper>
           <div>
-            <H1 display className="mb-4 text-black whitespace-pre-line">
+            <H1 display className="mb-4 text-[#0900FF] whitespace-pre-line">
               {L('heroTitle')}
             </H1>
           </div>

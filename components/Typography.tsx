@@ -9,14 +9,20 @@ interface TypographyProps {
     display?: boolean;
 }
 
-export function H1({ children, className = '', style }: TypographyProps): React.ReactElement {
+export function H1({ children, className = '', style, display }: TypographyProps): React.ReactElement {
     return (
         <h1
             className={cn(
-                `text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold`,
+                display
+                    ? '!text-4xl md:!text-6xl lg:!text-7xl xl:!text-8xl !leading-[1.05] tracking-tight !font-black'
+                    : 'text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold',
                 className
             )}
-            style={style}
+            style={
+                display
+                    ? { fontFamily: 'var(--font-plus-jakarta), sans-serif', fontWeight: 900, ...style }
+                    : style
+            }
         >
             {children}
         </h1>

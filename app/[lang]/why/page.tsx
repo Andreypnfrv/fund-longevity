@@ -46,7 +46,7 @@ export default async function WhyPage({ params }: WhyPageProps): Promise<JSX.Ele
       <Section>
         <Wrapper>
           <div>
-            <H1 display className="mb-4 text-black whitespace-pre-line">{whyTranslations.hero.title[locale]}</H1>
+            <H1 display className="mb-4 text-[#0900FF] whitespace-pre-line">{whyTranslations.hero.title[locale]}</H1>
           </div>
         </Wrapper>
       </Section>

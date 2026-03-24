@@ -131,6 +131,15 @@ export const aboutTranslations = {
       [Locale.IT]: 'Tel Aviv',
       [Locale.NL]: 'Tel Aviv',
     },
+    Tbilisi: {
+      [Locale.EN]: 'Tbilisi',
+      [Locale.SV]: 'Tbilisi',
+      [Locale.DE]: 'Tbilisi',
+      [Locale.FR]: 'Tbilisi',
+      [Locale.ES]: 'Tbilisi',
+      [Locale.IT]: 'Tbilisi',
+      [Locale.NL]: 'Tbilisi',
+    },
     Mexico: {
       [Locale.EN]: 'Mexico',
       [Locale.SV]: 'Mexiko',

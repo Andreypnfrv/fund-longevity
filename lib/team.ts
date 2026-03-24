@@ -198,7 +198,30 @@ export const TEAM_DATA: TeamData = {
     {
       city: 'telAviv',
       members: [
-        { name: 'Ilia Stambler', description: 'Chief Science Officer, Vetek (Seniority) Association, Israel. Fellow at Bar Ilan University. Chairman, International Longevity Alliance (ILA). Author of "A History of Life-extensionism in the Twentieth Century" and over 70 papers. Initiator of the Longevity Day and Month campaign.', location: 'Tel Aviv, Israel', image: '/iliastambler.jpeg' },
+        {
+          name: 'Ilia Stambler',
+          description:
+            'Chief Science Officer, Vetek (Seniority) Association, Israel. Fellow at Bar Ilan University. Chairman, International Longevity Alliance (ILA). Author of "A History of Life-extensionism in the Twentieth Century" and over 70 papers. Initiator of the Longevity Day and Month campaign.',
+          location: 'Tel Aviv, Israel',
+          image: '/iliastambler.jpeg',
+          socialLinks: { linkedin: 'https://www.linkedin.com/in/ilia-stambler-5099977/' },
+        },
+      ],
+    },
+    {
+      city: 'Tbilisi',
+      members: [
+        {
+          name: 'Ksenia Svaneti',
+          description:
+            'Sustainability and longevity consultant specializing in the strategic integration of wellness retreats, green energy infrastructure, and luxury brand transformation to establish Svaneti (Georgia) as a premier global destination for health and high-end biohacking.',
+          location: 'Tbilisi, Georgia',
+          image: '/ksenia.jpg',
+          socialLinks: {
+            linkedin: 'https://www.linkedin.com/in/ksenia-markovskaia',
+            telegram: 'https://t.me/kseniasvaneti',
+          },
+        },
       ],
     },
     {
