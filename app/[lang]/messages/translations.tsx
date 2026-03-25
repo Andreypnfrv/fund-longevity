@@ -10,6 +10,7 @@ const en = (s: string): Translation =>
     [Locale.ES]: s,
     [Locale.IT]: s,
     [Locale.NL]: s,
+    [Locale.CS]: s,
   }) as Translation;
 
 export const messagesTranslations = {

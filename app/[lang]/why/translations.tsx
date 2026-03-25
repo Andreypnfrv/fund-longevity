@@ -10,6 +10,7 @@ export const whyTranslations = {
       [Locale.ES]: 'El envejecimiento es un problema,\ny la ciencia lo resolverá',
       [Locale.IT]: 'L\'invecchiamento è un problema,\ne la scienza lo risolverà',
       [Locale.NL]: 'Veroudering is een probleem,\nen wetenschap lost het op',
+      [Locale.CS]: 'Stárnutí je problém,\na věda ho vyřeší',
     },
   },
   sections: {
@@ -22,15 +23,17 @@ export const whyTranslations = {
         [Locale.ES]: 'El envejecimiento es un problema',
         [Locale.IT]: 'L\'invecchiamento è un problema',
         [Locale.NL]: 'Veroudering is een probleem',
+        [Locale.CS]: 'Stárnutí je problém',
       },
       content: {
-        [Locale.EN]: 'Aging kills around 110,000 people every day. It is the primary risk factor behind nearly all major non-infectious diseases, including cancer, heart disease, and dementia. Beyond statistics, aging causes decades of frailty, pain, and loss of independence. It is the greatest source of human suffering that is being accepted as "normal".',
-        [Locale.SV]: 'Åldrande dödar cirka 110 000 människor varje dag. Det är den primära riskfaktorn bakom nästan alla stora icke-smittsamma sjukdomar, inklusive cancer, hjärtsjukdom och demens. Bortom statistik orsakar åldrande decennier av skörhet, smärta och förlust av självständighet. Det är den största källan till mänskligt lidande som vi accepterar som "normalt".',
-        [Locale.DE]: 'Das Altern tötet täglich etwa 110.000 Menschen. Es ist der Hauptrisikofaktor für fast alle großen nicht übertragbaren Krankheiten, darunter Krebs, Herzkrankheiten und Demenz. Jenseits der Statistik verursacht das Altern Jahrzehnte der Gebrechlichkeit, Schmerzen und des Verlusts der Unabhängigkeit. Es ist die größte Quelle menschlichen Leidens, die als „normal“ akzeptiert wird.',
+        [Locale.EN]: 'Aging kills around 110,000 people every day. It is the primary risk factor behind nearly all major non-infectious diseases, including cancer, heart disease, and dementia. Beyond statistics, aging causes decades of frailty, pain, and loss of independence. It is the greatest source of human suffering that is being accepted as “normal”.',
+        [Locale.SV]: 'Åldrande dödar cirka 110 000 människor varje dag. Det är den primära riskfaktorn bakom nästan alla stora icke-smittsamma sjukdomar, inklusive cancer, hjärtsjukdom och demens. Bortom statistik orsakar åldrande decennier av skörhet, smärta och förlust av självständighet. Det är den största källan till mänskligt lidande som vi accepterar som “normalt”.',
+        [Locale.DE]: 'Das Altern tötet täglich etwa 110.000 Menschen. Es ist der Hauptrisikofaktor für fast alle großen nicht übertragbaren Krankheiten, darunter Krebs, Herzkrankheiten und Demenz. Jenseits der Statistik verursacht das Altern Jahrzehnte der Gebrechlichkeit, Schmerzen und des Verlusts der Unabhängigkeit. Es ist die größte Quelle menschlichen Leidens, die als „normal” akzeptiert wird.',
         [Locale.FR]: 'Le vieillissement tue environ 110 000 personnes chaque jour. C\'est le principal facteur de risque derrière presque toutes les grandes maladies non infectieuses, dont le cancer, les maladies cardiaques et la démence. Au-delà des statistiques, le vieillissement cause des décennies de fragilité, de douleur et de perte d\'autonomie. C\'est la plus grande source de souffrance humaine acceptée comme « normale ».',
-        [Locale.ES]: 'El envejecimiento mata a unas 110.000 personas cada día. Es el principal factor de riesgo detrás de casi todas las enfermedades no infecciosas importantes, como el cáncer, las cardiopatías y la demencia. Más allá de las estadísticas, el envejecimiento causa décadas de fragilidad, dolor y pérdida de independencia. Es la mayor fuente de sufrimiento humano que se acepta como "normal".',
-        [Locale.IT]: 'L\'invecchiamento uccide circa 110.000 persone ogni giorno. È il principale fattore di rischio alla base di quasi tutte le principali malattie non infettive, tra cui cancro, malattie cardiache e demenza. Oltre le statistiche, l\'invecchiamento causa decenni di fragilità, dolore e perdita di indipendenza. È la più grande fonte di sofferenza umana che viene accettata come "normale".',
-        [Locale.NL]: 'Veroudering doodt ongeveer 110.000 mensen per dag. Het is de belangrijkste risicofactor achter bijna alle grote niet-overdraagbare ziekten, waaronder kanker, hartziekten en dementie. Voorbij de statistieken veroorzaakt veroudering decennia van broosheid, pijn en verlies van onafhankelijkheid. Het is de grootste bron van menselijk lijden die als "normaal" wordt geaccepteerd.',
+        [Locale.ES]: 'El envejecimiento mata a unas 110.000 personas cada día. Es el principal factor de riesgo detrás de casi todas las enfermedades no infecciosas importantes, como el cáncer, las cardiopatías y la demencia. Más allá de las estadísticas, el envejecimiento causa décadas de fragilidad, dolor y pérdida de independencia. Es la mayor fuente de sufrimiento humano que se acepta como “normal”.',
+        [Locale.IT]: 'L\'invecchiamento uccide circa 110.000 persone ogni giorno. È il principale fattore di rischio alla base di quasi tutte le principali malattie non infettive, tra cui cancro, malattie cardiache e demenza. Oltre le statistiche, l\'invecchiamento causa decenni di fragilità, dolore e perdita di indipendenza. È la più grande fonte di sofferenza umana che viene accettata come “normale”.',
+        [Locale.NL]: 'Veroudering doodt ongeveer 110.000 mensen per dag. Het is de belangrijkste risicofactor achter bijna alle grote niet-overdraagbare ziekten, waaronder kanker, hartziekten en dementie. Voorbij de statistieken veroorzaakt veroudering decennia van broosheid, pijn en verlies van onafhankelijkheid. Het is de grootste bron van menselijk lijden die als “normaal” wordt geaccepteerd.',
+        [Locale.CS]: 'Stárnutí každý den zabíjí přibližně 110 000 lidí. Je to primární rizikový faktor za téměř všemi hlavními neinfekčními nemocemi, včetně rakoviny, srdečních chorob a demence. Za statistikami stárnutí způsobuje desetiletí křehkosti, bolesti a ztráty samostatnosti. Je to největší zdroj lidského utrpení, který je přijímán jako „normální”.',
       },
     },
     personal: {
@@ -42,6 +45,7 @@ export const whyTranslations = {
         [Locale.ES]: 'Esto es personal',
         [Locale.IT]: 'È personale',
         [Locale.NL]: 'Dit is persoonlijk',
+        [Locale.CS]: 'Je to osobní věc',
       },
       content: {
         [Locale.EN]: 'Everyone you love will age, suffer, and die because of it. So will you. If we had the ability to prevent this, choosing not to would be deeply unethical. If we can stop aging, we should.',
@@ -51,6 +55,7 @@ export const whyTranslations = {
         [Locale.ES]: 'Todos los que amas envejecerán, sufrirán y morirán por ello. Tú también. Si tuviéramos la capacidad de prevenirlo, no hacerlo sería profundamente poco ético. Si podemos detener el envejecimiento, debemos hacerlo.',
         [Locale.IT]: 'Tutti quelli che ami invecchieranno, soffriranno e moriranno a causa di ciò. Anche tu. Se avessimo la capacità di prevenirlo, scegliere di non farlo sarebbe profondamente non etico. Se possiamo fermare l\'invecchiamento, dovremmo farlo.',
         [Locale.NL]: 'Iedereen van wie je houdt zal verouderen, lijden en sterven. Jij ook. Als we de mogelijkheid hadden dit te voorkomen, zou het diep onethisch zijn om dat niet te doen. Als we veroudering kunnen stoppen, moeten we dat doen.',
+        [Locale.CS]: 'Každý, koho milujete, kvůli tomu zestárne, bude trpět a zemře. Stejně tak vy. Kdybychom měli schopnost tomu předejít, bylo by hluboce neetické to neudělat. Pokud můžeme stárnutí zastavit, měli bychom to udělat.',
       },
     },
     possible: {
@@ -62,6 +67,7 @@ export const whyTranslations = {
         [Locale.ES]: 'Detener el envejecimiento es posible',
         [Locale.IT]: 'Fermare l\'invecchiamento è possibile',
         [Locale.NL]: 'Veroudering stoppen is mogelijk',
+        [Locale.CS]: 'Zastavení stárnutí je možné',
       },
       content: {
         [Locale.EN]: 'Aging is not a mystery or a force of nature. It is a biological process — and biological processes can be studied, modified, and treated. Over the past decades, scientists have identified many of the core mechanisms that drive aging at the cellular and molecular level. While our understanding is incomplete, it is already sufficient to begin developing real therapies.',
@@ -71,17 +77,19 @@ export const whyTranslations = {
         [Locale.ES]: 'El envejecimiento no es un misterio ni una fuerza de la naturaleza. Es un proceso biológico, y los procesos biológicos pueden estudiarse, modificarse y tratarse. En las últimas décadas, los científicos han identificado muchos de los mecanismos clave del envejecimiento a nivel celular y molecular. Aunque nuestro conocimiento es incompleto, ya es suficiente para empezar a desarrollar terapias reales.',
         [Locale.IT]: 'L\'invecchiamento non è un mistero né una forza della natura. È un processo biologico — e i processi biologici possono essere studiati, modificati e trattati. Negli ultimi decenni gli scienziati hanno identificato molti dei meccanismi chiave dell\'invecchiamento a livello cellulare e molecolare. La nostra comprensione è incompleta, ma già sufficiente per iniziare a sviluppare terapie reali.',
         [Locale.NL]: 'Veroudering is geen mysterie of natuurkracht. Het is een biologisch proces — en biologische processen kunnen worden bestudeerd, gewijzigd en behandeld. In de afgelopen decennia hebben wetenschappers veel van de kernmechanismen van veroudering op cellulair en moleculair niveau geïdentificeerd. Ons begrip is onvolledig, maar al voldoende om echte therapieën te ontwikkelen.',
+        [Locale.CS]: 'Stárnutí není záhada ani přírodní síla. Je to biologický proces – a biologické procesy lze studovat, upravovat a léčit. V posledních desetiletích vědci identifikovali mnoho základních mechanismů, které řídí stárnutí na buněčné a molekulární úrovni. I když naše znalosti nejsou úplné, jsou již dostatečné pro zahájení vývoje skutečných terapií.',
       },
     },
     meaning: {
       title: {
-        [Locale.EN]: 'What Do We Mean by "Stopping Aging"?',
-        [Locale.SV]: 'Vad menar vi med "stoppa åldrande"?',
-        [Locale.DE]: 'Was meinen wir mit „Altern aufhalten“?',
+        [Locale.EN]: 'What Do We Mean by “Stopping Aging”?',
+        [Locale.SV]: 'Vad menar vi med “stoppa åldrande”?',
+        [Locale.DE]: 'Was meinen wir mit „Altern aufhalten”?',
         [Locale.FR]: 'Que voulons-nous dire par « arrêter le vieillissement » ?',
-        [Locale.ES]: '¿Qué queremos decir con "detener el envejecimiento"?',
-        [Locale.IT]: 'Cosa intendiamo per "fermare l\'invecchiamento"?',
-        [Locale.NL]: 'Wat bedoelen we met "veroudering stoppen"?',
+        [Locale.ES]: '¿Qué queremos decir con “detener el envejecimiento”?',
+        [Locale.IT]: 'Cosa intendiamo per “fermare l\'invecchiamento”?',
+        [Locale.NL]: 'Wat bedoelen we met “veroudering stoppen”?',
+        [Locale.CS]: 'Co myslíme „zastavením stárnutí”?',
       },
       content: {
         [Locale.EN]: 'We mean treating aging as a medical condition. The goal is to restore and maintain youthful biological function — roughly equivalent to being in your twenties — for as long as you choose. This would prevent or reverse age-related diseases instead of treating them one by one.',
@@ -91,6 +99,7 @@ export const whyTranslations = {
         [Locale.ES]: 'Queremos decir tratar el envejecimiento como una condición médica. El objetivo es restaurar y mantener la función biológica juvenil — aproximadamente equivalente a estar en la veintena — todo el tiempo que elijas. Esto prevendría o revertiría las enfermedades relacionadas con la edad en lugar de tratarlas una por una.',
         [Locale.IT]: 'Intendiamo trattare l\'invecchiamento come una condizione medica. L\'obiettivo è ripristinare e mantenere la funzione biologica giovanile — circa equivalente a essere ventenni — per tutto il tempo che scegli. Questo prevenirebbe o invertirebbe le malattie legate all\'età invece di trattarle una per una.',
         [Locale.NL]: 'We bedoelen veroudering behandelen als een medische aandoening. Het doel is het herstellen en behouden van jeugdige biologische functie — ruwweg vergelijkbaar met die in je twintiger jaren — zolang je kiest. Dit zou leeftijdsgerelateerde ziekten voorkomen of omkeren in plaats van ze een voor een te behandelen.',
+        [Locale.CS]: 'Myslíme tím léčbu stárnutí jako zdravotního stavu. Cílem je obnovit a udržet mladistvou biologickou funkci – zhruba odpovídající stavu ve dvaceti letech – tak dlouho, jak si zvolíte. To by zabránilo nebo zvrátilo nemoci spojené se stárnutím namísto jejich léčení jednu po druhé.',
       },
     },
     realistic: {
@@ -102,6 +111,7 @@ export const whyTranslations = {
         [Locale.ES]: '¿Es esto realmente realista?',
         [Locale.IT]: 'È davvero realistico?',
         [Locale.NL]: 'Is dit echt realistisch?',
+        [Locale.CS]: 'Je to opravdu realistické?',
       },
       content: {
         [Locale.EN]: 'Yes. Thousands of scientists have publicly stated that aging is a solvable problem in the Dublin Longevity Declaration. Research already shows that aging can be slowed, paused, or reversed in laboratory organisms. Some animals exhibit negligible aging or extreme longevity. Nature has already demonstrated that aging is avoidable — humans simply haven\'t applied these solutions to ourselves yet.',
@@ -111,6 +121,7 @@ export const whyTranslations = {
         [Locale.ES]: 'Sí. Miles de científicos han declarado públicamente que el envejecimiento es un problema soluble en la Declaración de Dublín sobre Longevidad. La investigación ya muestra que el envejecimiento puede ralentizarse, pausarse o revertirse en organismos de laboratorio. Algunos animales muestran un envejecimiento negligible o una longevidad extrema. La naturaleza ya ha demostrado que el envejecimiento es evitable; los humanos simplemente no hemos aplicado estas soluciones a nosotros mismos.',
         [Locale.IT]: 'Sì. Migliaia di scienziati hanno dichiarato pubblicamente che l\'invecchiamento è un problema risolvibile nella Dichiarazione di Dublino sulla longevità. La ricerca mostra già che l\'invecchiamento può essere rallentato, messo in pausa o invertito negli organismi da laboratorio. Alcuni animali mostrano invecchiamento trascurabile o longevità estrema. La natura ha già dimostrato che l\'invecchiamento è evitabile — gli umani non hanno ancora applicato queste soluzioni a noi stessi.',
         [Locale.NL]: 'Ja. Duizenden wetenschappers hebben in de Dublin Longevity Declaration openbaar verklaard dat veroudering een oplosbaar probleem is. Onderzoek toont al aan dat veroudering kan worden vertraagd, gepauzeerd of omgekeerd in laboratoriumorganismen. Sommige dieren vertonen verwaarloosbare veroudering of extreme levensduur. De natuur heeft al aangetoond dat veroudering vermijdbaar is — mensen hebben deze oplossingen eenvoudigweg nog niet op onszelf toegepast.',
+        [Locale.CS]: 'Ano. Tisíce vědců veřejně prohlásily, že stárnutí je řešitelný problém v Dublinské deklaraci o dlouhověkosti. Výzkum již ukazuje, že stárnutí lze u laboratorních organismů zpomalit, zastavit nebo zvrátit. Některá zvířata vykazují zanedbatelné stárnutí nebo extrémní dlouhověkost. Příroda již prokázala, že stárnutí lze vyhnout – lidé tato řešení jednoduše ještě neaplikovali na sebe.',
       },
     },
     hard: {
@@ -122,15 +133,17 @@ export const whyTranslations = {
         [Locale.ES]: '¿Es difícil?',
         [Locale.IT]: 'È difficile?',
         [Locale.NL]: 'Is het moeilijk?',
+        [Locale.CS]: 'Je to obtížné?',
       },
       content: {
         [Locale.EN]: 'Extremely. Reversing aging in humans will likely be more difficult than landing on the Moon. It will require entirely new biotechnologies and breakthroughs that don\'t exist yet. We will need to remove senescent cells, repair or replace damaged tissues, and solve many other problems we don\'t fully understand. This is one of the most difficult challenges humanity has ever faced, but just because it is difficult does not mean it is impossible. Many scientists agree that there are no fundamental laws of physics that prohibits stopping aging. Nature has done it in several animals already, like the hydra.',
-        [Locale.SV]: 'Extremt. Att vända åldrande hos människor kommer förmodligen att vara svårare än att landa på månen. Det kommer att kräva helt nya bioteknologier och genombrott som inte finns ännu. Vi kommer att behöva ta bort senescenta celler, reparera eller ersätta skadade vävnader och lösa många problem som vi inte helt förstår ännu. Detta är en av de svåraste utmaningarna mänskligheten någonsin har stått inför. Men "svårt" betyder inte "omöjligt".',
-        [Locale.DE]: 'Extrem. Die Umkehrung des Alterns beim Menschen wird voraussichtlich schwieriger sein als die Mondlandung. Es werden völlig neue Biotechnologien und Durchbrüche benötigt, die es noch nicht gibt. Wir müssen seneszente Zellen entfernen, geschädigte Gewebe reparieren oder ersetzen und viele andere Probleme lösen, die wir noch nicht vollständig verstehen. Dies ist eine der schwierigsten Herausforderungen der Menschheit — aber „schwierig“ bedeutet nicht „unmöglich“. Viele Wissenschaftler sind sich einig, dass keine fundamentalen physikalischen Gesetze das Aufhalten des Alterns verbieten. Die Natur hat es bei mehreren Tieren bereits geschafft, z. B. bei der Hydra.',
+        [Locale.SV]: 'Extremt. Att vända åldrande hos människor kommer förmodligen att vara svårare än att landa på månen. Det kommer att kräva helt nya bioteknologier och genombrott som inte finns ännu. Vi kommer att behöva ta bort senescenta celler, reparera eller ersätta skadade vävnader och lösa många problem som vi inte helt förstår ännu. Detta är en av de svåraste utmaningarna mänskligheten någonsin har stått inför. Men “svårt” betyder inte “omöjligt”.',
+        [Locale.DE]: 'Extrem. Die Umkehrung des Alterns beim Menschen wird voraussichtlich schwieriger sein als die Mondlandung. Es werden völlig neue Biotechnologien und Durchbrüche benötigt, die es noch nicht gibt. Wir müssen seneszente Zellen entfernen, geschädigte Gewebe reparieren oder ersetzen und viele andere Probleme lösen, die wir noch nicht vollständig verstehen. Dies ist eine der schwierigsten Herausforderungen der Menschheit — aber „schwierig” bedeutet nicht „unmöglich”. Viele Wissenschaftler sind sich einig, dass keine fundamentalen physikalischen Gesetze das Aufhalten des Alterns verbieten. Die Natur hat es bei mehreren Tieren bereits geschafft, z. B. bei der Hydra.',
         [Locale.FR]: 'Extrêmement. Inverser le vieillissement chez l\'humain sera probablement plus difficile que l\'alunissage. Il faudra des biotechnologies et des percées entièrement nouvelles qui n\'existent pas encore. Il faudra éliminer les cellules sénescentes, réparer ou remplacer les tissus endommagés et résoudre bien d\'autres problèmes que nous ne comprenons pas encore pleinement. C\'est l\'un des défis les plus difficiles que l\'humanité ait jamais relevés, mais « difficile » ne veut pas dire « impossible ». De nombreux scientifiques s\'accordent à dire qu\'aucune loi fondamentale de la physique n\'interdit d\'arrêter le vieillissement. La nature l\'a déjà fait chez plusieurs animaux, comme l\'hydre.',
         [Locale.ES]: 'Extremadamente. Revertir el envejecimiento en humanos probablemente será más difícil que llegar a la Luna. Requerirá biotecnologías y avances completamente nuevos que aún no existen. Necesitaremos eliminar células senescentes, reparar o reemplazar tejidos dañados y resolver muchos otros problemas que aún no entendemos del todo. Es uno de los retos más difíciles a los que se ha enfrentado la humanidad, pero que sea difícil no significa que sea imposible. Muchos científicos coinciden en que no hay leyes fundamentales de la física que prohíban detener el envejecimiento. La naturaleza ya lo ha logrado en varios animales, como la hidra.',
         [Locale.IT]: 'Estremamente. Invertire l\'invecchiamento negli esseri umani sarà probabilmente più difficile che atterrare sulla Luna. Richiederà biotecnologie e progressi del tutto nuovi che non esistono ancora. Dovremo rimuovere le cellule senescenti, riparare o sostituire i tessuti danneggiati e risolvere molti altri problemi che non comprendiamo ancora appieno. È una delle sfide più difficili che l\'umanità abbia mai affrontato, ma « difficile » non significa « impossibile ». Molti scienziati concordano sul fatto che non esistono leggi fondamentali della fisica che vietino di fermare l\'invecchiamento. La natura l\'ha già fatto in diversi animali, come l\'idra.',
-        [Locale.NL]: 'Extreem. Veroudering bij mensen omkeren zal waarschijnlijk moeilijker zijn dan op de maan landen. Het vereist geheel nieuwe biotechnologieën en doorbraken die nog niet bestaan. We moeten senescente cellen verwijderen, beschadigd weefsel repareren of vervangen en veel andere problemen oplossen die we nog niet volledig begrijpen. Dit is een van de moeilijkste uitdagingen die de mensheid ooit heeft gehad, maar „moeilijk“ betekent niet „onmogelijk“. Veel wetenschappers zijn het erover eens dat er geen fundamentele natuurwetten zijn die het stoppen van veroudering verbieden. De natuur heeft het al gedaan bij verschillende dieren, zoals de hydra.',
+        [Locale.NL]: 'Extreem. Veroudering bij mensen omkeren zal waarschijnlijk moeilijker zijn dan op de maan landen. Het vereist geheel nieuwe biotechnologieën en doorbraken die nog niet bestaan. We moeten senescente cellen verwijderen, beschadigd weefsel repareren of vervangen en veel andere problemen oplossen die we nog niet volledig begrijpen. Dit is een van de moeilijkste uitdagingen die de mensheid ooit heeft gehad, maar „moeilijk” betekent niet „onmogelijk”. Veel wetenschappers zijn het erover eens dat er geen fundamentele natuurwetten zijn die het stoppen van veroudering verbieden. De natuur heeft het al gedaan bij verschillende dieren, zoals de hydra.',
+        [Locale.CS]: 'Extrémně. Zvrácení stárnutí u lidí bude pravděpodobně obtížnější než přistání na Měsíci. Bude to vyžadovat zcela nové biotechnologie a průlomy, které zatím neexistují. Budeme muset odstranit senescenční buňky, opravit nebo nahradit poškozené tkáně a vyřešit mnoho dalších problémů, kterým ještě plně nerozumíme. Je to jedna z nejobtížnějších výzev, kterým kdy lidstvo čelilo, ale obtížné neznamená nemožné. Mnoho vědců se shoduje, že neexistují žádné základní fyzikální zákony, které by zastavení stárnutí zakazovaly. Příroda to již dokázala u několika zvířat, jako je například hydra.',
       },
     },
     missing: {
@@ -142,6 +155,7 @@ export const whyTranslations = {
         [Locale.ES]: '¿Qué falta?',
         [Locale.IT]: 'Cosa manca?',
         [Locale.NL]: 'Wat ontbreekt er?',
+        [Locale.CS]: 'Co chybí?',
       },
       content: {
         [Locale.EN]: 'Scale. Today, fewer than a thousand people worldwide are seriously working on solving aging — researchers, biotech founders, and advocates combined. That number needs to grow by at least 1000×. There is no major government agency dedicated to ending aging. Funding is fragmented. Regulation is outdated. Public urgency is nearly nonexistent. This will not change on its own.',
@@ -151,6 +165,7 @@ export const whyTranslations = {
         [Locale.ES]: 'Escala. Hoy, menos de mil personas en todo el mundo trabajan seriamente en resolver el envejecimiento — investigadores, fundadores de biotecnología y defensores juntos. Ese número debe crecer al menos 1000×. No existe una agencia gubernamental importante dedicada a acabar con el envejecimiento. La financiación está fragmentada. La regulación está desactualizada. La urgencia pública es casi inexistente. Esto no cambiará por sí solo.',
         [Locale.IT]: 'Scala. Oggi meno di mille persone in tutto il mondo lavorano seriamente per risolvere l\'invecchiamento — ricercatori, fondatori di biotech e sostenitori insieme. Quel numero deve crescere almeno 1000 volte. Non esiste un\'agenzia governativa importante dedicata a porre fine all\'invecchiamento. I finanziamenti sono frammentati. La regolamentazione è obsoleta. L\'urgenza pubblica è quasi inesistente. Questo non cambierà da solo.',
         [Locale.NL]: 'Schaal. Vandaag werken wereldwijd minder dan duizend mensen serieus aan het oplossen van veroudering — onderzoekers, biotech-oprichters en pleitbezorgers samen. Dat aantal moet minstens 1000× groeien. Er is geen grote overheidsinstantie die zich richt op het beëindigen van veroudering. Financiering is versnipperd. Regelgeving is verouderd. Publieke urgentie is vrijwel afwezig. Dit verandert niet vanzelf.',
+        [Locale.CS]: 'Měřítko. Dnes méně než tisíc lidí na celém světě seriózně pracuje na řešení stárnutí – výzkumníci, zakladatelé biotechnologických firem a obhájci dohromady. Toto číslo musí vzrůst alespoň 1000×. Neexistuje žádná velká vládní agentura věnovaná ukončení stárnutí. Financování je roztříštěné. Regulace je zastaralá. Veřejná naléhavost téměř neexistuje. To se samo od sebe nezmění.',
       },
     },
     whyWeAct: {
@@ -162,6 +177,7 @@ export const whyTranslations = {
         [Locale.ES]: 'Por qué actuamos',
         [Locale.IT]: 'Perché agiamo',
         [Locale.NL]: 'Waarom we actie ondernemen',
+        [Locale.CS]: 'Proč jednáme',
       },
       content: {
         [Locale.EN]: 'Aging is the largest cause of death and suffering on Earth. Solving it requires a society-wide effort — scientific, political, and cultural. That\'s why we organize. That\'s why we demonstrate. That\'s why we demand action. Join us — and help make aging optional for humans and animals.',
@@ -171,6 +187,7 @@ export const whyTranslations = {
         [Locale.ES]: 'El envejecimiento es la mayor causa de muerte y sufrimiento en la Tierra. Resolverlo requiere un esfuerzo de toda la sociedad — científico, político y cultural. Por eso nos organizamos. Por eso manifestamos. Por eso exigimos acción. Únete — y ayuda a hacer que el envejecimiento sea opcional para humanos y animales.',
         [Locale.IT]: 'L\'invecchiamento è la più grande causa di morte e sofferenza sulla Terra. Risolverlo richiede uno sforzo dell\'intera società — scientifico, politico e culturale. Ecco perché ci organizziamo. Ecco perché manifestiamo. Ecco perché chiediamo azione. Unisciti a noi — e aiutaci a rendere l\'invecchiamento opzionale per umani e animali.',
         [Locale.NL]: 'Veroudering is de grootste oorzaak van dood en lijden op aarde. Het oplossen ervan vereist een inspanning van de hele samenleving — wetenschappelijk, politiek en cultureel. Daarom organiseren we. Daarom demonstreren we. Daarom eisen we actie. Doe mee — en help veroudering optioneel te maken voor mensen en dieren.',
+        [Locale.CS]: 'Stárnutí je největší příčinou smrti a utrpení na Zemi. Jeho řešení vyžaduje celospolečenské úsilí – vědecké, politické a kulturní. Proto se organizujeme. Proto demonstrujeme. Proto požadujeme akci. Připojte se k nám – a pomozte učinit stárnutí pro lidi a zvířata volitelným.',
       },
     },
   },

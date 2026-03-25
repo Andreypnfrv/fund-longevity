@@ -4,7 +4,7 @@ import React from 'react';
 import { Icon } from '@iconify/react';
 import { useRouter, usePathname } from 'next/navigation';
 import { Locale } from '@/lib/types';
-import { FlagEN, FlagSV, FlagDE, FlagFR, FlagES, FlagIT, FlagNL } from '@/lib/icons';
+import { FlagEN, FlagSV, FlagDE, FlagFR, FlagES, FlagIT, FlagNL, FlagCS } from '@/lib/icons';
 import { getLocalizedPath } from '@/lib/paths';
 import { Dropdown } from './Dropdown';
 
@@ -37,6 +37,7 @@ export function LanguageDropdown({ currentLocale, triggerClassName, triggerStyle
     [Locale.ES]: <FlagES />,
     [Locale.IT]: <FlagIT />,
     [Locale.NL]: <FlagNL />,
+    [Locale.CS]: <FlagCS />,
   };
   const localeLabels: Record<Locale, string> = {
     [Locale.EN]: 'English',
@@ -46,6 +47,7 @@ export function LanguageDropdown({ currentLocale, triggerClassName, triggerStyle
     [Locale.ES]: 'Español',
     [Locale.IT]: 'Italiano',
     [Locale.NL]: 'Nederlands',
+    [Locale.CS]: 'Čeština',
   };
 
   const trigger = (

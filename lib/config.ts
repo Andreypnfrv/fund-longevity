@@ -10,6 +10,7 @@ export const ogLocaleByLang: Record<string, string> = {
   es: 'es_ES',
   it: 'it_IT',
   nl: 'nl_NL',
+  cs: 'cs_CZ',
 };
 
 export function getOgLocale(lang: string): string {

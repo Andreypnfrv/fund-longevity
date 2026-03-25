@@ -11,6 +11,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Inicio',
       [Locale.IT]: 'Home',
       [Locale.NL]: 'Home',
+      [Locale.CS]: 'Domů',
     },
     why: {
       [Locale.EN]: 'Why',
@@ -20,6 +21,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Por qué',
       [Locale.IT]: 'Perché',
       [Locale.NL]: 'Waarom',
+      [Locale.CS]: 'Proč',
     },
     asks: {
       [Locale.EN]: 'Asks',
@@ -29,6 +31,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Demandas',
       [Locale.IT]: 'Richieste',
       [Locale.NL]: 'Eisen',
+      [Locale.CS]: 'Požadavky',
     },
     messages: {
       [Locale.EN]: 'Messages',
@@ -38,6 +41,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Mensajes',
       [Locale.IT]: 'Messaggi',
       [Locale.NL]: 'Boodschappen',
+      [Locale.CS]: 'Zprávy',
     },
     about: {
       [Locale.EN]: 'Team',
@@ -47,6 +51,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Equipo',
       [Locale.IT]: 'Team',
       [Locale.NL]: 'Team',
+      [Locale.CS]: 'Tým',
     },
   },
   footer: {
@@ -58,6 +63,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Fund Longevity es una manifestación multinacional por la extensión de la vida.',
       [Locale.IT]: 'Fund Longevity è un raduno multinazionale per l\'estensione della vita.',
       [Locale.NL]: 'Fund Longevity is een globale bijeenkomst voor levensverlenging.',
+      [Locale.CS]: 'Fund Longevity je globální rally za prodlužování života.',
     },
     discord: {
       [Locale.EN]: 'Join Discord',
@@ -67,6 +73,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Unirse a Discord',
       [Locale.IT]: 'Unisciti a Discord',
       [Locale.NL]: 'Word lid van Discord',
+      [Locale.CS]: 'Připojit se na Discord',
     },
   },
   common: {
@@ -78,6 +85,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Unirse',
       [Locale.IT]: 'Partecipa',
       [Locale.NL]: 'Doe mee',
+      [Locale.CS]: 'Připojit se',
     },
     learnMore: {
       [Locale.EN]: 'Learn more',
@@ -87,6 +95,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Saber más',
       [Locale.IT]: 'Scopri di più',
       [Locale.NL]: 'Meer informatie',
+      [Locale.CS]: 'Zjistit více',
     },
     close: {
       [Locale.EN]: 'Close',
@@ -96,6 +105,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Cerrar',
       [Locale.IT]: 'Chiudi',
       [Locale.NL]: 'Sluiten',
+      [Locale.CS]: 'Zavřít',
     },
   },
   forms: {
@@ -107,6 +117,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Nombre',
       [Locale.IT]: 'Nome',
       [Locale.NL]: 'Voornaam',
+      [Locale.CS]: 'Jméno',
     },
     city: {
       [Locale.EN]: 'City',
@@ -116,6 +127,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Ciudad',
       [Locale.IT]: 'Città',
       [Locale.NL]: 'Stad',
+      [Locale.CS]: 'Město',
     },
     email: {
       [Locale.EN]: 'Email',
@@ -125,6 +137,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Correo',
       [Locale.IT]: 'Email',
       [Locale.NL]: 'E-mail',
+      [Locale.CS]: 'E-mail',
     },
     phone: {
       [Locale.EN]: 'Phone',
@@ -134,6 +147,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Teléfono',
       [Locale.IT]: 'Telefono',
       [Locale.NL]: 'Telefoon',
+      [Locale.CS]: 'Telefon',
     },
     company: {
       [Locale.EN]: 'Company',
@@ -143,6 +157,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Empresa',
       [Locale.IT]: 'Azienda',
       [Locale.NL]: 'Bedrijf',
+      [Locale.CS]: 'Společnost',
     },
     submit: {
       [Locale.EN]: 'Send',
@@ -152,6 +167,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Enviar',
       [Locale.IT]: 'Invia',
       [Locale.NL]: 'Versturen',
+      [Locale.CS]: 'Odeslat',
     },
     joinOffline: {
       [Locale.EN]: "I'll join offline",
@@ -161,6 +177,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Participaré en persona',
       [Locale.IT]: 'Parteciperò di persona',
       [Locale.NL]: 'Ik doe offline mee',
+      [Locale.CS]: 'Přijdu osobně',
     },
     canTakePart: {
       [Locale.EN]: 'I can take part',
@@ -170,6 +187,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Puedo participar',
       [Locale.IT]: 'Posso partecipare',
       [Locale.NL]: 'Ik kan deelnemen',
+      [Locale.CS]: 'Mohu se zúčastnit',
     },
     intent: {
       [Locale.EN]: 'Intent',
@@ -179,6 +197,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Intención',
       [Locale.IT]: 'Intenzione',
       [Locale.NL]: 'Intentie',
+      [Locale.CS]: 'Záměr',
     },
     joinInPerson: {
       [Locale.EN]: "I want to join in-person",
@@ -188,6 +207,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Quiero participar en persona',
       [Locale.IT]: 'Voglio partecipare di persona',
       [Locale.NL]: 'Ik wil persoonlijk deelnemen',
+      [Locale.CS]: 'Chci se zúčastnit osobně',
     },
     joinOnline: {
       [Locale.EN]: "I want to join online",
@@ -197,6 +217,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Quiero participar en línea',
       [Locale.IT]: 'Voglio partecipare online',
       [Locale.NL]: 'Ik wil online deelnemen',
+      [Locale.CS]: 'Chci se zúčastnit online',
     },
     canTakePartInOrganisation: {
       [Locale.EN]: 'I can take part in organisation',
@@ -206,6 +227,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Puedo participar en la organización',
       [Locale.IT]: 'Posso partecipare all\'organizzazione',
       [Locale.NL]: 'Ik kan meedoen aan de organisatie',
+      [Locale.CS]: 'Mohu se podílet na organizaci',
     },
     media: {
       [Locale.EN]: 'Media',
@@ -215,6 +237,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Medios',
       [Locale.IT]: 'Media',
       [Locale.NL]: 'Media',
+      [Locale.CS]: 'Média',
     },
     ideallyUrl: {
       [Locale.EN]: 'Ideally url',
@@ -224,6 +247,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Idealmente URL',
       [Locale.IT]: 'Ideally url',
       [Locale.NL]: 'Bij voorkeur url',
+      [Locale.CS]: 'Ideálně URL',
     },
     sending: {
       [Locale.EN]: 'Sending...',
@@ -233,6 +257,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Enviando...',
       [Locale.IT]: 'Invio in corso...',
       [Locale.NL]: 'Verzenden...',
+      [Locale.CS]: 'Odesílám...',
     },
     emailInvalid: {
       [Locale.EN]: 'Please enter a valid email address',
@@ -242,6 +267,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Por favor, introduzca un correo válido',
       [Locale.IT]: 'Inserisci un indirizzo email valido',
       [Locale.NL]: 'Voer een geldig e-mailadres in',
+      [Locale.CS]: 'Zadejte prosím platnou e-mailovou adresu',
     },
     successMessage: {
       [Locale.EN]: 'Thank you! Your submission was successful.',
@@ -251,6 +277,7 @@ export const globalTranslations = {
       [Locale.ES]: '¡Gracias! Su envío fue exitoso.',
       [Locale.IT]: 'Grazie! L\'invio è andato a buon fine.',
       [Locale.NL]: 'Bedankt! Uw inzending is gelukt.',
+      [Locale.CS]: 'Děkujeme! Vaše přihlášení bylo úspěšné.',
     },
     errorMessage: {
       [Locale.EN]: 'Something went wrong. Please try again.',
@@ -260,6 +287,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Algo salió mal. Por favor, inténtelo de nuevo.',
       [Locale.IT]: 'Qualcosa è andato storto. Riprova.',
       [Locale.NL]: 'Er ging iets mis. Probeer het opnieuw.',
+      [Locale.CS]: 'Něco se pokazilo. Zkuste to prosím znovu.',
     },
     fieldRequired: {
       [Locale.EN]: 'This field is required',
@@ -269,6 +297,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Este campo es obligatorio',
       [Locale.IT]: 'Questo campo è obbligatorio',
       [Locale.NL]: 'Dit veld is verplicht',
+      [Locale.CS]: 'Toto pole je povinné',
     },
   },
 } as const satisfies Record<string, Record<string, Translation>>;

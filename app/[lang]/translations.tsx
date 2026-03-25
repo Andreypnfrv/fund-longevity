@@ -11,6 +11,7 @@ export const homeTranslations = {
       [Locale.ES]: 'Fund Longevity',
       [Locale.IT]: 'Fund Longevity',
       [Locale.NL]: 'Fund Longevity',
+      [Locale.CS]: 'Fund Longevity',
     },
     titleLine1: {
       [Locale.EN]: 'FUND',
@@ -20,6 +21,7 @@ export const homeTranslations = {
       [Locale.ES]: 'FUND',
       [Locale.IT]: 'FUND',
       [Locale.NL]: 'FUND',
+      [Locale.CS]: 'FUND',
     },
     titleLine2: {
       [Locale.EN]: 'LONGEVITY',
@@ -29,6 +31,7 @@ export const homeTranslations = {
       [Locale.ES]: 'LONGEVITY',
       [Locale.IT]: 'LONGEVITY',
       [Locale.NL]: 'LONGEVITY',
+      [Locale.CS]: 'LONGEVITY',
     },
     subtitle: {
       [Locale.EN]: 'A Global Rally for\u00A0Life\u00A0Extension',
@@ -38,6 +41,7 @@ export const homeTranslations = {
       [Locale.ES]: 'Una manifestación multinacional por la extensión de la vida',
       [Locale.IT]: 'Un raduno multinazionale per l\'estensione della vita',
       [Locale.NL]: 'Een globale bijeenkomst voor levensverlenging',
+      [Locale.CS]: 'Globální rally za\u00A0prodlužování\u00A0života',
     },
   },
   partners: {
@@ -49,6 +53,7 @@ export const homeTranslations = {
       [Locale.ES]: 'Organizaciones destacadas',
       [Locale.IT]: 'Organizzazioni in evidenza',
       [Locale.NL]: 'Uitgelichte organisaties',
+      [Locale.CS]: 'Vybrané organizace',
     },
     subtitle: {
       [Locale.EN]: 'These longevity organizations are working on the problem of aging. Supporting them makes a big difference.',
@@ -58,6 +63,7 @@ export const homeTranslations = {
       [Locale.ES]: 'Estas organizaciones de longevidad trabajan en el problema del envejecimiento. Apoyarlas marca una gran diferencia.',
       [Locale.IT]: 'Queste organizzazioni per la longevità lavorano sul problema dell\'invecchiamento. Sostenerle fa una grande differenza.',
       [Locale.NL]: 'Deze longevity-organisaties werken aan het probleem van veroudering. Ze steunen maakt een groot verschil.',
+      [Locale.CS]: 'Tyto longevity organizace pracují na problému stárnutí. Jejich podpora je velmi důležitá.',
     },
   },
   cities: {
@@ -69,6 +75,7 @@ export const homeTranslations = {
       [Locale.ES]: 'ÚNETE',
       [Locale.IT]: 'UNISCITI',
       [Locale.NL]: 'DOE MEE',
+      [Locale.CS]: 'PŘIPOJTE SE',
     },
     inYourCity: {
       [Locale.EN]: 'IN YOUR CITY',
@@ -78,6 +85,7 @@ export const homeTranslations = {
       [Locale.ES]: 'EN TU CIUDAD',
       [Locale.IT]: 'NELLA TUA CITTÀ',
       [Locale.NL]: 'IN JE STAD',
+      [Locale.CS]: 'VE VAŠEM MĚSTĚ',
     },
     date: {
       [Locale.EN]: '8TH\u00A0APRIL',
@@ -87,6 +95,7 @@ export const homeTranslations = {
       [Locale.ES]: '8 DE ABRIL',
       [Locale.IT]: '8 APRILE',
       [Locale.NL]: '8 APRIL',
+      [Locale.CS]: '8.\u00A0DUBNA',
     },
     year: {
       [Locale.EN]: '2026',
@@ -96,6 +105,7 @@ export const homeTranslations = {
       [Locale.ES]: '2026',
       [Locale.IT]: '2026',
       [Locale.NL]: '2026',
+      [Locale.CS]: '2026',
     },
     register: {
       [Locale.EN]: 'Register',
@@ -105,6 +115,7 @@ export const homeTranslations = {
       [Locale.ES]: 'Registrarse',
       [Locale.IT]: 'Registrati',
       [Locale.NL]: 'Registreren',
+      [Locale.CS]: 'Registrovat',
     },
   },
   whyAging: {
@@ -116,6 +127,7 @@ export const homeTranslations = {
       [Locale.ES]: 'Por qué el envejecimiento',
       [Locale.IT]: 'Perché l\'invecchiamento',
       [Locale.NL]: 'Waarom veroudering',
+      [Locale.CS]: 'Proč stárnutí',
     },
     description1: {
       [Locale.EN]: 'Aging is by far the largest cause of suffering, death and sickness.',
@@ -125,6 +137,7 @@ export const homeTranslations = {
       [Locale.ES]: 'El envejecimiento es con diferencia la mayor causa de sufrimiento, muerte y enfermedad.',
       [Locale.IT]: 'L\'invecchiamento è di gran lunga la principale causa di sofferenza, morte e malattia.',
       [Locale.NL]: 'Veroudering is verreweg de grootste oorzaak van lijden, dood en ziekte.',
+      [Locale.CS]: 'Stárnutí je zdaleka největší příčinou utrpení, smrti a nemoci.',
     },
     description2: {
       [Locale.EN]: 'It\'s a humanitarian emergency - that can and should be solved.',
@@ -134,6 +147,7 @@ export const homeTranslations = {
       [Locale.ES]: 'Es una emergencia humanitaria que puede y debe resolverse.',
       [Locale.IT]: 'È un\'emergenza umanitaria — che può e deve essere risolta.',
       [Locale.NL]: 'Het is een humanitaire noodsituatie — die opgelost kan en moet worden.',
+      [Locale.CS]: 'Je to humanitární nouze – kterou lze a je třeba vyřešit.',
     },
   },
   demonstrations: {
@@ -145,6 +159,7 @@ export const homeTranslations = {
       [Locale.ES]: '¿Cómo funcionará esto?',
       [Locale.IT]: 'Come funzionerà?',
       [Locale.NL]: 'Hoe gaat dit werken?',
+      [Locale.CS]: 'Jak to bude fungovat?',
     },
     description: {
       [Locale.EN]: 'Learn how our rallies work and how you can participate.',
@@ -154,6 +169,7 @@ export const homeTranslations = {
       [Locale.ES]: 'Aprende cómo funcionan nuestras manifestaciones y cómo participar.',
       [Locale.IT]: 'Scopri come funzionano i nostri raduni e come partecipare.',
       [Locale.NL]: 'Leer hoe onze bijeenkomsten werken en hoe je kunt deelnemen.',
+      [Locale.CS]: 'Zjistěte, jak naše rally fungují a jak se můžete zapojit.',
     },
   },
   howCanYouHelp: {
@@ -165,6 +181,7 @@ export const homeTranslations = {
       [Locale.ES]: 'Unirse',
       [Locale.IT]: 'Partecipa',
       [Locale.NL]: 'Doe mee',
+      [Locale.CS]: 'Připojit se',
     },
     description: {
       [Locale.EN]: 'Join us in the fight against aging. There are many ways to contribute.',
@@ -174,6 +191,7 @@ export const homeTranslations = {
       [Locale.ES]: 'Únete a nosotros en la lucha contra el envejecimiento. Hay muchas formas de contribuir.',
       [Locale.IT]: 'Unisciti a noi nella lotta contro l\'invecchiamento. Ci sono molti modi per contribuire.',
       [Locale.NL]: 'Doe mee in de strijd tegen veroudering. Er zijn veel manieren om bij te dragen.',
+      [Locale.CS]: 'Připojte se k nám v boji proti stárnutí. Existuje mnoho způsobů, jak přispět.',
     },
   },
   aboutUs: {
@@ -185,6 +203,7 @@ export const homeTranslations = {
       [Locale.ES]: 'Sobre nosotros',
       [Locale.IT]: 'Chi siamo',
       [Locale.NL]: 'Over ons',
+      [Locale.CS]: 'O nás',
     },
     description: {
       [Locale.EN]: 'Learn more about our mission and the team behind Fund Longevity.',
@@ -194,6 +213,7 @@ export const homeTranslations = {
       [Locale.ES]: 'Conoce nuestra misión y el equipo de Fund Longevity.',
       [Locale.IT]: 'Scopri la nostra missione e il team di Fund Longevity.',
       [Locale.NL]: 'Leer meer over onze missie en het team achter Fund Longevity.',
+      [Locale.CS]: 'Zjistěte více o naší misi a týmu za Fund Longevity.',
     },
     subtitle: {
       [Locale.EN]: 'Fund Longevity is a grass-roots, non-profit movement to fight aging via public events.',
@@ -203,6 +223,7 @@ export const homeTranslations = {
       [Locale.ES]: 'Fund Longevity es un movimiento de base sin ánimo de lucro para combatir el envejecimiento mediante actos públicos.',
       [Locale.IT]: 'Fund Longevity è un movimento dal basso e senza scopo di lucro per combattere l\'invecchiamento tramite eventi pubblici.',
       [Locale.NL]: 'Fund Longevity is een grassroots, non-profit beweging om veroudering te bestrijden via openbare evenementen.',
+      [Locale.CS]: 'Fund Longevity je grassroots neziskové hnutí k boji proti stárnutí prostřednictvím veřejných akcí.',
     },
   },
   buttons: {
@@ -214,6 +235,7 @@ export const homeTranslations = {
       [Locale.ES]: 'Saber más',
       [Locale.IT]: 'Scopri di più',
       [Locale.NL]: 'Meer informatie',
+      [Locale.CS]: 'Zjistit více',
     },
     getInvolved: {
       [Locale.EN]: 'Get involved',
@@ -223,6 +245,7 @@ export const homeTranslations = {
       [Locale.ES]: 'Involucrarse',
       [Locale.IT]: 'Partecipa',
       [Locale.NL]: 'Doe mee',
+      [Locale.CS]: 'Zapojit se',
     },
     joinDiscord: {
       [Locale.EN]: 'Join our Discord community',
@@ -232,6 +255,7 @@ export const homeTranslations = {
       [Locale.ES]: 'Únete a nuestra comunidad Discord',
       [Locale.IT]: 'Unisciti alla nostra community Discord',
       [Locale.NL]: 'Word lid van onze Discord-community',
+      [Locale.CS]: 'Připojte se k naší Discord komunitě',
     },
   },
 } as const satisfies Record<string, Record<string, Translation>>;

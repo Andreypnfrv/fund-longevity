@@ -29,6 +29,10 @@ export function FlagNL(): React.ReactElement {
   return <Icon icon="flag:nl-4x3" width={24} height={24} />;
 }
 
+export function FlagCS(): React.ReactElement {
+  return <Icon icon="flag:cz-4x3" width={24} height={24} />;
+}
+
 type DiscordIconProps = {
   size?: number | string;
   width?: number | string;
