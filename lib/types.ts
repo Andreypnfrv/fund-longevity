@@ -6,9 +6,10 @@ export enum Locale {
   ES = 'es',
   IT = 'it',
   NL = 'nl',
+  CS = 'cs',
 }
 
-export const LOCALES: Locale[] = [Locale.EN, Locale.SV, Locale.DE, Locale.FR, Locale.ES, Locale.IT, Locale.NL];
+export const LOCALES: Locale[] = [Locale.EN, Locale.SV, Locale.DE, Locale.FR, Locale.ES, Locale.IT, Locale.NL, Locale.CS];
 
 export function getLocaleFromLang(lang: string): Locale {
   const l = lang?.toLowerCase();

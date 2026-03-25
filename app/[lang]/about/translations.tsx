@@ -11,6 +11,7 @@ export const aboutTranslations = {
       [Locale.ES]: 'Equipo',
       [Locale.IT]: 'Team',
       [Locale.NL]: 'Team',
+      [Locale.CS]: 'Tým',
     },
     subtitle: {
       [Locale.EN]: 'Fund Longevity is a global rally for life extension. It is not a formal organization, but a non-profit initiative founded by Linus Petersson and Andrei Panferov. The goal is to make fighting aging main-stream.',
@@ -20,6 +21,7 @@ export const aboutTranslations = {
       [Locale.ES]: 'Fund Longevity is a global rally for life extension. It is not a formal organization, but a non-profit initiative founded by Linus Petersson and Andrei Panferov. The goal is to make fighting aging main-stream.',
       [Locale.IT]: 'Fund Longevity is a global rally for life extension. It is not a formal organization, but a non-profit initiative founded by Linus Petersson and Andrei Panferov. The goal is to make fighting aging main-stream.',
       [Locale.NL]: 'Fund Longevity is a global rally for life extension. It is not a formal organization, but a non-profit initiative founded by Linus Petersson and Andrei Panferov. The goal is to make fighting aging main-stream.',
+      [Locale.CS]: 'Fund Longevity je globální rally za prodlužování života. Není to formální organizace, ale nezisková iniciativa, kterou založili Linus Petersson a Andrei Panferov. Cílem je učinit boj proti stárnutí mainstreamovým.',
     },
   },
   about: {
@@ -30,6 +32,7 @@ export const aboutTranslations = {
     [Locale.ES]: '',
     [Locale.IT]: '',
     [Locale.NL]: '',
+    [Locale.CS]: '',
   },
   teamSections: {
     Stockholm: {
@@ -40,6 +43,7 @@ export const aboutTranslations = {
       [Locale.ES]: 'Estocolmo',
       [Locale.IT]: 'Stoccolma',
       [Locale.NL]: 'Stockholm',
+      [Locale.CS]: 'Stockholm',
     },
     Amsterdam: {
       [Locale.EN]: 'Amsterdam',
@@ -49,6 +53,7 @@ export const aboutTranslations = {
       [Locale.ES]: 'Amsterdam',
       [Locale.IT]: 'Amsterdam',
       [Locale.NL]: 'Amsterdam',
+      [Locale.CS]: 'Amsterdam',
     },
     Berlin: {
       [Locale.EN]: 'Berlin',
@@ -58,6 +63,7 @@ export const aboutTranslations = {
       [Locale.ES]: 'Berlín',
       [Locale.IT]: 'Berlino',
       [Locale.NL]: 'Berlijn',
+      [Locale.CS]: 'Berlín',
     },
     Paris: {
       [Locale.EN]: 'Paris',
@@ -67,6 +73,7 @@ export const aboutTranslations = {
       [Locale.ES]: 'París',
       [Locale.IT]: 'Parigi',
       [Locale.NL]: 'Parijs',
+      [Locale.CS]: 'Paříž',
     },
     London: {
       [Locale.EN]: 'London',
@@ -76,6 +83,7 @@ export const aboutTranslations = {
       [Locale.ES]: 'Londres',
       [Locale.IT]: 'Londra',
       [Locale.NL]: 'Londen',
+      [Locale.CS]: 'Londýn',
     },
     Rome: {
       [Locale.EN]: 'Rome',
@@ -85,6 +93,7 @@ export const aboutTranslations = {
       [Locale.ES]: 'Roma',
       [Locale.IT]: 'Roma',
       [Locale.NL]: 'Rome',
+      [Locale.CS]: 'Řím',
     },
     experts: {
       [Locale.EN]: 'Experts',
@@ -94,6 +103,7 @@ export const aboutTranslations = {
       [Locale.ES]: 'Expertos',
       [Locale.IT]: 'Esperti',
       [Locale.NL]: 'Experts',
+      [Locale.CS]: 'Odborníci',
     },
     liveStreamOrgs: {
       [Locale.EN]: 'Live streams orgs',
@@ -103,6 +113,7 @@ export const aboutTranslations = {
       [Locale.ES]: 'Orgs de transmisiones en vivo',
       [Locale.IT]: 'Orgs live stream',
       [Locale.NL]: 'Live stream-orgs',
+      [Locale.CS]: 'Organizace živého vysílání',
     },
     madrid: {
       [Locale.EN]: 'Madrid',
@@ -112,6 +123,7 @@ export const aboutTranslations = {
       [Locale.ES]: 'Madrid',
       [Locale.IT]: 'Madrid',
       [Locale.NL]: 'Madrid',
+      [Locale.CS]: 'Madrid',
     },
     brussels: {
       [Locale.EN]: 'Brussels',
@@ -121,6 +133,7 @@ export const aboutTranslations = {
       [Locale.ES]: 'Bruselas',
       [Locale.IT]: 'Bruxelles',
       [Locale.NL]: 'Brussel',
+      [Locale.CS]: 'Brusel',
     },
     Ljubljana: {
       [Locale.EN]: 'Ljubljana',
@@ -130,6 +143,7 @@ export const aboutTranslations = {
       [Locale.ES]: 'Liubliana',
       [Locale.IT]: 'Lubiana',
       [Locale.NL]: 'Ljubljana',
+      [Locale.CS]: 'Lublaň',
     },
     telAviv: {
       [Locale.EN]: 'Tel Aviv',
@@ -139,6 +153,7 @@ export const aboutTranslations = {
       [Locale.ES]: 'Tel Aviv',
       [Locale.IT]: 'Tel Aviv',
       [Locale.NL]: 'Tel Aviv',
+      [Locale.CS]: 'Tel Aviv',
     },
     Tbilisi: {
       [Locale.EN]: 'Tbilisi',
@@ -148,6 +163,7 @@ export const aboutTranslations = {
       [Locale.ES]: 'Tbilisi',
       [Locale.IT]: 'Tbilisi',
       [Locale.NL]: 'Tbilisi',
+      [Locale.CS]: 'Tbilisi',
     },
     Mexico: {
       [Locale.EN]: 'Mexico',
@@ -157,6 +173,7 @@ export const aboutTranslations = {
       [Locale.ES]: 'México',
       [Locale.IT]: 'Messico',
       [Locale.NL]: 'Mexico',
+      [Locale.CS]: 'Mexiko',
     },
     abuDhabi: {
       [Locale.EN]: 'Abu Dhabi',
@@ -166,6 +183,7 @@ export const aboutTranslations = {
       [Locale.ES]: 'Abu Dabi',
       [Locale.IT]: 'Abu Dhabi',
       [Locale.NL]: 'Abu Dhabi',
+      [Locale.CS]: 'Abú Dhabí',
     },
     Caracas: {
       [Locale.EN]: 'Caracas',
@@ -175,6 +193,7 @@ export const aboutTranslations = {
       [Locale.ES]: 'Caracas',
       [Locale.IT]: 'Caracas',
       [Locale.NL]: 'Caracas',
+      [Locale.CS]: 'Caracas',
     },
     'San Francisco': {
       [Locale.EN]: 'San Francisco',
@@ -184,6 +203,7 @@ export const aboutTranslations = {
       [Locale.ES]: 'San Francisco',
       [Locale.IT]: 'San Francisco',
       [Locale.NL]: 'San Francisco',
+      [Locale.CS]: 'San Francisco',
     },
   },
   localLeads: {
@@ -195,6 +215,7 @@ export const aboutTranslations = {
       [Locale.ES]: 'Líderes locales',
       [Locale.IT]: 'Responsabili locali',
       [Locale.NL]: 'Lokale leiders',
+      [Locale.CS]: 'Místní vedoucí',
     },
   },
   mediaLeads: {
@@ -206,6 +227,7 @@ export const aboutTranslations = {
       [Locale.ES]: 'Líderes de medios',
       [Locale.IT]: 'Media Leads',
       [Locale.NL]: 'Media Leads',
+      [Locale.CS]: 'Mediální vedoucí',
     },
   },
   partners: {
@@ -217,6 +239,7 @@ export const aboutTranslations = {
       [Locale.ES]: 'Organizaciones destacadas',
       [Locale.IT]: 'Organizzazioni in evidenza',
       [Locale.NL]: 'Uitgelichte organisaties',
+      [Locale.CS]: 'Vybrané organizace',
     },
   },
 } as const satisfies Record<string, Record<string, Translation> | Translation>;

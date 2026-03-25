@@ -9,6 +9,7 @@ export const messagesTranslations = {
     [Locale.ES]: 'Imprime una de esas pancartas o haz la tuya',
     [Locale.IT]: 'Stampa uno di quei cartelli o creane uno tuo',
     [Locale.NL]: 'Print een van die borden of maak je eigen',
+    [Locale.CS]: 'Print one of those signs or make your own',
   },
   sectionImportant: {
     [Locale.EN]: 'Most important signs',
@@ -18,6 +19,7 @@ export const messagesTranslations = {
     [Locale.ES]: 'Las pancartas más importantes',
     [Locale.IT]: 'I cartelli più importanti',
     [Locale.NL]: 'Belangrijkste borden',
+    [Locale.CS]: 'Most important signs',
   },
   sectionImportantSubtitle: {
     [Locale.EN]: "It's good to have those so we can keep consistency across cities",
@@ -27,6 +29,7 @@ export const messagesTranslations = {
     [Locale.ES]: 'Conviene tenerlas para mantener coherencia entre ciudades',
     [Locale.IT]: 'È utile averle per restare coerenti tra le città',
     [Locale.NL]: 'Handig om ze te hebben, zo blijft het in alle steden hetzelfde',
+    [Locale.CS]: "It's good to have those so we can keep consistency across cities",
   },
   sectionMeme: {
     [Locale.EN]: 'Meme-sign ideas',
@@ -36,6 +39,7 @@ export const messagesTranslations = {
     [Locale.ES]: 'Ideas de pancartas tipo meme',
     [Locale.IT]: 'Idee per cartelli da meme',
     [Locale.NL]: 'Meme-bord-ideeën',
+    [Locale.CS]: 'Meme-sign ideas',
   },
   sectionInspiration: {
     [Locale.EN]: 'Inspiration',
@@ -45,6 +49,7 @@ export const messagesTranslations = {
     [Locale.ES]: 'Inspiración',
     [Locale.IT]: 'Ispirazione',
     [Locale.NL]: 'Inspiratie',
+    [Locale.CS]: 'Inspiration',
   },
   inspirationCredit: {
     [Locale.EN]: 'AI-generated images that represent our vision',
@@ -54,6 +59,7 @@ export const messagesTranslations = {
     [Locale.ES]: 'Imágenes generadas por IA que reflejan nuestra visión',
     [Locale.IT]: 'Immagini generate dall’IA che rappresentano la nostra visione',
     [Locale.NL]: 'AI-beelden die onze visie weergeven',
+    [Locale.CS]: 'AI-generated images that represent our vision',
   },
   inspirationEmpty: {
     [Locale.EN]: 'More photos will be added here soon.',
@@ -63,6 +69,7 @@ export const messagesTranslations = {
     [Locale.ES]: 'Pronto añadiremos más fotos aquí.',
     [Locale.IT]: 'Presto aggiungeremo altre foto qui.',
     [Locale.NL]: 'Binnenkort komen hier meer foto’s.',
+    [Locale.CS]: 'More photos will be added here soon.',
   },
   download: {
     [Locale.EN]: 'Download',
@@ -72,6 +79,7 @@ export const messagesTranslations = {
     [Locale.ES]: 'Descargar',
     [Locale.IT]: 'Scarica',
     [Locale.NL]: 'Downloaden',
+    [Locale.CS]: 'Download',
   },
   memePdfCta: {
     [Locale.EN]: 'More slogan ideas (Google Doc)',
@@ -81,6 +89,7 @@ export const messagesTranslations = {
     [Locale.ES]: 'Más ideas de eslóganes (Google Doc)',
     [Locale.IT]: 'Altre idee di slogan (Google Doc)',
     [Locale.NL]: 'Meer sloganideeën (Google Doc)',
+    [Locale.CS]: 'More slogan ideas (Google Doc)',
   },
   memePdfUrl:
     'https://docs.google.com/document/d/1poE0bmPsSDeWWzs2kBynoCwhXg5qcg4Luj-siIucCFY/edit',
@@ -346,5 +355,6 @@ export const MEME_SIGN_LINES_BY_LOCALE: Record<Locale, readonly string[]> = {
   [Locale.ES]: MEME_ES,
   [Locale.IT]: MEME_IT,
   [Locale.NL]: MEME_NL,
+  [Locale.CS]: MEME_EN,
 };
 

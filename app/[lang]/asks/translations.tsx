@@ -26,6 +26,7 @@ export const asksUiTranslations = {
     [Locale.ES]: 'Manifestación Fund Longevity en el Nasdaq, Times Square',
     [Locale.IT]: 'Raduno Fund Longevity al Nasdaq, Times Square',
     [Locale.NL]: 'Fund Longevity-bijeenkomst bij Nasdaq, Times Square',
+    [Locale.CS]: 'Shromáždění Fund Longevity u Nasdaq na Times Square',
   } satisfies Translation,
 };
 
@@ -527,6 +528,7 @@ export const asksByLocale: Record<Locale, AsksBlueprint> = {
   [Locale.ES]: asksBlueprintEs,
   [Locale.IT]: asksBlueprintIt,
   [Locale.NL]: asksBlueprintNl,
+  [Locale.CS]: asksBlueprintEn,
 };
 
 export function getAsksForLocale(locale: Locale): AsksBlueprint {
