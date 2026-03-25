@@ -12,7 +12,7 @@
         "destination": "/en/index.html"
       },
       {
-        "regex": "^\/(en|sv|de|fr|es|it|nl)(\/.*)?$",
+        "regex": "^\/(en|sv|de|fr|es|it|nl|cs)(\/.*)?$",
         "destination": "/:1:2/index.html"
       }
     ],
