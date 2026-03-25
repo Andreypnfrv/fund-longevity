@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "check-i18n": "tsx scripts/check-i18n.ts",
     "deploy": "rm -rf .next out && npm run build && firebase deploy",
     "deploy:hosting": "rm -rf .next out && npm run build && firebase deploy --only hosting",
     "deploy:functions": "cd functions && npm install && npm run build && cd .. && firebase deploy --only functions"
@@ -27,6 +28,7 @@
     "@types/react-dom": "^18.0.0",
     "eslint": "^8.57.0",
     "eslint-config-next": "14.2.35",
+    "tsx": "^4.19.3",
     "typescript": "^5.0.0"
   }
 }

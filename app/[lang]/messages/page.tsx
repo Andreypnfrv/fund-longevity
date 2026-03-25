@@ -10,7 +10,7 @@ import { globalTranslations } from '@/lib/translations';
 import { cn } from '@/lib/utils';
 import messagesData from '@/lib/messages.json';
 import { getInspirationImages } from '@/lib/inspiration-images';
-import { MEME_SIGN_LINES, messagesTranslations } from './translations';
+import { MEME_SIGN_LINES_BY_LOCALE, messagesTranslations } from './translations';
 
 interface MessagesPageProps {
   params: Promise<{ lang: string }>;
@@ -90,12 +90,14 @@ export default async function MessagesPage({ params }: MessagesPageProps): Promi
   const locale = getLocaleFromLang(lang);
   const inspirationImages = await getInspirationImages();
   const t = messagesTranslations;
-  const L = (k: keyof typeof t) => pick(t[k] as Record<Locale, string>, locale);
+  type MessagesCopyKey = Exclude<keyof typeof messagesTranslations, 'memePdfUrl'>;
+  const L = (k: MessagesCopyKey) => pick(messagesTranslations[k] as Record<Locale, string>, locale);
   const bannerSigns = data.importantSigns.filter((s) => s.layout === 'banner');
   const defaultSigns = data.importantSigns.filter((s) => s.layout !== 'banner');
-  const memeMid = Math.ceil(MEME_SIGN_LINES.length / 2);
-  const memeCol1 = MEME_SIGN_LINES.slice(0, memeMid);
-  const memeCol2 = MEME_SIGN_LINES.slice(memeMid);
+  const memeLines = MEME_SIGN_LINES_BY_LOCALE[locale] ?? MEME_SIGN_LINES_BY_LOCALE[Locale.EN];
+  const memeMid = Math.ceil(memeLines.length / 2);
+  const memeCol1 = memeLines.slice(0, memeMid);
+  const memeCol2 = memeLines.slice(memeMid);
   const memeListClass =
     'list-disc list-outside space-y-3 pl-6 text-base md:text-lg text-black marker:text-xl';
 
@@ -136,13 +138,13 @@ export default async function MessagesPage({ params }: MessagesPageProps): Promi
               <div className="flex flex-col" style={{ gap: 50 }}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-1">
                   <ul className={memeListClass}>
-                    {memeCol1.map((line) => (
-                      <li key={line}>{line}</li>
+                    {memeCol1.map((line, i) => (
+                      <li key={`m1-${i}`}>{line}</li>
                     ))}
                   </ul>
                   <ul className={memeListClass}>
-                    {memeCol2.map((line) => (
-                      <li key={line}>{line}</li>
+                    {memeCol2.map((line, i) => (
+                      <li key={`m2-${i}`}>{line}</li>
                     ))}
                   </ul>
                 </div>
@@ -182,7 +184,7 @@ export default async function MessagesPage({ params }: MessagesPageProps): Promi
           </div>
         </Wrapper>
       </Section>
-      <CopyLinkButton />
+      <CopyLinkButton locale={locale} />
     </div>
   );
 }

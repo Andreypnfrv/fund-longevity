@@ -4,9 +4,10 @@ import { cn } from '@/lib/utils';
 
 interface LogoProps {
   className?: string;
+  title: string;
 }
 
-export function Logo({ className }: LogoProps): React.ReactElement {
+export function Logo({ className, title }: LogoProps): React.ReactElement {
   return (
       <H3 
       display={false}
@@ -16,7 +17,7 @@ export function Logo({ className }: LogoProps): React.ReactElement {
       )}
       style={{ marginBottom: 0, color: '#0900FF' }}
       >
-        Fund Longevity
+        {title}
       </H3>
   );
 }

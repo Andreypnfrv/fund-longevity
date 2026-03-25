@@ -6,6 +6,8 @@ import { useRouter, usePathname } from 'next/navigation';
 import { Locale } from '@/lib/types';
 import { FlagEN, FlagSV, FlagDE, FlagFR, FlagES, FlagIT, FlagNL } from '@/lib/icons';
 import { getLocalizedPath } from '@/lib/paths';
+import { useTranslations } from '@/lib/useTranslations';
+import { globalTranslations } from '@/lib/translations';
 import { Dropdown } from './Dropdown';
 
 interface LanguageDropdownProps {
@@ -18,6 +20,7 @@ interface LanguageDropdownProps {
 export function LanguageDropdown({ currentLocale, triggerClassName, triggerStyle, triggerWrapperClassName }: LanguageDropdownProps): React.ReactElement {
   const router = useRouter();
   const pathname = usePathname();
+  const { translate } = useTranslations(globalTranslations.common, currentLocale);
 
   const switchLanguage = (newLocale: Locale): void => {
     if (newLocale === currentLocale) {
@@ -52,7 +55,7 @@ export function LanguageDropdown({ currentLocale, triggerClassName, triggerStyle
     <button
       className={triggerClassName ?? "flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors"}
       style={triggerStyle}
-      aria-label="Change language"
+      aria-label={translate('changeLanguage')}
     >
       {localeFlags[currentLocale]}
       <Icon icon="lucide:chevron-down" width={16} height={16} />

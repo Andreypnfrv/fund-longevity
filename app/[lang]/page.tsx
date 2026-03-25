@@ -234,7 +234,7 @@ const EVENTS_DATA: EventData[] = [
     imageAlt: 'San Francisco',
     dateTime: 'Wednesday 8 April',
     location: 'San Francisco, California',
-    link: '#',
+    link: 'https://luma.com/ruebed41',
     buttonText: 'Register',
     buttonColor: '#0900FF',
     buttonShadow: '0 4px 6px rgba(9, 0, 255, 0.3)',

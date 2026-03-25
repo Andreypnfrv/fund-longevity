@@ -6,8 +6,8 @@ import { Section } from '@/components/Section';
 import { HowCanYouHelp } from '@/components/HowCanYouHelp';
 import { Wrapper } from '@/components/Wrapper';
 import { CopyLinkButton } from '@/components/CopyLinkButton';
-import { getLocaleFromLang, LOCALES } from '@/lib/types';
-import { asksContentEn } from './translations';
+import { getLocaleFromLang, LOCALES, Locale } from '@/lib/types';
+import { getAsksForLocale, asksUiTranslations } from './translations';
 
 interface AsksPageProps {
   params: Promise<{ lang: string }>;
@@ -49,7 +49,8 @@ export function generateStaticParams() {
 export default async function AsksPage({ params }: AsksPageProps): Promise<JSX.Element> {
   const { lang } = await params;
   const locale = getLocaleFromLang(lang);
-  const t = asksContentEn;
+  const t = getAsksForLocale(locale);
+  const nasdaqAlt = asksUiTranslations.nasdaqImageAlt[locale] ?? asksUiTranslations.nasdaqImageAlt[Locale.EN];
 
   return (
     <div>
@@ -129,7 +130,7 @@ export default async function AsksPage({ params }: AsksPageProps): Promise<JSX.E
           <div className="relative w-full min-h-[240px] max-h-[78vh] aspect-[16/10] overflow-hidden rounded-xl">
             <Image
               src="/NASDAQ.jpg"
-              alt="Fund Longevity rally at Nasdaq, Times Square"
+              alt={nasdaqAlt}
               fill
               className="object-cover"
               style={{ objectPosition: 'right top' }}
@@ -145,7 +146,7 @@ export default async function AsksPage({ params }: AsksPageProps): Promise<JSX.E
           <HowCanYouHelp locale={locale} />
         </Wrapper>
       </Section>
-      <CopyLinkButton />
+      <CopyLinkButton locale={locale} />
     </div>
   );
 }

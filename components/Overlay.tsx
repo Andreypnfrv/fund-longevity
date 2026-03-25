@@ -8,9 +8,10 @@ interface OverlayProps {
   onClose: () => void;
   children: ReactNode;
   className?: string;
+  ariaLabel: string;
 }
 
-export function Overlay({ isOpen, onClose, children, className = '' }: OverlayProps): React.ReactElement | null {
+export function Overlay({ isOpen, onClose, children, className = '', ariaLabel }: OverlayProps): React.ReactElement | null {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -37,7 +38,7 @@ export function Overlay({ isOpen, onClose, children, className = '' }: OverlayPr
           onClose();
         }
       }}
-      aria-label="Close overlay"
+      aria-label={ariaLabel}
     >
       {children}
     </div>

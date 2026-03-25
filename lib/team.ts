@@ -33,7 +33,24 @@ export const TEAM_DATA: TeamData = {
         { name: 'Peter Lidskiy', description: 'Assistant Professor at City University of Hong Kong, studies evolutionary biology of aging and the pathogen control hypothesis.', location: '', image: '/pl.jpg', socialLinks: { website: 'https://scholars.cityu.edu.hk/en/persons/plidskiy/' } },
         { name: 'Alexander Panchin', description: 'Biologist and science communicator, author of "Immortality or Death", researcher at Russian Academy of Sciences.', location: '', image: '/panchin.jpg', socialLinks: { telegram: 'https://t.me/ScienceInquisition', website: 'https://www.researchgate.net/profile/Alexander-Panchin' } },
         { name: 'Laurence Ion', description: 'Founding Steward of VitaDAO, Co-initiator of Vitalia. Focuses on DeSci and longevity research funding, and on new cities to accelerate drug development and make death optional.', location: '', image: '/laurence-ion.jpg', socialLinks: { linkedin: 'https://www.linkedin.com/in/laurenceion' } },
-        { name: 'Natasha Vita-More', description: 'Longevity scientist, AI Futures Theorist (PhD).', location: '', image: '/natasha-vita-more.jpg', socialLinks: {} },
+        {
+          name: 'Natasha Vita-More',
+          description: 'Longevity scientist, AI Futures Theorist (PhD).',
+          location: '',
+          image: '/natasha-vita-more.jpg',
+          socialLinks: { linkedin: 'https://www.linkedin.com/in/natasha-vita-more-phd-mphil-msc-1st-380363/' },
+        },
+        {
+          name: 'Max More',
+          description:
+            'Philosopher and futurist who writes, speaks, and consults on emerging technologies. President and CEO of the Alcor Life Extension Foundation, 2010–2020.',
+          location: '',
+          image: '/maxmore.png',
+          socialLinks: {
+            linkedin: 'https://www.linkedin.com/in/max-more-06a11a1/',
+            website: 'https://www.maxmore.com/',
+          },
+        },
         { name: 'José Luis Cordeiro', description: 'Engineer, economist and futurist. Vice-chair of Humanity+, founding faculty at Singularity University, co-author of "The Death of Death". Advocates longevity escape velocity and aging as a curable disease.', location: '', image: '/jose-luis-cordeiro.png', socialLinks: {} },
       ],
     },
@@ -166,6 +183,28 @@ export const TEAM_DATA: TeamData = {
             linkedin: 'https://www.linkedin.com/in/mitoz-deina/',
             telegram: 'https://t.me/deinamitoz',
           },
+        },
+        {
+          name: 'Quentin Le Bihan',
+          description:
+            'Field Service Engineer. Laboratory instrumentation, spectroscopy, microscopy, analytical systems, troubleshooting and scientific support.',
+          location: 'Paris, France',
+          image: '/quentin-le-bihan.png',
+          socialLinks: {
+            linkedin: 'https://www.linkedin.com/in/quentin-le-bihan-43aa8840',
+          },
+        },
+      ],
+    },
+    {
+      city: 'London',
+      members: [
+        {
+          name: 'David Wood',
+          description: 'Futurist, catalyst, author, singularitarian',
+          location: 'London, United Kingdom',
+          image: '/david-wood.png',
+          socialLinks: { linkedin: 'https://www.linkedin.com/in/dw2cco/' },
         },
       ],
     },

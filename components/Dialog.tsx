@@ -11,9 +11,11 @@ interface DialogProps {
   title?: string;
   children: ReactNode;
   className?: string;
+  closeLabel: string;
+  overlayAriaLabel: string;
 }
 
-export function Dialog({ isOpen, onClose, title, children, className = '' }: DialogProps): React.ReactElement | null {
+export function Dialog({ isOpen, onClose, title, children, className = '', closeLabel, overlayAriaLabel }: DialogProps): React.ReactElement | null {
   const dialogRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -31,7 +33,7 @@ export function Dialog({ isOpen, onClose, title, children, className = '' }: Dia
   }
 
   return (
-    <Overlay isOpen={isOpen} onClose={onClose}>
+    <Overlay isOpen={isOpen} onClose={onClose} ariaLabel={overlayAriaLabel}>
       <div
         className="fixed inset-0 flex items-center justify-center p-4"
         onClick={(e) => e.stopPropagation()}
@@ -51,7 +53,7 @@ export function Dialog({ isOpen, onClose, title, children, className = '' }: Dia
             )}
             {children}
             <div className="mt-6 flex justify-end">
-              <Button onClick={onClose}>Close</Button>
+              <Button onClick={onClose}>{closeLabel}</Button>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "predeploy": ["npm run check-i18n"],
     "public": "out",
     "ignore": [
       "firebase.json",

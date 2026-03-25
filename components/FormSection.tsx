@@ -11,6 +11,12 @@ import { useTranslations } from '@/lib/useTranslations';
 import { globalTranslations } from '@/lib/translations';
 import { mailchimpConfig } from '@/lib/config';
 
+const INTENT_MAILCHIMP = {
+  inPerson: 'I want to join in-person',
+  online: 'I want to join online',
+  organisation: 'I can take part in organisation',
+} as const;
+
 interface FormSectionProps {
   locale: Locale;
   title?: string;
@@ -242,20 +248,20 @@ export function FormSection({
 
         {intentRadio && (
           <div>
-            <label className="block text-base font-medium mb-2">Intent</label>
+            <label className="block text-base font-medium mb-2">{translate('intent')}</label>
             <div className="space-y-2">
               <div className="flex items-center">
                 <input
                   type="radio"
                   id="intent-in-person"
                   name="intent"
-                  value="I want to join in-person"
-                  checked={formData.intent === 'I want to join in-person'}
+                  value={INTENT_MAILCHIMP.inPerson}
+                  checked={formData.intent === INTENT_MAILCHIMP.inPerson}
                   onChange={(e) => setFormData({ ...formData, intent: e.target.value })}
                   className="mr-2"
                 />
                 <label htmlFor="intent-in-person" className="text-base">
-                  I want to join in-person
+                  {translate('joinInPerson')}
                 </label>
               </div>
               <div className="flex items-center">
@@ -263,13 +269,13 @@ export function FormSection({
                   type="radio"
                   id="intent-online"
                   name="intent"
-                  value="I want to join online"
-                  checked={formData.intent === 'I want to join online'}
+                  value={INTENT_MAILCHIMP.online}
+                  checked={formData.intent === INTENT_MAILCHIMP.online}
                   onChange={(e) => setFormData({ ...formData, intent: e.target.value })}
                   className="mr-2"
                 />
                 <label htmlFor="intent-online" className="text-base">
-                  I want to join online
+                  {translate('joinOnline')}
                 </label>
               </div>
               <div className="flex items-center">
@@ -277,13 +283,13 @@ export function FormSection({
                   type="radio"
                   id="intent-organisation"
                   name="intent"
-                  value="I can take part in organisation"
-                  checked={formData.intent === 'I can take part in organisation'}
+                  value={INTENT_MAILCHIMP.organisation}
+                  checked={formData.intent === INTENT_MAILCHIMP.organisation}
                   onChange={(e) => setFormData({ ...formData, intent: e.target.value })}
                   className="mr-2"
                 />
                 <label htmlFor="intent-organisation" className="text-base">
-                  I can take part in organisation
+                  {translate('canTakePartInOrganisation')}
                 </label>
               </div>
             </div>
@@ -291,14 +297,14 @@ export function FormSection({
         )}
 
         <Button type="submit" disabled={isSubmitting} className="w-full">
-          {isSubmitting ? 'Submitting...' : translate('submit')}
+          {isSubmitting ? translate('sending') : translate('submit')}
         </Button>
 
         {submitStatus === 'success' && (
-          <P className="text-green-600 text-base">Thank you! Your submission was successful.</P>
+          <P className="text-green-600 text-base">{translate('successMessage')}</P>
         )}
         {submitStatus === 'error' && (
-          <P className="text-red-600 text-base">Something went wrong. Please try again.</P>
+          <P className="text-red-600 text-base">{translate('errorMessage')}</P>
         )}
       </form>
     </>

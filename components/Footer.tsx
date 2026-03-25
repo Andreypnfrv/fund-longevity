@@ -7,6 +7,7 @@ import { Link } from './Link';
 import { Wrapper } from './Wrapper';
 import { useTranslations } from '@/lib/useTranslations';
 import { globalTranslations } from '@/lib/translations';
+import { homeTranslations } from '@/app/[lang]/translations';
 import { DiscordIcon } from '@/lib/icons';
 import { P } from './Typography';
 import { Logo } from './Logo';
@@ -25,7 +26,7 @@ export function Footer({ locale }: FooterProps): React.ReactElement {
       <Wrapper>
         <div className="flex flex-col md:flex-row w-full justify-between gap-8 md:gap-0">
           <div>
-            <Logo />
+            <Logo title={homeTranslations.hero.title[locale]} />
             <P className="mb-4 text-gray-700">{footer.translate('summary')}</P>
             <a
               href={discordUrl}

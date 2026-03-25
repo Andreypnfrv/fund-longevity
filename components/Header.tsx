@@ -13,6 +13,7 @@ import { Overlay } from './Overlay';
 import { Icon } from './Icon';
 import { useTranslations } from '@/lib/useTranslations';
 import { globalTranslations } from '@/lib/translations';
+import { homeTranslations } from '@/app/[lang]/translations';
 import { Fill, Size, navigationColors } from '@/lib/theme';
 import { cn } from '@/lib/utils';
 
@@ -22,6 +23,7 @@ interface HeaderProps {
 
 export function Header({ locale }: HeaderProps): React.ReactElement {
   const { translate } = useTranslations(globalTranslations.nav, locale);
+  const { translate: tc } = useTranslations(globalTranslations.common, locale);
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -113,17 +115,17 @@ export function Header({ locale }: HeaderProps): React.ReactElement {
         </Wrapper>
       </header>
 
-      <Overlay isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)}>
+      <Overlay isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} ariaLabel={tc('closeOverlay')}>
         <div
           className="fixed inset-0 bg-white shadow-xl z-50 overflow-y-auto flex flex-col"
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex items-center justify-between p-4 border-b border-gray-200">
-            <Logo />
+            <Logo title={homeTranslations.hero.title[locale]} />
             <button
               className="p-2 rounded-md hover:bg-gray-100 transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
-              aria-label="Close menu"
+              aria-label={tc('closeMenu')}
             >
               <Icon icon="lucide:x" width={24} height={24} />
             </button>
