@@ -13,6 +13,24 @@ export const whyTranslations = {
       [Locale.CS]: 'Stárnutí je problém,\na věda ho vyřeší',
     },
   },
+  seoDescription: {
+    [Locale.EN]:
+      'Why aging drives most death and disease, why many scientists treat it as solvable, and what scale and policy are missing—Fund Longevity’s case for a global rally.',
+    [Locale.SV]:
+      'Varför åldrande står bakom det mesta av död och sjukdom, varför många forskare ser det som lösbart, och vad som saknas i skala och policy—Fund Longevitys resonemang.',
+    [Locale.DE]:
+      'Warum Altern die meisten Todesfälle und Krankheiten treibt, warum viele Forschende es als lösbar sehen und was an Skala und Politik fehlt—die Argumentation von Fund Longevity.',
+    [Locale.FR]:
+      'Pourquoi le vieillissement cause la majeure partie des décès et des maladies, pourquoi de nombreux scientifiques le jugent soluble, et ce qui manque à l’échelle et dans les politiques publiques—le plaidoyer de Fund Longevity.',
+    [Locale.ES]:
+      'Por qué el envejecimiento impulsa la mayor parte de muertes y enfermedades, por qué muchos científicos lo consideran abordable y qué falta a escala y en políticas—el caso de Fund Longevity.',
+    [Locale.IT]:
+      'Perché l’invecchiamento spiega gran parte di morti e malattie, perché molti scienziati lo considerano affrontabile e cosa manca a scala e nelle politiche—il ragionamento di Fund Longevity.',
+    [Locale.NL]:
+      'Waarom veroudering zoveel sterfte en ziekte verklaart, waarom veel wetenschappers het oplosbaar achten en wat er schort aan schaal en beleid—het betoog van Fund Longevity.',
+    [Locale.CS]:
+      'Proč stárnutí stojí za většinou úmrtí a nemocí, proč ho mnoho vědců považuje za řešitelný problém a co chybí v měřítku a politice—argumentace Fund Longevity.',
+  },
   sections: {
     problem: {
       title: {

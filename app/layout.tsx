@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { defaultOgImage, siteUrl } from "@/lib/config";
 import "./globals.css";
@@ -37,6 +38,18 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`antialiased ${plusJakarta.variable} ${plusJakarta.className}`} suppressHydrationWarning>
         {children}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-7LR63S3RKN"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-7LR63S3RKN');
+          `}
+        </Script>
       </body>
     </html>
   );

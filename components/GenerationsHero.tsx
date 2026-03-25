@@ -3,7 +3,7 @@
 import React, { useRef, useEffect } from 'react';
 
 interface GenerationsHeroProps {
-  images: [string, string, string];
+  images: readonly string[];
 }
 
 export function GenerationsHero({

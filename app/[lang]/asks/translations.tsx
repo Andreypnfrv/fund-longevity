@@ -1,4 +1,3 @@
-import type { Translation } from '@/lib/types';
 import { Locale } from '@/lib/types';
 
 export type AskBlueprintSection = {
@@ -15,19 +14,6 @@ export type AsksBlueprint = {
   ownershipLabel: string;
   ownership: string;
   sections: AskBlueprintSection[];
-};
-
-export const asksUiTranslations = {
-  nasdaqImageAlt: {
-    [Locale.EN]: 'Fund Longevity rally at Nasdaq, Times Square',
-    [Locale.SV]: 'Fund Longevity-manifestation vid Nasdaq, Times Square',
-    [Locale.DE]: 'Fund Longevity-Kundgebung am Nasdaq, Times Square',
-    [Locale.FR]: 'Rassemblement Fund Longevity au Nasdaq, Times Square',
-    [Locale.ES]: 'Manifestación Fund Longevity en el Nasdaq, Times Square',
-    [Locale.IT]: 'Raduno Fund Longevity al Nasdaq, Times Square',
-    [Locale.NL]: 'Fund Longevity-bijeenkomst bij Nasdaq, Times Square',
-    [Locale.CS]: 'Shromáždění Fund Longevity u Nasdaq na Times Square',
-  } satisfies Translation,
 };
 
 const asksBlueprintEn = {
@@ -64,7 +50,7 @@ const asksBlueprintEn = {
         'Dedicated longevity agency modeled on proven ARPA/DARPA frameworks: directed challenges, competitive execution, non-dilutive funding, IP retained by developers',
         'Adaptive licensing with synthetic control arms from national health data',
         'Regulatory sandboxes for combination and repurposed therapies',
-        'Right to try for therapies',
+        'Right-to-try regulations for potentially life-saving treatments',
         'Publicly funded therapies priced for universal access through national healthcare systems',
       ],
     },
@@ -134,7 +120,7 @@ const asksBlueprintSv = {
         'Särskild longivitetsmyndighet efter ARPA/DARPA-modellen: riktade utmaningar, konkurrenskraftigt genomförande, icke-utspädande finansiering, immateriella rättigheter hos utvecklare',
         'Anpassade licensieringar med syntetiska kontrollarmar från nationella hälsodata',
         'Regulatoriska sandlådor för kombinations- och återanvända terapier',
-        'Rätt att pröva terapier',
+        'Reglering för rätt att pröva potentiellt livräddande behandlingar',
         'Offentligt finansierade terapier prissatta för universell tillgänglighet via nationella sjukvårdssystem',
       ],
     },
@@ -204,7 +190,7 @@ const asksBlueprintDe = {
         'Dedizierte Langlebigkeitsbehörde nach ARPA/DARPA-Vorbild: gerichtete Challenges, wettbewerbliche Umsetzung, nicht verwässernde Finanzierung, IP bei Entwicklerinnen und Entwicklern',
         'Adaptive Zulassung mit synthetischen Kontrollarmen aus nationalen Gesundheitsdaten',
         'Regulatorische Sandboxes für Kombinations- und Repurposing-Therapien',
-        'Recht auf Behandlungsversuch',
+        'Regelungen zum Recht auf Behandlungsversuch für potenziell lebensrettende Therapien',
         'Öffentlich finanzierte Therapien, für universellen Zugang über nationale Gesundheitssysteme bepreist',
       ],
     },
@@ -274,7 +260,7 @@ const asksBlueprintFr = {
         'Agence dédiée à la longévité calquée sur les cadres ARPA/DARPA : défis ciblés, exécution compétitive, financement non dilutif, PI conservée par les développeurs',
         'Autorisations adaptatives avec bras de contrôle synthétiques à partir des données de santé nationales',
         'Bac à sable réglementaire pour les thérapies combinées et repositionnées',
-        'Droit d\'essayer les thérapies',
+        'Réglementations de droit d\'essai pour des traitements potentiellement salvateurs',
         'Thérapies financées par le public tarifées pour un accès universel via les systèmes nationaux de santé',
       ],
     },
@@ -344,7 +330,7 @@ const asksBlueprintEs = {
         'Agencia dedicada a la longevidad inspirada en marcos ARPA/DARPA: retos dirigidos, ejecución competitiva, financiación no dilutiva, PI retenida por los desarrolladores',
         'Autorizaciones adaptativas con brazos de control sintéticos a partir de datos sanitarios nacionales',
         'Entornos regulatorios sandbox para terapias combinadas y reposicionadas',
-        'Derecho a probar terapias',
+        'Regulaciones de derecho a probar para tratamientos potencialmente salvadores de vidas',
         'Terapias financiadas con fondos públicos con precios para acceso universal a través de los sistemas nacionales de salud',
       ],
     },
@@ -414,7 +400,7 @@ const asksBlueprintIt = {
         'Agenzia dedicata alla longevità sul modello ARPA/DARPA: sfide mirate, esecuzione competitiva, finanziamento non diluitivo, PI trattenuta dagli sviluppatori',
         'Autorizzazioni adattive con bracci di controllo sintetici dai dati sanitari nazionali',
         'Sandbox regolatorie per terapie combinate e riposizionate',
-        'Diritto di provare le terapie',
+        'Normative sul diritto di provare per trattamenti potenzialmente in grado di salvare la vita',
         'Terapie finanziate pubblicamente con prezzi per accesso universale tramite sistemi sanitari nazionali',
       ],
     },
@@ -484,7 +470,7 @@ const asksBlueprintNl = {
         'Toegewijde longevity-agentschap naar ARPA/DARPA-model: gerichte uitdagingen, competitieve uitvoering, non-dilutieve financiering, IP bij ontwikkelaars',
         'Adaptieve vergunningen met synthetische controlearmen uit nationale gezondheidsdata',
         'Regulatory sandboxes voor combinaties en herpositioneerde therapieën',
-        'Recht om therapieën te proberen',
+        'Right-to-try-regelgeving voor potentieel levensreddende behandelingen',
         'Publiek gefinancierde therapieën geprijsd voor universele toegang via nationale zorgsystemen',
       ],
     },
@@ -519,6 +505,25 @@ const asksBlueprintNl = {
     },
   ] satisfies AskBlueprintSection[],
 } as const;
+
+export const asksSeoDescription: Record<Locale, string> = {
+  [Locale.EN]:
+    'Longevity State: a national policy blueprint for aging—cross-ministerial strategy, sustainable research funding, adaptive regulation, preventive healthcare, open data, and international coordination.',
+  [Locale.SV]:
+    'Longevity State: en nationell policyplan för åldrande—departmentsöverskridande strategi, hållbar forskningsfinansiering, anpassad reglering, preventiv vård, öppna data och internationell samordning.',
+  [Locale.DE]:
+    'Longevity State: nationaler Policy-Blueprint fürs Altern—ministerienübergreifende Strategie, nachhaltige Forschungsfinanzierung, adaptive Regulierung, Präventionsmedizin, offene Daten und internationale Koordination.',
+  [Locale.FR]:
+    'Longevity State : feuille de route nationale sur le vieillissement—stratégie interministérielle, financement durable de la recherche, régulation adaptée, prévention des soins, données ouvertes et coordination internationale.',
+  [Locale.ES]:
+    'Longevity State: plan de políticas nacional sobre el envejecimiento—estrategia interministerial, financiación sostenible de la investigación, regulación adaptativa, prevención sanitaria, datos abiertos y coordinación internacional.',
+  [Locale.IT]:
+    'Longevity State: blueprint di policy nazionale sull’invecchiamento—strategia interministeriale, finanziamento sostenibile della ricerca, regolazione adattiva, prevenzione sanitaria, dati aperti e coordinamento internazionale.',
+  [Locale.NL]:
+    'Longevity State: nationaal beleidsplan voor veroudering—interdepartementale strategie, duurzame onderzoeksfinanciering, adaptieve regulering, preventieve zorg, open data en internationale coördinatie.',
+  [Locale.CS]:
+    'Longevity State: národní politický plán pro stárnutí—meziresortní strategie, udržitelné financování výzkumu, adaptivní regulace, preventivní zdravotnictví, otevřená data a mezinárodní koordinace.',
+};
 
 export const asksByLocale: Record<Locale, AsksBlueprint> = {
   [Locale.EN]: asksBlueprintEn,

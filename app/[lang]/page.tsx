@@ -5,12 +5,11 @@ import { H4 } from '@/components/Typography';
 import { Section } from '@/components/Section';
 import { Partners } from '@/components/Partners';
 import { HowCanYouHelp } from '@/components/HowCanYouHelp';
-import { defaultOgImage, getOgLocale } from '@/lib/config';
+import { PARTNERS, buildLocalizedPageMetadata, defaultOgImage } from '@/lib/config';
 import { getLocaleFromLang, LOCALES } from '@/lib/types';
 import { homeTranslations } from './translations';
 import { getTranslation } from '@/lib/translate';
 import { Wrapper } from '@/components/Wrapper';
-import { PARTNERS } from '@/lib/config';
 
 interface EventData {
   id: string;
@@ -281,26 +280,20 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
   const { lang } = await params;
   const locale = getLocaleFromLang(lang);
   const translate = getTranslation(homeTranslations.hero, locale);
-  const title = translate('title');
-  const description = translate('subtitle');
+  const description = translate('subtitle').replace(/\u00A0/g, ' ');
   const path = `/${lang}/`;
-
-  return {
-    title,
+  const base = buildLocalizedPageMetadata({
+    lang,
+    title: 'Fund Longevity',
     description,
-    alternates: {
-      canonical: path,
-      languages: Object.fromEntries(LOCALES.map((l) => [l, `/${l}/`])),
-    },
-    openGraph: {
-      title,
-      description,
-      url: path,
-      locale: getOgLocale(lang),
-      siteName: 'Fund Longevity',
-      images: [{ url: defaultOgImage, alt: title }],
-    },
-    twitter: { title, description, images: [defaultOgImage] },
+    path,
+    ogImage: defaultOgImage,
+  });
+  return {
+    ...base,
+    title: { absolute: 'Fund Longevity' },
+    openGraph: { ...base.openGraph, title: 'Fund Longevity' },
+    twitter: { ...base.twitter, title: 'Fund Longevity' },
   };
 }
 

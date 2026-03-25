@@ -1,13 +1,15 @@
+import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import Image from 'next/image';
 import { H1, H3, P } from '@/components/Typography';
 import { Card } from '@/components/Card';
 import { Section } from '@/components/Section';
 import { HowCanYouHelp } from '@/components/HowCanYouHelp';
 import { Wrapper } from '@/components/Wrapper';
 import { CopyLinkButton } from '@/components/CopyLinkButton';
+import { buildLocalizedPageMetadata, defaultOgImage } from '@/lib/config';
 import { getLocaleFromLang, LOCALES, Locale } from '@/lib/types';
-import { getAsksForLocale, asksUiTranslations } from './translations';
+import { globalTranslations } from '@/lib/translations';
+import { asksSeoDescription, getAsksForLocale } from './translations';
 
 interface AsksPageProps {
   params: Promise<{ lang: string }>;
@@ -46,11 +48,24 @@ export function generateStaticParams() {
   return LOCALES.map((locale) => ({ lang: locale }));
 }
 
+export async function generateMetadata({ params }: AsksPageProps): Promise<Metadata> {
+  const { lang } = await params;
+  const locale = getLocaleFromLang(lang);
+  const title = globalTranslations.nav.asks[locale];
+  const description = asksSeoDescription[locale] ?? asksSeoDescription[Locale.EN];
+  return buildLocalizedPageMetadata({
+    lang,
+    title,
+    description,
+    path: `/${lang}/asks`,
+    ogImage: defaultOgImage,
+  });
+}
+
 export default async function AsksPage({ params }: AsksPageProps): Promise<JSX.Element> {
   const { lang } = await params;
   const locale = getLocaleFromLang(lang);
   const t = getAsksForLocale(locale);
-  const nasdaqAlt = asksUiTranslations.nasdaqImageAlt[locale] ?? asksUiTranslations.nasdaqImageAlt[Locale.EN];
 
   return (
     <div>
@@ -123,22 +138,6 @@ export default async function AsksPage({ params }: AsksPageProps): Promise<JSX.E
             </div>
           </Wrapper>
         </div>
-      </Section>
-
-      <Section style={{ paddingTop: 0 }}>
-        <Wrapper>
-          <div className="relative w-full min-h-[240px] max-h-[78vh] aspect-[16/10] overflow-hidden rounded-xl">
-            <Image
-              src="/NASDAQ.jpg"
-              alt={nasdaqAlt}
-              fill
-              className="object-cover"
-              style={{ objectPosition: 'right top' }}
-              sizes="(max-width: 600px) calc(100vw - 1.5rem), (max-width: 1280px) calc(100vw - 6rem), 1152px"
-              priority
-            />
-          </div>
-        </Wrapper>
       </Section>
 
       <Section>

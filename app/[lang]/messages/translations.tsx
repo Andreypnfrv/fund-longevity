@@ -11,6 +11,24 @@ export const messagesTranslations = {
     [Locale.NL]: 'Print een van die borden of maak je eigen',
     [Locale.CS]: 'Print one of those signs or make your own',
   },
+  seoDescription: {
+    [Locale.EN]:
+      'Download printable Fund Longevity signs and banners, meme-style slogan ideas, and a shared Google Doc—keep messaging consistent across cities and rallies.',
+    [Locale.SV]:
+      'Ladda ned utskrivbara Fund Longevity-skyltar och banderoller, memeinspirerade sloganidéer och ett delat Google-dokument – samordna budskap mellan städer och demonstrationer.',
+    [Locale.DE]:
+      'Druckbare Fund Longevity-Schilder und Banner, Meme-Slogans und ein gemeinsames Google Doc – konsistente Botschaften in Städten und auf Kundgebungen.',
+    [Locale.FR]:
+      'Téléchargez pancartes et banderoles Fund Longevity imprimables, idées de slogans façon mème et un Google Doc partagé – gardez un message cohérent entre villes et rassemblements.',
+    [Locale.ES]:
+      'Descarga carteles y pancartas imprimibles de Fund Longevity, ideas de eslóganes tipo meme y un Google Doc compartido: mensaje coherente entre ciudades y manifestaciones.',
+    [Locale.IT]:
+      'Scarica cartelli e striscioni stampabili Fund Longevity, idee slogan da meme e un Google Doc condiviso: messaggio coerente tra città e raduni.',
+    [Locale.NL]:
+      'Download printbare Fund Longevity-borden en spandoeken, meme-sloganideeën en een gedeelde Google Doc – consistente boodschap in steden en bij bijeenkomsten.',
+    [Locale.CS]:
+      'Stáhněte si tisknutelné nápisy a bannery Fund Longevity, nápady na slogany ve stylu memů a sdílený Google dokument – jednotné sdělení ve městech a na shromážděních.',
+  },
   sectionImportant: {
     [Locale.EN]: 'Most important signs',
     [Locale.SV]: 'Viktigaste skyltarna',

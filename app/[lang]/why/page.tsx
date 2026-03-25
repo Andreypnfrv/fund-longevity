@@ -1,10 +1,13 @@
+import type { Metadata } from 'next';
 import { GenerationsHero } from '@/components/GenerationsHero';
 import { Sidebar } from '@/components/Sidebar';
 import { H1, H2, H3, H4, P } from '@/components/Typography';
 import { Content } from '@/components/Content';
 import { Section, TextSection } from '@/components/Section';
 import { HowCanYouHelp } from '@/components/HowCanYouHelp';
-import { getLocaleFromLang, LOCALES } from '@/lib/types';
+import { buildLocalizedPageMetadata } from '@/lib/config';
+import { getLocaleFromLang, LOCALES, Locale } from '@/lib/types';
+import { globalTranslations } from '@/lib/translations';
 import { whyTranslations } from './translations';
 import { getTranslation } from '@/lib/translate';
 import { Wrapper } from '@/components/Wrapper';
@@ -15,6 +18,21 @@ interface WhyPageProps {
 
 export function generateStaticParams() {
   return LOCALES.map((locale) => ({ lang: locale }));
+}
+
+export async function generateMetadata({ params }: WhyPageProps): Promise<Metadata> {
+  const { lang } = await params;
+  const locale = getLocaleFromLang(lang);
+  const title = globalTranslations.nav.why[locale];
+  const description =
+    whyTranslations.seoDescription[locale] ?? whyTranslations.seoDescription[Locale.EN];
+  return buildLocalizedPageMetadata({
+    lang,
+    title,
+    description,
+    path: `/${lang}/why`,
+    ogImage: '/say-forever.jpg',
+  });
 }
 
 export default async function WhyPage({ params }: WhyPageProps): Promise<JSX.Element> {
@@ -50,9 +68,7 @@ export default async function WhyPage({ params }: WhyPageProps): Promise<JSX.Ele
           </div>
         </Wrapper>
       </Section>
-      <GenerationsHero 
-        images={['/Generations1.jpg', '/Generations2.jpg', '/Generations3.jpg']}
-      />
+      <GenerationsHero images={['/say-forever.jpg', '/say-forever-3.jpg']} />
 
       <Wrapper>
         <div className="flex flex-col lg:flex-row gap-16">

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import { H1, H3, P } from '@/components/Typography';
 import { Sidebar } from '@/components/Sidebar';
@@ -5,7 +6,8 @@ import { Content } from '@/components/Content';
 import { Partners } from '@/components/Partners';
 import { Section } from '@/components/Section';
 import { Wrapper } from '@/components/Wrapper';
-import { getLocaleFromLang, LOCALES } from '@/lib/types';
+import { buildLocalizedPageMetadata, defaultOgImage } from '@/lib/config';
+import { getLocaleFromLang, LOCALES, Locale } from '@/lib/types';
 import { aboutTranslations } from './translations';
 import { homeTranslations } from '@/app/[lang]/translations';
 import { PARTNERS } from '@/lib/config';
@@ -18,6 +20,21 @@ interface AboutPageProps {
 
 export function generateStaticParams() {
   return LOCALES.map((locale) => ({ lang: locale }));
+}
+
+export async function generateMetadata({ params }: AboutPageProps): Promise<Metadata> {
+  const { lang } = await params;
+  const locale = getLocaleFromLang(lang);
+  const title = aboutTranslations.hero.title[locale];
+  const description =
+    aboutTranslations.hero.subtitle[locale] ?? aboutTranslations.hero.subtitle[Locale.EN];
+  return buildLocalizedPageMetadata({
+    lang,
+    title,
+    description,
+    path: `/${lang}/about`,
+    ogImage: defaultOgImage,
+  });
 }
 
 export default async function AboutPage({ params }: AboutPageProps): Promise<JSX.Element> {

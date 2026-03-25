@@ -1,3 +1,6 @@
+import type { Metadata } from 'next';
+import { LOCALES } from './types';
+
 export const siteUrl =
   (typeof process !== 'undefined' && process.env['NEXT_PUBLIC_SITE_URL']) ||
   'https://fund-longevity.web.app';
@@ -19,6 +22,41 @@ export function getOgLocale(lang: string): string {
 }
 
 export const defaultOgImage = '/hero4.jpg';
+
+export function buildLocalizedPageMetadata(opts: {
+  lang: string;
+  title: string;
+  description: string;
+  path: string;
+  ogImage?: string;
+}): Metadata {
+  const { lang, title, description, path, ogImage = defaultOgImage } = opts;
+  const languages = Object.fromEntries(
+    LOCALES.map((loc) => [loc, path.replace(/^\/[^/]+/, `/${loc}`)]),
+  );
+  return {
+    title,
+    description,
+    alternates: { canonical: path, languages },
+    openGraph: {
+      type: 'website',
+      title,
+      description,
+      url: path,
+      locale: getOgLocale(lang),
+      alternateLocale: LOCALES.filter((loc) => loc !== lang).map((loc) => getOgLocale(loc)),
+      siteName: 'Fund Longevity',
+      images: [{ url: ogImage, alt: title }],
+    },
+    robots: { index: true, follow: true },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [ogImage],
+    },
+  };
+}
 
 export const mailchimpConfig = {
   userId: 'f5fb33aedc3387e255921da9c',

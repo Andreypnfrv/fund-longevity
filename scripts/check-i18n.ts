@@ -7,7 +7,6 @@ import { homeTranslations } from '../app/[lang]/translations';
 import { aboutTranslations } from '../app/[lang]/about/translations';
 import { messagesTranslations } from '../app/[lang]/messages/translations';
 import { whyTranslations } from '../app/[lang]/why/translations';
-import { asksUiTranslations } from '../app/[lang]/asks/translations';
 import { TEAM_DATA } from '../lib/team';
 
 const LOCALE_SET = new Set<string>(LOCALES);
@@ -188,7 +187,6 @@ const TRANSLATION_ROOTS: { name: string; root: unknown }[] = [
   { name: 'aboutTranslations', root: aboutTranslations },
   { name: 'messagesTranslations', root: messagesTranslations },
   { name: 'whyTranslations', root: whyTranslations },
-  { name: 'asksUiTranslations', root: asksUiTranslations },
 ];
 
 function isTranslationLeaf(obj: object): boolean {
