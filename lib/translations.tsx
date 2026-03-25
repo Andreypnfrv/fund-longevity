@@ -115,6 +115,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Cerrar superposición',
       [Locale.IT]: 'Chiudi sovrapposizione',
       [Locale.NL]: 'Overlay sluiten',
+      [Locale.CS]: 'Zavřít překrytí',
     },
     closeMenu: {
       [Locale.EN]: 'Close menu',
@@ -124,6 +125,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Cerrar menú',
       [Locale.IT]: 'Chiudi menu',
       [Locale.NL]: 'Menu sluiten',
+      [Locale.CS]: 'Zavřít menu',
     },
     changeLanguage: {
       [Locale.EN]: 'Change language',
@@ -133,6 +135,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Cambiar idioma',
       [Locale.IT]: 'Cambia lingua',
       [Locale.NL]: 'Taal wijzigen',
+      [Locale.CS]: 'Změnit jazyk',
     },
     copyPageLink: {
       [Locale.EN]: 'Copy link',
@@ -142,6 +145,7 @@ export const globalTranslations = {
       [Locale.ES]: 'Copiar enlace',
       [Locale.IT]: 'Copia link',
       [Locale.NL]: 'Link kopiëren',
+      [Locale.CS]: 'Kopírovat odkaz',
     },
     pageLinkCopied: {
       [Locale.EN]: 'Copied!',
@@ -151,6 +155,7 @@ export const globalTranslations = {
       [Locale.ES]: '¡Copiado!',
       [Locale.IT]: 'Copiato!',
       [Locale.NL]: 'Gekopieerd!',
+      [Locale.CS]: 'Zkopírováno!',
     },
   },
   forms: {
