@@ -2,14 +2,14 @@ import { Locale } from '@/lib/types';
 
 export const messagesTranslations = {
   heroTitle: {
-    [Locale.EN]: 'Print one of those signs or make your own',
-    [Locale.SV]: 'Skriv ut en av skyltarna eller gör din egen',
-    [Locale.DE]: 'Drucken Sie eines dieser Schilder oder gestalten Sie Ihr eigenes',
-    [Locale.FR]: 'Imprimez une de ces pancartes ou créez la vôtre',
-    [Locale.ES]: 'Imprime una de esas pancartas o haz la tuya',
-    [Locale.IT]: 'Stampa uno di quei cartelli o creane uno tuo',
-    [Locale.NL]: 'Print een van die borden of maak je eigen',
-    [Locale.CS]: 'Print one of those signs or make your own',
+    [Locale.EN]: 'Signs and Slogans',
+    [Locale.SV]: 'Skyltar och slogans',
+    [Locale.DE]: 'Schilder und Slogans',
+    [Locale.FR]: 'Pancartes et slogans',
+    [Locale.ES]: 'Pancartas y eslóganes',
+    [Locale.IT]: 'Cartelli e slogan',
+    [Locale.NL]: 'Borden en slogans',
+    [Locale.CS]: 'Signs and Slogans',
   },
   seoDescription: {
     [Locale.EN]:

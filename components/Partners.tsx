@@ -15,17 +15,11 @@ function PartnerCard({ children, className = '', logo, logoSize }: { children: R
   const logoHeight = logoSize === 'small' ? 'h-[63px]' : logoSize === 'medium' ? 'h-[105px]' : logoSize === 'large' ? 'h-[200px]' : 'h-[150px]';
   return (
     <div className={cn('rounded p-8 bg-white hover:bg-gray-100 transition-all duration-200 ease-in-out h-full min-h-[320px] flex flex-col justify-between', className)}>
-      <div className="flex flex-1 flex-row items-center justify-center w-full">
+      <div className="flex flex-1 flex-row items-center justify-center w-full min-h-0">
         {logo && (
-          <div
-            className={cn('w-full', logoHeight)}
-            style={{
-              backgroundImage: `url(${logo})`,
-              backgroundSize: 'contain',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat'
-            }}
-          />
+          <div className={cn('flex w-full items-center justify-center bg-white', logoHeight)}>
+            <img src={logo} alt="" className="max-h-full max-w-full object-contain" />
+          </div>
         )}
       </div>
       <div className="flex-shrink-0 w-full">{children}</div>

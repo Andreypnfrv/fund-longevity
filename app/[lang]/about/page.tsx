@@ -64,6 +64,14 @@ export default async function AboutPage({ params }: AboutPageProps): Promise<JSX
           <div>
             <H1 display className="mb-20 text-[#0900FF] whitespace-pre-line">{aboutTranslations.hero.title[locale]}</H1>
             <P className="text-4xl text-black opacity-90 whitespace-pre-line">{aboutTranslations.hero.subtitle[locale]}</P>
+            <a
+              href="https://docs.google.com/document/d/1pZbNyNh-QCYZG4tRp88AH_QVlVamS4F1/edit?rtpof=true&sd=true&tab=t.0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 block w-full border border-[#0900FF] px-4 py-4 text-center text-base md:text-lg font-semibold text-[#0900FF] hover:bg-[#0900FF]/5 transition-colors"
+            >
+              {aboutTranslations.hero.pressReleaseCta[locale]}
+            </a>
           </div>
         </Wrapper>
       </Section>

@@ -4,21 +4,21 @@
       "image": "/sign-big-banner.jpg",
       "alt": "Fund Longevity banner: 1% of taxes for longevity",
       "description": "Our primary call to action. The sign pairs the Fund Longevity name with the demand to allocate 1% of taxes toward longevity: treating aging as something we can fund and solve, not accept by default. Use it wherever you want that message to be impossible to miss—wide banner for marches, or scaled down for placards. Print on durable material at a shop so it stays readable from a distance.",
-      "downloadFile": "/sign-big-banner.jpg",
+      "downloadFile": "/sign-bigone-original.pdf",
       "layout": "banner"
     },
     {
       "image": "/sign-10000.jpg",
       "alt": "Sign: 10 000",
       "description": "Compact sign for crowds and photos.",
-      "downloadFile": "/sign-10000.jpg",
+      "downloadFile": "/sign-agingkills-original.pdf",
       "layout": "default"
     },
     {
       "image": "/sign-stop-aging.png",
       "alt": "Sign: stop aging",
       "description": "Short message, high contrast.",
-      "downloadFile": "/sign-stop-aging.png",
+      "downloadFile": "/sign-stopaging-original.pdf",
       "layout": "default"
     }
   ]

@@ -23,6 +23,16 @@ export const aboutTranslations = {
       [Locale.NL]: 'Fund Longevity is a global rally for life extension. It is not a formal organization, but a non-profit initiative founded by Linus Petersson and Andrei Panferov. The goal is to make fighting aging main-stream.',
       [Locale.CS]: 'Fund Longevity je globální rally za prodlužování života. Není to formální organizace, ale nezisková iniciativa, kterou založili Linus Petersson a Andrei Panferov. Cílem je učinit boj proti stárnutí mainstreamovým.',
     },
+    pressReleaseCta: {
+      [Locale.EN]: 'Press release (Google Doc)',
+      [Locale.SV]: 'Pressmeddelande (Google Doc)',
+      [Locale.DE]: 'Pressemitteilung (Google Doc)',
+      [Locale.FR]: 'Communiqué de presse (Google Doc)',
+      [Locale.ES]: 'Comunicado de prensa (Google Doc)',
+      [Locale.IT]: 'Comunicato stampa (Google Doc)',
+      [Locale.NL]: 'Persbericht (Google Doc)',
+      [Locale.CS]: 'Tisková zpráva (Google Doc)',
+    },
   },
   about: {
     [Locale.EN]: '',

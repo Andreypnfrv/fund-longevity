@@ -46,6 +46,11 @@ export async function generateMetadata({ params }: MessagesPageProps): Promise<M
 function SignBlock({ sign, downloadLabel }: { sign: ImportantSign; downloadLabel: string }) {
   return (
     <div className="flex flex-col gap-4 h-full rounded border border-gray-200 p-6 md:p-8">
+      <img
+        src={sign.image}
+        alt=""
+        className="w-full h-auto rounded border border-gray-100 bg-white"
+      />
       <p className="text-base font-medium text-gray-900">{sign.alt}</p>
       <a
         href={sign.downloadFile}

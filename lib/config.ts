@@ -158,6 +158,13 @@ export const PARTNERS: Partner[] = [
     description: 'Coalition of organizations and individuals advocating for longevity research and aging as a treatable condition.',
   },
   {
+    name: 'Society for vital life extension of Slovenia',
+    logo: '/partner-slovenia-vital-life-extension.png',
+    logoSize: 'medium' as const,
+    description:
+      'Slovenian nonprofit: public outreach on life extension, events, advocacy, light research, and connecting people in the field. Founded 2017; International Longevity Alliance member since 2019.',
+  },
+  {
     name: 'Humanity+',
     logo: '/humanity.png',
     logoSize: 'medium' as const,
