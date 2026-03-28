@@ -80,6 +80,16 @@ export default async function AboutPage({ params }: AboutPageProps): Promise<JSX
         <div className="flex flex-col lg:flex-row gap-16">
           <Sidebar locale={locale} items={sidebarItems} />
           <Content>
+            <section id="partners" className="mb-20">
+              <Partners
+                locale={locale}
+                title={aboutTranslations.partners.title[locale]}
+                subtitle={homeTranslations.partners.subtitle[locale]}
+                partners={PARTNERS}
+                titleAlign="left"
+              />
+            </section>
+
             <section id="team">
                 <div className="py-8 bg-white">
                   {citiesSorted.map((cityGroup) => (
@@ -142,15 +152,6 @@ export default async function AboutPage({ params }: AboutPageProps): Promise<JSX
                 </div>
             </section>
 
-            <section id="partners">
-              <Partners
-                locale={locale}
-                title={aboutTranslations.partners.title[locale]}
-                subtitle={homeTranslations.partners.subtitle[locale]}
-                partners={PARTNERS}
-                titleAlign="left"
-              />
-            </section>
           </Content>
         </div>
       </Wrapper>
