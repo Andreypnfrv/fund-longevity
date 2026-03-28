@@ -6,13 +6,43 @@ import { CopyLinkButton } from '@/components/CopyLinkButton';
 import { buildLocalizedPageMetadata, defaultOgImage } from '@/lib/config';
 import { getLocaleFromLang, LOCALES, Locale } from '@/lib/types';
 import { globalTranslations } from '@/lib/translations';
-
+import messagesData from '@/lib/messages.json';
 import { MEME_SIGN_LINES_BY_LOCALE, messagesTranslations } from './translations';
 
 interface MessagesPageProps {
   params: Promise<{ lang: string }>;
 }
 
+type ImportantSign = {
+  image: string;
+  alt: string;
+  downloadFile: string;
+  layout: 'banner' | 'default';
+};
+
+const data = messagesData as {
+  importantSigns: ImportantSign[];
+};
+
+function SignBlock({ sign, downloadLabel }: { sign: ImportantSign; downloadLabel: string }) {
+  return (
+    <div className="flex flex-col gap-4 h-full rounded border border-gray-200 p-6 md:p-8">
+      <img
+        src={sign.image}
+        alt=""
+        className="w-full h-auto rounded border border-gray-100 bg-white"
+      />
+      <p className="text-base font-medium text-gray-900">{sign.alt}</p>
+      <a
+        href={sign.downloadFile}
+        download
+        className="inline-flex items-center justify-center rounded-md bg-[#0900FF] text-white px-4 py-3 text-sm font-semibold hover:bg-[#0900FF]/90 transition-colors w-full sm:w-auto self-start"
+      >
+        {downloadLabel}
+      </a>
+    </div>
+  );
+}
 
 export function generateStaticParams() {
   return LOCALES.map((locale) => ({ lang: locale }));
@@ -44,6 +74,7 @@ export default async function MessagesPage({ params }: MessagesPageProps): Promi
   const t = messagesTranslations;
   type MessagesCopyKey = Exclude<keyof typeof messagesTranslations, 'memePdfUrl'>;
   const L = (k: MessagesCopyKey) => pick(messagesTranslations[k] as Record<Locale, string>, locale);
+  const defaultSigns = data.importantSigns.filter((s) => s.layout !== 'banner');
   const memeLines = MEME_SIGN_LINES_BY_LOCALE[locale] ?? MEME_SIGN_LINES_BY_LOCALE[Locale.EN];
   const memeMid = Math.ceil(memeLines.length / 2);
   const memeCol1 = memeLines.slice(0, memeMid);
@@ -89,6 +120,11 @@ export default async function MessagesPage({ params }: MessagesPageProps): Promi
                 >
                   {L('memePdfCta')}
                 </a>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-12">
+                {defaultSigns.map((sign, i) => (
+                  <SignBlock key={`${sign.image}-d-${i}`} sign={sign} downloadLabel={L('download')} />
+                ))}
               </div>
             </section>
           </div>
