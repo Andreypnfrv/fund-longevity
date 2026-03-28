@@ -4,14 +4,14 @@ import { Locale } from '@/lib/types';
 export const aboutTranslations = {
   hero: {
     title: {
-      [Locale.EN]: 'Team',
-      [Locale.SV]: 'Team',
-      [Locale.DE]: 'Team',
-      [Locale.FR]: 'Équipe',
-      [Locale.ES]: 'Equipo',
-      [Locale.IT]: 'Team',
-      [Locale.NL]: 'Team',
-      [Locale.CS]: 'Tým',
+      [Locale.EN]: 'About',
+      [Locale.SV]: 'Om oss',
+      [Locale.DE]: 'Über uns',
+      [Locale.FR]: 'À propos',
+      [Locale.ES]: 'Sobre nosotros',
+      [Locale.IT]: 'Chi siamo',
+      [Locale.NL]: 'Over ons',
+      [Locale.CS]: 'O nás',
     },
     subtitle: {
       [Locale.EN]: 'Fund Longevity is a global rally for life extension. It is not a formal organization, but a non-profit initiative founded by Linus Petersson and Andrei Panferov. The goal is to make fighting aging main-stream.',
