@@ -231,7 +231,7 @@ const EVENTS_DATA: EventData[] = [
     flag: '🇺🇸',
     image: '/san-francisco.jpg',
     imageAlt: 'San Francisco',
-    dateTime: 'Wednesday 8 April',
+    dateTime: 'Wednesday 8 April, 17:00-18:00 PDT',
     location: 'San Francisco, California',
     link: 'https://luma.com/ruebed41',
     buttonText: 'Register',
