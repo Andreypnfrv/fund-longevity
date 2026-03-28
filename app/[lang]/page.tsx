@@ -219,7 +219,7 @@ const EVENTS_DATA: EventData[] = [
     imageAlt: 'Abu Dhabi',
     dateTime: 'Wednesday 8 April, 5:00 p.m. GST (GMT+4)',
     location: 'Abu Dhabi',
-    link: '#',
+    link: 'https://luma.com/b7b2d2n2',
     buttonText: 'Register',
     buttonColor: '#0900FF',
     buttonShadow: '0 4px 6px rgba(9, 0, 255, 0.3)',
