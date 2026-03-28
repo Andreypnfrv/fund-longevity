@@ -49,12 +49,12 @@ export default async function AboutPage({ params }: AboutPageProps): Promise<JSX
     return a.city.localeCompare(b.city, undefined, { sensitivity: 'base' });
   });
   const sidebarItems = [
+    { id: 'partners', label: aboutTranslations.partners.title[locale], href: '/about#partners' },
     ...citiesSorted.map((g) => ({
       id: g.city,
       label: aboutTranslations.teamSections[g.city as keyof typeof aboutTranslations.teamSections][locale],
       href: `/about#${g.city}`,
     })),
-    { id: 'partners', label: aboutTranslations.partners.title[locale], href: '/about#partners' },
   ];
 
   return (
