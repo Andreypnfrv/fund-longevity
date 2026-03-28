@@ -59,7 +59,7 @@ export default async function AboutPage({ params }: AboutPageProps): Promise<JSX
 
   return (
     <div className='flex flex-col gap-8 md:gap-18 pt-16 md:pt-20'>
-      <Section>
+      <Section style={{ paddingTop: 0, paddingBottom: 0 }}>
         <Wrapper>
           <div>
             <H1 display className="mb-20 text-[#0900FF] whitespace-pre-line">{aboutTranslations.hero.title[locale]}</H1>
