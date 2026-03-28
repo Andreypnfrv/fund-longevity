@@ -97,23 +97,6 @@ export default async function MessagesPage({ params }: MessagesPageProps): Promi
       <Section style={{ paddingTop: 0, paddingBottom: 0 }}>
         <Wrapper>
           <div className="pb-16 md:pb-24">
-            <section id="important-signs" className="mb-20 md:mb-28">
-              <H2 className="mb-3 md:mb-4">{L('sectionImportant')}</H2>
-              <P className="mb-8 md:mb-10 max-w-2xl text-base md:text-lg text-gray-600">
-                {L('sectionImportantSubtitle')}
-              </P>
-              <div className="flex flex-col gap-6 md:gap-8">
-                {bannerSigns.map((sign, i) => (
-                  <SignBlock key={`${sign.image}-b-${i}`} sign={sign} downloadLabel={L('download')} />
-                ))}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                  {defaultSigns.map((sign, i) => (
-                    <SignBlock key={`${sign.image}-d-${i}`} sign={sign} downloadLabel={L('download')} />
-                  ))}
-                </div>
-              </div>
-            </section>
-
             <section id="meme-signs">
               <H2 className="mb-8">{L('sectionMeme')}</H2>
               <div className="flex flex-col" style={{ gap: 50 }}>
