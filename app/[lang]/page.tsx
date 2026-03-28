@@ -290,6 +290,7 @@ export default async function HomePage({ params }: HomePageProps): Promise<JSX.E
   const partnersTranslate = getTranslation(homeTranslations.partners, locale);
   const heroTranslate = getTranslation(homeTranslations.hero, locale);
   const citiesTranslate = getTranslation(homeTranslations.cities, locale);
+  const eventDateTimeTranslate = getTranslation(homeTranslations.eventDateTimes, locale);
 
   return (
     <div>
@@ -380,9 +381,10 @@ export default async function HomePage({ params }: HomePageProps): Promise<JSX.E
                   </div>
                   <div className="text-base md:text-lg mb-0 inline-flex flex-wrap items-baseline gap-x-1 max-[1180px]:flex-col max-[1180px]:items-start max-[1180px]:gap-y-0">
                     {(() => {
-                      const i = event.dateTime.indexOf(', ');
-                      const datePart = i >= 0 ? event.dateTime.slice(0, i) : event.dateTime;
-                      const timePart = i >= 0 ? event.dateTime.slice(i + 2) : '';
+                      const dateTimeStr = eventDateTimeTranslate(event.id as keyof typeof homeTranslations.eventDateTimes);
+                      const i = dateTimeStr.indexOf(', ');
+                      const datePart = i >= 0 ? dateTimeStr.slice(0, i) : dateTimeStr;
+                      const timePart = i >= 0 ? dateTimeStr.slice(i + 2) : '';
                       const nbsp = '\u00A0';
                       const dateStr = datePart.replace(/ /g, nbsp);
                       const timeStr = timePart.replace(/ /g, nbsp);
