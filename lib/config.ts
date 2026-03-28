@@ -166,7 +166,7 @@ export const PARTNERS: Partner[] = [
   },
   {
     name: 'Humanity+',
-    logo: '/humanity.png',
+    logo: '/humanityplus.jpg',
     logoSize: 'medium' as const,
     url: 'https://www.humanityplus.org',
     description: 'Advocates for the ethical use of technology and evidence-based science to expand human capabilities. Educational organization at the forefront of healthy longevity, AI, and the future of humanity; runs H+ Summits and TransVision conferences.',
