@@ -97,6 +97,15 @@ export default async function MessagesPage({ params }: MessagesPageProps): Promi
       <Section style={{ paddingTop: 0, paddingBottom: 0 }}>
         <Wrapper>
           <div className="pb-16 md:pb-24">
+            <section id="important-signs" className="mb-20 md:mb-28">
+              <div className="flex flex-col gap-6 md:gap-8">                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                  {defaultSigns.map((sign, i) => (
+                    <SignBlock key={`${sign.image}-d-${i}`} sign={sign} downloadLabel={L('download')} />
+                  ))}
+                </div>
+              </div>
+            </section>
             <section id="meme-signs">
               <H2 className="mb-8">{L('sectionMeme')}</H2>
               <div className="flex flex-col" style={{ gap: 50 }}>
@@ -120,11 +129,6 @@ export default async function MessagesPage({ params }: MessagesPageProps): Promi
                 >
                   {L('memePdfCta')}
                 </a>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-12">
-                {defaultSigns.map((sign, i) => (
-                  <SignBlock key={`${sign.image}-d-${i}`} sign={sign} downloadLabel={L('download')} />
-                ))}
               </div>
             </section>
           </div>
