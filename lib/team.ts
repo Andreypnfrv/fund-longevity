@@ -52,6 +52,7 @@ export const TEAM_DATA: TeamData = {
           },
         },
         { name: 'José Luis Cordeiro', description: 'Engineer, economist and futurist. Vice-chair of Humanity+, founding faculty at Singularity University, co-author of "The Death of Death". Advocates longevity escape velocity and aging as a curable disease.', location: '', image: '/jose-luis-cordeiro.png', socialLinks: {} },
+        { name: 'Carrie Radomski', description: 'Director & Co-Founder involved in radical life-extension and cryonics for 10 years. Has appeared on National Canadian TV about cryonics and on the HBO season finale of "How to with John Wilson". Legal activist who sued the Crown for the rights of cryonicists living in BC. Currently creating the Futurist Club and Cryonics Rapid Response Standby Organization in Alberta, Canada. Other interests include philosophy, AI safety, quantified-self, parenting and neurodiversity.', location: '', image: '/carrie-radomski.jpg', socialLinks: {} },
       ],
     },
     {
