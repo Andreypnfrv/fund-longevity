@@ -1,7 +1,9 @@
 import type { ReactNode } from 'react';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import { NavigationProvider } from '@/components/NavigationProvider';
 import { getLocaleFromLang } from '@/lib/types';
-import { AllLangSwitcher } from '@/app/all/[lang]/lang-switcher';
+import '../globals.css';
 
 interface LayoutProps {
   children: ReactNode;
@@ -14,8 +16,11 @@ export default async function LangLayout({ children, params }: LayoutProps): Pro
 
   return (
     <NavigationProvider locale={locale}>
-      <AllLangSwitcher currentLocale={locale} />
-      <main>{children}</main>
+      <div className="flex flex-col min-h-screen">
+        <Header locale={locale} />
+        <main className="flex-1">{children}</main>
+        <Footer locale={locale} />
+      </div>
     </NavigationProvider>
   );
 }

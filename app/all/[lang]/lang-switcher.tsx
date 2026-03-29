@@ -38,7 +38,7 @@ export function AllLangSwitcher({ currentLocale }: AllLangSwitcherProps): React.
 
   const switchLanguage = (newLocale: Locale): void => {
     if (newLocale !== currentLocale) {
-      router.push(`/${newLocale}`);
+      router.push(`/all/${newLocale}`);
     }
   };
 
