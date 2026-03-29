@@ -160,6 +160,15 @@ export const TEAM_DATA: TeamData = {
         {
           name: 'Linus Petersson',
           description: 'Co-founder of Swedish Longevity Cluster and author of \'Läkemedel mot Åldrande\' (Drugs Against Aging). 20+ years in the longevity space. Consultant within pharmaceutical and longevity industry. Keynote speaker on aging and longevity.',
+          descriptions: {
+            [Locale.SV]: 'Medgrundare av Swedish Longevity Cluster och författare till \'Läkemedel mot Åldrande\'. 20+ år inom longevityområdet. Konsult inom läkemedels- och longevityindustrin. Föreläsare om åldrande och longevity.',
+            [Locale.DE]: 'Mitgründer des Swedish Longevity Cluster und Autor von \'Läkemedel mot Åldrande\' (Medikamente gegen das Altern). 20+ Jahre im Bereich Longevity. Berater in der Pharma- und Longevity-Industrie. Keynote-Speaker über Altern und Longevity.',
+            [Locale.FR]: 'Cofondateur du Swedish Longevity Cluster et auteur de \'Läkemedel mot Åldrande\' (Médicaments contre le vieillissement). Plus de 20 ans dans le domaine de la longévité. Consultant dans l\'industrie pharmaceutique et de la longévité. Conférencier principal sur le vieillissement et la longévité.',
+            [Locale.ES]: 'Cofundador del Swedish Longevity Cluster y autor de \'Läkemedel mot Åldrande\' (Medicamentos contra el envejecimiento). Más de 20 años en el espacio de la longevidad. Consultor en la industria farmacéutica y de longevidad. Conferencista principal sobre envejecimiento y longevidad.',
+            [Locale.IT]: 'Cofondatore dello Swedish Longevity Cluster e autore di \'Läkemedel mot Åldrande\' (Farmaci contro l\'invecchiamento). Oltre 20 anni nel settore della longevità. Consulente nell\'industria farmaceutica e della longevità. Relatore principale su invecchiamento e longevità.',
+            [Locale.NL]: 'Medeoprichter van de Swedish Longevity Cluster en auteur van \'Läkemedel mot Åldrande\' (Medicijnen tegen veroudering). 20+ jaar in de longevity-sector. Consultant in de farmaceutische en longevity-industrie. Keynote-spreker over veroudering en longevity.',
+            [Locale.CS]: 'Spoluzakladatel Swedish Longevity Cluster a autor knihy \'Läkemedel mot Åldrande\' (Léky proti stárnutí). Více než 20 let v oblasti dlouhověkosti. Konzultant ve farmaceutickém průmyslu a průmyslu dlouhověkosti. Hlavní řečník o stárnutí a dlouhověkosti.',
+          },
           location: 'Stockholm, Sweden',
           image: '/linus-peteresson.png',
           socialLinks: {
@@ -172,6 +181,15 @@ export const TEAM_DATA: TeamData = {
         {
           name: 'Andrei Panferov',
           description: 'Responsible for design and coordination. Serial tech entrepreneur with focus on AI, BioTech, and Web3. 17 yrs in entrepreneurship, 7 yrs in tech. Co-founder Talent River, Dowell.',
+          descriptions: {
+            [Locale.SV]: 'Ansvarig för design och koordination. Seriell teknikentreprenör med fokus på AI, BioTech och Web3. 17 år i företagande, 7 år inom tech. Medgrundare av Talent River, Dowell.',
+            [Locale.DE]: 'Verantwortlich für Design und Koordination. Serieller Technologieunternehmer mit Fokus auf KI, BioTech und Web3. 17 Jahre im Unternehmertum, 7 Jahre in der Technik. Mitgründer von Talent River, Dowell.',
+            [Locale.FR]: 'Responsable du design et de la coordination. Entrepreneur technologique en série axé sur l\'IA, la BioTech et le Web3. 17 ans dans l\'entrepreneuriat, 7 ans dans la tech. Cofondateur de Talent River, Dowell.',
+            [Locale.ES]: 'Responsable de diseño y coordinación. Emprendedor tecnológico en serie con enfoque en IA, BioTech y Web3. 17 años en emprendimiento, 7 años en tecnología. Cofundador de Talent River, Dowell.',
+            [Locale.IT]: 'Responsabile di design e coordinamento. Imprenditore tecnologico seriale con focus su IA, BioTech e Web3. 17 anni nell\'imprenditoria, 7 anni in tecnologia. Cofondatore di Talent River, Dowell.',
+            [Locale.NL]: 'Verantwoordelijk voor ontwerp en coördinatie. Serieel tech-ondernemer met focus op AI, BioTech en Web3. 17 jaar in ondernemerschap, 7 jaar in tech. Medeoprichter van Talent River, Dowell.',
+            [Locale.CS]: 'Odpovědný za design a koordinaci. Sériový technologický podnikatel se zaměřením na AI, BioTech a Web3. 17 let v podnikání, 7 let v technologiích. Spoluzakladatel Talent River, Dowell.',
+          },
           location: 'Stockholm, Sweden',
           image: '/andrei-panferov.jpg',
           socialLinks: {
@@ -183,6 +201,15 @@ export const TEAM_DATA: TeamData = {
         {
           name: 'Peter Ottsjö',
           description: 'Media lead. Scientific journalist and science communicator specializing in longevity research. CEO of LEVITY Media Group and co-host of the LEVITY Podcast.',
+          descriptions: {
+            [Locale.SV]: 'Medieansvarig. Vetenskapsjournalist och vetenskapskommunikatör specialiserad på longevityforskning. VD för LEVITY Media Group och medvärd för LEVITY Podcast.',
+            [Locale.DE]: 'Medialeitung. Wissenschaftsjournalist und Wissenschaftskommunikator, spezialisiert auf Langlebigkeitsforschung. CEO der LEVITY Media Group und Co-Moderator des LEVITY Podcasts.',
+            [Locale.FR]: 'Responsable médias. Journaliste scientifique et communicant scientifique spécialisé dans la recherche sur la longévité. PDG de LEVITY Media Group et co-animateur du LEVITY Podcast.',
+            [Locale.ES]: 'Responsable de medios. Periodista científico y comunicador de ciencia especializado en investigación sobre longevidad. CEO de LEVITY Media Group y co-presentador del LEVITY Podcast.',
+            [Locale.IT]: 'Responsabile media. Giornalista scientifico e comunicatore scientifico specializzato nella ricerca sulla longevità. CEO di LEVITY Media Group e co-conduttore del LEVITY Podcast.',
+            [Locale.NL]: 'Mediaverantwoordelijke. Wetenschapsjournalist en wetenschapscommunicator gespecialiseerd in longevity-onderzoek. CEO van LEVITY Media Group en co-host van de LEVITY Podcast.',
+            [Locale.CS]: 'Vedoucí médií. Vědecký novinář a popularizátor vědy specializující se na výzkum dlouhověkosti. CEO LEVITY Media Group a spolumoderátorem LEVITY Podcast.',
+          },
           location: 'Stockholm, Sweden',
           image: '/peter-ottsjo.png',
           socialLinks: {
@@ -192,6 +219,15 @@ export const TEAM_DATA: TeamData = {
         {
           name: 'Moa Quist',
           description: 'Curious visionary, doer and longevity organizer.',
+          descriptions: {
+            [Locale.SV]: 'Nyfiken visionär, görare och longevityorganisatör.',
+            [Locale.DE]: 'Neugierige Visionärin, Macherin und Longevity-Organisatorin.',
+            [Locale.FR]: 'Visionnaire curieuse, pragmatique et organisatrice de la longévité.',
+            [Locale.ES]: 'Visionaria curiosa, hacedora y organizadora de longevidad.',
+            [Locale.IT]: 'Visionaria curiosa, pragmatica e organizzatrice di longevità.',
+            [Locale.NL]: 'Nieuwsgierige visionair, doener en longevity-organisator.',
+            [Locale.CS]: 'Zvídavá vizionářka, realizátorka a organizátorka dlouhověkosti.',
+          },
           location: 'Stockholm, Sweden',
           image: '/moaqusit.jpeg',
           socialLinks: { linkedin: 'https://www.linkedin.com/in/moaquist/' },
@@ -199,6 +235,15 @@ export const TEAM_DATA: TeamData = {
         {
           name: 'Thomas Ahlström',
           description: 'Swedish transhumanist and longevity networker exploring ethics and technology to help reshape humanity\'s future. Driven to transcend human limits, expand human potential, and advance the pursuit of longer, healthier lives.',
+          descriptions: {
+            [Locale.SV]: 'Svensk transhumanist och longevitynätverkare som utforskar etik och teknik för att hjälpa omforma mänsklighetens framtid. Driven av att överskrida mänskliga gränser, utöka mänsklig potential och främja jakten på längre, hälsosammare liv.',
+            [Locale.DE]: 'Schwedischer Transhumanist und Longevity-Netzwerker, der Ethik und Technologie erkundet, um die Zukunft der Menschheit neu zu gestalten. Getrieben vom Wunsch, menschliche Grenzen zu überwinden, menschliches Potenzial zu erweitern und das Streben nach längeren, gesünderen Leben voranzutreiben.',
+            [Locale.FR]: 'Transhumaniste suédois et animateur de réseau sur la longévité qui explore l\'éthique et la technologie pour aider à remodeler l\'avenir de l\'humanité. Motivé par le désir de transcender les limites humaines, d\'élargir le potentiel humain et de promouvoir la quête de vies plus longues et en meilleure santé.',
+            [Locale.ES]: 'Transhumanista sueco y networker de longevidad que explora la ética y la tecnología para ayudar a remodelar el futuro de la humanidad. Impulsado a trascender los límites humanos, expandir el potencial humano y avanzar en la búsqueda de vidas más largas y saludables.',
+            [Locale.IT]: 'Transumanista svedese e networker della longevità che esplora l\'etica e la tecnologia per aiutare a ridefinire il futuro dell\'umanità. Motivato a trascendere i limiti umani, espandere il potenziale umano e promuovere la ricerca di vite più lunghe e sane.',
+            [Locale.NL]: 'Zweedse transhumanist en longevity-netwerker die ethiek en technologie verkent om de toekomst van de mensheid te helpen herscheppen. Gedreven om menselijke grenzen te overstijgen, menselijk potentieel uit te breiden en de zoektocht naar langere, gezondere levens te bevorderen.',
+            [Locale.CS]: 'Švédský transhumanista a síťovač v oblasti dlouhověkosti, který zkoumá etiku a technologie, aby pomohl přetvořit budoucnost lidstva. Motivován překonáváním lidských hranic, rozšiřováním lidského potenciálu a prosazováním touhy po delším a zdravějším životě.',
+          },
           location: 'Stockholm, Sweden',
           image: '/thomas-ahlstrom.png',
           socialLinks: {
@@ -214,6 +259,15 @@ export const TEAM_DATA: TeamData = {
         {
           name: 'Vladimir Leshko',
           description: 'Biomedical engineer working toward extending human lifespan through public engagement, thoughtful self-experimentation, and operational leadership as COO at Unlimited Bio, a gene therapy startup.',
+          descriptions: {
+            [Locale.SV]: 'Biomedicinsk ingenjör som arbetar för att förlänga människans livslängd genom samhällsengagemang, genomtänkt självexperimentering och operativt ledarskap som COO på Unlimited Bio, en generapistart-up.',
+            [Locale.DE]: 'Biomedizinischer Ingenieur, der durch öffentliches Engagement, durchdachte Selbstexperimentierung und operative Führung als COO bei Unlimited Bio, einem Gentherapie-Startup, zur Verlängerung der menschlichen Lebensspanne beiträgt.',
+            [Locale.FR]: 'Ingénieur biomédical travaillant à l\'extension de la durée de vie humaine par l\'engagement public, l\'auto-expérimentation réfléchie et le leadership opérationnel en tant que COO chez Unlimited Bio, une startup de thérapie génique.',
+            [Locale.ES]: 'Ingeniero biomédico que trabaja para extender la vida humana mediante la participación pública, la autoexperimentación reflexiva y el liderazgo operativo como COO en Unlimited Bio, una startup de terapia génica.',
+            [Locale.IT]: 'Ingegnere biomedico che lavora per estendere la durata della vita umana attraverso il coinvolgimento pubblico, l\'auto-sperimentazione ponderata e la leadership operativa come COO di Unlimited Bio, una startup di terapia genica.',
+            [Locale.NL]: 'Biomedisch ingenieur die werkt aan het verlengen van de menselijke levensduur door middel van publieke betrokkenheid, doordachte zelfexperimentatie en operationeel leiderschap als COO bij Unlimited Bio, een startup voor gentherapie.',
+            [Locale.CS]: 'Biomedicínský inženýr pracující na prodloužení lidského života prostřednictvím veřejného angažmá, promyšlené sebeexperimentace a provozního vedení jako COO ve společnosti Unlimited Bio, startupu zaměřeném na genovou terapii.',
+          },
           location: 'Amsterdam, Netherlands',
           image: '/vladimir-leshko.png',
           socialLinks: {
@@ -225,6 +279,15 @@ export const TEAM_DATA: TeamData = {
         {
           name: 'Sofia Eremchuk',
           description: 'Operations at EightSix Science and Synconetics Organisation | Emerging Neurotech | Longevity',
+          descriptions: {
+            [Locale.SV]: 'Verksamhet vid EightSix Science och Synconetics Organisation | Framväxande Neurotech | Longevity',
+            [Locale.DE]: 'Betrieb bei EightSix Science und Synconetics Organisation | Aufkommende Neurotech | Longevity',
+            [Locale.FR]: 'Opérations chez EightSix Science et Synconetics Organisation | Neurotechnologie émergente | Longévité',
+            [Locale.ES]: 'Operaciones en EightSix Science y Synconetics Organisation | Neurotecnología emergente | Longevidad',
+            [Locale.IT]: 'Operazioni presso EightSix Science e Synconetics Organisation | Neurotech emergente | Longevità',
+            [Locale.NL]: 'Operaties bij EightSix Science en Synconetics Organisation | Opkomende Neurotech | Longevity',
+            [Locale.CS]: 'Provoz v EightSix Science a Synconetics Organisation | Rozvíjející se Neurotech | Dlouhověkost',
+          },
           location: 'Amsterdam, Netherlands',
           image: '/sofia-eremchuk.JPG',
           socialLinks: {
@@ -239,6 +302,15 @@ export const TEAM_DATA: TeamData = {
         {
           name: 'Didier Coeurnelle',
           description: 'Co-chair of Heales (Healthy Life Extension Society), Brussels. Board member of International Longevity Alliance and Humanity+. Vice-president of Association Française Transhumaniste Technoprog. Author of "Et si on arrêterait de vieillir!" and co-author of "Technoprog".',
+          descriptions: {
+            [Locale.SV]: 'Medordförande för Heales (Healthy Life Extension Society), Bryssel. Styrelsemedlem i International Longevity Alliance och Humanity+. Vicepresident för Association Française Transhumaniste Technoprog. Författare till "Et si on arrêterait de vieillir!" och medförfattare till "Technoprog".',
+            [Locale.DE]: 'Mitvorstand von Heales (Healthy Life Extension Society), Brüssel. Vorstandsmitglied der International Longevity Alliance und Humanity+. Vizepräsident der Association Française Transhumaniste Technoprog. Autor von "Et si on arrêterait de vieillir!" und Mitautor von "Technoprog".',
+            [Locale.FR]: 'Coprésident de Heales (Healthy Life Extension Society), Bruxelles. Membre du conseil d\'administration de l\'International Longevity Alliance et de Humanity+. Vice-président de l\'Association Française Transhumaniste Technoprog. Auteur de "Et si on arrêterait de vieillir!" et co-auteur de "Technoprog".',
+            [Locale.ES]: 'Copresidente de Heales (Healthy Life Extension Society), Bruselas. Miembro del consejo de International Longevity Alliance y Humanity+. Vicepresidente de Association Française Transhumaniste Technoprog. Autor de "Et si on arrêterait de vieillir!" y coautor de "Technoprog".',
+            [Locale.IT]: 'Copresidente di Heales (Healthy Life Extension Society), Bruxelles. Membro del consiglio di International Longevity Alliance e Humanity+. Vicepresidente dell\'Association Française Transhumaniste Technoprog. Autore di "Et si on arrêterait de vieillir!" e coautore di "Technoprog".',
+            [Locale.NL]: 'Co-voorzitter van Heales (Healthy Life Extension Society), Brussel. Bestuurslid van International Longevity Alliance en Humanity+. Vice-president van Association Française Transhumaniste Technoprog. Auteur van "Et si on arrêterait de vieillir!" en co-auteur van "Technoprog".',
+            [Locale.CS]: 'Spolupředseda Heales (Healthy Life Extension Society), Brusel. Člen představenstva International Longevity Alliance a Humanity+. Viceprezident Association Française Transhumaniste Technoprog. Autor knihy "Et si on arrêterait de vieillir!" a spoluautor "Technoprog".',
+          },
           location: 'Brussels, Belgium',
           image: '/didier.jpeg',
           socialLinks: {
@@ -265,6 +337,15 @@ export const TEAM_DATA: TeamData = {
         {
           name: 'Ingemar Patrick Linden',
           description: 'Author of "The Case against Death" (MIT Press 2022) and "Mot döden en radikalt livsbejakande filosofi" (Volante 2024).',
+          descriptions: {
+            [Locale.SV]: 'Författare till "The Case against Death" (MIT Press 2022) och "Mot döden en radikalt livsbejakande filosofi" (Volante 2024).',
+            [Locale.DE]: 'Autor von "The Case against Death" (MIT Press 2022) und "Mot döden en radikalt livsbejakande filosofi" (Volante 2024).',
+            [Locale.FR]: 'Auteur de "The Case against Death" (MIT Press 2022) et "Mot döden en radikalt livsbejakande filosofi" (Volante 2024).',
+            [Locale.ES]: 'Autor de "The Case against Death" (MIT Press 2022) y "Mot döden en radikalt livsbejakande filosofi" (Volante 2024).',
+            [Locale.IT]: 'Autore di "The Case against Death" (MIT Press 2022) e "Mot döden en radikalt livsbejakande filosofi" (Volante 2024).',
+            [Locale.NL]: 'Auteur van "The Case against Death" (MIT Press 2022) en "Mot döden en radikalt livsbejakande filosofi" (Volante 2024).',
+            [Locale.CS]: 'Autor knih "The Case against Death" (MIT Press 2022) a "Mot döden en radikalt livsbejakande filosofi" (Volante 2024).',
+          },
           location: 'Berlin, Germany',
           image: '/patricklinden.jpg',
           socialLinks: { linkedin: 'https://www.linkedin.com/in/ingemar-patrick-linden-122bb3b/' },
@@ -288,6 +369,15 @@ export const TEAM_DATA: TeamData = {
           name: 'Quentin Le Bihan',
           description:
             'Field Service Engineer. Laboratory instrumentation, spectroscopy, microscopy, analytical systems, troubleshooting and scientific support.',
+          descriptions: {
+            [Locale.SV]: 'Fältserviceingenjör. Laboratorieinstrumentering, spektroskopi, mikroskopi, analytiska system, felsökning och vetenskaplig support.',
+            [Locale.DE]: 'Außendienstingenieur. Laborinstrumentierung, Spektroskopie, Mikroskopie, analytische Systeme, Fehlerbehebung und wissenschaftlicher Support.',
+            [Locale.FR]: 'Ingénieur de service terrain. Instrumentation de laboratoire, spectroscopie, microscopie, systèmes analytiques, dépannage et support scientifique.',
+            [Locale.ES]: 'Ingeniero de servicio de campo. Instrumentación de laboratorio, espectroscopía, microscopía, sistemas analíticos, resolución de problemas y soporte científico.',
+            [Locale.IT]: 'Ingegnere di assistenza sul campo. Strumentazione di laboratorio, spettroscopia, microscopia, sistemi analitici, risoluzione dei problemi e supporto scientifico.',
+            [Locale.NL]: 'Buitendienstingenieur. Laboratoriumapparatuur, spectroscopie, microscopie, analytische systemen, probleemoplossing en wetenschappelijke ondersteuning.',
+            [Locale.CS]: 'Terénní servisní inženýr. Laboratorní instrumentace, spektroskopie, mikroskopie, analytické systémy, odstraňování závad a vědecká podpora.',
+          },
           location: 'Paris, France',
           image: '/quentin-le-bihan.png',
           socialLinks: {
@@ -302,6 +392,15 @@ export const TEAM_DATA: TeamData = {
         {
           name: 'David Wood',
           description: 'Futurist, catalyst, author, singularitarian',
+          descriptions: {
+            [Locale.SV]: 'Futurist, katalysator, författare, singularitarianist',
+            [Locale.DE]: 'Futurist, Katalysator, Autor, Singularitarianist',
+            [Locale.FR]: 'Futuriste, catalyseur, auteur, singularitarien',
+            [Locale.ES]: 'Futurista, catalizador, autor, singularitariano',
+            [Locale.IT]: 'Futurista, catalizzatore, autore, singolaritariano',
+            [Locale.NL]: 'Futurist, katalysator, auteur, singularitariaan',
+            [Locale.CS]: 'Futurista, katalyzátor, autor, singularitarián',
+          },
           location: 'London, United Kingdom',
           image: '/david-wood.png',
           socialLinks: { linkedin: 'https://www.linkedin.com/in/dw2cco/' },
@@ -314,6 +413,15 @@ export const TEAM_DATA: TeamData = {
         {
           name: 'Ferdinando Randisi',
           description: 'AI/ML technologist | Longevity scientist | DPhil (PhD) Computational Biophysics | Vitalist',
+          descriptions: {
+            [Locale.SV]: 'AI/ML-teknolog | Longevitetsforskare | DPhil (PhD) Beräkningsbiofysik | Vitalist',
+            [Locale.DE]: 'KI/ML-Technologe | Longevity-Wissenschaftler | DPhil (PhD) Biophysikalische Informatik | Vitalist',
+            [Locale.FR]: 'Technologue IA/ML | Scientifique en longévité | DPhil (PhD) Biophysique computationnelle | Vitaliste',
+            [Locale.ES]: 'Tecnólogo de IA/ML | Científico de longevidad | DPhil (PhD) Biofísica Computacional | Vitalista',
+            [Locale.IT]: 'Tecnologo AI/ML | Scienziato della longevità | DPhil (PhD) Biofisica Computazionale | Vitalista',
+            [Locale.NL]: 'AI/ML-technoloog | Longevity-wetenschapper | DPhil (PhD) Computationele Biofysica | Vitalist',
+            [Locale.CS]: 'Technolog AI/ML | Vědec v oblasti dlouhověkosti | DPhil (PhD) Výpočetní biofyzika | Vitalista',
+          },
           location: 'Rome, Italy',
           image: '/ferdinando-randsini.png',
           socialLinks: {},
@@ -323,9 +431,9 @@ export const TEAM_DATA: TeamData = {
     {
       city: 'madrid',
       members: [
-        { name: 'José Luis Cordeiro', description: 'Engineer, economist and futurist. Vice-chair of Humanity+, founding faculty at Singularity University, co-author of "The Death of Death". Advocates longevity escape velocity and aging as a curable disease.', location: '', image: '/jose-luis-cordeiro.png' },
-        { name: 'Maristela Bermúdez', description: 'Engineer working on sustainability and health. Director, International Longevity Summit, Madrid.', location: '', image: '/maristela-bermudez.png' },
-        { name: 'Miguel Ferrero', description: 'Neuropsychologist, Advisor, International Longevity Summit, Madrid.', location: '', image: '/miguel-ferrero.png' },
+        { name: 'José Luis Cordeiro', description: 'Engineer, economist and futurist. Vice-chair of Humanity+, founding faculty at Singularity University, co-author of "The Death of Death". Advocates longevity escape velocity and aging as a curable disease.', descriptions: { [Locale.SV]: 'Ingenjör, ekonom och futurist. Vice ordförande för Humanity+, grundande fakultetsmedlem vid Singularity University, medförfattare till "The Death of Death". Förespråkar longevity escape velocity och åldrande som en behandlingsbar sjukdom.', [Locale.DE]: 'Ingenieur, Ökonom und Futurist. Stellvertretender Vorsitzender von Humanity+, Gründungsfakultät der Singularity University, Mitautor von "The Death of Death". Setzt sich für die Longevity Escape Velocity und Altern als heilbare Krankheit ein.', [Locale.FR]: 'Ingénieur, économiste et futuriste. Vice-président de Humanity+, membre fondateur du corps enseignant de la Singularity University, co-auteur de "The Death of Death". Défenseur de la vitesse d\'échappement à la longévité et du vieillissement comme maladie curable.', [Locale.ES]: 'Ingeniero, economista y futurista. Vicepresidente de Humanity+, miembro fundador del profesorado de la Singularity University, coautor de "The Death of Death". Defiende la velocidad de escape de la longevidad y el envejecimiento como enfermedad curable.', [Locale.IT]: 'Ingegnere, economista e futurista. Vicepresidente di Humanity+, membro fondatore del corpo docente della Singularity University, co-autore di "The Death of Death". Sostiene la velocità di fuga della longevità e l\'invecchiamento come malattia curabile.', [Locale.NL]: 'Ingenieur, econoom en futurist. Vice-voorzitter van Humanity+, oprichtend faculteitslid van de Singularity University, co-auteur van "The Death of Death". Pleit voor longevity escape velocity en veroudering als een behandelbare ziekte.', [Locale.CS]: 'Inženýr, ekonom a futurista. Místopředseda Humanity+, zakládající člen fakulty Singularity University, spoluautor knihy "The Death of Death". Zastává myšlenku longevity escape velocity a stárnutí jako léčitelné nemoci.' }, location: '', image: '/jose-luis-cordeiro.png' },
+        { name: 'Maristela Bermúdez', description: 'Engineer working on sustainability and health. Director, International Longevity Summit, Madrid.', descriptions: { [Locale.SV]: 'Ingenjör som arbetar med hållbarhet och hälsa. Direktör, International Longevity Summit, Madrid.', [Locale.DE]: 'Ingenieurin, die an Nachhaltigkeit und Gesundheit arbeitet. Direktorin, International Longevity Summit, Madrid.', [Locale.FR]: 'Ingénieure travaillant sur la durabilité et la santé. Directrice, International Longevity Summit, Madrid.', [Locale.ES]: 'Ingeniera que trabaja en sostenibilidad y salud. Directora, International Longevity Summit, Madrid.', [Locale.IT]: 'Ingegnera che lavora su sostenibilità e salute. Direttrice, International Longevity Summit, Madrid.', [Locale.NL]: 'Ingenieur die werkt aan duurzaamheid en gezondheid. Directeur, International Longevity Summit, Madrid.', [Locale.CS]: 'Inženýrka pracující na udržitelnosti a zdraví. Ředitelka, International Longevity Summit, Madrid.' }, location: '', image: '/maristela-bermudez.png' },
+        { name: 'Miguel Ferrero', description: 'Neuropsychologist, Advisor, International Longevity Summit, Madrid.', descriptions: { [Locale.SV]: 'Neuropsykolog, rådgivare, International Longevity Summit, Madrid.', [Locale.DE]: 'Neuropsychologe, Berater, International Longevity Summit, Madrid.', [Locale.FR]: 'Neuropsychologue, conseiller, International Longevity Summit, Madrid.', [Locale.ES]: 'Neuropsicólogo, asesor, International Longevity Summit, Madrid.', [Locale.IT]: 'Neuropsicólogo, consulente, International Longevity Summit, Madrid.', [Locale.NL]: 'Neuropsycholoog, adviseur, International Longevity Summit, Madrid.', [Locale.CS]: 'Neuropsycholog, poradce, International Longevity Summit, Madrid.' }, location: '', image: '/miguel-ferrero.png' },
       ],
     },
     {
@@ -334,6 +442,15 @@ export const TEAM_DATA: TeamData = {
         {
           name: 'Georgij Boljuba',
           description: 'Aspiring longevity activist.',
+          descriptions: {
+            [Locale.SV]: 'Blivande longevityaktivist.',
+            [Locale.DE]: 'Angehender Longevity-Aktivist.',
+            [Locale.FR]: 'Militant en devenir pour la longévité.',
+            [Locale.ES]: 'Aspirante a activista de la longevidad.',
+            [Locale.IT]: 'Aspirante attivista della longevità.',
+            [Locale.NL]: 'Aankomend longevity-activist.',
+            [Locale.CS]: 'Začínající aktivista v oblasti dlouhověkosti.',
+          },
           location: 'Prague, Czech Republic',
           image: '/georgij-boljuba.jpg',
           socialLinks: {},
@@ -343,7 +460,7 @@ export const TEAM_DATA: TeamData = {
     {
       city: 'Ljubljana',
       members: [
-        { name: 'Martin Lipovšek', description: 'PhD student at University of Ljubljana. Member of the Board of Directors, International Longevity Alliance (ILA).', location: 'Ljubljana, Slovenia', image: '/martinlipovsek.jpeg', socialLinks: { linkedin: 'https://www.linkedin.com/in/martin-lipov%C5%A1ek-8905b3175/' } },
+        { name: 'Martin Lipovšek', description: 'PhD student at University of Ljubljana. Member of the Board of Directors, International Longevity Alliance (ILA).', descriptions: { [Locale.SV]: 'Doktorandstudent vid Universitetet i Ljubljana. Styrelsemedlem, International Longevity Alliance (ILA).', [Locale.DE]: 'Doktorand an der Universität Ljubljana. Mitglied des Vorstands, International Longevity Alliance (ILA).', [Locale.FR]: 'Doctorant à l\'Université de Ljubljana. Membre du conseil d\'administration, International Longevity Alliance (ILA).', [Locale.ES]: 'Estudiante de doctorado en la Universidad de Ljubljana. Miembro del Consejo de Administración, International Longevity Alliance (ILA).', [Locale.IT]: 'Dottorando all\'Università di Ljubljana. Membro del Consiglio di Amministrazione, International Longevity Alliance (ILA).', [Locale.NL]: 'Promotieonderzoeker aan de Universiteit van Ljubljana. Lid van het bestuur, International Longevity Alliance (ILA).', [Locale.CS]: 'Doktorand na Univerzitě v Lublani. Člen představenstva, International Longevity Alliance (ILA).' }, location: 'Ljubljana, Slovenia', image: '/martinlipovsek.jpeg', socialLinks: { linkedin: 'https://www.linkedin.com/in/martin-lipov%C5%A1ek-8905b3175/' } },
       ],
     },
     {
@@ -353,6 +470,15 @@ export const TEAM_DATA: TeamData = {
           name: 'Ilia Stambler',
           description:
             'Chief Science Officer, Vetek (Seniority) Association, Israel. Fellow at Bar Ilan University. Chairman, International Longevity Alliance (ILA). Author of "A History of Life-extensionism in the Twentieth Century" and over 70 papers. Initiator of the Longevity Day and Month campaign.',
+          descriptions: {
+            [Locale.SV]: 'Chief Science Officer, Vetek (Seniority) Association, Israel. Forskarkolleg vid Bar Ilan University. Ordförande, International Longevity Alliance (ILA). Författare till "A History of Life-extensionism in the Twentieth Century" och över 70 artiklar. Initiativtagare till kampanjen Longevity Day and Month.',
+            [Locale.DE]: 'Chief Science Officer, Vetek (Seniority) Association, Israel. Fellow an der Bar Ilan University. Vorsitzender, International Longevity Alliance (ILA). Autor von "A History of Life-extensionism in the Twentieth Century" und über 70 Veröffentlichungen. Initiator der Kampagne Longevity Day and Month.',
+            [Locale.FR]: 'Directeur scientifique, Vetek (Seniority) Association, Israël. Fellow à l\'Université Bar Ilan. Président, International Longevity Alliance (ILA). Auteur de "A History of Life-extensionism in the Twentieth Century" et de plus de 70 articles. Initiateur de la campagne Longevity Day and Month.',
+            [Locale.ES]: 'Director Científico, Vetek (Seniority) Association, Israel. Investigador asociado en la Universidad Bar Ilan. Presidente, International Longevity Alliance (ILA). Autor de "A History of Life-extensionism in the Twentieth Century" y más de 70 artículos. Iniciador de la campaña Longevity Day and Month.',
+            [Locale.IT]: 'Chief Science Officer, Vetek (Seniority) Association, Israele. Fellow all\'Università Bar Ilan. Presidente, International Longevity Alliance (ILA). Autore di "A History of Life-extensionism in the Twentieth Century" e oltre 70 articoli. Iniziatore della campagna Longevity Day and Month.',
+            [Locale.NL]: 'Chief Science Officer, Vetek (Seniority) Association, Israël. Fellow aan de Bar Ilan University. Voorzitter, International Longevity Alliance (ILA). Auteur van "A History of Life-extensionism in the Twentieth Century" en meer dan 70 artikelen. Initiatiefnemer van de Longevity Day and Month-campagne.',
+            [Locale.CS]: 'Vědecký ředitel, Vetek (Seniority) Association, Izrael. Vědecký pracovník na Bar Ilan University. Předseda, International Longevity Alliance (ILA). Autor knihy "A History of Life-extensionism in the Twentieth Century" a více než 70 odborných článků. Iniciátor kampaně Longevity Day and Month.',
+          },
           location: 'Tel Aviv, Israel',
           image: '/iliastambler.jpeg',
           socialLinks: { linkedin: 'https://www.linkedin.com/in/ilia-stambler-5099977/' },
@@ -366,6 +492,15 @@ export const TEAM_DATA: TeamData = {
           name: 'Ksenia Svaneti',
           description:
             'Sustainability and longevity consultant specializing in the strategic integration of wellness retreats, green energy infrastructure, and luxury brand transformation to establish Svaneti (Georgia) as a premier global destination for health and high-end biohacking.',
+          descriptions: {
+            [Locale.SV]: 'Konsult inom hållbarhet och longevity, specialiserad på strategisk integration av välmåenderetreat, grön energiinfrastruktur och lyxvarutransformation för att etablera Svaneti (Georgien) som en ledande global destination för hälsa och high-end biohacking.',
+            [Locale.DE]: 'Nachhaltigkeits- und Langlebigkeitsberaterin, spezialisiert auf die strategische Integration von Wellness-Retreats, grüner Energieinfrastruktur und Luxusmarken-Transformation, um Svaneti (Georgien) als erstklassiges globales Ziel für Gesundheit und High-End-Biohacking zu etablieren.',
+            [Locale.FR]: 'Consultante en durabilité et longévité spécialisée dans l\'intégration stratégique des retraites bien-être, de l\'infrastructure énergétique verte et de la transformation des marques de luxe pour établir Svaneti (Géorgie) comme destination mondiale de premier plan pour la santé et le biohacking haut de gamme.',
+            [Locale.ES]: 'Consultora de sostenibilidad y longevidad especializada en la integración estratégica de retiros de bienestar, infraestructura de energía verde y transformación de marcas de lujo para establecer Svaneti (Georgia) como un destino global de primer nivel para la salud y el biohacking de alta gama.',
+            [Locale.IT]: 'Consulente di sostenibilità e longevità specializzata nell\'integrazione strategica di ritiri benessere, infrastrutture di energia verde e trasformazione di marchi di lusso per stabilire Svaneti (Georgia) come destinazione globale di prim\'ordine per la salute e il biohacking di alto livello.',
+            [Locale.NL]: 'Duurzaamheids- en longevity-consultant gespecialiseerd in de strategische integratie van wellness-retraites, groene energieinfrastructuur en luxemerk-transformatie om Svaneti (Georgië) te vestigen als een toonaangevende wereldwijde bestemming voor gezondheid en high-end biohacking.',
+            [Locale.CS]: 'Konzultantka v oblasti udržitelnosti a dlouhověkosti specializující se na strategickou integraci wellness retreatů, infrastruktury zelené energie a transformace luxusních značek za účelem etablování Svaneti (Gruzie) jako přední světové destinace pro zdraví a high-end biohacking.',
+          },
           location: 'Tbilisi, Georgia',
           image: '/ksenia.jpg',
           socialLinks: {
@@ -384,7 +519,7 @@ export const TEAM_DATA: TeamData = {
     {
       city: 'San Francisco',
       members: [
-        { name: 'Melissa King', description: 'Co-Founder and COO, Healthspan Action Coalition. Founding senior staff member, California Institute for Regenerative Medicine. Policy wonk, patient advocate and science communicator.', location: 'San Francisco, USA', image: '/melissa-king.jpg', socialLinks: {} },
+        { name: 'Melissa King', description: 'Co-Founder and COO, Healthspan Action Coalition. Founding senior staff member, California Institute for Regenerative Medicine. Policy wonk, patient advocate and science communicator.', descriptions: { [Locale.SV]: 'Medgrundare och COO, Healthspan Action Coalition. Grundande seniorpersonal, California Institute for Regenerative Medicine. Policyexpert, patientförespråkare och vetenskapskommunikatör.', [Locale.DE]: 'Mitgründerin und COO, Healthspan Action Coalition. Gründendes leitendes Mitglied, California Institute for Regenerative Medicine. Politikexpertin, Patientenanwältin und Wissenschaftskommunikatorin.', [Locale.FR]: 'Cofondatrice et COO, Healthspan Action Coalition. Membre fondateur du personnel supérieur, California Institute for Regenerative Medicine. Experte en politiques, défenseure des patients et communicante scientifique.', [Locale.ES]: 'Cofundadora y COO, Healthspan Action Coalition. Miembro fundador del personal superior, California Institute for Regenerative Medicine. Experta en políticas, defensora de pacientes y comunicadora científica.', [Locale.IT]: 'Cofondatrice e COO, Healthspan Action Coalition. Membro fondatore dello staff senior, California Institute for Regenerative Medicine. Esperta di politiche, difensore dei pazienti e comunicatrice scientifica.', [Locale.NL]: 'Medeoprichter en COO, Healthspan Action Coalition. Oprichtend senior personeelslid, California Institute for Regenerative Medicine. Beleidsexpert, patiëntenadvocaat en wetenschapscommunicator.', [Locale.CS]: 'Spoluzakladatelka a COO, Healthspan Action Coalition. Zakládající člen vyššího personálu, California Institute for Regenerative Medicine. Odbornice na politiku, zastánkyně pacientů a popularizátorka vědy.' }, location: 'San Francisco, USA', image: '/melissa-king.jpg', socialLinks: {} },
       ],
     },
     {
@@ -396,13 +531,13 @@ export const TEAM_DATA: TeamData = {
     {
       city: 'Caracas',
       members: [
-        { name: 'José Gregorio Bermúdez Cancine', description: 'Mechanical engineer, expert in the control of contracts for major projects in the oil and manufacturing industries.', location: 'Caracas, Venezuela', image: '/jose-caracas.jpeg' },
+        { name: 'José Gregorio Bermúdez Cancine', description: 'Mechanical engineer, expert in the control of contracts for major projects in the oil and manufacturing industries.', descriptions: { [Locale.SV]: 'Maskiningenjör, expert på kontrollering av kontrakt för stora projekt inom olje- och tillverkningsindustrin.', [Locale.DE]: 'Maschinenbauingenieur, Experte für die Kontrolle von Verträgen für Großprojekte in der Öl- und Fertigungsindustrie.', [Locale.FR]: 'Ingénieur mécanicien, expert dans le contrôle des contrats pour les grands projets dans les industries pétrolière et manufacturière.', [Locale.ES]: 'Ingeniero mecánico, experto en el control de contratos para proyectos importantes en las industrias petrolera y manufacturera.', [Locale.IT]: 'Ingegnere meccanico, esperto nel controllo dei contratti per grandi progetti nelle industrie petrolifera e manifatturiera.', [Locale.NL]: 'Werktuigbouwkundig ingenieur, expert in de beheersing van contracten voor grote projecten in de olie- en maakindustrie.', [Locale.CS]: 'Strojní inženýr, expert na kontrolu smluv pro velké projekty v ropném a výrobním průmyslu.' }, location: 'Caracas, Venezuela', image: '/jose-caracas.jpeg' },
       ],
     },
     {
       city: 'liveStreamOrgs',
       members: [
-        { name: 'Nastya Egorova', description: 'CEO & Co-Founder @Open Longevity and SayForever campaign, counselor @LBF, advisor @Vitalism Foundation. Biologist and artist by training, Nastya has been wearing multiple hats in science communication, social movements building, and open science projects.', location: '', image: '/nastya.jpg', socialLinks: { linkedin: 'https://www.linkedin.com/in/nastya-egorova/' } },
+        { name: 'Nastya Egorova', description: 'CEO & Co-Founder @Open Longevity and SayForever campaign, counselor @LBF, advisor @Vitalism Foundation. Biologist and artist by training, Nastya has been wearing multiple hats in science communication, social movements building, and open science projects.', descriptions: { [Locale.SV]: 'VD & medgrundare @Open Longevity och SayForever-kampanjen, rådgivare @LBF, konsult @Vitalism Foundation. Biolog och konstnär i grunden, Nastya har haft många roller inom vetenskapskommunikation, samhällsrörelseskapande och öppna vetenskapsprojekt.', [Locale.DE]: 'CEO & Mitgründerin @Open Longevity und SayForever-Kampagne, Beraterin @LBF, Beraterin @Vitalism Foundation. Als ausgebildete Biologin und Künstlerin hat Nastya viele Rollen in der Wissenschaftskommunikation, im Aufbau sozialer Bewegungen und in offenen Wissenschaftsprojekten übernommen.', [Locale.FR]: 'PDG et cofondatrice @Open Longevity et campagne SayForever, conseillère @LBF, conseillère @Vitalism Foundation. Biologiste et artiste de formation, Nastya a porté de nombreux chapeaux dans la communication scientifique, la construction de mouvements sociaux et les projets de science ouverte.', [Locale.ES]: 'CEO y cofundadora @Open Longevity y campaña SayForever, consejera @LBF, asesora @Vitalism Foundation. Bióloga y artista de formación, Nastya ha desempeñado múltiples roles en comunicación científica, construcción de movimientos sociales y proyectos de ciencia abierta.', [Locale.IT]: 'CEO e cofondatrice @Open Longevity e campagna SayForever, consigliera @LBF, consulente @Vitalism Foundation. Biologa e artista di formazione, Nastya ha ricoperto molteplici ruoli nella comunicazione scientifica, nella costruzione di movimenti sociali e nei progetti di scienza aperta.', [Locale.NL]: 'CEO en medeoprichter @Open Longevity en SayForever-campagne, adviseur @LBF, adviseur @Vitalism Foundation. Biologe en kunstenares van opleiding, Nastya heeft meerdere rollen vervuld in wetenschapscommunicatie, het opbouwen van sociale bewegingen en open wetenschapsprojecten.', [Locale.CS]: 'CEO a spoluzakladatelka @Open Longevity a kampaně SayForever, poradkyně @LBF, poradkyně @Vitalism Foundation. Bioložka a umělkyně vzděláním, Nastya zastávala mnoho rolí ve vědecké komunikaci, budování sociálních hnutí a projektech otevřené vědy.' }, location: '', image: '/nastya.jpg', socialLinks: { linkedin: 'https://www.linkedin.com/in/nastya-egorova/' } },
         { name: 'Danila Immortalist', description: '', location: '', image: '/danila-immortalist.jpeg' },
       ],
     },
