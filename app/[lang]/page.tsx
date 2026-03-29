@@ -10,6 +10,10 @@ import { getLocaleFromLang, LOCALES } from '@/lib/types';
 import { homeTranslations } from './translations';
 import { getTranslation } from '@/lib/translate';
 import { Wrapper } from '@/components/Wrapper';
+import WhyPage from '@/app/[lang]/why/page';
+import AsksPage from '@/app/[lang]/asks/page';
+import MessagesPage from '@/app/[lang]/messages/page';
+import AboutPage from '@/app/[lang]/about/page';
 
 interface EventData {
   id: string;
@@ -300,6 +304,7 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
 export default async function HomePage({ params }: HomePageProps): Promise<JSX.Element> {
   const { lang } = await params;
   const locale = getLocaleFromLang(lang);
+  const pageParams = Promise.resolve({ lang });
 
   const partnersTranslate = getTranslation(homeTranslations.partners, locale);
   const heroTranslate = getTranslation(homeTranslations.hero, locale);
@@ -308,6 +313,7 @@ export default async function HomePage({ params }: HomePageProps): Promise<JSX.E
 
   return (
     <div>
+    <section id="home">
       <Hero
         backgroundImage="/hero4.jpg"
         locale={locale}
@@ -440,6 +446,19 @@ export default async function HomePage({ params }: HomePageProps): Promise<JSX.E
         </Wrapper>
       </Section>
 
+    </section>
+      <section id="why">
+        <WhyPage params={pageParams} />
+      </section>
+      <section id="asks">
+        <AsksPage params={pageParams} />
+      </section>
+      <section id="messages">
+        <MessagesPage params={pageParams} />
+      </section>
+      <section id="about">
+        <AboutPage params={pageParams} />
+      </section>
     </div>
   );
 }

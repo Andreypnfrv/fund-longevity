@@ -1,13 +1,23 @@
-import { redirect } from 'next/navigation';
+import type { ReactNode } from 'react';
+import { NavigationProvider } from '@/components/NavigationProvider';
+import { getLocaleFromLang } from '@/lib/types';
+import { AllLangSwitcher } from '@/app/all/[lang]/lang-switcher';
 
 interface LayoutProps {
-  children: never;
+  children: ReactNode;
   params: Promise<{ lang: string }>;
 }
 
-export default async function LangLayout({ params }: LayoutProps): Promise<never> {
+export default async function LangLayout({ children, params }: LayoutProps): Promise<JSX.Element> {
   const { lang } = await params;
-  redirect(`/all/${lang}`);
+  const locale = getLocaleFromLang(lang);
+
+  return (
+    <NavigationProvider locale={locale}>
+      <AllLangSwitcher currentLocale={locale} />
+      <main>{children}</main>
+    </NavigationProvider>
+  );
 }
 
 

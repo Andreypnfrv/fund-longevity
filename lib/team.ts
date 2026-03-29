@@ -332,7 +332,7 @@ export const TEAM_DATA: TeamData = {
       city: 'Prague',
       members: [
         {
-          name: 'Georgy Bolyuba',
+          name: 'Georgij Boljuba',
           description: 'Aspiring longevity activist.',
           location: 'Prague, Czech Republic',
           image: '/georgij-boljuba.jpg',
