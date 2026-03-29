@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { Icon } from '@iconify/react';
 import { Locale } from '@/lib/types';
 import { FlagEN, FlagSV, FlagDE, FlagFR, FlagES, FlagIT, FlagNL, FlagCS } from '@/lib/icons';
@@ -65,7 +66,15 @@ export function AllLangSwitcher({ currentLocale }: AllLangSwitcherProps): React.
   }));
 
   return (
-    <div className="fixed top-4 right-4 z-50">
+    <div className="fixed top-4 right-4 z-50 flex items-center gap-2">
+      <Link
+        href={`/${currentLocale}`}
+        className="flex items-center gap-1.5 px-3 py-2 rounded-md bg-white/90 hover:bg-white shadow transition-colors text-sm font-medium text-gray-700"
+        // i18n-allow
+        aria-label="Go to navigation view"
+      >
+        <Icon icon="lucide:layout-list" width={16} height={16} />
+      </Link>
       <Dropdown trigger={trigger} items={items} placement="bottom-end" />
     </div>
   );
