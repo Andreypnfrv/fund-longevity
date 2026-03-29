@@ -3,14 +3,11 @@ import Image from 'next/image';
 import { H1, H3, P } from '@/components/Typography';
 import { Sidebar } from '@/components/Sidebar';
 import { Content } from '@/components/Content';
-import { Partners } from '@/components/Partners';
 import { Section } from '@/components/Section';
 import { Wrapper } from '@/components/Wrapper';
 import { buildLocalizedPageMetadata, defaultOgImage } from '@/lib/config';
 import { getLocaleFromLang, LOCALES, Locale } from '@/lib/types';
 import { aboutTranslations } from './translations';
-import { homeTranslations } from '@/app/[lang]/translations';
-import { PARTNERS } from '@/lib/config';
 import { TEAM_DATA } from '@/lib/team';
 import { Icon } from '@/components/Icon';
 
@@ -42,20 +39,17 @@ export default async function AboutPage({ params }: AboutPageProps): Promise<JSX
   const locale = getLocaleFromLang(lang);
 
   const citiesSorted = [...TEAM_DATA.cities].sort((a, b) => {
-    if (a.city === 'experts') return 1;
-    if (b.city === 'experts') return -1;
-    if (a.city === 'liveStreamOrgs') return 1;
-    if (b.city === 'liveStreamOrgs') return -1;
+    if (a.city === 'experts') return -1;
+    if (b.city === 'experts') return 1;
+    if (a.city === 'liveStreamOrgs') return -1;
+    if (b.city === 'liveStreamOrgs') return 1;
     return a.city.localeCompare(b.city, undefined, { sensitivity: 'base' });
   });
-  const sidebarItems = [
-    { id: 'partners', label: aboutTranslations.partners.title[locale], href: '/about#partners' },
-    ...citiesSorted.map((g) => ({
-      id: g.city,
-      label: aboutTranslations.teamSections[g.city as keyof typeof aboutTranslations.teamSections][locale],
-      href: `/about#${g.city}`,
-    })),
-  ];
+  const sidebarItems = citiesSorted.map((g) => ({
+    id: g.city,
+    label: aboutTranslations.teamSections[g.city as keyof typeof aboutTranslations.teamSections][locale],
+    href: `/about#${g.city}`,
+  }));
 
   return (
     <div className='flex flex-col gap-8 md:gap-18 pt-16 md:pt-20'>
@@ -80,16 +74,6 @@ export default async function AboutPage({ params }: AboutPageProps): Promise<JSX
         <div className="flex flex-col lg:flex-row gap-16">
           <Sidebar locale={locale} items={sidebarItems} />
           <Content>
-            <section id="partners" className="mb-20">
-              <Partners
-                locale={locale}
-                title={aboutTranslations.partners.title[locale]}
-                subtitle={homeTranslations.partners.subtitle[locale]}
-                partners={PARTNERS}
-                titleAlign="left"
-              />
-            </section>
-
             <section id="team">
                 <div className="py-8 bg-white">
                   {citiesSorted.map((cityGroup) => (
