@@ -52,7 +52,7 @@ export default async function AboutPage({ params }: AboutPageProps): Promise<JSX
   }));
 
   return (
-    <div className='flex flex-col gap-8 md:gap-18 pt-16 md:pt-20'>
+    <div className='flex flex-col gap-8 md:gap-18'>
       <Section style={{ paddingTop: 0, paddingBottom: 0 }}>
         <Wrapper>
           <div>

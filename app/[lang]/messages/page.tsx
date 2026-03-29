@@ -83,7 +83,7 @@ export default async function MessagesPage({ params }: MessagesPageProps): Promi
     'list-disc list-outside space-y-3 pl-6 text-base md:text-lg text-black marker:text-xl';
 
   return (
-    <div className="flex flex-col gap-8 md:gap-18 pt-16 md:pt-20">
+    <div className="flex flex-col gap-8 md:gap-18">
       <Section style={{ paddingTop: 0, paddingBottom: 0 }}>
         <Wrapper>
           <div>
@@ -96,7 +96,7 @@ export default async function MessagesPage({ params }: MessagesPageProps): Promi
 
       <Section style={{ paddingTop: 0, paddingBottom: 0 }}>
         <Wrapper>
-          <div className="pb-16 md:pb-24">
+          <div className="pb-16 md:pb-16">
             <section id="important-signs" className="mb-20 md:mb-28">
               <div className="flex flex-col gap-6 md:gap-8">                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">

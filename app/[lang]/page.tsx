@@ -350,7 +350,7 @@ export default async function HomePage({ params }: HomePageProps): Promise<JSX.E
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 mb-8 pt-16 md:pt-24">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0">
             {[
               ...EVENTS_DATA.filter((e) => e.type === 'online'),
               ...EVENTS_DATA.filter((e) => e.type === 'city').sort((a, b) => a.name.localeCompare(b.name)),
