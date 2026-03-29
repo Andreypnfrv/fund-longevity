@@ -329,6 +329,18 @@ export const TEAM_DATA: TeamData = {
       ],
     },
     {
+      city: 'Prague',
+      members: [
+        {
+          name: 'Georgy Bolyuba',
+          description: 'Aspiring longevity activist.',
+          location: 'Prague, Czech Republic',
+          image: '/georgij-boljuba.jpg',
+          socialLinks: {},
+        },
+      ],
+    },
+    {
       city: 'Ljubljana',
       members: [
         { name: 'Martin Lipovšek', description: 'PhD student at University of Ljubljana. Member of the Board of Directors, International Longevity Alliance (ILA).', location: 'Ljubljana, Slovenia', image: '/martinlipovsek.jpeg', socialLinks: { linkedin: 'https://www.linkedin.com/in/martin-lipov%C5%A1ek-8905b3175/' } },

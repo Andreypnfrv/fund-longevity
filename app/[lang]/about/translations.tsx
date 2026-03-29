@@ -145,6 +145,16 @@ export const aboutTranslations = {
       [Locale.NL]: 'Brussel',
       [Locale.CS]: 'Brusel',
     },
+    Prague: {
+      [Locale.EN]: 'Prague',
+      [Locale.SV]: 'Prag',
+      [Locale.DE]: 'Prag',
+      [Locale.FR]: 'Prague',
+      [Locale.ES]: 'Praga',
+      [Locale.IT]: 'Praga',
+      [Locale.NL]: 'Praag',
+      [Locale.CS]: 'Praha',
+    },
     Ljubljana: {
       [Locale.EN]: 'Ljubljana',
       [Locale.SV]: 'Ljubljana',
