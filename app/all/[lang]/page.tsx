@@ -1,4 +1,4 @@
-import { LOCALES, getLocaleFromLang } from '@/lib/types';
+import { LOCALES } from '@/lib/types';
 import HomePage from '@/app/[lang]/page';
 import WhyPage from '@/app/[lang]/why/page';
 import AsksPage from '@/app/[lang]/asks/page';
