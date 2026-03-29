@@ -45,6 +45,7 @@ export function AllLangSwitcher({ currentLocale }: AllLangSwitcherProps): React.
   const trigger = (
     <button
       className="flex items-center gap-2 px-3 py-2 rounded-md bg-white/90 hover:bg-white shadow transition-colors"
+      // i18n-allow
       aria-label="Change language"
     >
       {localeFlags[currentLocale]}
