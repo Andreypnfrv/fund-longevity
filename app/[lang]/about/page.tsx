@@ -98,7 +98,7 @@ export default async function AboutPage({ params }: AboutPageProps): Promise<JSX
                               <h3 className="text-2xl font-bold">{member.name}</h3>
                               {member.location && <span className="text-base text-gray-600">{member.location}</span>}
                             </div>
-                            {member.description && <P className="mb-4">{member.description}</P>}
+                            {(member.descriptions?.[locale] ?? member.description) && <P className="mb-4">{member.descriptions?.[locale] ?? member.description}</P>}
                             {member.socialLinks && (member.socialLinks.linkedin ?? member.socialLinks.x ?? member.socialLinks.website ?? member.socialLinks.telegram ?? member.socialLinks.github) && (
                               <div className="flex gap-3">
                                 {member.socialLinks?.linkedin && (

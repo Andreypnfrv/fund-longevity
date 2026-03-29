@@ -506,6 +506,76 @@ const asksBlueprintNl = {
   ] satisfies AskBlueprintSection[],
 } as const;
 
+const asksBlueprintCs = {
+  heroTitle: 'Stát dlouhověkosti',
+  heroSubtitle: 'Politický plán pro stárnoucí svět',
+  lead: 'Stárnutí je hlavní příčinou úmrtí, invalidity a nákladů na zdravotní péči — přesto dostává zlomek financování určeného pro jeho příznaky, jako je rakovina a srdeční choroby. S stárnoucí populací a zmenšující se pracovní silou je prodloužení zdravých produktivních let nejnaléhavější demografickou výzvou a zároveň nejvíce zanedbávanou.',
+  objectivesLabel: 'Cíle',
+  objectives:
+    'Prodloužené zdravé a produktivní roky, nižší zátěž invaliditou — delší účast na trhu práce, širší daňová základna, snížené náklady na péči. Výnosy se v čase kumulují.',
+  ownershipLabel: 'Vlastnictví',
+  ownership:
+    'Řízeno meziresortní komisí (zdravotnictví, školství, věda, ekonomika, práce) s jednotnou Národní strategií dlouhověkosti, financovanou 1 % ročního státního rozpočtu.',
+  sections: [
+    {
+      title:
+        'Talenty — Přitahovat, rozvíjet a udržovat špičkové vědecké talenty v oblasti dlouhověkosti odstraňováním bariér vstupu a posílením vzdělávání',
+      bullets: [
+        'Zrychlené vízum a uznávání kvalifikací pro výzkumníky a kliniky',
+        'Programy PhD/MD-PhD propojující biologii stárnutí, medicínu a datovou vědu',
+      ],
+    },
+    {
+      title:
+        'Věda — Udržitelné dlouhodobé financování výzkumu stárnutí a průlomových intervencí',
+      bullets: [
+        'Vyhrazené financování specificky pro základní výzkum stárnutí',
+        'Regulace úprav lidského genomu proporcionální k riziku, nahrazující plošné zákazy',
+      ],
+    },
+    {
+      title:
+        'Translace — Adaptivní regulace a veřejné financování pro spravedlivě dostupné terapie',
+      bullets: [
+        'Vyhrazená agentura pro dlouhověkost inspirovaná rámcem ARPA/DARPA: cílené výzvy, konkurenční plnění, nedilutivní financování, IP uchovaná vývojáři',
+        'Adaptivní licencování se syntetickými kontrolními rameny z národních zdravotních dat',
+        'Regulatorní sandboxy pro kombinované a přeúčelované terapie',
+        'Právo vyzkoušet potenciálně život zachraňující léčby',
+        'Veřejně financované terapie oceněné pro univerzální přístup prostřednictvím národních zdravotnických systémů',
+      ],
+    },
+    {
+      title:
+        'Zdravotní péče — Klinická infrastruktura optimalizovaná pro prevenci v populačním měřítku',
+      bullets: [
+        'Screening a prevence v populačním měřítku zaměřené na hlavní rizika věkově podmíněných onemocnění',
+        'Longitudinální sběr biomarkerů — funkčních i molekulárních — s opt-out jako výchozím nastavením',
+        'Integrace preventivních studií do rutinní klinické praxe',
+        'Geroterapeutické endpointy v rámcích hodnocení zdravotnických technologií a úhradách',
+      ],
+    },
+    {
+      title:
+        'Data — Otevřený, interoperabilní a škálovatelný datový ekosystém pro výzkum stárnutí',
+      bullets: [
+        'Bezpečný volný přístup k anonymizovaným datům pro každého výzkumníka a aplikaci AI',
+        'Jednotné standardy interoperability napříč zdravotními, výzkumnými a registrovými daty',
+        'Standardizované endpointy pro geroterapeutické studie',
+      ],
+    },
+    {
+      title:
+        'Mezinárodní — Koordinace pro to, co žádná jednotlivá země nedokáže sama',
+      bullets: [
+        'AI-připravené programy perturbačního screeningu a sdílená molekulární datová infrastruktura',
+        'Vzájemné uznávání výsledků klinických studií a výsledků regulatorních sandboxů',
+        'Sdílená výzkumná infrastruktura: mokré laboratoře, modelové organismy, výpočetní kapacita, perturbační screening',
+        'Veřejná angažovanost k boji proti dezinformacím o vědě o dlouhověkosti',
+      ],
+    },
+  ] satisfies AskBlueprintSection[],
+} as const;
+
 export const asksSeoDescription: Record<Locale, string> = {
   [Locale.EN]:
     'Longevity State: a national policy blueprint for aging—cross-ministerial strategy, sustainable research funding, adaptive regulation, preventive healthcare, open data, and international coordination.',
@@ -533,7 +603,7 @@ export const asksByLocale: Record<Locale, AsksBlueprint> = {
   [Locale.ES]: asksBlueprintEs,
   [Locale.IT]: asksBlueprintIt,
   [Locale.NL]: asksBlueprintNl,
-  [Locale.CS]: asksBlueprintEn,
+  [Locale.CS]: asksBlueprintCs,
 };
 
 export function getAsksForLocale(locale: Locale): AsksBlueprint {

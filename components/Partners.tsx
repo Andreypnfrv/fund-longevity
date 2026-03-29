@@ -27,7 +27,7 @@ function PartnerCard({ children, className = '', logo, logoSize }: { children: R
   );
 }
 
-export function Partners({ locale: _locale, title, subtitle, partners, titleAlign = 'center' }: PartnersProps) {
+export function Partners({ locale, title, subtitle, partners, titleAlign = 'center' }: PartnersProps) {
   return (
     <section>
       <div className={cn('py-8 md:py-12 mb-8', titleAlign === 'left' ? 'text-left' : 'text-center')}>
@@ -54,8 +54,8 @@ export function Partners({ locale: _locale, title, subtitle, partners, titleAlig
           const cardContent = (
             <>
               <h3 className="text-lg md:text-xl font-semibold mb-2">{partner.name}</h3>
-              {partner.description && (
-                <p className="text-sm text-gray-600 whitespace-pre-line">{partner.description}</p>
+              {(partner.descriptions?.[locale] ?? partner.description) && (
+                <p className="text-sm text-gray-600 whitespace-pre-line">{partner.descriptions?.[locale] ?? partner.description}</p>
               )}
             </>
           );
