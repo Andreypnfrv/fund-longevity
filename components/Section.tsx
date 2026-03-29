@@ -13,7 +13,7 @@ export function Section({ children, className = '', id, style }: SectionProps): 
     <section 
       id={id}
       className={cn('w-full flex flex-row justify-center', className)}
-      style={{ paddingTop: '100px', paddingBottom: '100px', ...style }}
+      style={{ paddingTop: '10px', paddingBottom: '10px', ...style }}
     >
       {children}
     </section>

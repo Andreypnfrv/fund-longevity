@@ -68,7 +68,7 @@ export default async function AsksPage({ params }: AsksPageProps): Promise<JSX.E
   const t = getAsksForLocale(locale);
 
   return (
-    <div>
+    <div className="flex flex-col gap-8 md:gap-18">
       <Section style={{ paddingTop: '4rem', paddingBottom: '2.5rem' }}>
         <Wrapper className="flex flex-col items-center">
           <div className="flex w-full max-w-4xl flex-col items-center px-3 text-center">

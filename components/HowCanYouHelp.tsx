@@ -21,7 +21,7 @@ export function HowCanYouHelp({ locale }: HowCanYouHelpProps): React.ReactElemen
 
   return (
     <Card className='text-center border border-black rounded-xl'>
-      <div className="flex flex-col gap-8 py-8 md:py-16">
+      <div className="flex flex-col gap-8">
         <div className="text-center">
           <div className="inline-block">
             <div className="flex flex-col items-start gap-1 md:gap-2">

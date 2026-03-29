@@ -59,7 +59,7 @@ export default async function WhyPage({ params }: WhyPageProps): Promise<JSX.Ele
   ];
 
   return (
-    <div className='flex flex-col gap-8 md:gap-18 pt-16 md:pt-20'>
+    <div className='flex flex-col gap-8 md:gap-18'>
       
       <Section>
         <Wrapper>
