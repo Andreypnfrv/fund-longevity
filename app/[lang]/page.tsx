@@ -105,7 +105,7 @@ const EVENTS_DATA: EventData[] = [
     flag: '🇮🇹',
     image: '/Rome_Via_di_S_Nicola_de_Cesarini.jpg',
     imageAlt: 'Rome',
-    dateTime: 'Wednesday 8 April, 17:00-18:00 CEST',
+    dateTime: 'Wednesday 8 April, 16:00-18:00 CEST',
     location: 'Via di S. Nicola de\' Cesarini',
     link: 'https://luma.com/xjvb2fcb',
     buttonText: 'Register',

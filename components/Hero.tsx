@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
+import Image from 'next/image';
 import { H1, P } from './Typography';
 import { Wrapper } from './Wrapper';
 import type { Locale } from '@/lib/types';
@@ -66,17 +67,15 @@ export function Hero(props: HeroProps): React.ReactElement {
       />
       <div className="relative z-10 flex-1 flex items-start justify-start px-3 pt-16 md:pt-24 min-[600px]:px-4">
         <div className="relative inline-block hero-title-wrap">
-          <h1 className="font-black text-left px-3 py-4 min-[600px]:px-8 uppercase whitespace-normal min-[600px]:whitespace-nowrap lg:whitespace-pre-line" style={{
-            color: '#0900FF',
-            fontFamily: 'var(--font-plus-jakarta), sans-serif',
-            fontSize: '0.96em',
-            lineHeight: '1',
-            letterSpacing: '-0.02em',
-          }}>
-            {props.titleLine1 ?? 'FUND'}
-            <span className="lg:hidden"> </span>
-            <br className="hidden lg:block" />
-            {props.titleLine2 ?? 'LONGEVITY'}
+          <h1 className="m-0 p-0">
+            <Image
+              src="/fund-longevity-logo.png"
+              alt={`${props.titleLine1 ?? 'FUND'} ${props.titleLine2 ?? 'LONGEVITY'}`}
+              width={1024}
+              height={281}
+              priority
+              className="block w-full max-w-[min(90vw,42rem)] h-auto px-3 py-4 min-[600px]:px-8"
+            />
           </h1>
         </div>
       </div>
