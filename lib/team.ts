@@ -577,7 +577,37 @@ export const TEAM_DATA: TeamData = {
     {
       city: 'Ljubljana',
       members: [
-        { name: 'Martin Lipovšek', description: 'PhD student at University of Ljubljana. Member of the Board of Directors, International Longevity Alliance (ILA).', descriptions: { [Locale.SV]: 'Doktorandstudent vid Universitetet i Ljubljana. Styrelsemedlem, International Longevity Alliance (ILA).', [Locale.DE]: 'Doktorand an der Universität Ljubljana. Mitglied des Vorstands, International Longevity Alliance (ILA).', [Locale.FR]: 'Doctorant à l\'Université de Ljubljana. Membre du conseil d\'administration, International Longevity Alliance (ILA).', [Locale.ES]: 'Estudiante de doctorado en la Universidad de Ljubljana. Miembro del Consejo de Administración, International Longevity Alliance (ILA).', [Locale.IT]: 'Dottorando all\'Università di Ljubljana. Membro del Consiglio di Amministrazione, International Longevity Alliance (ILA).', [Locale.NL]: 'Promotieonderzoeker aan de Universiteit van Ljubljana. Lid van het bestuur, International Longevity Alliance (ILA).', [Locale.CS]: 'Doktorand na Univerzitě v Lublani. Člen představenstva, International Longevity Alliance (ILA).' }, location: 'Ljubljana, Slovenia', image: '/martinlipovsek.jpeg', socialLinks: { linkedin: 'https://www.linkedin.com/in/martin-lipov%C5%A1ek-8905b3175/' } },
+        {
+          name: 'Martin Lipovšek',
+          description: 'PhD student at University of Ljubljana. Member of the Board of Directors, International Longevity Alliance (ILA).',
+          descriptions: {
+            [Locale.SV]: 'Doktorandstudent vid Universitetet i Ljubljana. Styrelsemedlem, International Longevity Alliance (ILA).',
+            [Locale.DE]: 'Doktorand an der Universität Ljubljana. Mitglied des Vorstands, International Longevity Alliance (ILA).',
+            [Locale.FR]: 'Doctorant à l\'Université de Ljubljana. Membre du conseil d\'administration, International Longevity Alliance (ILA).',
+            [Locale.ES]: 'Estudiante de doctorado en la Universidad de Ljubljana. Miembro del Consejo de Administración, International Longevity Alliance (ILA).',
+            [Locale.IT]: 'Dottorando all\'Università di Ljubljana. Membro del Consiglio di Amministrazione, International Longevity Alliance (ILA).',
+            [Locale.NL]: 'Promotieonderzoeker aan de Universiteit van Ljubljana. Lid van het bestuur, International Longevity Alliance (ILA).',
+            [Locale.CS]: 'Doktorand na Univerzitě v Lublani. Člen představenstva, International Longevity Alliance (ILA).',
+          },
+          location: 'Ljubljana, Slovenia',
+          image: '/martinlipovsek.jpeg',
+          socialLinks: { linkedin: 'https://www.linkedin.com/in/martin-lipov%C5%A1ek-8905b3175/' },
+        },
+        {
+          name: 'Zala Berk',
+          description: 'Co-host. Student at University of Ljubljana, Faculty of Arts.',
+          descriptions: {
+            [Locale.SV]: 'Medvärd. Student vid Universitetet i Ljubljana, filosofiska fakulteten.',
+            [Locale.DE]: 'Co-Moderatorin. Studentin an der Universität Ljubljana, Philosophische Fakultät.',
+            [Locale.FR]: 'Co-animatrice. Étudiante à l\'Université de Ljubljana, faculté des lettres.',
+            [Locale.ES]: 'Co-anfitriona. Estudiante en la Universidad de Ljubljana, Facultad de Letras.',
+            [Locale.IT]: 'Co-host. Studentessa all\'Università di Lubiana, Facoltà di Lettere.',
+            [Locale.NL]: 'Co-host. Student aan de Universiteit van Ljubljana, Faculteit der Letteren.',
+            [Locale.CS]: 'Spoluhostitelka. Studentka na Univerzitě v Lublani, Filozofická fakulta.',
+          },
+          location: 'Ljubljana, Slovenia',
+          socialLinks: { linkedin: 'https://www.linkedin.com/in/zala-berk-220v022/' },
+        },
       ],
     },
     {
