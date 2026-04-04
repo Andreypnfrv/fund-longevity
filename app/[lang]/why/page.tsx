@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: WhyPageProps): Promise<Metada
     title,
     description,
     path: `/${lang}/why`,
-    ogImage: '/say-forever.jpg',
+    ogImage: '/why-say-forever.jpg',
   });
 }
 
@@ -68,7 +68,7 @@ export default async function WhyPage({ params }: WhyPageProps): Promise<JSX.Ele
           </div>
         </Wrapper>
       </Section>
-      <GenerationsHero images={['/say-forever.jpg', '/say-forever-3.jpg']} />
+      <GenerationsHero images={['/why-say-forever.jpg']} />
 
       <Wrapper>
         <div className="flex flex-col lg:flex-row gap-16">

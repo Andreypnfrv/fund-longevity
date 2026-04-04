@@ -266,6 +266,20 @@ const EVENTS_DATA: EventData[] = [
     buttonColor: '#0900FF',
     buttonShadow: '0 4px 6px rgba(9, 0, 255, 0.3)',
   },
+  {
+    id: 'telaviv',
+    type: 'city',
+    name: 'TEL AVIV',
+    flag: '🇮🇱',
+    image: '/telaviv.jpg',
+    imageAlt: 'Tel Aviv',
+    dateTime: 'Wednesday 8 April, 17:00-18:00 CEST',
+    location: 'Tel Aviv',
+    link: 'https://luma.com/b7b2d2n2',
+    buttonText: 'Register',
+    buttonColor: '#0900FF',
+    buttonShadow: '0 4px 6px rgba(9, 0, 255, 0.3)',
+  },
 ];
 
 interface HomePageProps {

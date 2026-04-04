@@ -9,35 +9,38 @@ interface GenerationsHeroProps {
 export function GenerationsHero({
   images,
 }: GenerationsHeroProps): React.ReactElement {
+  const multi = images.length > 1;
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const currentIndexRef = useRef(1);
   const isTransitioningRef = useRef(false);
 
-  const extendedImages = [images[images.length - 1], ...images, images[0]];
+  const extendedImages = multi
+    ? [images[images.length - 1], ...images, images[0]]
+    : images;
 
   useEffect(() => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollTo({
-        left: window.innerWidth,
-        behavior: 'auto',
-      });
-    }
-  }, []);
+    if (!multi || !scrollContainerRef.current) return;
+    scrollContainerRef.current.scrollTo({
+      left: window.innerWidth,
+      behavior: 'auto',
+    });
+  }, [multi]);
 
   useEffect(() => {
+    if (!multi) return;
     const interval = setInterval(() => {
       if (isTransitioningRef.current || !scrollContainerRef.current) return;
-      
+
       isTransitioningRef.current = true;
       currentIndexRef.current += 1;
-      
+
       if (scrollContainerRef.current) {
         scrollContainerRef.current.scrollTo({
           left: currentIndexRef.current * window.innerWidth,
           behavior: 'smooth',
         });
       }
-      
+
       setTimeout(() => {
         isTransitioningRef.current = false;
         if (scrollContainerRef.current && currentIndexRef.current >= extendedImages.length - 1) {
@@ -51,7 +54,24 @@ export function GenerationsHero({
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [extendedImages.length]);
+  }, [multi, extendedImages.length]);
+
+  if (!multi) {
+    const [image] = images;
+    return (
+      <div className="relative w-full h-[min(50vh,400px)] md:h-[80dvh]">
+        <div
+          className="w-full h-full"
+          style={{
+            backgroundImage: `url(${image})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
+      </div>
+    );
+  }
 
   return (
     <div className="relative w-full h-[min(50vh,400px)] md:h-[80dvh]">

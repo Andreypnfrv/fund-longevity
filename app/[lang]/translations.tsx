@@ -429,6 +429,16 @@ export const homeTranslations = {
       [Locale.NL]: 'zondag 5 april 2026, 16:00-19:00 GMT+4',
       [Locale.CS]: 'neděle 5. dubna 2026, 16:00-19:00 GMT+4',
     },
+    telaviv: {
+      [Locale.EN]: 'Wednesday 8 April, 17:00-18:00 CEST',
+      [Locale.SV]: 'onsdag 8 april, 17:00-18:00 CEST',
+      [Locale.DE]: 'Mittwoch, 8. April, 17:00-18:00 CEST',
+      [Locale.FR]: 'mercredi 8 avril, 17:00-18:00 CEST',
+      [Locale.ES]: 'miércoles 8 de abril, 17:00-18:00 CEST',
+      [Locale.IT]: 'mercoledì 8 aprile, 17:00-18:00 CEST',
+      [Locale.NL]: 'woensdag 8 april, 17:00-18:00 CEST',
+      [Locale.CS]: 'středa 8. dubna, 17:00-18:00 CEST',
+    },
   },
 } as const satisfies Record<string, Record<string, Translation>>;
 
