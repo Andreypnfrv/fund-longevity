@@ -61,7 +61,7 @@ export default async function WhyPage({ params }: WhyPageProps): Promise<JSX.Ele
   return (
     <div className='flex flex-col gap-8 md:gap-18'>
       
-      <Section>
+      <Section style={{ paddingTop: '15px' }}>
         <Wrapper>
           <div>
             <H1 display className="mb-4 text-[#0900FF] whitespace-pre-line">{whyTranslations.hero.title[locale]}</H1>

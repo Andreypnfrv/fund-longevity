@@ -31,6 +31,52 @@ export const TEAM_DATA: TeamData = {
   coreTeam: [],
   cities: [
     {
+      city: 'core',
+      members: [
+        {
+          name: 'Linus Petersson',
+          description: 'Co-founder of Swedish Longevity Cluster and author of \'Läkemedel mot Åldrande\' (Drugs Against Aging). 20+ years in the longevity space. Consultant within pharmaceutical and longevity industry. Keynote speaker on aging and longevity.',
+          descriptions: {
+            [Locale.SV]: 'Medgrundare av Swedish Longevity Cluster och författare till \'Läkemedel mot Åldrande\'. 20+ år inom longevityområdet. Konsult inom läkemedels- och longevityindustrin. Föreläsare om åldrande och longevity.',
+            [Locale.DE]: 'Mitgründer des Swedish Longevity Cluster und Autor von \'Läkemedel mot Åldrande\' (Medikamente gegen das Altern). 20+ Jahre im Bereich Longevity. Berater in der Pharma- und Longevity-Industrie. Keynote-Speaker über Altern und Longevity.',
+            [Locale.FR]: 'Cofondateur du Swedish Longevity Cluster et auteur de \'Läkemedel mot Åldrande\' (Médicaments contre le vieillissement). Plus de 20 ans dans le domaine de la longévité. Consultant dans l\'industrie pharmaceutique et de la longévité. Conférencier principal sur le vieillissement et la longévité.',
+            [Locale.ES]: 'Cofundador del Swedish Longevity Cluster y autor de \'Läkemedel mot Åldrande\' (Medicamentos contra el envejecimiento). Más de 20 años en el espacio de la longevidad. Consultor en la industria farmacéutica y de longevidad. Conferencista principal sobre envejecimiento y longevidad.',
+            [Locale.IT]: 'Cofondatore dello Swedish Longevity Cluster e autore di \'Läkemedel mot Åldrande\' (Farmaci contro l\'invecchiamento). Oltre 20 anni nel settore della longevità. Consulente nell\'industria farmaceutica e della longevità. Relatore principale su invecchiamento e longevità.',
+            [Locale.NL]: 'Medeoprichter van de Swedish Longevity Cluster en auteur van \'Läkemedel mot Åldrande\' (Medicijnen tegen veroudering). 20+ jaar in de longevity-sector. Consultant in de farmaceutische en longevity-industrie. Keynote-spreker over veroudering en longevity.',
+            [Locale.CS]: 'Spoluzakladatel Swedish Longevity Cluster a autor knihy \'Läkemedel mot Åldrande\' (Léky proti stárnutí). Více než 20 let v oblasti dlouhověkosti. Konzultant ve farmaceutickém průmyslu a průmyslu dlouhověkosti. Hlavní řečník o stárnutí a dlouhověkosti.',
+          },
+          location: 'Stockholm, Sweden',
+          image: '/linus-peteresson.png',
+          socialLinks: {
+            linkedin: 'https://www.linkedin.com/in/linuspetersson/',
+            x: 'https://x.com/LinusPeters',
+            website: 'http://www.linuspetersson.se/',
+            telegram: 'https://t.me/lpetersson_longevity',
+          },
+        },
+        {
+          name: 'Andrei Panferov',
+          description: 'Responsible for design and coordination. Serial tech entrepreneur with focus on AI, BioTech, and Web3. 17 yrs in entrepreneurship, 7 yrs in tech. Co-founder Talent River, Dowell.',
+          descriptions: {
+            [Locale.SV]: 'Ansvarig för design och koordination. Seriell teknikentreprenör med fokus på AI, BioTech och Web3. 17 år i företagande, 7 år inom tech. Medgrundare av Talent River, Dowell.',
+            [Locale.DE]: 'Verantwortlich für Design und Koordination. Serieller Technologieunternehmer mit Fokus auf KI, BioTech und Web3. 17 Jahre im Unternehmertum, 7 Jahre in der Technik. Mitgründer von Talent River, Dowell.',
+            [Locale.FR]: 'Responsable du design et de la coordination. Entrepreneur technologique en série axé sur l\'IA, la BioTech et le Web3. 17 ans dans l\'entrepreneuriat, 7 ans dans la tech. Cofondateur de Talent River, Dowell.',
+            [Locale.ES]: 'Responsable de diseño y coordinación. Emprendedor tecnológico en serie con enfoque en IA, BioTech y Web3. 17 años en emprendimiento, 7 años en tecnología. Cofundador de Talent River, Dowell.',
+            [Locale.IT]: 'Responsabile di design e coordinamento. Imprenditore tecnologico seriale con focus su IA, BioTech e Web3. 17 anni nell\'imprenditoria, 7 anni in tecnologia. Cofondatore di Talent River, Dowell.',
+            [Locale.NL]: 'Verantwoordelijk voor ontwerp en coördinatie. Serieel tech-ondernemer met focus op AI, BioTech en Web3. 17 jaar in ondernemerschap, 7 jaar in tech. Medeoprichter van Talent River, Dowell.',
+            [Locale.CS]: 'Odpovědný za design a koordinaci. Sériový technologický podnikatel se zaměřením na AI, BioTech a Web3. 17 let v podnikání, 7 let v technologiích. Spoluzakladatel Talent River, Dowell.',
+          },
+          location: 'Stockholm, Sweden',
+          image: '/andrei-panferov.jpg',
+          socialLinks: {
+            linkedin: 'https://www.linkedin.com/in/andreypnfrv/',
+            x: 'https://x.com/andreypnfrv',
+            telegram: 'https://t.me/andreypnfrv',
+          },
+        },
+      ],
+    },
+    {
       city: 'experts',
       members: [
         {
@@ -152,52 +198,100 @@ export const TEAM_DATA: TeamData = {
           },
           location: '', image: '/carrie-radomski.jpg', socialLinks: {},
         },
+        {
+          name: 'Yuri Deigin',
+          description:
+            'Longevity biotech entrepreneur working on partial reprogramming gene therapies for Alzheimer\'s and other diseases.',
+          descriptions: {
+            [Locale.SV]:
+              'Longevity biotech-entreprenör som arbetar med partiell omprogrammering och genterapi mot Alzheimers och andra sjukdomar.',
+            [Locale.DE]:
+              'Langlebigkeits-Biotech-Unternehmer mit Fokus auf partielle Reprogrammierungs-Gentherapien bei Alzheimer und anderen Erkrankungen.',
+            [Locale.FR]:
+              'Entrepreneur biotech en longévité, thérapies géniques de reprogrammation partielle pour Alzheimer et d\'autres maladies.',
+            [Locale.ES]:
+              'Emprendedor de biotecnología de longevidad que trabaja en terapias génicas de reprogramación parcial para Alzheimer y otras enfermedades.',
+            [Locale.IT]:
+              'Imprenditore biotech della longevità che lavora su terapie geniche di riprogrammazione parziale per Alzheimer e altre malattie.',
+            [Locale.NL]:
+              'Longevity biotech-ondernemer die werkt aan partiële herprogrammeringsgentherapieën voor Alzheimer en andere ziekten.',
+            [Locale.CS]:
+              'Podnikatel v oblasti biotechnologií dlouhověkosti zaměřený na genové terapie částečného reprogramování u Alzheimerovy choroby a dalších nemocí.',
+          },
+          location: '',
+          image: '/yuri-deigin.png',
+          socialLinks: { linkedin: 'https://www.linkedin.com/in/yurideigin/' },
+        },
+        {
+          name: 'Ilia Stambler',
+          description:
+            'Chief Science Officer, Vetek (Seniority) Association, Israel. Fellow at Bar Ilan University. Chairman, International Longevity Alliance (ILA). Author of "A History of Life-extensionism in the Twentieth Century" and over 70 papers. Initiator of the Longevity Day and Month campaign.',
+          descriptions: {
+            [Locale.SV]: 'Chief Science Officer, Vetek (Seniority) Association, Israel. Forskarkolleg vid Bar Ilan University. Ordförande, International Longevity Alliance (ILA). Författare till "A History of Life-extensionism in the Twentieth Century" och över 70 artiklar. Initiativtagare till kampanjen Longevity Day and Month.',
+            [Locale.DE]: 'Chief Science Officer, Vetek (Seniority) Association, Israel. Fellow an der Bar Ilan University. Vorsitzender, International Longevity Alliance (ILA). Autor von "A History of Life-extensionism in the Twentieth Century" und über 70 Veröffentlichungen. Initiator der Kampagne Longevity Day and Month.',
+            [Locale.FR]: 'Directeur scientifique, Vetek (Seniority) Association, Israël. Fellow à l\'Université Bar Ilan. Président, International Longevity Alliance (ILA). Auteur de "A History of Life-extensionism in the Twentieth Century" et de plus de 70 articles. Initiateur de la campagne Longevity Day and Month.',
+            [Locale.ES]: 'Director Científico, Vetek (Seniority) Association, Israel. Investigador asociado en la Universidad Bar Ilan. Presidente, International Longevity Alliance (ILA). Autor de "A History of Life-extensionism in the Twentieth Century" y más de 70 artículos. Iniciador de la campaña Longevity Day and Month.',
+            [Locale.IT]: 'Chief Science Officer, Vetek (Seniority) Association, Israele. Fellow all\'Università Bar Ilan. Presidente, International Longevity Alliance (ILA). Autore di "A History of Life-extensionism in the Twentieth Century" e oltre 70 articoli. Iniziatore della campagna Longevity Day and Month.',
+            [Locale.NL]: 'Chief Science Officer, Vetek (Seniority) Association, Israël. Fellow aan de Bar Ilan University. Voorzitter, International Longevity Alliance (ILA). Auteur van "A History of Life-extensionism in the Twentieth Century" en meer dan 70 artikelen. Initiatiefnemer van de Longevity Day and Month-campagne.',
+            [Locale.CS]: 'Vědecký ředitel, Vetek (Seniority) Association, Izrael. Vědecký pracovník na Bar Ilan University. Předseda, International Longevity Alliance (ILA). Autor knihy "A History of Life-extensionism in the Twentieth Century" a více než 70 odborných článků. Iniciátor kampaně Longevity Day and Month.',
+          },
+          location: '',
+          image: '/iliastambler.jpeg',
+          socialLinks: { linkedin: 'https://www.linkedin.com/in/ilia-stambler-5099977/' },
+        },
+        {
+          name: 'Andrew Steele',
+          description:
+            'Longevity scientist, Director of The Longevity Initiative, author of Ageless.',
+          descriptions: {
+            [Locale.SV]:
+              'Longevitetsforskare, verksam vid The Longevity Initiative, författare till Ageless.',
+            [Locale.DE]:
+              'Langlebigkeitswissenschaftler, Director of The Longevity Initiative, Autor von Ageless.',
+            [Locale.FR]:
+              'Scientifique en longévité, directeur de The Longevity Initiative, auteur d\'Ageless.',
+            [Locale.ES]:
+              'Científico de la longevidad, director de The Longevity Initiative, autor de Ageless.',
+            [Locale.IT]:
+              'Scienziato della longevità, direttore di The Longevity Initiative, autore di Ageless.',
+            [Locale.NL]:
+              'Longevity-wetenschapper, directeur van The Longevity Initiative, auteur van Ageless.',
+            [Locale.CS]:
+              'Vědec v oblasti dlouhověkosti, ředitel iniciativy The Longevity Initiative, autor knihy Ageless.',
+          },
+          location: '',
+          image: '/andrew-steele.png',
+          socialLinks: { linkedin: 'https://www.linkedin.com/in/statto/' },
+        },
+        {
+          name: 'Israel Pichardo-Casas, PhD',
+          description:
+            'Geroscientist and healthspan entrepreneur; CEO of Nentropy (nutraceuticals, biomarkers). PhD in Biomedical Sciences (UNAM, Mexico); postdoc with David Sinclair at Harvard (therapeutic peptides). Founder of PeptideFold. Former CSO and science advisor to Legacy Lyfe Labs, Life Biosciences, Cenegenics, Proteobiotech (Mexico). Co-organizing the 2026 Longevity Summit in Mexico City.',
+          descriptions: {
+            [Locale.SV]:
+              'Gerovetenskapsman och entreprenör inom hälsospan; VD för Nentropy (nutraceuticals, biomarker). PhD i biomedicin (UNAM, Mexiko), postdoktor hos David Sinclair vid Harvard (terapeutiska peptider). Grundare av PeptideFold. Tidigare CSO och vetenskaplig rådgivare till Legacy Lyfe Labs, Life Biosciences, Cenegenics, Proteobiotech (Mexiko). Medorganiserar Longevity Summit 2026 i Mexico City.',
+            [Locale.DE]:
+              'Gerowissenschaftler und Unternehmer für Gesundheitsspanne; CEO von Nentropy (Nutraceuticals, Biomarker). Promotion Biomedizin (UNAM, Mexiko), Postdoc bei David Sinclair in Harvard (therapeutische Peptide). Gründer von PeptideFold. Ehem. CSO und Berater für Legacy Lyfe Labs, Life Biosciences, Cenegenics, Proteobiotech (Mexiko). Co-Organisator des Longevity Summit 2026 in Mexico City.',
+            [Locale.FR]:
+              'Géroscientifique et entrepreneur « healthspan » ; PDG de Nentropy (nutraceutiques, biomarqueurs). Doctorat biomédical (UNAM, Mexique), postdoc avec David Sinclair à Harvard (peptides thérapeutiques). Fondateur de PeptideFold. Ex-CSO et conseiller scientifique auprès de Legacy Lyfe Labs, Life Biosciences, Cenegenics, Proteobiotech (Mexique). Co-organise le Longevity Summit 2026 à Mexico.',
+            [Locale.ES]:
+              'Gerocientífico y emprendedor en vida saludable; CEO de Nentropy (nutracéuticos, biomarcadores). Doctor UNAM (México), posdoctorado con David Sinclair en Harvard (péptidos terapéuticos). Fundador de PeptideFold. Ex-CSO y asesor en Legacy Lyfe Labs, Life Biosciences, Cenegenics, Proteobiotech (México). Coorganiza el Longevity Summit 2026 en Ciudad de México.',
+            [Locale.IT]:
+              'Geroscientista e imprenditore sulla healthspan; CEO di Nentropy (nutraceutici, biomarcatori). PhD UNAM (Messico), postdoc con David Sinclair a Harvard (peptidi terapeutici). Fondatore di PeptideFold. Ex-CSO e consulente per Legacy Lyfe Labs, Life Biosciences, Cenegenics, Proteobiotech (Messico). Co-organizza il Longevity Summit 2026 a Città del Messico.',
+            [Locale.NL]:
+              'Gerowetenschapper en ondernemer rond gezonde levensduur; CEO van Nentropy (nutraceuticals, biomarkers). PhD biomedicina (UNAM, Mexico), postdoc bij David Sinclair op Harvard (therapeutische peptiden). Oprichter van PeptideFold. Ex-CSO en adviseur bij Legacy Lyfe Labs, Life Biosciences, Cenegenics, Proteobiotech (Mexico). Co-organiseert Longevity Summit 2026 in Mexico City.',
+            [Locale.CS]:
+              'Gerovědec a podnikatel se zaměřením na zdravé stáří; CEO Nentropy (nutraceutika, biomarkery). PhD biomedicína (UNAM, Mexiko), postdoktorát u Davida Sinclaira na Harvardu (terapeutické peptidy). Zakladatel PeptideFold. Dříve CSO a vědecký poradce u Legacy Lyfe Labs, Life Biosciences, Cenegenics, Proteobiotech (Mexiko). Spoluorganizuje Longevity Summit 2026 v Ciudad de México.',
+          },
+          location: '',
+          image: '/israel-pichardo-casas.png',
+          socialLinks: { linkedin: 'https://www.linkedin.com/in/israelpichardocasas/' },
+        },
       ],
     },
     {
       city: 'Stockholm',
       members: [
-        {
-          name: 'Linus Petersson',
-          description: 'Co-founder of Swedish Longevity Cluster and author of \'Läkemedel mot Åldrande\' (Drugs Against Aging). 20+ years in the longevity space. Consultant within pharmaceutical and longevity industry. Keynote speaker on aging and longevity.',
-          descriptions: {
-            [Locale.SV]: 'Medgrundare av Swedish Longevity Cluster och författare till \'Läkemedel mot Åldrande\'. 20+ år inom longevityområdet. Konsult inom läkemedels- och longevityindustrin. Föreläsare om åldrande och longevity.',
-            [Locale.DE]: 'Mitgründer des Swedish Longevity Cluster und Autor von \'Läkemedel mot Åldrande\' (Medikamente gegen das Altern). 20+ Jahre im Bereich Longevity. Berater in der Pharma- und Longevity-Industrie. Keynote-Speaker über Altern und Longevity.',
-            [Locale.FR]: 'Cofondateur du Swedish Longevity Cluster et auteur de \'Läkemedel mot Åldrande\' (Médicaments contre le vieillissement). Plus de 20 ans dans le domaine de la longévité. Consultant dans l\'industrie pharmaceutique et de la longévité. Conférencier principal sur le vieillissement et la longévité.',
-            [Locale.ES]: 'Cofundador del Swedish Longevity Cluster y autor de \'Läkemedel mot Åldrande\' (Medicamentos contra el envejecimiento). Más de 20 años en el espacio de la longevidad. Consultor en la industria farmacéutica y de longevidad. Conferencista principal sobre envejecimiento y longevidad.',
-            [Locale.IT]: 'Cofondatore dello Swedish Longevity Cluster e autore di \'Läkemedel mot Åldrande\' (Farmaci contro l\'invecchiamento). Oltre 20 anni nel settore della longevità. Consulente nell\'industria farmaceutica e della longevità. Relatore principale su invecchiamento e longevità.',
-            [Locale.NL]: 'Medeoprichter van de Swedish Longevity Cluster en auteur van \'Läkemedel mot Åldrande\' (Medicijnen tegen veroudering). 20+ jaar in de longevity-sector. Consultant in de farmaceutische en longevity-industrie. Keynote-spreker over veroudering en longevity.',
-            [Locale.CS]: 'Spoluzakladatel Swedish Longevity Cluster a autor knihy \'Läkemedel mot Åldrande\' (Léky proti stárnutí). Více než 20 let v oblasti dlouhověkosti. Konzultant ve farmaceutickém průmyslu a průmyslu dlouhověkosti. Hlavní řečník o stárnutí a dlouhověkosti.',
-          },
-          location: 'Stockholm, Sweden',
-          image: '/linus-peteresson.png',
-          socialLinks: {
-            linkedin: 'https://www.linkedin.com/in/linuspetersson/',
-            x: 'https://x.com/LinusPeters',
-            website: 'http://www.linuspetersson.se/',
-            telegram: 'https://t.me/lpetersson_longevity',
-          },
-        },
-        {
-          name: 'Andrei Panferov',
-          description: 'Responsible for design and coordination. Serial tech entrepreneur with focus on AI, BioTech, and Web3. 17 yrs in entrepreneurship, 7 yrs in tech. Co-founder Talent River, Dowell.',
-          descriptions: {
-            [Locale.SV]: 'Ansvarig för design och koordination. Seriell teknikentreprenör med fokus på AI, BioTech och Web3. 17 år i företagande, 7 år inom tech. Medgrundare av Talent River, Dowell.',
-            [Locale.DE]: 'Verantwortlich für Design und Koordination. Serieller Technologieunternehmer mit Fokus auf KI, BioTech und Web3. 17 Jahre im Unternehmertum, 7 Jahre in der Technik. Mitgründer von Talent River, Dowell.',
-            [Locale.FR]: 'Responsable du design et de la coordination. Entrepreneur technologique en série axé sur l\'IA, la BioTech et le Web3. 17 ans dans l\'entrepreneuriat, 7 ans dans la tech. Cofondateur de Talent River, Dowell.',
-            [Locale.ES]: 'Responsable de diseño y coordinación. Emprendedor tecnológico en serie con enfoque en IA, BioTech y Web3. 17 años en emprendimiento, 7 años en tecnología. Cofundador de Talent River, Dowell.',
-            [Locale.IT]: 'Responsabile di design e coordinamento. Imprenditore tecnologico seriale con focus su IA, BioTech e Web3. 17 anni nell\'imprenditoria, 7 anni in tecnologia. Cofondatore di Talent River, Dowell.',
-            [Locale.NL]: 'Verantwoordelijk voor ontwerp en coördinatie. Serieel tech-ondernemer met focus op AI, BioTech en Web3. 17 jaar in ondernemerschap, 7 jaar in tech. Medeoprichter van Talent River, Dowell.',
-            [Locale.CS]: 'Odpovědný za design a koordinaci. Sériový technologický podnikatel se zaměřením na AI, BioTech a Web3. 17 let v podnikání, 7 let v technologiích. Spoluzakladatel Talent River, Dowell.',
-          },
-          location: 'Stockholm, Sweden',
-          image: '/andrei-panferov.jpg',
-          socialLinks: {
-            linkedin: 'https://www.linkedin.com/in/andreypnfrv/',
-            x: 'https://x.com/andreypnfrv',
-            telegram: 'https://t.me/andreypnfrv',
-          },
-        },
         {
           name: 'Peter Ottsjö',
           description: 'Media lead. Scientific journalist and science communicator specializing in longevity research. CEO of LEVITY Media Group and co-host of the LEVITY Podcast.',
@@ -455,6 +549,29 @@ export const TEAM_DATA: TeamData = {
           image: '/georgij-boljuba.jpg',
           socialLinks: {},
         },
+        {
+          name: 'Petr Šrámek',
+          description:
+            'Czech entrepreneur, Managing Partner at VC LongevityTech.fund; CEO HealthyLongevity.clinic; Whytics Lead Scientist.',
+          descriptions: {
+            [Locale.SV]:
+              'Tjeckisk entreprenör, Managing Partner på VC LongevityTech.fund; VD för HealthyLongevity.clinic; Whytics Lead Scientist.',
+            [Locale.DE]:
+              'Tschechischer Unternehmer, Managing Partner bei VC LongevityTech.fund; CEO von HealthyLongevity.clinic; Whytics Lead Scientist.',
+            [Locale.FR]:
+              'Entrepreneur tchèque, associé directeur chez VC LongevityTech.fund ; PDG de HealthyLongevity.clinic ; scientifique principal chez Whytics.',
+            [Locale.ES]:
+              'Emprendedor checo, socio director en VC LongevityTech.fund; CEO de HealthyLongevity.clinic; Whytics Lead Scientist.',
+            [Locale.IT]:
+              'Imprenditore ceco, Managing Partner di VC LongevityTech.fund; CEO di HealthyLongevity.clinic; Whytics Lead Scientist.',
+            [Locale.NL]:
+              'Tsjechische ondernemer, Managing Partner bij VC LongevityTech.fund; CEO van HealthyLongevity.clinic; Whytics Lead Scientist.',
+            [Locale.CS]:
+              'Český podnikatel, řídící partner ve VC LongevityTech.fund; CEO HealthyLongevity.clinic; vedoucí vědec ve Whytics.',
+          },
+          location: 'Prague, Czech Republic',
+          socialLinks: { linkedin: 'https://www.linkedin.com/in/petrsramek/' },
+        },
       ],
     },
     {
@@ -520,6 +637,35 @@ export const TEAM_DATA: TeamData = {
       city: 'San Francisco',
       members: [
         { name: 'Melissa King', description: 'Co-Founder and COO, Healthspan Action Coalition. Founding senior staff member, California Institute for Regenerative Medicine. Policy wonk, patient advocate and science communicator.', descriptions: { [Locale.SV]: 'Medgrundare och COO, Healthspan Action Coalition. Grundande seniorpersonal, California Institute for Regenerative Medicine. Policyexpert, patientförespråkare och vetenskapskommunikatör.', [Locale.DE]: 'Mitgründerin und COO, Healthspan Action Coalition. Gründendes leitendes Mitglied, California Institute for Regenerative Medicine. Politikexpertin, Patientenanwältin und Wissenschaftskommunikatorin.', [Locale.FR]: 'Cofondatrice et COO, Healthspan Action Coalition. Membre fondateur du personnel supérieur, California Institute for Regenerative Medicine. Experte en politiques, défenseure des patients et communicante scientifique.', [Locale.ES]: 'Cofundadora y COO, Healthspan Action Coalition. Miembro fundador del personal superior, California Institute for Regenerative Medicine. Experta en políticas, defensora de pacientes y comunicadora científica.', [Locale.IT]: 'Cofondatrice e COO, Healthspan Action Coalition. Membro fondatore dello staff senior, California Institute for Regenerative Medicine. Esperta di politiche, difensore dei pazienti e comunicatrice scientifica.', [Locale.NL]: 'Medeoprichter en COO, Healthspan Action Coalition. Oprichtend senior personeelslid, California Institute for Regenerative Medicine. Beleidsexpert, patiëntenadvocaat en wetenschapscommunicator.', [Locale.CS]: 'Spoluzakladatelka a COO, Healthspan Action Coalition. Zakládající člen vyššího personálu, California Institute for Regenerative Medicine. Odbornice na politiku, zastánkyně pacientů a popularizátorka vědy.' }, location: 'San Francisco, USA', image: '/melissa-king.jpg', socialLinks: {} },
+      ],
+    },
+    {
+      city: 'Austin',
+      members: [
+        {
+          name: 'Aufstin Filiko',
+          description:
+            'Full Stack AI Engineer | LLM Agent Systems · Computer Vision · RAG Pipelines.',
+          descriptions: {
+            [Locale.SV]:
+              'Full Stack AI-ingenjör | LLM-agentssystem · datorseende · RAG-pipelines.',
+            [Locale.DE]:
+              'Full-Stack-KI-Ingenieur | LLM-Agentensysteme · Computer Vision · RAG-Pipelines.',
+            [Locale.FR]:
+              'Ingénieur IA full stack | systèmes d\'agents LLM · vision par ordinateur · pipelines RAG.',
+            [Locale.ES]:
+              'Ingeniero de IA Full Stack | sistemas de agentes LLM · visión por computador · pipelines RAG.',
+            [Locale.IT]:
+              'Full Stack AI Engineer | sistemi di agenti LLM · computer vision · pipeline RAG.',
+            [Locale.NL]:
+              'Full Stack AI-engineer | LLM-agentsystemen · computervisie · RAG-pipelines.',
+            [Locale.CS]:
+              'Full Stack AI inženýr | LLM agentní systémy · počítačové vidění · RAG pipeline.',
+          },
+          location: 'Austin, Texas, USA',
+          image: '/aufstin-filiko.png',
+          socialLinks: { linkedin: 'https://www.linkedin.com/in/filiko/' },
+        },
       ],
     },
     {

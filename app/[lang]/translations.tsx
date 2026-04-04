@@ -409,6 +409,16 @@ export const homeTranslations = {
       [Locale.NL]: 'woensdag 8 april, 17:00-18:00 PDT',
       [Locale.CS]: 'středa 8. dubna, 17:00-18:00 PDT',
     },
+    austin: {
+      [Locale.EN]: 'Wednesday 8 April, 10:00-11:00 CDT',
+      [Locale.SV]: 'onsdag 8 april, 10:00-11:00 CDT',
+      [Locale.DE]: 'Mittwoch, 8. April, 10:00-11:00 CDT',
+      [Locale.FR]: 'mercredi 8 avril, 10:00-11:00 CDT',
+      [Locale.ES]: 'miércoles 8 de abril, 10:00-11:00 CDT',
+      [Locale.IT]: 'mercoledì 8 aprile, 10:00-11:00 CDT',
+      [Locale.NL]: 'woensdag 8 april, 10:00-11:00 CDT',
+      [Locale.CS]: 'středa 8. dubna, 10:00-11:00 CDT',
+    },
     scottsdale: {
       [Locale.EN]: 'Wednesday 8 April, 17:00-18:00 MST',
       [Locale.SV]: 'onsdag 8 april, 17:00-18:00 MST',

@@ -14,14 +14,22 @@ export const aboutTranslations = {
       [Locale.CS]: 'O nás',
     },
     subtitle: {
-      [Locale.EN]: 'Fund Longevity is a global rally for life extension. It is not a formal organization, but a non-profit initiative founded by Linus Petersson and Andrei Panferov. The goal is to make fighting aging main-stream.',
-      [Locale.SV]: 'Fund Longevity är ett multinationellt rally för livsförlängning. Det är inte en formell organisation, utan ett ideellt initiativ grundat av Linus Petersson och Andrei Panferov. Målet är att göra kampen mot åldrande mainstream.',
-      [Locale.DE]: 'Fund Longevity is a global rally for life extension. It is not a formal organization, but a non-profit initiative founded by Linus Petersson and Andrei Panferov. The goal is to make fighting aging main-stream.',
-      [Locale.FR]: 'Fund Longevity est un mouvement mondial en faveur de l\'allongement de la durée de vie. Il ne s\'agit pas d\'une organisation officielle, mais d\'une initiative à but non lucratif fondée par Linus Petersson et Andrei Panferov. L\'objectif est de faire de la lutte contre le vieillissement une cause largement acceptée.',
-      [Locale.ES]: 'Fund Longevity is a global rally for life extension. It is not a formal organization, but a non-profit initiative founded by Linus Petersson and Andrei Panferov. The goal is to make fighting aging main-stream.',
-      [Locale.IT]: 'Fund Longevity is a global rally for life extension. It is not a formal organization, but a non-profit initiative founded by Linus Petersson and Andrei Panferov. The goal is to make fighting aging main-stream.',
-      [Locale.NL]: 'Fund Longevity is a global rally for life extension. It is not a formal organization, but a non-profit initiative founded by Linus Petersson and Andrei Panferov. The goal is to make fighting aging main-stream.',
-      [Locale.CS]: 'Fund Longevity je globální rally za prodlužování života. Není to formální organizace, ale nezisková iniciativa, kterou založili Linus Petersson a Andrei Panferov. Cílem je učinit boj proti stárnutí mainstreamovým.',
+      [Locale.EN]:
+        'Fund Longevity is a non-profit initiative founded by Linus Petersson and Andrei Panferov. Our mission is to make the fight against aging a mainstream cause — culturally, politically, and scientifically. We organize global coordinated action to accelerate the public urgency that life extension research deserves.',
+      [Locale.SV]:
+        'Fund Longevity är ett ideellt initiativ grundat av Linus Petersson och Andrei Panferov. Vår mission är att göra kampen mot åldrande till en mainstreamfråga — kulturellt, politiskt och vetenskapligt. Vi organiserar globalt samordnade aktioner för att öka den offentliga brådska som forskning om livsförlängning förtjänar.',
+      [Locale.DE]:
+        'Fund Longevity ist eine gemeinnützige Initiative von Linus Petersson und Andrei Panferov. Unsere Mission ist es, den Kampf gegen das Altern zu einer Mainstream-Sache zu machen — kulturell, politisch und wissenschaftlich. Wir organisieren global koordinierte Aktionen, um die öffentliche Dringlichkeit zu fördern, die die Lebensverlängerungsforschung verdient.',
+      [Locale.FR]:
+        'Fund Longevity est une initiative à but non lucratif fondée par Linus Petersson et Andrei Panferov. Notre mission est de faire de la lutte contre le vieillissement une cause grand public — culturellement, politiquement et scientifiquement. Nous organisons une action coordonnée mondiale pour accélérer l\'urgence publique que mérite la recherche sur l\'allongement de la vie.',
+      [Locale.ES]:
+        'Fund Longevity es una iniciativa sin ánimo de lucro fundada por Linus Petersson y Andrei Panferov. Nuestra misión es convertir la lucha contra el envejecimiento en una causa general — cultural, política y científicamente. Organizamos acción coordinada global para acelerar la urgencia pública que merece la investigación en extensión de la vida.',
+      [Locale.IT]:
+        'Fund Longevity è un\'iniziativa senza scopo di lucro fondata da Linus Petersson e Andrei Panferov. La nostra missione è rendere la lotta all\'invecchiamento una causa mainstream — culturalmente, politicamente e scientificamente. Organizziamo azioni coordinate globali per accelerare l\'urgenza pubblica che merita la ricerca sulla durata della vita.',
+      [Locale.NL]:
+        'Fund Longevity is een non-profitinitiatief van Linus Petersson en Andrei Panferov. Onze missie is om de strijd tegen veroudering mainstream te maken — cultureel, politiek en wetenschappelijk. We organiseren wereldwijd gecoördineerde actie om de publieke urgentie te versnellen die onderzoek naar levensverlenging verdient.',
+      [Locale.CS]:
+        'Fund Longevity je nezisková iniciativa založená Linusem Peterssonem a Andrejem Panferovem. Naším posláním je učinit boj proti stárnutí mainstreamovou záležitostí — kulturně, politicky a vědecky. Organizujeme globálně koordinované akce, abychom urychlili veřejnou naléhavost, kterou si výzkum prodlužování života zaslouží.',
     },
     pressReleaseCta: {
       [Locale.EN]: 'Press release (Google Doc)',
@@ -104,6 +112,16 @@ export const aboutTranslations = {
       [Locale.IT]: 'Roma',
       [Locale.NL]: 'Rome',
       [Locale.CS]: 'Řím',
+    },
+    core: {
+      [Locale.EN]: 'Core',
+      [Locale.SV]: 'Kärnteam',
+      [Locale.DE]: 'Kernteam',
+      [Locale.FR]: 'Noyau',
+      [Locale.ES]: 'Núcleo',
+      [Locale.IT]: 'Nucleo',
+      [Locale.NL]: 'Kern',
+      [Locale.CS]: 'Jádro',
     },
     experts: {
       [Locale.EN]: 'Experts',
@@ -224,6 +242,16 @@ export const aboutTranslations = {
       [Locale.IT]: 'San Francisco',
       [Locale.NL]: 'San Francisco',
       [Locale.CS]: 'San Francisco',
+    },
+    Austin: {
+      [Locale.EN]: 'Austin',
+      [Locale.SV]: 'Austin',
+      [Locale.DE]: 'Austin',
+      [Locale.FR]: 'Austin',
+      [Locale.ES]: 'Austin',
+      [Locale.IT]: 'Austin',
+      [Locale.NL]: 'Austin',
+      [Locale.CS]: 'Austin',
     },
   },
   localLeads: {
