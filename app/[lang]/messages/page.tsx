@@ -5,6 +5,7 @@ import { Wrapper } from '@/components/Wrapper';
 import { CopyLinkButton } from '@/components/CopyLinkButton';
 import { buildLocalizedPageMetadata, defaultOgImage } from '@/lib/config';
 import { getLocaleFromLang, LOCALES, Locale } from '@/lib/types';
+import { cn } from '@/lib/utils';
 import { globalTranslations } from '@/lib/translations';
 import messagesData from '@/lib/messages.json';
 import { MEME_SIGN_LINES_BY_LOCALE, messagesTranslations } from './translations';
@@ -24,15 +25,33 @@ const data = messagesData as {
   importantSigns: ImportantSign[];
 };
 
-function SignBlock({ sign, downloadLabel }: { sign: ImportantSign; downloadLabel: string }) {
+const BANNER_SIGN: ImportantSign = {
+  image: '/FundLongevityBanner.jpg',
+  alt: '',
+  downloadFile: '/FundLongevityBanner.pdf',
+  layout: 'default',
+};
+
+function SignBlock({
+  sign,
+  downloadLabel,
+  caption,
+  className,
+}: {
+  sign: ImportantSign;
+  downloadLabel: string;
+  caption?: string;
+  className?: string;
+}) {
+  const label = caption ?? sign.alt;
   return (
-    <div className="flex flex-col gap-4 h-full rounded border border-gray-200 p-6 md:p-8">
+    <div className={cn('flex flex-col gap-4 h-full rounded border border-gray-200 p-6 md:p-8', className)}>
       <img
         src={sign.image}
         alt=""
         className="w-full h-auto rounded border border-gray-100 bg-white"
       />
-      <p className="text-base font-medium text-gray-900">{sign.alt}</p>
+      <p className="text-base font-medium text-gray-900">{label}</p>
       <a
         href={sign.downloadFile}
         download
@@ -98,8 +117,15 @@ export default async function MessagesPage({ params }: MessagesPageProps): Promi
         <Wrapper>
           <div className="pb-16 md:pb-16">
             <section id="important-signs" className="mb-20 md:mb-28">
-              <div className="flex flex-col gap-6 md:gap-8">                
+              <div className="flex flex-col gap-6 md:gap-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                  <div className="md:col-span-2">
+                    <SignBlock
+                      sign={BANNER_SIGN}
+                      downloadLabel={L('download')}
+                      caption={L('fundLongevityBannerTitle')}
+                    />
+                  </div>
                   {defaultSigns.map((sign, i) => (
                     <SignBlock key={`${sign.image}-d-${i}`} sign={sign} downloadLabel={L('download')} />
                   ))}

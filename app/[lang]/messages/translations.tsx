@@ -89,6 +89,16 @@ export const messagesTranslations = {
     [Locale.NL]: 'Binnenkort komen hier meer foto’s.',
     [Locale.CS]: 'More photos will be added here soon.',
   },
+  fundLongevityBannerTitle: {
+    [Locale.EN]: 'Fund Longevity banner (PDF)',
+    [Locale.SV]: 'Fund Longevity-banderoll (PDF)',
+    [Locale.DE]: 'Fund Longevity-Banner (PDF)',
+    [Locale.FR]: 'Bannière Fund Longevity (PDF)',
+    [Locale.ES]: 'Pancarta Fund Longevity (PDF)',
+    [Locale.IT]: 'Banner Fund Longevity (PDF)',
+    [Locale.NL]: 'Fund Longevity-spandoek (PDF)',
+    [Locale.CS]: 'Banner Fund Longevity (PDF)',
+  },
   download: {
     [Locale.EN]: 'Download',
     [Locale.SV]: 'Ladda ner',
