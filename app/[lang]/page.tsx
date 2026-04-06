@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { Hero } from '@/components/Hero';
 import { H4 } from '@/components/Typography';
+import { Link } from '@/components/Link';
 import { Section } from '@/components/Section';
 import { Partners } from '@/components/Partners';
 import { HowCanYouHelp } from '@/components/HowCanYouHelp';
@@ -33,8 +34,8 @@ const EVENTS_DATA: EventData[] = [
     type: 'online',
     name: 'LIVE STREAM',
     flag: '📱',
-    image: '/youtube.svg',
-    imageAlt: 'YouTube',
+    image: '/live-stream.jpeg',
+    imageAlt: 'Live stream',
     dateTime: 'Wednesday 8 April, 17:00-18:00 CEST',
     location: 'Youtube',
     link: 'https://luma.com/b7b2d2n2',
@@ -331,6 +332,7 @@ export default async function HomePage({ params }: HomePageProps): Promise<JSX.E
 
   const partnersTranslate = getTranslation(homeTranslations.partners, locale);
   const heroTranslate = getTranslation(homeTranslations.hero, locale);
+  const agingProblemTranslate = getTranslation(homeTranslations.agingProblem, locale);
   const citiesTranslate = getTranslation(homeTranslations.cities, locale);
   const eventDateTimeTranslate = getTranslation(homeTranslations.eventDateTimes, locale);
 
@@ -343,6 +345,18 @@ export default async function HomePage({ params }: HomePageProps): Promise<JSX.E
         titleLine2={heroTranslate('titleLine2')}
         subtitle={heroTranslate('subtitle')}
       />
+      <Section>
+        <Wrapper>
+          <div className="mx-auto max-w-5xl py-8 md:py-12">
+            <p className="text-2xl leading-snug text-gray-900 md:text-3xl lg:text-4xl md:leading-tight [&_a]:inline">
+              {agingProblemTranslate('body')}{' '}
+              <Link href="/why" locale={locale} className="font-semibold text-[#0900FF] hover:underline">
+                {agingProblemTranslate('readMore')}
+              </Link>
+            </p>
+          </div>
+        </Wrapper>
+      </Section>
       <Section id="cities">
         <Wrapper>
           <div className="text-center py-8 md:py-12">
@@ -390,27 +404,14 @@ export default async function HomePage({ params }: HomePageProps): Promise<JSX.E
                 className="text-start flex flex-col justify-between gap-md p-6 rounded-lg hover:bg-gray-100 transition-all duration-200 ease-in-out cursor-pointer"
               >
                 <div className="flex flex-col flex-1 min-h-0 gap-5">
-                  <div className={`relative aspect-square ${event.type === 'online' ? 'bg-black' : 'bg-gray-200'} rounded-lg overflow-hidden`}>
+                  <div className="relative aspect-square bg-gray-200 rounded-lg overflow-hidden">
                     {event.image ? (
-                      event.type === 'online' ? (
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <Image
-                            src={event.image}
-                            alt={event.imageAlt || event.name}
-                            width={200}
-                            height={200}
-                            className="object-contain"
-                            unoptimized
-                          />
-                        </div>
-                      ) : (
-                        <Image
-                          src={event.image}
-                          alt={event.imageAlt || event.name}
-                          fill
-                          className="object-cover"
-                        />
-                      )
+                      <Image
+                        src={event.image}
+                        alt={event.imageAlt || event.name}
+                        fill
+                        className="object-cover"
+                      />
                     ) : (
                       <div className="absolute inset-0 flex items-center justify-center bg-gray-300">
                         <span className="text-gray-500 text-4xl">{event.flag}</span>

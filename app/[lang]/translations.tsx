@@ -118,6 +118,36 @@ export const homeTranslations = {
       [Locale.CS]: 'Registrovat',
     },
   },
+  agingProblem: {
+    body: {
+      [Locale.EN]:
+        'Aging kills around 110,000 people every day. It is the primary risk factor behind nearly all major non-infectious diseases, including cancer, heart disease, and dementia. Beyond statistics, aging causes decades of frailty, pain, and loss of independence. It is the greatest source of human suffering that is being accepted as “normal”. Science is ready to fight, and so must political will be.',
+      [Locale.SV]:
+        'Åldrande dödar cirka 110 000 människor varje dag. Det är den primära riskfaktorn bakom nästan alla stora icke-smittsamma sjukdomar, inklusive cancer, hjärtsjukdom och demens. Bortom statistik orsakar åldrande decennier av skörhet, smärta och förlust av självständighet. Det är den största källan till mänskligt lidande som vi accepterar som “normalt”. Vetenskapen är redo att slåss, och det måste den politiska viljan också vara.',
+      [Locale.DE]:
+        'Das Altern tötet täglich etwa 110.000 Menschen. Es ist der Hauptrisikofaktor für fast alle großen nicht übertragbaren Krankheiten, darunter Krebs, Herzkrankheiten und Demenz. Jenseits der Statistik verursacht das Altern Jahrzehnte der Gebrechlichkeit, Schmerzen und des Verlusts der Unabhängigkeit. Es ist die größte Quelle menschlichen Leidens, die als „normal” akzeptiert wird. Die Wissenschaft ist bereit zu kämpfen — und der politische Wille muss es auch sein.',
+      [Locale.FR]:
+        'Le vieillissement tue environ 110 000 personnes chaque jour. C\'est le principal facteur de risque derrière presque toutes les grandes maladies non infectieuses, dont le cancer, les maladies cardiaques et la démence. Au-delà des statistiques, le vieillissement cause des décennies de fragilité, de douleur et de perte d\'autonomie. C\'est la plus grande source de souffrance humaine acceptée comme « normale ». La science est prête à se battre, et la volonté politique doit l\'être aussi.',
+      [Locale.ES]:
+        'El envejecimiento mata a unas 110.000 personas cada día. Es el principal factor de riesgo detrás de casi todas las enfermedades no infecciosas importantes, como el cáncer, las cardiopatías y la demencia. Más allá de las estadísticas, el envejecimiento causa décadas de fragilidad, dolor y pérdida de independencia. Es la mayor fuente de sufrimiento humano que se acepta como “normal”. La ciencia está lista para luchar, y la voluntad política también debe estarlo.',
+      [Locale.IT]:
+        'L\'invecchiamento uccide circa 110.000 persone ogni giorno. È il principale fattore di rischio alla base di quasi tutte le principali malattie non infettive, tra cui cancro, malattie cardiache e demenza. Oltre le statistiche, l\'invecchiamento causa decenni di fragilità, dolore e perdita di indipendenza. È la più grande fonte di sofferenza umana che viene accettata come “normale”. La scienza è pronta a combattere, e deve esserlo anche la volontà politica.',
+      [Locale.NL]:
+        'Veroudering doodt ongeveer 110.000 mensen per dag. Het is de belangrijkste risicofactor achter bijna alle grote niet-overdraagbare ziekten, waaronder kanker, hartziekten en dementie. Voorbij de statistieken veroorzaakt veroudering decennia van broosheid, pijn en verlies van onafhankelijkheid. Het is de grootste bron van menselijk lijden die als “normaal” wordt geaccepteerd. De wetenschap is klaar om te vechten, en dat moet de politieke wil ook zijn.',
+      [Locale.CS]:
+        'Stárnutí každý den zabíjí přibližně 110 000 lidí. Je to primární rizikový faktor za téměř všemi hlavními neinfekčními nemocemi, včetně rakoviny, srdečních chorob a demence. Za statistikami stárnutí způsobuje desetiletí křehkosti, bolesti a ztráty samostatnosti. Je to největší zdroj lidského utrpení, který je přijímán jako „normální”. Věda je připravena bojovat; musí také politická vůle.',
+    },
+    readMore: {
+      [Locale.EN]: 'Read more',
+      [Locale.SV]: 'Läs mer',
+      [Locale.DE]: 'Weiterlesen',
+      [Locale.FR]: 'Lire la suite',
+      [Locale.ES]: 'Leer más',
+      [Locale.IT]: 'Leggi di più',
+      [Locale.NL]: 'Lees meer',
+      [Locale.CS]: 'Číst dál',
+    },
+  },
   whyAging: {
     title: {
       [Locale.EN]: 'Why Aging',
