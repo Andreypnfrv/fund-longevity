@@ -74,6 +74,50 @@ export const TEAM_DATA: TeamData = {
             telegram: 'https://t.me/andreypnfrv',
           },
         },
+        {
+          name: 'Vladimir Leshko',
+          description: 'Biomedical engineer working toward extending human lifespan through public engagement, thoughtful self-experimentation, and operational leadership as COO at Unlimited Bio, a gene therapy startup.',
+          descriptions: {
+            [Locale.SV]: 'Biomedicinsk ingenjör som arbetar för att förlänga människans livslängd genom samhällsengagemang, genomtänkt självexperimentering och operativt ledarskap som COO på Unlimited Bio, en generapistart-up.',
+            [Locale.DE]: 'Biomedizinischer Ingenieur, der durch öffentliches Engagement, durchdachte Selbstexperimentierung und operative Führung als COO bei Unlimited Bio, einem Gentherapie-Startup, zur Verlängerung der menschlichen Lebensspanne beiträgt.',
+            [Locale.FR]: 'Ingénieur biomédical travaillant à l\'extension de la durée de vie humaine par l\'engagement public, l\'auto-expérimentation réfléchie et le leadership opérationnel en tant que COO chez Unlimited Bio, une startup de thérapie génique.',
+            [Locale.ES]: 'Ingeniero biomédico que trabaja para extender la vida humana mediante la participación pública, la autoexperimentación reflexiva y el liderazgo operativo como COO en Unlimited Bio, una startup de terapia génica.',
+            [Locale.IT]: 'Ingegnere biomedico che lavora per estendere la durata della vita umana attraverso il coinvolgimento pubblico, l\'auto-sperimentazione ponderata e la leadership operativa come COO di Unlimited Bio, una startup di terapia genica.',
+            [Locale.NL]: 'Biomedisch ingenieur die werkt aan het verlengen van de menselijke levensduur door middel van publieke betrokkenheid, doordachte zelfexperimentatie en operationeel leiderschap als COO bij Unlimited Bio, een startup voor gentherapie.',
+            [Locale.CS]: 'Biomedicínský inženýr pracující na prodloužení lidského života prostřednictvím veřejného angažmá, promyšlené sebeexperimentace a provozního vedení jako COO ve společnosti Unlimited Bio, startupu zaměřeném na genovou terapii.',
+          },
+          location: 'Amsterdam, Netherlands',
+          image: '/vladimir-leshko.png',
+          socialLinks: {
+            linkedin: 'https://www.linkedin.com/in/vllesh/',
+            x: 'https://x.com/vladileshko',
+            telegram: 'https://t.me/vleshko',
+          },
+        },
+        {
+          name: 'Nastya Egorova',
+          description:
+            'CEO & Co-Founder @Open Longevity and SayForever campaign, counselor @LBF, advisor @Vitalism Foundation. Biologist and artist by training, Nastya has been wearing multiple hats in science communication, social movements building, and open science projects.',
+          descriptions: {
+            [Locale.SV]:
+              'VD & medgrundare @Open Longevity och SayForever-kampanjen, rådgivare @LBF, konsult @Vitalism Foundation. Biolog och konstnär i grunden, Nastya har haft många roller inom vetenskapskommunikation, samhällsrörelseskapande och öppna vetenskapsprojekt.',
+            [Locale.DE]:
+              'CEO & Mitgründerin @Open Longevity und SayForever-Kampagne, Beraterin @LBF, Beraterin @Vitalism Foundation. Als ausgebildete Biologin und Künstlerin hat Nastya viele Rollen in der Wissenschaftskommunikation, im Aufbau sozialer Bewegungen und in offenen Wissenschaftsprojekten übernommen.',
+            [Locale.FR]:
+              'PDG et cofondatrice @Open Longevity et campagne SayForever, conseillère @LBF, conseillère @Vitalism Foundation. Biologiste et artiste de formation, Nastya a porté de nombreux chapeaux dans la communication scientifique, la construction de mouvements sociaux et les projets de science ouverte.',
+            [Locale.ES]:
+              'CEO y cofundadora @Open Longevity y campaña SayForever, consejera @LBF, asesora @Vitalism Foundation. Bióloga y artista de formación, Nastya ha desempeñado múltiples roles en comunicación científica, construcción de movimientos sociales y proyectos de ciencia abierta.',
+            [Locale.IT]:
+              'CEO e cofondatrice @Open Longevity e campagna SayForever, consigliera @LBF, consulente @Vitalism Foundation. Biologa e artista di formazione, Nastya ha ricoperto molteplici ruoli nella comunicazione scientifica, nella costruzione di movimenti sociali e nei progetti di scienza aperta.',
+            [Locale.NL]:
+              'CEO en medeoprichter @Open Longevity en SayForever-campagne, adviseur @LBF, adviseur @Vitalism Foundation. Biologe en kunstenares van opleiding, Nastya heeft meerdere rollen vervuld in wetenschapscommunicatie, het opbouwen van sociale bewegingen en open wetenschapsprojecten.',
+            [Locale.CS]:
+              'CEO a spoluzakladatelka @Open Longevity a kampaně SayForever, poradkyně @LBF, poradkyně @Vitalism Foundation. Bioložka a umělkyně vzděláním, Nastya zastávala mnoho rolí ve vědecké komunikaci, budování sociálních hnutí a projektech otevřené vědy.',
+          },
+          location: '',
+          image: '/nastya.jpg',
+          socialLinks: { linkedin: 'https://www.linkedin.com/in/nastya-egorova/' },
+        },
       ],
     },
     {

@@ -175,8 +175,8 @@ export default async function AboutPage({ params }: AboutPageProps): Promise<JSX
             <div id="core" className="scroll-mt-48">
               <H3 className="mb-6">{aboutTranslations.teamSections.core[locale]}</H3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {coreGroup.members.map((member) => (
-                  <TeamMemberCard key={member.name} member={member} locale={locale} />
+                {coreGroup.members.map((member, i) => (
+                  <TeamMemberCard key={`core-${member.name}-${i}`} member={member} locale={locale} />
                 ))}
               </div>
             </div>
@@ -196,8 +196,8 @@ export default async function AboutPage({ params }: AboutPageProps): Promise<JSX
                       {aboutTranslations.teamSections[cityGroup.city as keyof typeof aboutTranslations.teamSections][locale]}
                     </H3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                      {cityGroup.members.map((member) => (
-                        <TeamMemberCard key={member.name} member={member} locale={locale} />
+                      {cityGroup.members.map((member, i) => (
+                        <TeamMemberCard key={`${cityGroup.city}-${member.name}-${i}`} member={member} locale={locale} />
                       ))}
                     </div>
                   </div>
