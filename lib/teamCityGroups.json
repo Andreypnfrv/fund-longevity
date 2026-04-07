@@ -1,0 +1,159 @@
+[
+  {
+    "city": "core",
+    "memberIds": [
+      "linus-petersson",
+      "andrei-panferov",
+      "vladimir-leshko",
+      "nastya-egorova",
+      "jose-luis-cordeiro"
+    ]
+  },
+  {
+    "city": "experts",
+    "memberIds": [
+      "aubrey-de-grey",
+      "peter-lidskiy",
+      "alexander-panchin",
+      "laurence-ion",
+      "natasha-vita-more",
+      "max-more",
+      "jose-luis-cordeiro",
+      "carrie-radomski",
+      "yuri-deigin",
+      "ilia-stambler",
+      "andrew-steele",
+      "israel-pichardo-casas-phd"
+    ]
+  },
+  {
+    "city": "Stockholm",
+    "memberIds": [
+      "peter-ottsjo",
+      "moa-quist",
+      "thomas-ahlstrom"
+    ]
+  },
+  {
+    "city": "Amsterdam",
+    "memberIds": [
+      "vladimir-leshko",
+      "sofia-eremchuk"
+    ]
+  },
+  {
+    "city": "brussels",
+    "memberIds": [
+      "didier-coeurnelle"
+    ]
+  },
+  {
+    "city": "Berlin",
+    "memberIds": [
+      "felix-werth",
+      "ingemar-patrick-linden"
+    ]
+  },
+  {
+    "city": "Paris",
+    "memberIds": [
+      "mitoz-deina",
+      "quentin-le-bihan"
+    ]
+  },
+  {
+    "city": "London",
+    "memberIds": [
+      "david-wood"
+    ]
+  },
+  {
+    "city": "Rome",
+    "memberIds": [
+      "ferdinando-randisi"
+    ]
+  },
+  {
+    "city": "madrid",
+    "memberIds": [
+      "jose-luis-cordeiro",
+      "maristela-bermudez",
+      "miguel-ferrero"
+    ]
+  },
+  {
+    "city": "Prague",
+    "memberIds": [
+      "georgij-boljuba",
+      "petr-sramek"
+    ]
+  },
+  {
+    "city": "Ljubljana",
+    "memberIds": [
+      "martin-lipovsek",
+      "zala-berk"
+    ]
+  },
+  {
+    "city": "telAviv",
+    "memberIds": [
+      "ilia-stambler"
+    ]
+  },
+  {
+    "city": "Tbilisi",
+    "memberIds": [
+      "ksenia-svaneti"
+    ]
+  },
+  {
+    "city": "Toronto",
+    "memberIds": [
+      "ivan-gorbadei"
+    ]
+  },
+  {
+    "city": "Calgary",
+    "memberIds": [
+      "ildar-idrisov"
+    ]
+  },
+  {
+    "city": "Mexico",
+    "memberIds": [
+      "paulina-alva-flores"
+    ]
+  },
+  {
+    "city": "San Francisco",
+    "memberIds": [
+      "melissa-king"
+    ]
+  },
+  {
+    "city": "Austin",
+    "memberIds": [
+      "aufstin-filiko"
+    ]
+  },
+  {
+    "city": "abuDhabi",
+    "memberIds": [
+      "javier-torres"
+    ]
+  },
+  {
+    "city": "Caracas",
+    "memberIds": [
+      "jose-gregorio-bermudez-cancine"
+    ]
+  },
+  {
+    "city": "liveStreamOrgs",
+    "memberIds": [
+      "nastya-egorova",
+      "danila-immortalist"
+    ]
+  }
+]

@@ -253,6 +253,26 @@ export const aboutTranslations = {
       [Locale.NL]: 'Austin',
       [Locale.CS]: 'Austin',
     },
+    Toronto: {
+      [Locale.EN]: 'Toronto',
+      [Locale.SV]: 'Toronto',
+      [Locale.DE]: 'Toronto',
+      [Locale.FR]: 'Toronto',
+      [Locale.ES]: 'Toronto',
+      [Locale.IT]: 'Toronto',
+      [Locale.NL]: 'Toronto',
+      [Locale.CS]: 'Toronto',
+    },
+    Calgary: {
+      [Locale.EN]: 'Calgary',
+      [Locale.SV]: 'Calgary',
+      [Locale.DE]: 'Calgary',
+      [Locale.FR]: 'Calgary',
+      [Locale.ES]: 'Calgary',
+      [Locale.IT]: 'Calgary',
+      [Locale.NL]: 'Calgary',
+      [Locale.CS]: 'Calgary',
+    },
   },
   localLeads: {
     title: {

@@ -106,8 +106,8 @@ export function Sidebar({ locale, items, activeId: propActiveId }: SidebarProps)
   const currentActiveId = propActiveId || activeId;
 
   return (
-    <aside className="hidden lg:block w-64 border-l border-gray-200 sticky top-24 self-start">
-      <nav>
+    <aside className="hidden lg:block w-64 shrink-0 border-l border-gray-200 sticky top-24 self-start max-h-[calc(100vh-6rem)] overflow-y-auto overscroll-contain [scrollbar-gutter:stable]">
+      <nav className="pr-1 pb-2">
         <ul className="space-y-6">
           {items.map((item) => (
             <li key={item.id}>

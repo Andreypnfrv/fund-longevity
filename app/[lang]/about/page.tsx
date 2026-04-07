@@ -15,6 +15,9 @@ interface AboutPageProps {
   params: Promise<{ lang: string }>;
 }
 
+const TEAM_MEMBER_GRID =
+  'grid gap-6 [grid-template-columns:repeat(auto-fill,minmax(min(100%,17rem),1fr))]';
+
 function TeamMemberCard({ member, locale }: { member: TeamMember; locale: Locale }): JSX.Element {
   return (
     <div className="bg-white rounded-lg py-6">
@@ -24,7 +27,7 @@ function TeamMemberCard({ member, locale }: { member: TeamMember; locale: Locale
             src={member.image}
             alt={member.name}
             fill
-            className={`object-cover rounded-lg ${member.name === 'Miguel Ferrero' ? 'object-top' : ''}`}
+            className={`object-cover rounded-lg ${member.name === 'Miguel Ferrero' || member.name === 'Ivan Gorbadei' ? 'object-top' : ''}`}
           />
         ) : (
           <span className="text-gray-400 text-sm">{member.name}</span>
@@ -169,33 +172,28 @@ export default async function AboutPage({ params }: AboutPageProps): Promise<JSX
         </Wrapper>
       </Section>
 
-      {coreGroup && (
-        <Section>
-          <Wrapper>
-            <div id="core" className="scroll-mt-48">
-              <H3 className="mb-6">{aboutTranslations.teamSections.core[locale]}</H3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {coreGroup.members.map((member, i) => (
-                  <TeamMemberCard key={`core-${member.name}-${i}`} member={member} locale={locale} />
-                ))}
-              </div>
-            </div>
-          </Wrapper>
-        </Section>
-      )}
-
       <Wrapper>
         <div className="flex flex-col lg:flex-row gap-16">
           <Sidebar locale={locale} items={sidebarItems} />
           <Content>
             <section id="team">
               <div className="py-8 bg-white">
+                {coreGroup && (
+                  <div id="core" className="mb-48 scroll-mt-48">
+                    <H3 className="mb-6">{aboutTranslations.teamSections.core[locale]}</H3>
+                    <div className={TEAM_MEMBER_GRID}>
+                      {coreGroup.members.map((member, i) => (
+                        <TeamMemberCard key={`core-${member.name}-${i}`} member={member} locale={locale} />
+                      ))}
+                    </div>
+                  </div>
+                )}
                 {citiesSorted.map((cityGroup) => (
                   <div key={cityGroup.city} id={cityGroup.city} className="mb-48 scroll-mt-48">
                     <H3 className="mb-6">
                       {aboutTranslations.teamSections[cityGroup.city as keyof typeof aboutTranslations.teamSections][locale]}
                     </H3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className={TEAM_MEMBER_GRID}>
                       {cityGroup.members.map((member, i) => (
                         <TeamMemberCard key={`${cityGroup.city}-${member.name}-${i}`} member={member} locale={locale} />
                       ))}
