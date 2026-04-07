@@ -529,6 +529,7 @@
     "name": "Petr Šrámek",
     "description": "Czech entrepreneur, Managing Partner at VC LongevityTech.fund; CEO HealthyLongevity.clinic; Whytics Lead Scientist.",
     "location": "Prague, Czech Republic",
+    "image": "/petr-sramek.jpg",
     "socialLinks": {
       "linkedin": "https://www.linkedin.com/in/petrsramek/"
     },
@@ -602,7 +603,8 @@
     "location": "Toronto, Canada",
     "image": "/ivan-gorbadei.jpg",
     "socialLinks": {
-      "linkedin": "https://www.linkedin.com/in/igorbadei/"
+      "linkedin": "https://www.linkedin.com/in/igorbadei/",
+      "telegram": "https://t.me/TheIvanToronto"
     },
     "descriptions": {
       "sv": "AI-ingenjör, entusiast för longevity och singularitet.",
@@ -618,7 +620,10 @@
     "name": "Ildar Idrisov, PhD",
     "description": "AI researcher and a hopeful visionary.",
     "location": "Calgary, Canada",
-    "image": "/ildar-idrisov.png"
+    "image": "/ildar-idrisov.png",
+    "socialLinks": {
+      "linkedin": "https://www.linkedin.com/in/ildar-idrisov-19987328/"
+    }
   },
   "paulina-alva-flores": {
     "name": "Paulina Alva Flores",
