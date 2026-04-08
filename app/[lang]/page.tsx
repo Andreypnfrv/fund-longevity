@@ -62,8 +62,8 @@ const EVENTS_DATA: EventData[] = [
     type: 'city',
     name: 'STOCKHOLM',
     flag: '🇸🇪',
-    image: '/StockholmRiksgatan3.jpg',
-    imageAlt: 'Stockholm',
+    image: '/stockholm.png',
+    imageAlt: 'Fund Longevity march, Stockholm',
     dateTime: 'Wednesday 8 April, 17:00-18:00 CEST',
     location: 'Riksgatan 3',
     link: 'https://luma.com/jjvn91yn',
@@ -90,8 +90,8 @@ const EVENTS_DATA: EventData[] = [
     type: 'city',
     name: 'AMSTERDAM',
     flag: '🇳🇱',
-    image: '/AmsterdamDamSquare.jpg',
-    imageAlt: 'Amsterdam',
+    image: '/amsterdam-rally.png',
+    imageAlt: 'Fund Longevity rally, Dam Square, Amsterdam',
     dateTime: 'Wednesday 8 April, 17:00-18:00 CEST',
     location: 'Dam Square',
     link: 'https://luma.com/tkxk5owu',
@@ -104,8 +104,8 @@ const EVENTS_DATA: EventData[] = [
     type: 'city',
     name: 'ROME',
     flag: '🇮🇹',
-    image: '/Rome_Via_San_Nicola_de_Cesarini.png',
-    imageAlt: 'Rome',
+    image: '/rome-rally.png',
+    imageAlt: 'Fund Longevity rally, Rome',
     dateTime: 'Wednesday 8 April, 16:00-18:00 CEST',
     location: 'Via San Nicola de\' Cesarini',
     link: 'https://luma.com/xjvb2fcb',
@@ -118,8 +118,8 @@ const EVENTS_DATA: EventData[] = [
     type: 'city',
     name: 'LJUBLJANA',
     flag: '🇸🇮',
-    image: '/ljubljana.jpg',
-    imageAlt: 'Ljubljana',
+    image: '/ljubljana.png',
+    imageAlt: 'Fund Longevity rally, Prešeren Square, Ljubljana',
     dateTime: 'Wednesday 8 April, 17:00-18:00 CEST',
     location: 'Ljubljana',
     link: 'https://luma.com/ttgmkonk',
@@ -146,8 +146,8 @@ const EVENTS_DATA: EventData[] = [
     type: 'city',
     name: 'PARIS',
     flag: '🇫🇷',
-    image: '/paris.png',
-    imageAlt: 'Paris',
+    image: '/paris-rally.png',
+    imageAlt: 'Fund Longevity rally, Esplanade des Invalides, Paris',
     dateTime: 'Wednesday 8 April, 17:00-18:00 CEST',
     location: '2 Pl. du Palais Bourbon',
     link: 'https://luma.com/unt7c4gf',
@@ -160,8 +160,8 @@ const EVENTS_DATA: EventData[] = [
     type: 'city',
     name: 'PRAGUE',
     flag: '🇨🇿',
-    image: '/prague.jpeg',
-    imageAlt: 'Prague',
+    image: '/prague-rally.png',
+    imageAlt: 'Fund Longevity rally, Klárov, Prague',
     dateTime: 'Wednesday 8 April, 17:00-18:30 CEST',
     location: 'Park Klárov, 118 00 Malá Strana (Památník padlým vojákům II. světové války)',
     link: 'https://luma.com/ykwx2ykm',
@@ -174,8 +174,8 @@ const EVENTS_DATA: EventData[] = [
     type: 'city',
     name: 'MADRID',
     flag: '🇪🇸',
-    image: '/madrid.jpg',
-    imageAlt: 'Madrid',
+    image: '/madrid-rally.png',
+    imageAlt: 'Fund Longevity rally, Presidencia de la Comunidad de Madrid',
     dateTime: 'Wednesday 8 April, 10:00-12:00 CET',
     location: 'Madrid City Hall',
     link: 'https://www.meetup.com/madridsingularity/events/313571696/',
@@ -188,8 +188,8 @@ const EVENTS_DATA: EventData[] = [
     type: 'city',
     name: 'MEXICO',
     flag: '🇲🇽',
-    image: '/mexico.png',
-    imageAlt: 'Mexico',
+    image: '/mexico-rally.png',
+    imageAlt: 'Fund Longevity rally, Mexico',
     dateTime: 'Wednesday 8 April',
     location: 'Mexico',
     link: '#',
@@ -349,6 +349,7 @@ export default async function HomePage({ params }: HomePageProps): Promise<JSX.E
   const agingProblemTranslate = getTranslation(homeTranslations.agingProblem, locale);
   const citiesTranslate = getTranslation(homeTranslations.cities, locale);
   const eventDateTimeTranslate = getTranslation(homeTranslations.eventDateTimes, locale);
+  const recapApril8Translate = getTranslation(homeTranslations.recapApril8, locale);
 
   return (
     <div>
@@ -368,6 +369,54 @@ export default async function HomePage({ params }: HomePageProps): Promise<JSX.E
                 {agingProblemTranslate('readMore')}
               </Link>
             </p>
+          </div>
+        </Wrapper>
+      </Section>
+      <Section id="recap-april-8" className="bg-gradient-to-b from-[#f5f6ff] via-white to-white">
+        <Wrapper>
+          <div className="mx-auto max-w-5xl py-12 md:py-20">
+            <div className="relative overflow-hidden rounded-3xl border border-black/[0.06] bg-white p-6 shadow-[0_32px_120px_-24px_rgba(9,0,255,0.22)] md:p-10 lg:p-12">
+              <div
+                aria-hidden
+                className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[#0900FF]/10 blur-3xl"
+              />
+              <div
+                aria-hidden
+                className="pointer-events-none absolute -bottom-32 -left-16 h-72 w-72 rounded-full bg-[#0900FF]/5 blur-3xl"
+              />
+              <div className="relative flex flex-col gap-12 md:gap-16 lg:gap-20">
+                <h2
+                  className="text-3xl font-black leading-[1.05] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl"
+                  style={{
+                    background: 'linear-gradient(120deg, #000 0%, #1a1a1a 35%, #0900FF 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                  }}
+                >
+                  {recapApril8Translate('title')}
+                </h2>
+                <div className="relative aspect-video w-full shrink-0 overflow-hidden rounded-2xl bg-black shadow-[0_20px_60px_-15px_rgba(0,0,0,0.45)] ring-1 ring-black/20">
+                  <iframe
+                    className="absolute inset-0 h-full w-full"
+                    src="https://www.youtube.com/embed/4CHvbryuUb4?rel=0&modestbranding=1"
+                    title={recapApril8Translate('iframeTitle')}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+                <div className="flex shrink-0 justify-center">
+                  <a
+                    href="https://www.youtube.com/watch?v=4CHvbryuUb4"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center rounded-lg bg-[#0900FF] px-6 py-3 text-base font-semibold text-white shadow-md transition hover:scale-[1.02] hover:shadow-lg"
+                  >
+                    {recapApril8Translate('openOnYoutube')}
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </Wrapper>
       </Section>

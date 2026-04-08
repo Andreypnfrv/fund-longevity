@@ -148,6 +148,38 @@ export const homeTranslations = {
       [Locale.CS]: 'Číst dál',
     },
   },
+  recapApril8: {
+    title: {
+      [Locale.EN]: 'HOW IT WAS — 8 APRIL 2026',
+      [Locale.SV]: 'SÅ GICK DET — 8 APRIL 2026',
+      [Locale.DE]: 'SO WAR ES — 8. APRIL 2026',
+      [Locale.FR]: 'COMMENT C’ÉTAIT — 8 AVRIL 2026',
+      [Locale.ES]: 'ASÍ FUE — 8 DE ABRIL DE 2026',
+      [Locale.IT]: 'COM’È ANDATA — 8 APRILE 2026',
+      [Locale.NL]: 'ZO WAS HET — 8 APRIL 2026',
+      [Locale.CS]: 'JAK TO BYLO — 8. DUBNA 2026',
+    },
+    iframeTitle: {
+      [Locale.EN]: 'Fund Longevity live stream — 8 April 2026',
+      [Locale.SV]: 'Fund Longevity livesändning — 8 april 2026',
+      [Locale.DE]: 'Fund Longevity Livestream — 8. April 2026',
+      [Locale.FR]: 'Direct Fund Longevity — 8 avril 2026',
+      [Locale.ES]: 'Directo Fund Longevity — 8 de abril de 2026',
+      [Locale.IT]: 'Diretta Fund Longevity — 8 aprile 2026',
+      [Locale.NL]: 'Fund Longevity livestream — 8 april 2026',
+      [Locale.CS]: 'Fund Longevity živý přenos — 8. dubna 2026',
+    },
+    openOnYoutube: {
+      [Locale.EN]: 'Open on YouTube',
+      [Locale.SV]: 'Öppna på YouTube',
+      [Locale.DE]: 'Auf YouTube ansehen',
+      [Locale.FR]: 'Ouvrir sur YouTube',
+      [Locale.ES]: 'Abrir en YouTube',
+      [Locale.IT]: 'Apri su YouTube',
+      [Locale.NL]: 'Openen op YouTube',
+      [Locale.CS]: 'Otevřít na YouTube',
+    },
+  },
   whyAging: {
     title: {
       [Locale.EN]: 'Why Aging',
