@@ -153,7 +153,7 @@ export default async function AboutPage({ params }: AboutPageProps): Promise<JSX
 
   return (
     <div className="flex flex-col gap-8 md:gap-18">
-      <Section style={{ paddingTop: '15px', paddingBottom: 0 }}>
+      <Section style={{ paddingTop: '30px', paddingBottom: 0 }}>
         <Wrapper>
           <div>
             <H1 display className="mb-20 text-[#0900FF] whitespace-pre-line">

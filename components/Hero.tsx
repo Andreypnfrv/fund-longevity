@@ -1,16 +1,11 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
-import Image from 'next/image';
 import { H1, P } from './Typography';
 import { Wrapper } from './Wrapper';
-import type { Locale } from '@/lib/types';
 
 interface HeroProps {
   backgroundImage: string;
-  locale: Locale;
-  titleLine1?: string;
-  titleLine2?: string;
   subtitle?: string;
 }
 
@@ -65,29 +60,17 @@ export function Hero(props: HeroProps): React.ReactElement {
           willChange: 'transform',
         }}
       />
-      <div className="relative z-10 flex-1 flex items-start justify-start px-3 pt-16 md:pt-24 min-[600px]:px-4">
-        <div className="relative inline-block hero-title-wrap">
-          <h1 className="m-0 p-0">
-            <Image
-              src="/fund-longevity-logo.png"
-              alt={`${props.titleLine1 ?? 'FUND'} ${props.titleLine2 ?? 'LONGEVITY'}`}
-              width={1024}
-              height={281}
-              priority
-              className="block w-full max-w-[min(90vw,42rem)] h-auto px-3 py-4 min-[600px]:px-8"
-            />
-          </h1>
+      {props.subtitle?.trim() ? (
+        <div className="relative z-10 flex-1 flex flex-col items-end justify-end w-full px-3 pb-8 min-[600px]:px-4 lg:items-start pt-16 md:pt-24">
+          <p className="hero-subtitle-wrap text-white font-black w-auto whitespace-pre-line text-right ml-auto px-3 py-6 min-[600px]:px-8 lg:w-full lg:ml-0 lg:text-left" style={{ 
+            fontFamily: 'var(--font-plus-jakarta), sans-serif',
+            textShadow: '0 2px 4px rgba(0, 106, 167, 0.35), 0 4px 16px rgba(15, 23, 42, 0.5), 0 0 40px rgba(30, 58, 90, 0.25)',
+            fontWeight: 900
+          }}>
+            {props.subtitle}
+          </p>
         </div>
-      </div>
-      <div className="relative z-10 flex-1 flex flex-col items-end justify-end w-full px-3 pb-8 min-[600px]:px-4 lg:items-start" style={{ paddingTop: '4rem' }}>
-        <p className="hero-subtitle-wrap text-white font-black w-auto whitespace-pre-line text-right ml-auto px-3 py-6 min-[600px]:px-8 lg:w-full lg:ml-0 lg:text-left" style={{ 
-          fontFamily: 'var(--font-plus-jakarta), sans-serif',
-          textShadow: '0 2px 4px rgba(0, 106, 167, 0.35), 0 4px 16px rgba(15, 23, 42, 0.5), 0 0 40px rgba(30, 58, 90, 0.25)',
-          fontWeight: 900
-        }}>
-          {props.subtitle}
-        </p>
-      </div>
+      ) : null}
     </div>
   );
 }

@@ -103,7 +103,7 @@ export default async function MessagesPage({ params }: MessagesPageProps): Promi
 
   return (
     <div className="flex flex-col gap-8 md:gap-18">
-      <Section style={{ paddingTop: '15px', paddingBottom: 0 }}>
+      <Section style={{ paddingTop: '30px', paddingBottom: 0 }}>
         <Wrapper>
           <div>
             <H1 display className="mb-4 text-[#0900FF] whitespace-pre-line">

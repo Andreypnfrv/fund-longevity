@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 import type { Locale } from '@/lib/types';
@@ -28,7 +29,6 @@ export function Header({ locale }: HeaderProps): React.ReactElement {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const pathWithoutLocale = (pathname ?? '/').replace(/^\/[^/]+/, '') || '/';
-  const isHomePage = pathWithoutLocale === '/' || pathWithoutLocale === '';
 
   const isActive = (path: string): boolean => {
     const normalizedPath = pathWithoutLocale.endsWith('/') ? pathWithoutLocale.slice(0, -1) : pathWithoutLocale;
@@ -50,25 +50,23 @@ export function Header({ locale }: HeaderProps): React.ReactElement {
 
   return (
     <>
-      <header 
-        className={cn(
-          `flex flex-row justify-center items-center z-40`,
-          isHomePage ? 'absolute top-0 left-0 right-0 pt-4' : 'sticky top-0 bg-white'
-        )}
-        style={{
-          height: isHomePage ? 'auto' : 'auto',
-          minHeight: isHomePage ? 'auto' : '80px',
-        }}
-      >
+      <header className="flex flex-row justify-center items-center z-40 sticky top-0 bg-white min-h-[80px] [&_a]:no-underline [&_a:hover]:no-underline [&_a:visited]:no-underline [&_a:focus-visible]:no-underline">
         <Wrapper className="h-full !px-3 min-[600px]:!px-12">
-          <div 
-            className={cn(
-              "relative w-full h-full flex items-center",
-              !isHomePage && "border-b border-gray-300"
-            )}
+          <div
+            className="relative w-full h-full flex items-center"
             style={{ height: '64px' }}
           >
-            <div className="flex flex-row items-center w-full h-full min-w-0 flex overflow-x-auto lg:justify-evenly lg:overflow-visible">
+            <div className="flex flex-row items-center w-full h-full min-w-0 gap-14 min-[600px]:gap-20">
+              <Link href="/" locale={locale} className="no-underline shrink-0 flex items-center py-1" aria-label={homeTranslations.hero.title[locale]}>
+                <Image
+                  src="/fund-longevity-logo.png"
+                  alt=""
+                  width={188}
+                  height={52}
+                  className="h-[40.32px] w-auto min-[600px]:h-[51.84px]"
+                />
+              </Link>
+              <div className="flex flex-row items-center flex-1 min-w-0 overflow-x-auto lg:justify-evenly lg:overflow-visible">
               <nav className="flex items-center h-full gap-0 flex-1 min-w-0 overflow-x-auto lg:overflow-visible lg:justify-evenly">
                 {navLinks.map((link) => (
                   <div key={link.href} className="flex-shrink-0 lg:flex-1 lg:flex-shrink flex items-center h-full">
@@ -109,6 +107,7 @@ export function Header({ locale }: HeaderProps): React.ReactElement {
                     paddingRight: 10,
                   }}
                 />
+              </div>
               </div>
             </div>
           </div>

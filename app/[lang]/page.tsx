@@ -6,11 +6,13 @@ import { Link } from '@/components/Link';
 import { Section } from '@/components/Section';
 import { Partners } from '@/components/Partners';
 import { HowCanYouHelp } from '@/components/HowCanYouHelp';
-import { PARTNERS, buildLocalizedPageMetadata, defaultOgImage } from '@/lib/config';
-import { getLocaleFromLang, LOCALES } from '@/lib/types';
+import { PARTNERS, buildLocalizedPageMetadata, defaultOgImage, mailchimpConfig } from '@/lib/config';
+import { getLocaleFromLang, LOCALES, SubmitIntent } from '@/lib/types';
 import { homeTranslations } from './translations';
 import { getTranslation } from '@/lib/translate';
 import { Wrapper } from '@/components/Wrapper';
+import { FormSection } from '@/components/FormSection';
+import { Fill, Size } from '@/lib/theme';
 
 interface EventData {
   id: string;
@@ -230,8 +232,8 @@ const EVENTS_DATA: EventData[] = [
     type: 'city',
     name: 'SAN FRANCISCO',
     flag: '🇺🇸',
-    image: '/san-francisco.jpg',
-    imageAlt: 'San Francisco',
+    image: '/san-francisco-rally.png',
+    imageAlt: 'Fund Longevity rally, San Francisco',
     dateTime: 'Tuesday 7 April, 5:00 p.m. PDT',
     location: 'San Francisco, California',
     link: 'https://luma.com/ruebed41',
@@ -322,8 +324,8 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: HomePageProps): Promise<Metadata> {
   const { lang } = await params;
   const locale = getLocaleFromLang(lang);
-  const translate = getTranslation(homeTranslations.hero, locale);
-  const description = translate('subtitle').replace(/\u00A0/g, ' ');
+  const translate = getTranslation(homeTranslations.agingProblem, locale);
+  const description = translate('tagline').replace(/\u00A0/g, ' ');
   const path = `/${lang}/`;
   const base = buildLocalizedPageMetadata({
     lang,
@@ -345,7 +347,6 @@ export default async function HomePage({ params }: HomePageProps): Promise<JSX.E
   const locale = getLocaleFromLang(lang);
 
   const partnersTranslate = getTranslation(homeTranslations.partners, locale);
-  const heroTranslate = getTranslation(homeTranslations.hero, locale);
   const agingProblemTranslate = getTranslation(homeTranslations.agingProblem, locale);
   const citiesTranslate = getTranslation(homeTranslations.cities, locale);
   const eventDateTimeTranslate = getTranslation(homeTranslations.eventDateTimes, locale);
@@ -353,67 +354,99 @@ export default async function HomePage({ params }: HomePageProps): Promise<JSX.E
 
   return (
     <div>
-      <Hero
-        backgroundImage="/hero4.jpg"
-        locale={locale}
-        titleLine1={heroTranslate('titleLine1')}
-        titleLine2={heroTranslate('titleLine2')}
-        subtitle={heroTranslate('subtitle')}
-      />
+      <Hero backgroundImage="/stockholn-hero.jpeg" />
       <Section>
         <Wrapper>
-          <div className="mx-auto max-w-5xl py-8 md:py-12">
-            <p className="text-2xl leading-snug text-gray-900 md:text-3xl lg:text-4xl md:leading-tight [&_a]:inline">
-              {agingProblemTranslate('body')}{' '}
-              <Link href="/why" locale={locale} className="font-semibold text-[#0900FF] hover:underline">
-                {agingProblemTranslate('readMore')}
-              </Link>
-            </p>
+          <div className="mx-auto max-w-5xl pt-8 pb-16 md:pt-12 md:pb-24 lg:pb-28">
+            <div className="flex flex-col gap-10 md:gap-16 lg:gap-20">
+              <p className="hero-subtitle-wrap whitespace-pre-line font-black leading-snug text-gray-900 md:leading-tight">
+                {agingProblemTranslate('tagline')}
+              </p>
+              <p className="text-2xl leading-snug text-gray-900 md:text-3xl lg:text-4xl md:leading-tight [&_a]:inline">
+                {agingProblemTranslate('body')}{' '}
+                <Link href="/why" locale={locale} className="font-semibold text-[#0900FF] hover:underline">
+                  {agingProblemTranslate('readMore')}
+                </Link>
+              </p>
+            </div>
           </div>
         </Wrapper>
       </Section>
       <Section id="recap-april-8" className="bg-gradient-to-b from-[#f5f6ff] via-white to-white">
         <Wrapper>
-          <div className="mx-auto max-w-5xl py-12 md:py-20">
-            <div className="relative overflow-hidden rounded-3xl border border-black/[0.06] bg-white p-6 shadow-[0_32px_120px_-24px_rgba(9,0,255,0.22)] md:p-10 lg:p-12">
-              <div
-                aria-hidden
-                className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[#0900FF]/10 blur-3xl"
-              />
-              <div
-                aria-hidden
-                className="pointer-events-none absolute -bottom-32 -left-16 h-72 w-72 rounded-full bg-[#0900FF]/5 blur-3xl"
-              />
-              <div className="relative flex flex-col gap-12 md:gap-16 lg:gap-20">
-                <h2
-                  className="text-3xl font-black leading-[1.05] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl"
+          <div className="w-full py-12 md:py-20">
+            <div className="flex flex-col gap-10 lg:flex-row lg:items-stretch lg:gap-12 xl:gap-16">
+              <div className="relative min-w-0 flex-[2] basis-0 overflow-hidden rounded-3xl border border-black/[0.06] bg-white p-6 shadow-[0_32px_120px_-24px_rgba(9,0,255,0.22)] md:p-10 lg:min-h-0 lg:p-12">
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[#0900FF]/10 blur-3xl"
+                />
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute -bottom-32 -left-16 h-72 w-72 rounded-full bg-[#0900FF]/5 blur-3xl"
+                />
+                <div className="relative flex flex-col gap-12 md:gap-16 lg:gap-20">
+                  <h2
+                    className="whitespace-pre-line text-3xl font-black leading-[1.05] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl"
+                    style={{
+                      background: 'linear-gradient(120deg, #000 0%, #1a1a1a 35%, #0900FF 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                    }}
+                  >
+                    {recapApril8Translate('title')}
+                  </h2>
+                  <div className="relative aspect-video w-full shrink-0 overflow-hidden rounded-2xl bg-black shadow-[0_20px_60px_-15px_rgba(0,0,0,0.45)] ring-1 ring-black/20">
+                    <iframe
+                      className="absolute inset-0 h-full w-full"
+                      src="https://www.youtube.com/embed/4CHvbryuUb4?rel=0&modestbranding=1"
+                      title={recapApril8Translate('iframeTitle')}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    />
+                  </div>
+                  <div className="flex shrink-0 justify-center">
+                    <a
+                      href="https://www.youtube.com/watch?v=4CHvbryuUb4"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex h-[3.75rem] items-center justify-center rounded-2xl bg-[#FF0000] px-8 text-sm font-bold uppercase tracking-[0.14em] text-white shadow-[0_14px_44px_-6px_rgba(255,0,0,0.55)] ring-2 ring-white/25 transition hover:scale-[1.02] hover:ring-white/40"
+                    >
+                      {recapApril8Translate('openOnYoutube')}
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="flex min-h-0 w-full min-w-0 flex-col self-stretch lg:flex-1 lg:basis-0">
+                <div
+                  className="box-border flex h-full min-h-0 w-full flex-col rounded-3xl border border-white/15 px-6 py-10 text-center text-white shadow-[0_24px_80px_-28px_rgba(0,0,0,0.45)] md:px-8 md:py-12 lg:flex-1 lg:min-h-0 lg:py-12"
                   style={{
                     background: 'linear-gradient(120deg, #000 0%, #1a1a1a 35%, #0900FF 100%)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text',
                   }}
                 >
-                  {recapApril8Translate('title')}
-                </h2>
-                <div className="relative aspect-video w-full shrink-0 overflow-hidden rounded-2xl bg-black shadow-[0_20px_60px_-15px_rgba(0,0,0,0.45)] ring-1 ring-black/20">
-                  <iframe
-                    className="absolute inset-0 h-full w-full"
-                    src="https://www.youtube.com/embed/4CHvbryuUb4?rel=0&modestbranding=1"
-                    title={recapApril8Translate('iframeTitle')}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  />
-                </div>
-                <div className="flex shrink-0 justify-center">
-                  <a
-                    href="https://www.youtube.com/watch?v=4CHvbryuUb4"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-lg bg-[#0900FF] px-6 py-3 text-base font-semibold text-white shadow-md transition hover:scale-[1.02] hover:shadow-lg"
-                  >
-                    {recapApril8Translate('openOnYoutube')}
-                  </a>
+                  <h3 className="w-full shrink-0 whitespace-pre-line text-3xl font-black uppercase leading-[1.05] tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
+                    {recapApril8Translate('newsletterTitle')}
+                  </h3>
+                  <div className="flex min-h-0 flex-col gap-8 pt-8 lg:flex-1 lg:justify-center">
+                    <p className="w-full text-lg leading-relaxed text-white md:text-xl">
+                      {recapApril8Translate('newsletterDescription')}
+                    </p>
+                    <div className="w-full">
+                      <FormSection
+                        locale={locale}
+                        noCard
+                        listId={mailchimpConfig.listIds.partners}
+                        mailchimpFormId={mailchimpConfig.formIds.partners}
+                        fields={{ firstName: false, city: false, phone: false, email: true }}
+                        formClassName="gap-10 text-center [&_label]:mb-2 [&_label]:block [&_label]:text-center [&_label]:text-white [&_p]:text-center [&_p]:!text-white [&_input]:border-white/35 [&_input]:bg-white/10 [&_input]:text-white [&_input]:placeholder:text-white/45"
+                        submitIntent={SubmitIntent.Subscribe}
+                        submitButtonFill={Fill.Blue}
+                        submitButtonSize={Size.LG}
+                        submitButtonClassName="rounded-2xl font-bold uppercase tracking-[0.14em] text-sm shadow-[0_14px_44px_-6px_rgba(9,0,255,0.6)] ring-2 ring-white/25 hover:ring-white/40"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

@@ -3,10 +3,12 @@
 import React from 'react';
 import { H3 } from './Typography';
 import { DiscordCommunity } from './DiscordCommunity';
-import { Locale } from '@/lib/types';
+import { FormSection } from './FormSection';
+import { Locale, SubmitIntent } from '@/lib/types';
 import { Card } from './Card';
 import { useTranslations } from '@/lib/useTranslations';
 import { homeTranslations } from '@/app/[lang]/translations';
+import { mailchimpConfig } from '@/lib/config';
 
 interface HowCanYouHelpProps {
   locale: Locale;
@@ -40,8 +42,18 @@ export function HowCanYouHelp({ locale }: HowCanYouHelpProps): React.ReactElemen
           </div>
         </div>
         <H3 className="font-normal text-xl md:text-2xl">{description}</H3>
-        <div className="flex justify-center gap-4 flex-wrap pt-4">
-          <DiscordCommunity label={buttons('joinDiscord')} variant="button" />
+        <div className="w-full max-w-4xl self-center pt-2">
+          <FormSection
+            locale={locale}
+            noCard
+            inline
+            inlineEnd={<DiscordCommunity label={buttons('joinDiscord')} variant="button" />}
+            listId={mailchimpConfig.listIds.partners}
+            mailchimpFormId={mailchimpConfig.formIds.partners}
+            fields={{ firstName: false, city: false, phone: false, email: true }}
+            formClassName="gap-3 [&_p]:text-center"
+            submitIntent={SubmitIntent.SubscribeToEmail}
+          />
         </div>
       </div>
     </Card>

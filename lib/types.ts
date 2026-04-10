@@ -1,3 +1,15 @@
+export enum SubmitIntent {
+  Send = 'send',
+  Subscribe = 'subscribe',
+  SubscribeToEmail = 'subscribeToEmail',
+}
+
+export enum SubmitStatus {
+  Idle = 'idle',
+  Success = 'success',
+  Error = 'error',
+}
+
 export enum Locale {
   EN = 'en',
   SV = 'sv',

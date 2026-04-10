@@ -33,16 +33,6 @@ export const homeTranslations = {
       [Locale.NL]: 'LONGEVITY',
       [Locale.CS]: 'LONGEVITY',
     },
-    subtitle: {
-      [Locale.EN]: 'A Global Rally for\u00A0Life\u00A0Extension',
-      [Locale.SV]: 'Ett Multinationellt Rally för Livsförlängning',
-      [Locale.DE]: 'Eine globale Kundgebung für Lebensverlängerung',
-      [Locale.FR]: 'Un rassemblement global pour l\'extension de la vie',
-      [Locale.ES]: 'Una manifestación multinacional por la extensión de la vida',
-      [Locale.IT]: 'Un raduno multinazionale per l\'estensione della vita',
-      [Locale.NL]: 'Een globale bijeenkomst voor levensverlenging',
-      [Locale.CS]: 'Globální rally za\u00A0prodlužování\u00A0života',
-    },
   },
   partners: {
     title: {
@@ -119,6 +109,16 @@ export const homeTranslations = {
     },
   },
   agingProblem: {
+    tagline: {
+      [Locale.EN]: 'A Global Rally for\u00A0Life\u00A0Extension',
+      [Locale.SV]: 'Ett Multinationellt Rally för Livsförlängning',
+      [Locale.DE]: 'Eine globale Kundgebung für Lebensverlängerung',
+      [Locale.FR]: 'Un rassemblement global pour l\'extension de la vie',
+      [Locale.ES]: 'Una manifestación multinacional por la extensión de la vida',
+      [Locale.IT]: 'Un raduno multinazionale per l\'estensione della vita',
+      [Locale.NL]: 'Een globale bijeenkomst voor levensverlenging',
+      [Locale.CS]: 'Globální rally za\u00A0prodlužování\u00A0života',
+    },
     body: {
       [Locale.EN]:
         'Aging kills around 110,000 people every day. It is the primary risk factor behind nearly all major non-infectious diseases, including cancer, heart disease, and dementia. Beyond statistics, aging causes decades of frailty, pain, and loss of independence. It is the greatest source of human suffering that is being accepted as “normal”. Science is ready to fight, and so must political will be.',
@@ -150,14 +150,14 @@ export const homeTranslations = {
   },
   recapApril8: {
     title: {
-      [Locale.EN]: 'HOW IT WAS — 8 APRIL 2026',
-      [Locale.SV]: 'SÅ GICK DET — 8 APRIL 2026',
-      [Locale.DE]: 'SO WAR ES — 8. APRIL 2026',
-      [Locale.FR]: 'COMMENT C’ÉTAIT — 8 AVRIL 2026',
-      [Locale.ES]: 'ASÍ FUE — 8 DE ABRIL DE 2026',
-      [Locale.IT]: 'COM’È ANDATA — 8 APRILE 2026',
-      [Locale.NL]: 'ZO WAS HET — 8 APRIL 2026',
-      [Locale.CS]: 'JAK TO BYLO — 8. DUBNA 2026',
+      [Locale.EN]: 'HOW IT WAS —\n8 APRIL 2026',
+      [Locale.SV]: 'SÅ GICK DET —\n8 APRIL 2026',
+      [Locale.DE]: 'SO WAR ES —\n8. APRIL 2026',
+      [Locale.FR]: 'COMMENT C’ÉTAIT —\n8 AVRIL 2026',
+      [Locale.ES]: 'ASÍ FUE —\n8 DE ABRIL DE 2026',
+      [Locale.IT]: 'COM’È ANDATA —\n8 APRILE 2026',
+      [Locale.NL]: 'ZO WAS HET —\n8 APRIL 2026',
+      [Locale.CS]: 'JAK TO BYLO —\n8. DUBNA 2026',
     },
     iframeTitle: {
       [Locale.EN]: 'Fund Longevity live stream — 8 April 2026',
@@ -178,6 +178,26 @@ export const homeTranslations = {
       [Locale.IT]: 'Apri su YouTube',
       [Locale.NL]: 'Openen op YouTube',
       [Locale.CS]: 'Otevřít na YouTube',
+    },
+    newsletterTitle: {
+      [Locale.EN]: 'Newsletter',
+      [Locale.SV]: 'Nyhetsbrev',
+      [Locale.DE]: 'Newsletter',
+      [Locale.FR]: 'Infolettre',
+      [Locale.ES]: 'Boletín',
+      [Locale.IT]: 'Newsletter',
+      [Locale.NL]: 'Nieuwsbrief',
+      [Locale.CS]: 'Newsletter',
+    },
+    newsletterDescription: {
+      [Locale.EN]: 'Rally dates, advocacy campaigns, and longevity movement news—in your inbox.',
+      [Locale.SV]: 'Rallydatum, kampanjer och nyheter från longevity-rörelsen – rakt i din inkorg.',
+      [Locale.DE]: 'Termine für Kundgebungen, Advocacy-Kampagnen und Longevity-News—direkt in Ihrem Posteingang.',
+      [Locale.FR]: 'Dates de rassemblements, campagnes de plaidoyer et actualités du mouvement longévité — dans votre boîte mail.',
+      [Locale.ES]: 'Fechas de manifestaciones, campañas de defensa y noticias del movimiento por la longevidad—en tu bandeja de entrada.',
+      [Locale.IT]: 'Date dei raduni, campagne di advocacy e notizie dal movimento per la longevità—in arrivo nella tua inbox.',
+      [Locale.NL]: 'Rallydata, advocacy-acties en longevity-nieuws—rechtstreeks in je inbox.',
+      [Locale.CS]: 'Termíny akcí, advocacy kampaně a novinky z longevity hnutí—přímo do schránky.',
     },
   },
   whyAging: {
