@@ -53,6 +53,16 @@ export const globalTranslations = {
       [Locale.NL]: 'Over ons',
       [Locale.CS]: 'O nás',
     },
+    donate: {
+      [Locale.EN]: 'Donate',
+      [Locale.SV]: 'Donera',
+      [Locale.DE]: 'Spenden',
+      [Locale.FR]: 'Faire un don',
+      [Locale.ES]: 'Donar',
+      [Locale.IT]: 'Dona',
+      [Locale.NL]: 'Doneren',
+      [Locale.CS]: 'Darovat',
+    },
   },
   footer: {
     summary: {

@@ -42,6 +42,7 @@ export function Header({ locale }: HeaderProps): React.ReactElement {
     { href: '/asks', key: 'asks' },
     { href: '/messages', key: 'messages' },
     { href: '/about', key: 'about' },
+    { href: '/donate', key: 'donate' },
   ];
 
   const handleLinkClick = () => {

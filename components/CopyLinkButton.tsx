@@ -38,3 +38,32 @@ export function CopyLinkButton({ locale }: { locale: Locale }): React.ReactEleme
     </div>
   );
 }
+
+export function CopyTextButton({
+  textToCopy,
+  idleLabel,
+  copiedLabel,
+  className,
+}: {
+  textToCopy: string;
+  idleLabel: string;
+  copiedLabel: string;
+  className?: string;
+}): React.ReactElement {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(textToCopy);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+    }
+  };
+
+  return (
+    <button type="button" onClick={handleCopy} className={className} aria-label={idleLabel}>
+      {copied ? copiedLabel : idleLabel}
+    </button>
+  );
+}

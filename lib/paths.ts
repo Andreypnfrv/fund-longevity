@@ -6,6 +6,7 @@ export const PATHS = {
   ASKS: '/asks',
   MESSAGES: '/messages',
   ABOUT: '/about',
+  DONATE: '/donate',
 } as const;
 
 export type PathKey = keyof typeof PATHS;

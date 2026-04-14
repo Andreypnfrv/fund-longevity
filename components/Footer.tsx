@@ -49,6 +49,9 @@ export function Footer({ locale }: FooterProps): React.ReactElement {
             <Link href="/about" locale={locale} className=" text-base text-gray-700 hover:text-[#0900FF] transition-colors">
               {nav.translate('about')}
             </Link>
+            <Link href="/donate" locale={locale} className=" text-base text-gray-700 hover:text-[#0900FF] transition-colors">
+              {nav.translate('donate')}
+            </Link>
           </nav>
         </div>
       </Wrapper>

@@ -7,6 +7,7 @@ import { homeTranslations } from '../app/[lang]/translations';
 import { aboutTranslations } from '../app/[lang]/about/translations';
 import { messagesTranslations } from '../app/[lang]/messages/translations';
 import { whyTranslations } from '../app/[lang]/why/translations';
+import { donateTranslations } from '../app/[lang]/donate/translations';
 import { TEAM_DATA } from '../lib/team';
 
 const LOCALE_SET = new Set<string>(LOCALES);
@@ -23,6 +24,7 @@ const TRANSLATION_SOURCE_PATHS = [
   path.join('app', '[lang]', 'messages', 'translations.tsx'),
   path.join('app', '[lang]', 'why', 'translations.tsx'),
   path.join('app', '[lang]', 'asks', 'translations.tsx'),
+  path.join('app', '[lang]', 'donate', 'translations.tsx'),
 ];
 
 function commentOnLineHasExempt(line: string): boolean {
@@ -187,6 +189,7 @@ const TRANSLATION_ROOTS: { name: string; root: unknown }[] = [
   { name: 'aboutTranslations', root: aboutTranslations },
   { name: 'messagesTranslations', root: messagesTranslations },
   { name: 'whyTranslations', root: whyTranslations },
+  { name: 'donateTranslations', root: donateTranslations },
 ];
 
 function isTranslationLeaf(obj: object): boolean {
