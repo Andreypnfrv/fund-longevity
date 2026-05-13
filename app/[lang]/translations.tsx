@@ -137,6 +137,16 @@ export const homeTranslations = {
       [Locale.CS]:
         'Stárnutí každý den zabíjí přibližně 110 000 lidí. Je to primární rizikový faktor za téměř všemi hlavními neinfekčními nemocemi, včetně rakoviny, srdečních chorob a demence. Za statistikami stárnutí způsobuje desetiletí křehkosti, bolesti a ztráty samostatnosti. Je to největší zdroj lidského utrpení, který je přijímán jako „normální”. Věda je připravena bojovat; musí také politická vůle.',
     },
+    promoIframeTitle: {
+      [Locale.EN]: 'Fund Longevity rally promo video',
+      [Locale.SV]: 'Fund Longevity rallykampanjfilm',
+      [Locale.DE]: 'Fund Longevity Rally-Werbevideo',
+      [Locale.FR]: 'Vidéo promo du rassemblement Fund Longevity',
+      [Locale.ES]: 'Vídeo promocional del rally Fund Longevity',
+      [Locale.IT]: 'Video promozionale del raduno Fund Longevity',
+      [Locale.NL]: 'Fund Longevity rally promotievideo',
+      [Locale.CS]: 'Propagátorské video rally Fund Longevity',
+    },
     readMore: {
       [Locale.EN]: 'Read more',
       [Locale.SV]: 'Läs mer',

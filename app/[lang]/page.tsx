@@ -357,17 +357,30 @@ export default async function HomePage({ params }: HomePageProps): Promise<JSX.E
       <Hero backgroundImage="/stockholn-hero.jpeg" />
       <Section>
         <Wrapper>
-          <div className="mx-auto max-w-5xl pt-8 pb-16 md:pt-12 md:pb-24 lg:pb-28">
-            <div className="flex flex-col gap-10 md:gap-16 lg:gap-20">
-              <p className="hero-subtitle-wrap whitespace-pre-line font-black leading-snug text-gray-900 md:leading-tight">
-                {agingProblemTranslate('tagline')}
-              </p>
-              <p className="text-2xl leading-snug text-gray-900 md:text-3xl lg:text-4xl md:leading-tight [&_a]:inline">
-                {agingProblemTranslate('body')}{' '}
-                <Link href="/why" locale={locale} className="font-semibold text-[#0900FF] hover:underline">
-                  {agingProblemTranslate('readMore')}
-                </Link>
-              </p>
+          <div className="w-full pt-8 pb-16 md:pt-12 md:pb-24 lg:pb-28">
+            <div className="flex flex-col gap-8 xl:flex-row xl:items-stretch xl:gap-16 2xl:gap-20">
+              <div className="order-first flex min-h-0 w-full min-w-0 flex-col xl:order-2 xl:flex-1 xl:basis-0 xl:justify-center">
+                <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-black shadow-[0_20px_60px_-15px_rgba(0,0,0,0.35)] ring-1 ring-black/15">
+                  <iframe
+                    className="absolute inset-0 h-full w-full"
+                    src="https://www.youtube.com/embed/qg5AS-YmOXk?rel=0&modestbranding=1"
+                    title={agingProblemTranslate('promoIframeTitle')}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+              <div className="order-last flex min-w-0 w-full flex-col gap-6 md:gap-16 xl:order-1 xl:flex-1 xl:basis-0 xl:gap-20">
+                <p className="hero-subtitle-wrap whitespace-pre-line font-black uppercase leading-[1.05] tracking-tight text-gray-900">
+                  {agingProblemTranslate('tagline')}
+                </p>
+                <p className="text-2xl leading-snug text-gray-900 md:text-3xl xl:text-4xl md:leading-tight [&_a]:inline">
+                  {agingProblemTranslate('body')}{' '}
+                  <Link href="/why" locale={locale} className="font-semibold text-[#0900FF] hover:underline">
+                    {agingProblemTranslate('readMore')}
+                  </Link>
+                </p>
+              </div>
             </div>
           </div>
         </Wrapper>
